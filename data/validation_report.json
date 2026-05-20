@@ -1,0 +1,79 @@
+{
+  "errors": [],
+  "warnings": [
+    {
+      "row": 2,
+      "warning": "BLANK_OR_INVALID_READING",
+      "meter_id": "EGAT__FL01__Main"
+    },
+    {
+      "row": 3,
+      "warning": "BLANK_OR_INVALID_READING",
+      "meter_id": "EGAT__FL01__Main2"
+    },
+    {
+      "row": 4,
+      "warning": "BLANK_OR_INVALID_READING",
+      "meter_id": "T.0006__FL01__MDB"
+    },
+    {
+      "row": 5,
+      "warning": "BLANK_OR_INVALID_READING",
+      "meter_id": "T.0007__FL01__MDB"
+    },
+    {
+      "row": 6,
+      "warning": "BLANK_OR_INVALID_READING",
+      "meter_id": "T.0008__FL01__MDB"
+    },
+    {
+      "row": 7,
+      "warning": "BLANK_OR_INVALID_READING",
+      "meter_id": "T.0009__FL01__MDB"
+    },
+    {
+      "row": 8,
+      "warning": "BLANK_OR_INVALID_READING",
+      "meter_id": "T.0010__FL01__MDB"
+    },
+    {
+      "row": 9,
+      "warning": "BLANK_OR_INVALID_READING",
+      "meter_id": "T.0011__FL01__MDB"
+    },
+    {
+      "row": 10,
+      "warning": "BLANK_OR_INVALID_READING",
+      "meter_id": "T.0012__FL01__MDB"
+    },
+    {
+      "row": 11,
+      "warning": "BLANK_OR_INVALID_READING",
+      "meter_id": "D.0026__FL01__MDB"
+    },
+    {
+      "row": 113,
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร."
+    },
+    {
+      "row": 114,
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร."
+    }
+  ],
+  "stats": {
+    "meters": 101,
+    "weekly_reading_rows_used": 0,
+    "normalized_readings": 0,
+    "weekly_consumption_rows": 0,
+    "department_weekly_rows": 0,
+    "main_meter_codes": [
+      "MDB",
+      "Main",
+      "SCB21"
+    ]
+  }
+}
