@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+.DS_Store
+
+data/weekly_readings.csv
+data/energy_db.json
+data/validation_report.json
