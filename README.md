@@ -1,5 +1,5 @@
 # Energy Dashboard Auto DB — Production GitHub Version
-
+...
 ระบบนี้ออกแบบให้ใช้กับ GitHub + GitHub Actions + GitHub Pages โดยตรง
 
 ## วิธีใช้งานประจำสัปดาห์
