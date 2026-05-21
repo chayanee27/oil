@@ -9,7 +9,7 @@
       "Main",
       "SCB21"
     ],
-    "generated_at": "2026-05-21T07:05:29",
+    "generated_at": "2026-05-21T07:12:14",
     "generated_from": [
       "forms/*.csv",
       "data/meter_master.csv",
@@ -2472,7 +2472,7 @@
         "Main",
         "SCB21"
       ],
-      "form_files_read": 1
+      "form_files_read": 3
     }
   }
 }
