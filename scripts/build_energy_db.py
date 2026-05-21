@@ -382,8 +382,8 @@ def main() -> None:
     print("Generated data/validation_report.json")
     print(json.dumps(db["validation"]["stats"], ensure_ascii=False, indent=2))
     if db["validation"]["errors"]:
-    print(f"Validation failed with {len(db['validation']['errors'])} error(s). See data/validation_report.json")
-    # raise SystemExit(1)
+        print(f"Validation failed with {len(db['validation']['errors'])} error(s). See data/validation_report.json")
+        # raise SystemExit(1)
 
 
 if __name__ == "__main__":
