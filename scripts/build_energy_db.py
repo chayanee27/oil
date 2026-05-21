@@ -98,7 +98,7 @@ def parse_week_id(value: str, reading_date: str) -> str:
     text = (value or "").strip()
     if re.fullmatch(r"\d{4}-W\d{2}", text):
         return text
-      dt = datetime.strptime(reading_date, "%Y-%m-%d")
+        dt = datetime.strptime(reading_date, "%Y-%m-%d")
     iso = dt.isocalendar()
     return f"{iso.year}-W{iso.week:02d}"
 
