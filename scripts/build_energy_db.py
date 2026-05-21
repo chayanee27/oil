@@ -31,11 +31,26 @@ DEPARTMENTS = ["สก.ชธธ.", "อบค.", "อบฟ.", "อบย.", "�
 GENERATED_READING_FIELDS = ["source_form", "reading_date", "week_id", "meter_id", "raw_reading", "raw_unit", "reader", "note"]
 
 
-def read_csv(path: Path) -> list[dict[str, str]]:
-    if not path.exists():
-        raise FileNotFoundError(f"Missing input file: {path}")
-    with path.open("r", encoding="utf-8-sig", newline="") as f:
-        return list(csv.DictReader(f))
+def read_csv(path):
+    encodings = ["utf-8-sig", "utf-8", "cp874", "tis-620"]
+    last_error = None
+
+    for enc in encodings:
+        try:
+            with open(path, "r", encoding=enc, newline="") as f:
+                rows = list(csv.DictReader(f))
+            print(f"Read CSV OK: {path} encoding={enc}")
+            return rows
+        except UnicodeDecodeError as e:
+            last_error = e
+
+    raise UnicodeDecodeError(
+        "utf-8",
+        b"",
+        0,
+        1,
+        f"Cannot decode CSV file: {path}. Last error: {last_error}"
+    )
 
 
 def write_csv(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None:
