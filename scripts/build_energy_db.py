@@ -1,3 +1,4 @@
+```python
 import csv
 import json
 from pathlib import Path
@@ -141,68 +142,71 @@ def build():
                     "error": str(e)
                 })
 
+    department_weekly = []
+
+    allocations_by_meter = {}
+
+    for row in department_allocations:
+        meter_id = row.get("meter_id", "").strip()
+
+        if meter_id not in allocations_by_meter:
+            allocations_by_meter[meter_id] = []
+
+        allocations_by_meter[meter_id].append(row)
+
+    sorted_readings = sorted(
+        all_readings,
+        key=lambda x: (x["meter_id"], x["reading_date"])
+    )
+
+    previous_by_meter = {}
+
+    for row in sorted_readings:
+        meter_id = row["meter_id"]
+
+        current = row["normalized_kwh"]
+
+        prev = previous_by_meter.get(meter_id)
+
+        previous_by_meter[meter_id] = current
+
+        if prev is None:
+            continue
+
+        diff = current - prev
+
+        if diff < 0:
+            continue
+
+        allocations = allocations_by_meter.get(meter_id, [])
+
+        for alloc in allocations:
+            pct = float(alloc.get("allocation_percent", 0))
+
+            department_weekly.append({
+                "week_end_date": row["reading_date"],
+                "week_id": row["week_id"],
+                "department": alloc.get("department", ""),
+                "meter_id": meter_id,
+                "building_name": row["building_name"],
+                "b_code": alloc.get("b_code", ""),
+                "kwh": round(diff * (pct / 100), 3)
+            })
+
     validation["stats"] = {
-        department_weekly = []
-
-allocations_by_meter = {}
-
-for row in department_allocations:
-    meter_id = row.get("meter_id", "").strip()
-
-    if meter_id not in allocations_by_meter:
-        allocations_by_meter[meter_id] = []
-
-    allocations_by_meter[meter_id].append(row)
-
-sorted_readings = sorted(
-    all_readings,
-    key=lambda x: (x["meter_id"], x["reading_date"])
-)
-
-previous_by_meter = {}
-
-for row in sorted_readings:
-    meter_id = row["meter_id"]
-
-    current = row["normalized_kwh"]
-
-    prev = previous_by_meter.get(meter_id)
-
-    previous_by_meter[meter_id] = current
-
-    if prev is None:
-        continue
-
-    diff = current - prev
-
-    if diff < 0:
-        continue
-
-    allocations = allocations_by_meter.get(meter_id, [])
-
-    for alloc in allocations:
-        pct = float(alloc.get("allocation_percent", 0))
-
-        department_weekly.append({
-            "week_end_date": row["reading_date"],
-            "week_id": row["week_id"],
-            "department": alloc.get("department", ""),
-            "meter_id": meter_id,
-            "building_name": row["building_name"],
-            "b_code": alloc.get("b_code", ""),
-            "kwh": round(diff * (pct / 100), 3)
-        })
         "meters": len(meter_master),
         "weekly_forms_rows_used": len(all_readings),
         "normalized_readings": len(all_readings),
+        "department_weekly_rows": len(department_weekly),
         "main_meter_codes": MAIN_METER_CODES,
         "form_files_read": len(form_files)
     }
-return {
-    "weekly_readings": all_readings,
-    "department_weekly": department_weekly,
-    "validation": validation
-}
+
+    return {
+        "weekly_readings": all_readings,
+        "department_weekly": department_weekly,
+        "validation": validation
+    }
 
 
 def write_outputs(db):
@@ -253,3 +257,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+```
