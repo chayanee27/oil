@@ -1,1202 +1,644 @@
 {
-  "errors": [
+  "errors": [],
+  "warnings": [
     {
-      "file": "2026-W17.csv",
-      "row": 2,
-      "error": "INVALID_READING"
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
     },
     {
-      "file": "2026-W17.csv",
-      "row": 3,
-      "error": "INVALID_READING"
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
     },
     {
-      "file": "2026-W17.csv",
-      "row": 6,
-      "error": "INVALID_READING"
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
     },
     {
-      "file": "2026-W17.csv",
-      "row": 7,
-      "error": "INVALID_READING"
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
     },
     {
-      "file": "2026-W17.csv",
-      "row": 9,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "B.0001__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W17.csv",
-      "row": 15,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W17.csv",
-      "row": 20,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0017__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W17.csv",
-      "row": 42,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0017__FL01__ร้านค้า_1",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W17.csv",
-      "row": 53,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0017__FL01__ร้านค้า_2",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W18.csv",
-      "row": 2,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0017__FL01__ร้านค้า_4",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W18.csv",
-      "row": 3,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0017__FL01__ร้านค้า_5",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W18.csv",
-      "row": 7,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0019__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W18.csv",
-      "row": 15,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0019__FL01__ร้านค้า_1",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W18.csv",
-      "row": 20,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W18.csv",
-      "row": 32,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0019__FL01__ร้านค้า_3",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W18.csv",
-      "row": 42,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0019__FL01__ร้านค้า_4",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W18.csv",
-      "row": 53,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0019__FL01__ร้านค้า_5",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W19.csv",
-      "row": 2,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0019__FL01__ร้านค้า_6",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W19.csv",
-      "row": 3,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W19.csv",
-      "row": 6,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0025__FL01__MDB",
+      "warning": "FIRST_READING_USED_MWH_UNIT"
     },
     {
-      "file": "2026-W19.csv",
-      "row": 7,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0026__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W19.csv",
-      "row": 15,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0031__FL01__MDB",
+      "warning": "FIRST_READING_USED_MWH_UNIT"
     },
     {
-      "file": "2026-W19.csv",
-      "row": 20,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "D.0031__FL01__ร้านค้า_1",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W19.csv",
-      "row": 53,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W19.csv",
+      "reading_date": "2026-05-08",
+      "meter_id": "D.0033__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W20.csv",
-      "row": 2,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0006__FL01__MDB",
+      "warning": "FIRST_READING_USED_MWH_UNIT"
     },
     {
-      "file": "2026-W20.csv",
-      "row": 3,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0007__FL01__MDB",
+      "warning": "FIRST_READING_USED_MWH_UNIT"
     },
     {
-      "file": "2026-W20.csv",
-      "row": 7,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W18.csv",
+      "reading_date": "2026-05-01",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W20.csv",
-      "row": 9,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0010__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W20.csv",
-      "row": 15,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W18.csv",
+      "reading_date": "2026-05-01",
+      "meter_id": "T.0011__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W20.csv",
-      "row": 20,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0012__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W20.csv",
-      "row": 25,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0014__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W20.csv",
-      "row": 30,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0015__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W20.csv",
-      "row": 32,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0017__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W20.csv",
-      "row": 42,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0018__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W20.csv",
-      "row": 53,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W19.csv",
+      "reading_date": "2026-05-08",
+      "meter_id": "T.0018__FL01__MDB",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 2,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W20.csv",
+      "reading_date": "2026-05-15",
+      "meter_id": "T.0018__FL01__MDB",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 3,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL01__AP1",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 4,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL01__EMDB_1",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 5,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL01__LP1",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 6,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL01__Main",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 7,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL01__PP1",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 8,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL03__AP3",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 9,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL03__LP3",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 10,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL03__PP3",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 11,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL03__SCB_3",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 12,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL04__AP4",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 13,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL04__LP4",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 14,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL04__PP41",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 15,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL04__PP42",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 16,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL04__SCB_4",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 17,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL05__AP5",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 18,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL05__LP5",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 19,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL05__PP51",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 20,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL05__PP52",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 21,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL05__SCB_5",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 22,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL06__AP6",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 23,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL06__LP6",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 24,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL06__PP61",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 25,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL06__PP62",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 26,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL06__SCB_6",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 27,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL07__AP7",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 28,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL07__LP7",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 29,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL07__PP71",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 30,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL07__PP72",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 31,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL07__SCB_7",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 32,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL08__AP8",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 33,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL08__LP8",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 34,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL08__PP81",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 35,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL08__PP82",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 36,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL08__SCB_8",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 37,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL09__AP9",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 38,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL09__BP",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 39,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL09__LP9",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 40,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL09__PP91",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 41,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL09__PP92",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 42,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL09__PPAC_1",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 43,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL09__PPAC_2",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 44,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL09__PPAC_3",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 45,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL09__PPD",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 46,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL09__PPL",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 47,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0019__FL09__SCB_9",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 48,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__AP21",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 49,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 50,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 51,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__LP21",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 52,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 53,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__LP23",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 54,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__PP21",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 55,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 56,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__PP23",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 57,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__SCB_21",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 58,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0020__FL02__SCB_22",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 59,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0020__FL03__PPAC_3",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 60,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0020__FL03__SCB_23",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 61,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 62,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 63,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0025__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 64,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0026__FL01__MDB",
+      "warning": "FIRST_READING_USED_MWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 65,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0027__FL01__MDB",
+      "warning": "FIRST_READING_USED_MWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 66,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0028__FL01__MDB",
+      "warning": "FIRST_READING_USED_MWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 67,
-      "error": "INVALID_READING"
+      "source_form": "forms/2026-W17.csv",
+      "reading_date": "2026-04-24",
+      "meter_id": "T.0029__FL01__MDB",
+      "warning": "FIRST_READING_USED_MWH_UNIT"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 68,
-      "error": "INVALID_READING"
+      "week_end_date": "2026-05-08",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "NON_WEEKLY_GAP_14_DAYS"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 69,
-      "error": "INVALID_READING"
+      "week_end_date": "2026-05-15",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "NON_WEEKLY_GAP_14_DAYS"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 70,
-      "error": "INVALID_READING"
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0018__FL01__MDB",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
     },
     {
-      "file": "2026-W21.csv",
-      "row": 71,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 72,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 73,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 74,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 75,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 76,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 77,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 78,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 79,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 80,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 81,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 82,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 83,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 84,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 85,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 86,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 87,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 88,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 89,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 90,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 91,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 92,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 93,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 94,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 95,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 96,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 97,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 98,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 99,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 100,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 101,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "2026-W21.csv",
-      "row": 102,
-      "error": "INVALID_READING"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 2,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 3,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 4,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 5,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 6,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 7,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 8,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 9,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 10,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 11,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 12,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 13,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 14,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 15,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 16,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 17,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 18,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 19,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 20,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 21,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 22,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 23,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 24,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 25,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 26,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 27,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 28,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 29,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 30,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 31,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 32,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 33,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 34,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 35,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 36,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 37,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 38,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 39,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 40,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 41,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 42,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 43,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 44,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 45,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 46,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 47,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 48,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 49,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 50,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 51,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 52,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 53,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 54,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 55,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 56,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 57,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 58,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 59,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 60,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 61,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 62,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 63,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 64,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 65,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 66,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 67,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 68,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 69,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 70,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 71,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 72,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 73,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 74,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 75,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 76,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 77,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 78,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 79,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 80,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 81,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 82,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 83,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 84,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 85,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 86,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 87,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 88,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 89,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 90,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 91,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 92,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 93,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 94,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 95,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 96,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 97,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 98,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 99,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 100,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 101,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
-    },
-    {
-      "file": "_blank_template.csv",
-      "row": 102,
-      "error": "time data 'YYYY-MM-DD' does not match format '%d/%m/%Y'"
+      "week_end_date": "2026-05-15",
+      "meter_id": "T.0018__FL01__MDB",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
     }
   ],
-  "warnings": [],
   "stats": {
     "meters": 101,
     "weekly_forms_rows_used": 369,
     "normalized_readings": 369,
-    "department_weekly_rows": 305,
+    "weekly_consumption_rows": 274,
+    "department_weekly_rows": 108,
     "main_meter_codes": [
       "MDB",
       "Main",
       "SCB21"
     ],
-    "form_files_read": 6
+    "form_files_read": 5
   }
 }
