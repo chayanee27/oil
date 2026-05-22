@@ -11,6 +11,108 @@
       "file": "department_allocations.csv",
       "warning": "UNKNOWN_DEPARTMENT",
       "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
       "meter_id": "T.0025__FL01__MDB"
     },
     {
@@ -26,146 +128,440 @@
       "meter_id": "T.0025__FL01__MDB"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "file": "department_allocations.csv",
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "B.0001__FL01__MDB",
       "warning": "FIRST_READING_USED_KWH_UNIT"
+    },
+    {
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
+    },
+    {
+      "source_form": "forms/2026-W14.csv",
+      "reading_date": "2026-04-03",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W15.csv",
+      "reading_date": "2026-04-10",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W16.csv",
+      "reading_date": "2026-04-17",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
     },
     {
       "source_form": "forms/2026-W17.csv",
       "reading_date": "2026-04-24",
       "meter_id": "D.0015__FL01__MDB",
-      "warning": "FIRST_READING_USED_KWH_UNIT"
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W19.csv",
+      "reading_date": "2026-05-08",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "D.0017__FL01__MDB",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W02.csv",
+      "reading_date": "2026-01-09",
       "meter_id": "D.0017__FL01__ร้านค้า_1",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "D.0017__FL01__ร้านค้า_2",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "D.0017__FL01__ร้านค้า_4",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "D.0017__FL01__ร้านค้า_5",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "D.0019__FL01__MDB",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "D.0019__FL01__ร้านค้า_1",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "D.0019__FL01__ร้านค้า_2",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "D.0019__FL01__ร้านค้า_3",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "D.0019__FL01__ร้านค้า_4",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "D.0019__FL01__ร้านค้า_5",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "D.0019__FL01__ร้านค้า_6",
       "warning": "FIRST_READING_USED_KWH_UNIT"
+    },
+    {
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
+    },
+    {
+      "source_form": "forms/2026-W06.csv",
+      "reading_date": "2026-02-06",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W07.csv",
+      "reading_date": "2026-02-13",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W08.csv",
+      "reading_date": "2026-02-20",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W09.csv",
+      "reading_date": "2026-02-27",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W10.csv",
+      "reading_date": "2026-03-06",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W11.csv",
+      "reading_date": "2026-03-13",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W12.csv",
+      "reading_date": "2026-03-20",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W13.csv",
+      "reading_date": "2026-03-27",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W14.csv",
+      "reading_date": "2026-04-03",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W15.csv",
+      "reading_date": "2026-04-10",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W16.csv",
+      "reading_date": "2026-04-17",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
     },
     {
       "source_form": "forms/2026-W17.csv",
       "reading_date": "2026-04-24",
       "meter_id": "D.0019__FL01__ร้านค้า_7",
-      "warning": "FIRST_READING_USED_KWH_UNIT"
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
-      "meter_id": "D.0025__FL01__MDB",
-      "warning": "FIRST_READING_USED_MWH_UNIT"
-    },
-    {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
-      "meter_id": "D.0026__FL01__MDB",
-      "warning": "FIRST_READING_USED_KWH_UNIT"
-    },
-    {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
-      "meter_id": "D.0031__FL01__MDB",
-      "warning": "FIRST_READING_USED_MWH_UNIT"
-    },
-    {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
-      "meter_id": "D.0031__FL01__ร้านค้า_1",
-      "warning": "FIRST_READING_USED_KWH_UNIT"
+      "source_form": "forms/2026-W18.csv",
+      "reading_date": "2026-05-01",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
     },
     {
       "source_form": "forms/2026-W19.csv",
       "reading_date": "2026-05-08",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
+      "meter_id": "D.0025__FL01__MDB",
+      "warning": "FIRST_READING_USED_MWH_UNIT"
+    },
+    {
+      "source_form": "forms/2026-W08.csv",
+      "reading_date": "2026-02-20",
+      "meter_id": "D.0025__FL01__MDB",
+      "warning": "NEGATIVE_DELTA_AFTER_AUTO_NORMALIZE"
+    },
+    {
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
+      "meter_id": "D.0026__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
+    },
+    {
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
+      "meter_id": "D.0031__FL01__MDB",
+      "warning": "FIRST_READING_USED_MWH_UNIT"
+    },
+    {
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
+      "meter_id": "D.0031__FL01__ร้านค้า_1",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
+    },
+    {
+      "source_form": "forms/2026-W02.csv",
+      "reading_date": "2026-01-09",
       "meter_id": "D.0033__FL01__MDB",
       "warning": "FIRST_READING_USED_KWH_UNIT"
+    },
+    {
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
+      "meter_id": "T.0006__FL01__MDB",
+      "warning": "FIRST_READING_USED_MWH_UNIT"
+    },
+    {
+      "source_form": "forms/2026-W16.csv",
+      "reading_date": "2026-04-17",
+      "meter_id": "T.0006__FL01__MDB",
+      "warning": "NEGATIVE_DELTA_AFTER_AUTO_NORMALIZE"
     },
     {
       "source_form": "forms/2026-W17.csv",
       "reading_date": "2026-04-24",
       "meter_id": "T.0006__FL01__MDB",
+      "warning": "NEGATIVE_DELTA_AFTER_AUTO_NORMALIZE"
+    },
+    {
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
+      "meter_id": "T.0007__FL01__MDB",
       "warning": "FIRST_READING_USED_MWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
-      "meter_id": "T.0007__FL01__MDB",
-      "warning": "FIRST_READING_USED_MWH_UNIT"
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
+    },
+    {
+      "source_form": "forms/2026-W08.csv",
+      "reading_date": "2026-02-20",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,NEGATIVE_DELTA_AFTER_AUTO_NORMALIZE"
+    },
+    {
+      "source_form": "forms/2026-W09.csv",
+      "reading_date": "2026-02-27",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W10.csv",
+      "reading_date": "2026-03-06",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W11.csv",
+      "reading_date": "2026-03-13",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W12.csv",
+      "reading_date": "2026-03-20",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W13.csv",
+      "reading_date": "2026-03-27",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W14.csv",
+      "reading_date": "2026-04-03",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W15.csv",
+      "reading_date": "2026-04-10",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W16.csv",
+      "reading_date": "2026-04-17",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,NEGATIVE_DELTA_AFTER_AUTO_NORMALIZE"
     },
     {
       "source_form": "forms/2026-W18.csv",
       "reading_date": "2026-05-01",
       "meter_id": "T.0008__FL01__MDB",
-      "warning": "FIRST_READING_USED_KWH_UNIT"
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W20.csv",
+      "reading_date": "2026-05-15",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
+      "meter_id": "T.0009__FL01__MDB",
+      "warning": "FIRST_READING_USED_MWH_UNIT"
+    },
+    {
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0010__FL01__MDB",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
@@ -176,447 +572,887 @@
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0012__FL01__MDB",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0014__FL01__MDB",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0015__FL01__MDB",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
+      "meter_id": "T.0016__FL01__MDB",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
+    },
+    {
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0017__FL01__MDB",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0018__FL01__MDB",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL01__AP1",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL01__EMDB_1",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL01__LP1",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL01__Main",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL01__PP1",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL03__AP3",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL03__LP3",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL03__PP3",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL03__SCB_3",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL04__AP4",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL04__LP4",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL04__PP41",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL04__PP42",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL04__SCB_4",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL05__AP5",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL05__LP5",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL05__PP51",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL05__PP52",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL05__SCB_5",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL06__AP6",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL06__LP6",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL06__PP61",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL06__PP62",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL06__SCB_6",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL07__AP7",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL07__LP7",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL07__PP71",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL07__PP72",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL07__SCB_7",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL08__AP8",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL08__LP8",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL08__PP81",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL08__PP82",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL08__SCB_8",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL09__AP9",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL09__BP",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL09__LP9",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL09__PP91",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL09__PP92",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL09__PPAC_1",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL09__PPAC_2",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL09__PPAC_3",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL09__PPD",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL09__PPL",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0019__FL09__SCB_9",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0020__FL01__AP21",
       "warning": "FIRST_READING_USED_KWH_UNIT"
+    },
+    {
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "FIRST_READING_USED_KWH_UNIT"
+    },
+    {
+      "source_form": "forms/2026-W08.csv",
+      "reading_date": "2026-02-20",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W09.csv",
+      "reading_date": "2026-02-27",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W10.csv",
+      "reading_date": "2026-03-06",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W11.csv",
+      "reading_date": "2026-03-13",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W12.csv",
+      "reading_date": "2026-03-20",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W13.csv",
+      "reading_date": "2026-03-27",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W14.csv",
+      "reading_date": "2026-04-03",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W15.csv",
+      "reading_date": "2026-04-10",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W16.csv",
+      "reading_date": "2026-04-17",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
     },
     {
       "source_form": "forms/2026-W17.csv",
       "reading_date": "2026-04-24",
       "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W18.csv",
+      "reading_date": "2026-05-01",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W19.csv",
+      "reading_date": "2026-05-08",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W20.csv",
+      "reading_date": "2026-05-15",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
+      "meter_id": "T.0020__FL01__AP23",
       "warning": "FIRST_READING_USED_KWH_UNIT"
+    },
+    {
+      "source_form": "forms/2026-W15.csv",
+      "reading_date": "2026-04-10",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W16.csv",
+      "reading_date": "2026-04-17",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
     },
     {
       "source_form": "forms/2026-W17.csv",
       "reading_date": "2026-04-24",
       "meter_id": "T.0020__FL01__AP23",
-      "warning": "FIRST_READING_USED_KWH_UNIT"
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W18.csv",
+      "reading_date": "2026-05-01",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W19.csv",
+      "reading_date": "2026-05-08",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W20.csv",
+      "reading_date": "2026-05-15",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNIT_SUSPECT_AUTO_CORRECTED,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH"
+    },
+    {
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0020__FL01__LP21",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0020__FL01__LP22",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0020__FL01__LP23",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0020__FL01__PP21",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0020__FL01__PP22",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0020__FL01__PP23",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0020__FL01__SCB_21",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0020__FL02__SCB_22",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0020__FL03__PPAC_3",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0020__FL03__SCB_23",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0022__FL01__MDB",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0023__FL01__MDB",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0025__FL01__MDB",
       "warning": "FIRST_READING_USED_KWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0026__FL01__MDB",
       "warning": "FIRST_READING_USED_MWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0027__FL01__MDB",
       "warning": "FIRST_READING_USED_MWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0028__FL01__MDB",
       "warning": "FIRST_READING_USED_MWH_UNIT"
     },
     {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
+      "source_form": "forms/2026-W01.csv",
+      "reading_date": "2026-01-02",
       "meter_id": "T.0029__FL01__MDB",
       "warning": "FIRST_READING_USED_MWH_UNIT"
     },
     {
+      "week_end_date": "2026-04-03",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-10",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-17",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-24",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
       "week_end_date": "2026-05-08",
       "meter_id": "D.0015__FL01__MDB",
+      "warning": "NON_WEEKLY_GAP_14_DAYS,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-24",
+      "meter_id": "D.0017__FL01__ร้านค้า_1",
+      "warning": "NON_WEEKLY_GAP_21_DAYS"
+    },
+    {
+      "week_end_date": "2026-03-13",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
       "warning": "NON_WEEKLY_GAP_14_DAYS"
+    },
+    {
+      "week_end_date": "2026-04-10",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
+      "warning": "NON_WEEKLY_GAP_14_DAYS"
+    },
+    {
+      "week_end_date": "2026-02-06",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,SPIKE_SUSPECT_OVER_5X_MEDIAN,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-02-13",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,SPIKE_SUSPECT_OVER_5X_MEDIAN,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-02-20",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,SPIKE_SUSPECT_OVER_5X_MEDIAN,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-02-27",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,SPIKE_SUSPECT_OVER_5X_MEDIAN,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-03-06",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-03-13",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-03-20",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-03-27",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-03",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-10",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-17",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-24",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "D.0019__FL01__ร้านค้า_7",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-02-20",
+      "meter_id": "D.0025__FL01__MDB",
+      "warning": "NEGATIVE_DELTA,NEGATIVE_DELTA_AFTER_AUTO_NORMALIZE"
+    },
+    {
+      "week_end_date": "2026-04-17",
+      "meter_id": "D.0033__FL01__MDB",
+      "warning": "NON_WEEKLY_GAP_14_DAYS"
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "D.0033__FL01__MDB",
+      "warning": "NON_WEEKLY_GAP_21_DAYS"
+    },
+    {
+      "week_end_date": "2026-04-17",
+      "meter_id": "T.0006__FL01__MDB",
+      "warning": "NEGATIVE_DELTA,NEGATIVE_DELTA_AFTER_AUTO_NORMALIZE"
+    },
+    {
+      "week_end_date": "2026-04-24",
+      "meter_id": "T.0006__FL01__MDB",
+      "warning": "NEGATIVE_DELTA,NEGATIVE_DELTA_AFTER_AUTO_NORMALIZE"
+    },
+    {
+      "week_end_date": "2026-02-13",
+      "meter_id": "T.0007__FL01__MDB",
+      "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN"
+    },
+    {
+      "week_end_date": "2026-02-20",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "NEGATIVE_DELTA,NEGATIVE_DELTA_AFTER_AUTO_NORMALIZE,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-02-27",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,SPIKE_SUSPECT_OVER_5X_MEDIAN,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-03-06",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,SPIKE_SUSPECT_OVER_5X_MEDIAN,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-03-13",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,SPIKE_SUSPECT_OVER_5X_MEDIAN,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-03-20",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,SPIKE_SUSPECT_OVER_5X_MEDIAN,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-03-27",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-03",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-10",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-17",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "NEGATIVE_DELTA,NEGATIVE_DELTA_AFTER_AUTO_NORMALIZE,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "meter_id": "T.0008__FL01__MDB",
+      "warning": "NON_WEEKLY_GAP_14_DAYS,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
     },
     {
       "week_end_date": "2026-05-15",
       "meter_id": "T.0008__FL01__MDB",
-      "warning": "NON_WEEKLY_GAP_14_DAYS"
+      "warning": "NON_WEEKLY_GAP_14_DAYS,RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-02-06",
+      "meter_id": "T.0019__FL09__PPD",
+      "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN"
+    },
+    {
+      "week_end_date": "2026-02-13",
+      "meter_id": "T.0019__FL09__PPD",
+      "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN"
+    },
+    {
+      "week_end_date": "2026-02-20",
+      "meter_id": "T.0019__FL09__PPD",
+      "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN"
+    },
+    {
+      "week_end_date": "2026-02-27",
+      "meter_id": "T.0019__FL09__PPD",
+      "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN"
+    },
+    {
+      "week_end_date": "2026-02-20",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-02-27",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-03-06",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,SPIKE_SUSPECT_OVER_5X_MEDIAN,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-03-13",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-03-20",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,SPIKE_SUSPECT_OVER_5X_MEDIAN,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-03-27",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,SPIKE_SUSPECT_OVER_5X_MEDIAN,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-03",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-10",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-17",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-10",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-17",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
+    },
+    {
+      "week_end_date": "2026-03-27",
+      "meter_id": "T.0020__FL01__PP23",
+      "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN"
+    },
+    {
+      "week_end_date": "2026-04-10",
+      "meter_id": "T.0020__FL01__PP23",
+      "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN"
+    },
+    {
+      "week_end_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__PP23",
+      "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN"
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "meter_id": "T.0020__FL01__PP23",
+      "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN"
     }
   ],
   "stats": {
     "meters": 101,
-    "weekly_forms_rows_used": 369,
-    "normalized_readings": 369,
-    "weekly_consumption_rows": 274,
-    "department_weekly_rows": 108,
+    "weekly_forms_rows_used": 1898,
+    "normalized_readings": 1898,
+    "weekly_consumption_rows": 1801,
+    "department_weekly_rows": 744,
     "main_meter_codes": [
       "MDB",
       "Main",
       "SCB21"
     ],
-    "form_files_read": 5
+    "form_files_read": 21
   }
 }
