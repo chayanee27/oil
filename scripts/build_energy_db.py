@@ -23,15 +23,15 @@ OUTPUT_VALIDATION = DATA_DIR / "validation_report.json"
 MAIN_METER_CODES = {"MDB", "Main", "SCB21"}
 DEPARTMENTS = ["สก.ชธธ.", "อบค.", "อบฟ.", "อบย.", "อรอ.", "อคม.", "อหข."]
 
-# Conservative auto-reset rule.
-# Use only for a true adjacent-week collapse, e.g. 300,000 -> 12.
-# In that case usage = current - 0 = current.
+# Only use auto-reset when the reading clearly collapses, e.g. 300000 -> 12.
+# Then usage = current reading, equivalent to current - 0.
 AUTO_RESET_RATIO_THRESHOLD = 100
 
 
 def read_csv(path):
     encodings = ["utf-8-sig", "utf-8", "cp874", "tis-620"]
     last_error = None
+
     for enc in encodings:
         try:
             with open(path, "r", encoding=enc, newline="") as f:
@@ -42,6 +42,7 @@ def read_csv(path):
             return []
         except Exception as e:
             last_error = e
+
     raise last_error
 
 
@@ -70,20 +71,25 @@ def parse_date(value):
     text = str(value or "").strip()
     if not text:
         raise ValueError("reading_date is blank")
+
     for fmt in ("%Y-%m-%d", "%d/%m/%Y", "%d-%m-%Y"):
         try:
             return datetime.strptime(text, fmt).strftime("%Y-%m-%d")
         except ValueError:
             pass
+
     raise ValueError(f"invalid date format: {text}")
 
 
 def clean_unit(unit):
     u = str(unit or "").strip().lower()
+
     if u in {"mwh", "mwhr", "mwh.", "เมกะวัตต์ชั่วโมง"}:
         return "MWh"
+
     if u in {"kwh", "kwhr", "kwh.", "หน่วย", "ยูนิต"}:
         return "kWh"
+
     return ""
 
 
@@ -92,43 +98,59 @@ def is_yes(value):
     return text in {"y", "yes", "true", "1", "reset", "r", "ใช่", "รีเซ็ต"}
 
 
-def declared_kwh(raw_value, raw_unit, default_unit=None):
+def get_col(row, *names):
+    for name in names:
+        if name in row:
+            return row.get(name)
+
+    normalized = {
+        str(k).strip().lower().replace(" ", "").replace("_", ""): v
+        for k, v in row.items()
+    }
+
+    for name in names:
+        key = str(name).strip().lower().replace(" ", "").replace("_", "")
+        if key in normalized:
+            return normalized[key]
+
+    return ""
+
+
+def declared_to_kwh(raw_value, raw_unit, default_unit=""):
     unit = clean_unit(raw_unit) or clean_unit(default_unit) or "kWh"
     return raw_value * 1000 if unit == "MWh" else raw_value
 
 
-def normalize_by_continuity(raw_value, raw_unit, previous_kwh, default_unit=None, reset_flag=False):
+def normalize_by_continuity(raw_value, raw_unit, previous_kwh, default_unit=""):
     """
-    Normalize cumulative meter reading to kWh.
-
-    Mostly same continuity logic as before, but with one important reset guard:
-    If the declared/current value is far lower than previous (e.g. 300,000 -> 12),
-    keep the declared value as the post-reset reading. Do NOT auto-convert it
-    to MWh just because that is closer to the previous value.
+    Working-base normalization:
+    - Respect declared/default unit when no previous reading exists.
+    - Otherwise compare candidates:
+      declared, raw-as-kWh, raw-as-MWh.
+    - Choose the most continuous non-negative reading.
+    - IMPORTANT: if declared reading collapses strongly from previous, keep it as a reset reading
+      and do not convert small kWh into MWh just to avoid a negative delta.
     """
     flags = []
+    declared = declared_to_kwh(raw_value, raw_unit, default_unit)
     unit = clean_unit(raw_unit) or clean_unit(default_unit) or "kWh"
-    declared = declared_kwh(raw_value, raw_unit, default_unit)
 
     if previous_kwh is None:
         return round(declared, 3), flags
 
-    if reset_flag:
-        flags.append("METER_RESET_MANUAL")
-        return round(declared, 3), flags
-
-    # Critical reset fix:
-    # Detect a real collapse using the declared unit BEFORE continuity scoring.
-    # Example previous=300000, declared=12 => ratio 25000 => reset.
+    # Narrow reset guard before continuity scoring.
+    # This is the only added behavior compared with the previously working flow.
     if declared < previous_kwh:
-        collapse_ratio = previous_kwh / max(declared, 1)
-        if collapse_ratio >= AUTO_RESET_RATIO_THRESHOLD:
+        ratio = previous_kwh / max(declared, 1)
+        if ratio >= AUTO_RESET_RATIO_THRESHOLD:
             flags.append("METER_RESET_AUTO_DECLARED_VALUE_KEPT")
             return round(declared, 3), flags
 
-    as_kwh = raw_value
-    as_mwh = raw_value * 1000
-    candidates = [("declared", declared), ("as_kwh", as_kwh), ("as_mwh", as_mwh)]
+    candidates = [
+        ("declared", declared),
+        ("as_kwh", raw_value),
+        ("as_mwh", raw_value * 1000),
+    ]
 
     unique = []
     seen = set()
@@ -141,7 +163,10 @@ def normalize_by_continuity(raw_value, raw_unit, previous_kwh, default_unit=None
     scored = []
     for label, value in unique:
         delta = value - previous_kwh
-        score = delta if delta >= 0 else abs(delta) * 1000 + 1_000_000_000
+        if delta >= 0:
+            score = delta
+        else:
+            score = abs(delta) * 1000 + 1_000_000_000
         scored.append((score, label, value))
 
     scored.sort(key=lambda x: x[0])
@@ -157,21 +182,6 @@ def normalize_by_continuity(raw_value, raw_unit, previous_kwh, default_unit=None
     return round(chosen_value, 3), flags
 
 
-def get_col(row, *names):
-    for name in names:
-        if name in row:
-            return row.get(name)
-    normalized = {
-        str(k).strip().lower().replace(" ", "").replace("_", ""): v
-        for k, v in row.items()
-    }
-    for name in names:
-        key = str(name).strip().lower().replace(" ", "").replace("_", "")
-        if key in normalized:
-            return normalized[key]
-    return ""
-
-
 def load_master():
     meter_master = read_csv(METER_MASTER_FILE)
     department_allocations = read_csv(DEPARTMENT_ALLOCATIONS_FILE)
@@ -183,33 +193,46 @@ def load_master():
         if meter_id:
             meter_by_id[meter_id] = row
 
-    source_allocations = building_allocations if building_allocations else department_allocations
-    allocations_by_meter = {}
+    def build_alloc_map(rows):
+        out = {}
+        used_count = 0
+        for row in rows:
+            meter_id = str(get_col(row, "meter_id", "Meter ID", "มิเตอร์", "รหัสมิเตอร์")).strip()
+            department = str(get_col(row, "department", "หน่วยงาน", "ฝ่าย")).strip()
 
-    for row in source_allocations:
-        meter_id = str(get_col(row, "meter_id", "Meter ID", "มิเตอร์", "รหัสมิเตอร์")).strip()
-        department = str(get_col(row, "department", "หน่วยงาน", "ฝ่าย")).strip()
+            # User rule: blank department rows are ignored.
+            if meter_id == "" or department == "":
+                continue
 
-        # User rule: blank department rows are ignored.
-        if meter_id == "" or department == "":
-            continue
+            ratio = to_float(get_col(row, "allocation_ratio", "ratio", "สัดส่วน"))
+            if ratio is None:
+                pct = to_float(get_col(row, "allocation_percent", "percent", "%"))
+                ratio = pct / 100 if pct is not None else 0
 
-        ratio = to_float(get_col(row, "allocation_ratio", "ratio", "สัดส่วน"))
-        if ratio is None:
-            pct = to_float(get_col(row, "allocation_percent", "percent", "%"))
-            ratio = pct / 100 if pct is not None else 0
+            if ratio is None or ratio <= 0:
+                continue
 
-        if ratio is None or ratio <= 0:
-            continue
+            out.setdefault(meter_id, []).append({
+                **row,
+                "meter_id": meter_id,
+                "department": department,
+                "allocation_ratio": ratio,
+            })
+            used_count += 1
+        return out, used_count
 
-        allocations_by_meter.setdefault(meter_id, []).append({
-            **row,
-            "meter_id": meter_id,
-            "department": department,
-            "allocation_ratio": ratio,
-        })
+    building_alloc_map, building_used = build_alloc_map(building_allocations)
+    old_alloc_map, old_used = build_alloc_map(department_allocations)
 
-    return meter_master, source_allocations, meter_by_id, allocations_by_meter
+    # Use building allocation when it contains rows for the meter.
+    # Fallback per-meter to old allocation to avoid zero dashboard if building map is incomplete.
+    allocations_by_meter = dict(old_alloc_map)
+    for meter_id, rows in building_alloc_map.items():
+        allocations_by_meter[meter_id] = rows
+
+    allocation_source = building_allocations if building_used > 0 else department_allocations
+
+    return meter_master, allocation_source, meter_by_id, allocations_by_meter, building_used, old_used
 
 
 def collect_form_readings(meter_by_id, validation):
@@ -219,6 +242,7 @@ def collect_form_readings(meter_by_id, validation):
 
     for form_path in form_files:
         rows = read_csv(form_path)
+
         for row_no, row in enumerate(rows, start=2):
             meter_id = str(row.get("meter_id", "")).strip()
             if meter_id == "":
@@ -306,13 +330,16 @@ def calculate_usage(raw_readings, meter_by_id):
         for row in rows:
             manual_reset = is_yes(row.get("reset_flag"))
 
-            normalized_kwh, flags = normalize_by_continuity(
-                raw_value=row["raw_reading"],
-                raw_unit=row.get("raw_unit", ""),
-                previous_kwh=previous_kwh,
-                default_unit=default_unit,
-                reset_flag=manual_reset,
-            )
+            if manual_reset:
+                normalized_kwh = round(declared_to_kwh(row["raw_reading"], row.get("raw_unit", ""), default_unit), 3)
+                flags = ["METER_RESET_MANUAL_DECLARED_VALUE_KEPT"]
+            else:
+                normalized_kwh, flags = normalize_by_continuity(
+                    raw_value=row["raw_reading"],
+                    raw_unit=row.get("raw_unit", ""),
+                    previous_kwh=previous_kwh,
+                    default_unit=default_unit,
+                )
 
             subb_code = str(row.get("subb_code", "")).strip()
             is_main_meter = subb_code in MAIN_METER_CODES
@@ -329,24 +356,14 @@ def calculate_usage(raw_readings, meter_by_id):
                 raw_delta = normalized_kwh - previous_kwh
 
                 if manual_reset:
-                    # User rule: treat previous as 0 for this week.
                     usage_kwh = normalized_kwh
                     week_flags.append("METER_RESET_MANUAL_PREVIOUS_TREATED_AS_ZERO")
-
+                elif "METER_RESET_AUTO_DECLARED_VALUE_KEPT" in flags:
+                    usage_kwh = normalized_kwh
+                    week_flags.append("METER_RESET_AUTO_PREVIOUS_TREATED_AS_ZERO")
                 elif normalized_kwh < previous_kwh:
-                    ratio = previous_kwh / max(normalized_kwh, 1)
-
-                    if ratio >= AUTO_RESET_RATIO_THRESHOLD:
-                        # User rule: for large adjacent-week reset only,
-                        # treat previous as 0, so usage = current.
-                        usage_kwh = normalized_kwh
-                        week_flags.append("METER_RESET_AUTO_PREVIOUS_TREATED_AS_ZERO")
-                    else:
-                        # Do not touch normal/nearby negative cases.
-                        # Keep them out of totals and make them visible.
-                        usage_kwh = 0
-                        week_flags.append("NEGATIVE_DELTA_NOT_RESET_USAGE_ZERO")
-
+                    usage_kwh = 0
+                    week_flags.append("NEGATIVE_DELTA_NOT_RESET_USAGE_ZERO")
                 else:
                     usage_kwh = normalized_kwh - previous_kwh
 
@@ -379,7 +396,7 @@ def calculate_usage(raw_readings, meter_by_id):
                     "flags": sorted(set(week_flags)),
                 })
 
-                if usage_kwh >= 0:
+                if usage_kwh > 0:
                     recent_deltas.append(usage_kwh)
 
             previous_kwh = normalized_kwh
@@ -453,7 +470,7 @@ def build_monthly_by_department(department_weekly):
 def build():
     validation = {"errors": [], "warnings": [], "stats": {}}
 
-    meter_master, allocation_source, meter_by_id, allocations_by_meter = load_master()
+    meter_master, allocation_source, meter_by_id, allocations_by_meter, building_alloc_rows, old_alloc_rows = load_master()
     raw_readings, form_files = collect_form_readings(meter_by_id, validation)
     normalized_readings, weekly_consumption = calculate_usage(raw_readings, meter_by_id)
     department_weekly = allocate_to_department(weekly_consumption, allocations_by_meter, validation)
@@ -487,6 +504,8 @@ def build():
         "weekly_consumption_rows": len(weekly_consumption),
         "department_weekly_rows": len(department_weekly),
         "allocation_rows_used": sum(len(v) for v in allocations_by_meter.values()),
+        "building_allocation_rows_used": building_alloc_rows,
+        "fallback_allocation_rows_available": old_alloc_rows,
         "main_meter_codes": sorted(MAIN_METER_CODES),
         "form_files_read": len(form_files),
         "auto_reset_ratio_threshold": AUTO_RESET_RATIO_THRESHOLD,
@@ -495,15 +514,19 @@ def build():
     return {
         "meta": {
             "site": "กฟผ. สำนักงานไทรน้อย",
-            "version": "energy-auto-db-reset-support-v8",
+            "version": "energy-auto-db-working-base-plus-narrow-reset-v9",
             "base_unit": "kWh",
             "main_meter_codes": sorted(MAIN_METER_CODES),
             "generated_at": datetime.now().isoformat(timespec="seconds"),
             "reset_logic": (
-                "Only for large adjacent-week reset: previous/current ratio >= "
-                f"{AUTO_RESET_RATIO_THRESHOLD}. Then previous is treated as 0 and usage=current."
+                "Working-base logic plus narrow reset only. "
+                "If declared current collapses from previous by ratio >= "
+                f"{AUTO_RESET_RATIO_THRESHOLD}, previous is treated as 0 and usage=current."
             ),
-            "allocation_logic": "Only allocation rows with department are used. kWh = weekly_usage * allocation_ratio.",
+            "allocation_logic": (
+                "Use building allocation per meter when available; fallback to original allocation per meter. "
+                "Only rows with department are used. kWh = weekly_usage * allocation_ratio."
+            ),
         },
         "departments": DEPARTMENTS,
         "meters": meter_master,
