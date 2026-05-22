@@ -8,7 +8,7 @@
       "Main",
       "SCB21"
     ],
-    "generated_at": "2026-05-22T07:44:46",
+    "generated_at": "2026-05-22T07:46:06",
     "reset_logic": "Only for large adjacent-week reset: previous/current ratio >= 100. Then previous is treated as 0 and usage=current.",
     "allocation_logic": "Only allocation rows with department are used. kWh = weekly_usage * allocation_ratio."
   },
