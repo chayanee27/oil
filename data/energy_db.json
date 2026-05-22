@@ -4060,6 +4060,2753 @@
       "is_main_meter": false
     }
   ],
+  "department_weekly": [
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "B.0001__FL01__MDB",
+      "building_name": "บ.0001 อาคาร แฟลต อบค.",
+      "b_code": "B.0001",
+      "kwh": 5.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "B.0001__FL01__MDB",
+      "building_name": "บ.0001 อาคาร แฟลต อบค.",
+      "b_code": "B.0001",
+      "kwh": 2.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "B.0001__FL01__MDB",
+      "building_name": "บ.0001 อาคาร แฟลต อบค.",
+      "b_code": "B.0001",
+      "kwh": 3.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB",
+      "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
+      "b_code": "D.0015",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 235.04
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 91.73
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 166.2
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0017__FL01__MDB",
+      "building_name": "ต.0017 อาคาร โรงอาหาร",
+      "b_code": "D.0017",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 8511.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 2652.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 4817.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0019__FL01__MDB",
+      "building_name": "ต.0019 อาคารนันทนาการพร้อมอาคารจอดรถ",
+      "b_code": "D.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0025__FL01__MDB",
+      "building_name": "ต.0025 อาคารอเนกประสงค์",
+      "b_code": "D.0025",
+      "kwh": 784.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0025__FL01__MDB",
+      "building_name": "ต.0025 อาคารอเนกประสงค์",
+      "b_code": "D.0025",
+      "kwh": 226.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0025__FL01__MDB",
+      "building_name": "ต.0025 อาคารอเนกประสงค์",
+      "b_code": "D.0025",
+      "kwh": 565.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0026__FL01__MDB",
+      "building_name": "ต.0026 อาคารระบบประปา",
+      "b_code": "D.0026",
+      "kwh": 191.06
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0026__FL01__MDB",
+      "building_name": "ต.0026 อาคารระบบประปา",
+      "b_code": "D.0026",
+      "kwh": 69.54
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "D.0026__FL01__MDB",
+      "building_name": "ต.0026 อาคารระบบประปา",
+      "b_code": "D.0026",
+      "kwh": 141.64
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อหข.",
+      "meter_id": "D.0031__FL01__MDB",
+      "building_name": "ต.0031 อาคารโรงอาหาร",
+      "b_code": "D.0031",
+      "kwh": 344.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อหข.",
+      "meter_id": "D.0031__FL01__MDB",
+      "building_name": "ต.0031 อาคารโรงอาหาร",
+      "b_code": "D.0031",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อหข.",
+      "meter_id": "D.0031__FL01__MDB",
+      "building_name": "ต.0031 อาคารโรงอาหาร",
+      "b_code": "D.0031",
+      "kwh": 155.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อหข.",
+      "meter_id": "D.0031__FL01__MDB",
+      "building_name": "ต.0031 อาคารโรงอาหาร",
+      "b_code": "D.0031",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อหข.",
+      "meter_id": "D.0031__FL01__MDB",
+      "building_name": "ต.0031 อาคารโรงอาหาร",
+      "b_code": "D.0031",
+      "kwh": 224.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อหข.",
+      "meter_id": "D.0031__FL01__MDB",
+      "building_name": "ต.0031 อาคารโรงอาหาร",
+      "b_code": "D.0031",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อรอ.",
+      "meter_id": "T.0006__FL01__MDB",
+      "building_name": "ท.0006 อาคาร บริหารอะไหล่กังหันก๊าซ1 อรอ.",
+      "b_code": "T.0006",
+      "kwh": 1449.471
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อรอ.",
+      "meter_id": "T.0006__FL01__MDB",
+      "building_name": "ท.0006 อาคาร บริหารอะไหล่กังหันก๊าซ1 อรอ.",
+      "b_code": "T.0006",
+      "kwh": 825.21
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อรอ.",
+      "meter_id": "T.0006__FL01__MDB",
+      "building_name": "ท.0006 อาคาร บริหารอะไหล่กังหันก๊าซ1 อรอ.",
+      "b_code": "T.0006",
+      "kwh": 1284.79
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0007__FL01__MDB",
+      "building_name": "ท.0007 อาคาร กองบริหาร ชธธ.",
+      "b_code": "T.0007",
+      "kwh": 1666.58
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0007__FL01__MDB",
+      "building_name": "ท.0007 อาคาร กองบริหาร ชธธ.",
+      "b_code": "T.0007",
+      "kwh": 608.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0007__FL01__MDB",
+      "building_name": "ท.0007 อาคาร กองบริหาร ชธธ.",
+      "b_code": "T.0007",
+      "kwh": 1112.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อรอ.",
+      "meter_id": "T.0008__FL01__MDB",
+      "building_name": "ท.0008 อาคาร บริหารอะไหล่กังหันก๊าซ2 อรอ.",
+      "b_code": "T.0008",
+      "kwh": 0.285
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อรอ.",
+      "meter_id": "T.0010__FL01__MDB",
+      "building_name": "ท.0010 อาคาร ทดสอบเครื่องกล อรอ.",
+      "b_code": "T.0010",
+      "kwh": 1.861
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อรอ.",
+      "meter_id": "T.0010__FL01__MDB",
+      "building_name": "ท.0010 อาคาร ทดสอบเครื่องกล อรอ.",
+      "b_code": "T.0010",
+      "kwh": 0.812
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อรอ.",
+      "meter_id": "T.0010__FL01__MDB",
+      "building_name": "ท.0010 อาคาร ทดสอบเครื่องกล อรอ.",
+      "b_code": "T.0010",
+      "kwh": 1.305
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0011__FL01__MDB",
+      "building_name": "ท.0011 อาคาร เครื่องมือ อบค.",
+      "b_code": "T.0011",
+      "kwh": 516.85
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0012__FL01__MDB",
+      "building_name": "ท.0012 อาคาร บำรุงรักษาเครื่องกล อบค.",
+      "b_code": "T.0012",
+      "kwh": 5951.33
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0012__FL01__MDB",
+      "building_name": "ท.0012 อาคาร บำรุงรักษาเครื่องกล อบค.",
+      "b_code": "T.0012",
+      "kwh": 2636.9
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0012__FL01__MDB",
+      "building_name": "ท.0012 อาคาร บำรุงรักษาเครื่องกล อบค.",
+      "b_code": "T.0012",
+      "kwh": 4122.85
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0014__FL01__MDB",
+      "building_name": "ท.0014 อาคาร ปฏิบัติการฝ่ายบำรุงรักษาไฟฟ้าและโยธา",
+      "b_code": "T.0014",
+      "kwh": 1584.6
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบย.",
+      "meter_id": "T.0014__FL01__MDB",
+      "building_name": "ท.0014 อาคาร ปฏิบัติการฝ่ายบำรุงรักษาไฟฟ้าและโยธา",
+      "b_code": "T.0014",
+      "kwh": 83.4
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0014__FL01__MDB",
+      "building_name": "ท.0014 อาคาร ปฏิบัติการฝ่ายบำรุงรักษาไฟฟ้าและโยธา",
+      "b_code": "T.0014",
+      "kwh": 668.8
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบย.",
+      "meter_id": "T.0014__FL01__MDB",
+      "building_name": "ท.0014 อาคาร ปฏิบัติการฝ่ายบำรุงรักษาไฟฟ้าและโยธา",
+      "b_code": "T.0014",
+      "kwh": 35.2
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0014__FL01__MDB",
+      "building_name": "ท.0014 อาคาร ปฏิบัติการฝ่ายบำรุงรักษาไฟฟ้าและโยธา",
+      "b_code": "T.0014",
+      "kwh": 1157.1
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบย.",
+      "meter_id": "T.0014__FL01__MDB",
+      "building_name": "ท.0014 อาคาร ปฏิบัติการฝ่ายบำรุงรักษาไฟฟ้าและโยธา",
+      "b_code": "T.0014",
+      "kwh": 60.9
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อคม.",
+      "meter_id": "T.0015__FL01__MDB",
+      "building_name": "ท.0015 อาคาศูนย์ปฏิบัติการทดสอบเคมี 2",
+      "b_code": "T.0015",
+      "kwh": 15248.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อคม.",
+      "meter_id": "T.0015__FL01__MDB",
+      "building_name": "ท.0015 อาคาศูนย์ปฏิบัติการทดสอบเคมี 2",
+      "b_code": "T.0015",
+      "kwh": 8227.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อคม.",
+      "meter_id": "T.0015__FL01__MDB",
+      "building_name": "ท.0015 อาคาศูนย์ปฏิบัติการทดสอบเคมี 2",
+      "b_code": "T.0015",
+      "kwh": 11747.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0017__FL01__MDB",
+      "building_name": "ท.0017 อาคาร ศูนย์พัฒนางานเชื่อมและทดสอบฝีมือช่างเชื่อมสากล",
+      "b_code": "T.0017",
+      "kwh": 1415.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0017__FL01__MDB",
+      "building_name": "ท.0017 อาคาร ศูนย์พัฒนางานเชื่อมและทดสอบฝีมือช่างเชื่อมสากล",
+      "b_code": "T.0017",
+      "kwh": 762.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0017__FL01__MDB",
+      "building_name": "ท.0017 อาคาร ศูนย์พัฒนางานเชื่อมและทดสอบฝีมือช่างเชื่อมสากล",
+      "b_code": "T.0017",
+      "kwh": 656.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0018__FL01__MDB",
+      "building_name": "ท.0018 อาคารศูนย์มาตรวิทยาและสอบเทียบเครื่องมือวัด",
+      "b_code": "T.0018",
+      "kwh": 2577940.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0018__FL01__MDB",
+      "building_name": "ท.0018 อาคารศูนย์มาตรวิทยาและสอบเทียบเครื่องมือวัด",
+      "b_code": "T.0018",
+      "kwh": 5582.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 4341.645
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 26049.87
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 2170.822
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 4341.645
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 2170.822
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 4341.645
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 26049.87
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 26049.87
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 13024.935
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 4341.645
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 13024.935
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 4341.645
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 26049.87
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 1790.978
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 10745.87
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 895.489
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 1790.978
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 895.489
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 1790.978
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 10745.87
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 10745.87
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 5372.935
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 1790.978
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 5372.935
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 1790.978
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 10745.87
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 2978.08
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 17868.48
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 1489.039
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "สก.ชธธ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 2978.08
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 1489.04
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 2978.08
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 17868.48
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 17868.48
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 8934.24
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบฟ.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 2978.08
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 8934.24
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อคม.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 2978.08
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 17868.48
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบย.",
+      "meter_id": "T.0019__FL01__Main",
+      "building_name": "ท.0019 ชั้นที่ 1 อาคารทำการ ชธธ.",
+      "b_code": "T.0019",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0022__FL01__MDB",
+      "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
+      "b_code": "T.0022",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0022__FL01__MDB",
+      "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
+      "b_code": "T.0022",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0022__FL01__MDB",
+      "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
+      "b_code": "T.0022",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อบค.",
+      "meter_id": "T.0023__FL01__MDB",
+      "building_name": "ท.0023 อาคาร Construction Shop อบค.",
+      "b_code": "T.0023",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อบค.",
+      "meter_id": "T.0023__FL01__MDB",
+      "building_name": "ท.0023 อาคาร Construction Shop อบค.",
+      "b_code": "T.0023",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อบค.",
+      "meter_id": "T.0023__FL01__MDB",
+      "building_name": "ท.0023 อาคาร Construction Shop อบค.",
+      "b_code": "T.0023",
+      "kwh": 0.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB",
+      "building_name": "ท.0025 อาคารเก็บอุปกรณ์ อสร.",
+      "b_code": "T.0025",
+      "kwh": 23.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB",
+      "building_name": "ท.0025 อาคารเก็บอุปกรณ์ อสร.",
+      "b_code": "T.0025",
+      "kwh": 6.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อสร.",
+      "meter_id": "T.0025__FL01__MDB",
+      "building_name": "ท.0025 อาคารเก็บอุปกรณ์ อสร.",
+      "b_code": "T.0025",
+      "kwh": 15.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อหข.",
+      "meter_id": "T.0026__FL01__MDB",
+      "building_name": "ท.0026 อาคารบริหารการขนส่ง",
+      "b_code": "T.0026",
+      "kwh": 3690.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อหข.",
+      "meter_id": "T.0026__FL01__MDB",
+      "building_name": "ท.0026 อาคารบริหารการขนส่ง",
+      "b_code": "T.0026",
+      "kwh": 1540.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อหข.",
+      "meter_id": "T.0026__FL01__MDB",
+      "building_name": "ท.0026 อาคารบริหารการขนส่ง",
+      "b_code": "T.0026",
+      "kwh": 2460.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อหข.",
+      "meter_id": "T.0027__FL01__MDB",
+      "building_name": "ท.0027 อาคารปฏิบัติการกองขนส่ง",
+      "b_code": "T.0027",
+      "kwh": 1660.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อหข.",
+      "meter_id": "T.0027__FL01__MDB",
+      "building_name": "ท.0027 อาคารปฏิบัติการกองขนส่ง",
+      "b_code": "T.0027",
+      "kwh": 510.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อหข.",
+      "meter_id": "T.0027__FL01__MDB",
+      "building_name": "ท.0027 อาคารปฏิบัติการกองขนส่ง",
+      "b_code": "T.0027",
+      "kwh": 990.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อหข.",
+      "meter_id": "T.0028__FL01__MDB",
+      "building_name": "ท.0028 อาคารกองซ่อมเครื่องจักรกลและยานพาหนะ 1",
+      "b_code": "T.0028",
+      "kwh": 1830.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อหข.",
+      "meter_id": "T.0028__FL01__MDB",
+      "building_name": "ท.0028 อาคารกองซ่อมเครื่องจักรกลและยานพาหนะ 1",
+      "b_code": "T.0028",
+      "kwh": 650.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อหข.",
+      "meter_id": "T.0028__FL01__MDB",
+      "building_name": "ท.0028 อาคารกองซ่อมเครื่องจักรกลและยานพาหนะ 1",
+      "b_code": "T.0028",
+      "kwh": 1210.0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "week_id": "2026-W18",
+      "department": "อหข.",
+      "meter_id": "T.0029__FL01__MDB",
+      "building_name": "ท.0029 อาคารกองซ่อมเครื่องจักรกลและยานพาหนะ 2",
+      "b_code": "T.0029",
+      "kwh": 1600.0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "week_id": "2026-W19",
+      "department": "อหข.",
+      "meter_id": "T.0029__FL01__MDB",
+      "building_name": "ท.0029 อาคารกองซ่อมเครื่องจักรกลและยานพาหนะ 2",
+      "b_code": "T.0029",
+      "kwh": 870.0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "week_id": "2026-W20",
+      "department": "อหข.",
+      "meter_id": "T.0029__FL01__MDB",
+      "building_name": "ท.0029 อาคารกองซ่อมเครื่องจักรกลและยานพาหนะ 2",
+      "b_code": "T.0029",
+      "kwh": 1590.0
+    }
+  ],
   "validation": {
     "errors": [
       {
@@ -5253,6 +8000,7 @@
       "meters": 101,
       "weekly_forms_rows_used": 369,
       "normalized_readings": 369,
+      "department_weekly_rows": 305,
       "main_meter_codes": [
         "MDB",
         "Main",

@@ -1191,6 +1191,7 @@
     "meters": 101,
     "weekly_forms_rows_used": 369,
     "normalized_readings": 369,
+    "department_weekly_rows": 305,
     "main_meter_codes": [
       "MDB",
       "Main",
