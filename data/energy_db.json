@@ -8,7 +8,7 @@
       "Main",
       "SCB21"
     ],
-    "generated_at": "2026-05-25T08:18:14",
+    "generated_at": "2026-05-25T08:20:06",
     "reset_logic": "Working-base logic plus narrow reset only. If declared current collapses from previous by ratio >= 100, previous is treated as 0 and usage=current.",
     "missing_reading_logic": "If raw_reading is blank or 0, it is skipped as not recorded; previous valid reading remains the baseline.",
     "unchanged_reading_logic": "If current normalized reading equals previous normalized reading, weekly usage is forced to 0.",
@@ -32,8 +32,8 @@
       "subb_code": "Main",
       "building_name": "มิเตอร์รวมทั้งหมด",
       "default_unit": "MWh",
-      "is_main": "False",
-      "show_on_dashboard": "False",
+      "is_main": "True",
+      "show_on_dashboard": "True",
       "source_sheet": "MeterData69 RAW"
     },
     {
