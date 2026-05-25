@@ -58,37 +58,55 @@ function deptRows(){return (DATA.department_weekly||[]).filter(inFilter);}
 function deptTotal(dept){return deptRows().filter(r=>r.department===dept).reduce((a,b)=>a+(+b.kwh||0),0)}
 function allTotal(){return DEPT.reduce((a,d)=>a+deptTotal(d),0)}
 function buildingRows(){
-  const keyOf = r => r.meter_id || (r.building_name || r.b_code || "");
   const nameOf = r => r.building_name || r.b_code || r.meter_id || "ไม่ระบุอาคาร";
+
+  // Guard: ตัดค่า anomaly ที่ backend flag ว่าผิดปกติออกจากกราฟ Top อาคารเท่านั้น
+  // เพื่อไม่ให้ค่า reading/reset ผิดพลาดตัวเดียวทำให้กราฟโดดเป็นหลักสิบล้าน
+  const isBadSpike = r => {
+    const flags = r.flags || r.source_flags || [];
+    return Array.isArray(flags) && flags.some(f =>
+      String(f).includes("SPIKE_SUSPECT") ||
+      String(f).includes("NEGATIVE_DELTA_NOT_RESET")
+    );
+  };
 
   const map = {};
 
   if(sD === "all"){
-    // รวมทั้งสำนักงาน: ใช้ usage จริงของอาคาร × 1
-    // แต่เอาเฉพาะอาคารที่มี allocation ratio > 0 ในตาราง mapping เดิมเท่านั้น
-    const eligible = new Set((DATA.department_weekly || [])
+    // รวมทั้งสำนักงาน:
+    // - ใช้ค่า usage จริงของอาคารจาก weekly_consumption
+    // - บังคับ ratio = 1
+    // - ใช้เฉพาะอาคารที่มี ratio > 0 อยู่ใน mapping
+    // - ตัดอาคารชื่อซ้ำโดย group ด้วย building_name ไม่ใช่ meter_id
+    const eligibleMeters = new Set((DATA.department_weekly || [])
       .filter(r => (+r.allocation_ratio || 0) > 0)
       .map(r => r.meter_id));
 
     (DATA.weekly_consumption || [])
       .filter(inFilter)
       .filter(r => r.is_main_meter !== false)
-      .filter(r => eligible.has(r.meter_id))
+      .filter(r => eligibleMeters.has(r.meter_id))
+      .filter(r => !isBadSpike(r))
       .forEach(r => {
-        const k = keyOf(r);
-        if(!map[k]) map[k] = {name:nameOf(r), kwh:0};
-        map[k].kwh += +r.kwh || 0;
+        const name = nameOf(r);
+        if(!map[name]) map[name] = {name, kwh:0};
+        map[name].kwh += +r.kwh || 0; // ratio = 1
       });
+
   } else {
-    // เลือกฝ่าย: ใช้ค่าที่คูณ ratio ของฝ่ายนั้นแล้ว
-    // department_weekly.kwh = weekly_usage × allocation_ratio ของ row mapping นั้น
+    // เลือกฝ่าย:
+    // - ใช้ค่าที่คูณ ratio ของฝ่ายนั้นแล้วจาก department_weekly
+    // - group ด้วย building_name เพื่อเรียงลำดับภายในฝ่าย
+    // - ไม่เอา raw usage ทั้งก้อนมาแสดง
     (DATA.department_weekly || [])
       .filter(inFilter)
       .filter(r => r.department === sD)
+      .filter(r => (+r.allocation_ratio || 0) > 0)
+      .filter(r => !isBadSpike(r))
       .forEach(r => {
-        const k = keyOf(r);
-        if(!map[k]) map[k] = {name:nameOf(r), kwh:0};
-        map[k].kwh += +r.kwh || 0;
+        const name = nameOf(r);
+        if(!map[name]) map[name] = {name, kwh:0};
+        map[name].kwh += +r.kwh || 0; // usage × ratio ของฝ่ายที่เลือก
       });
   }
 
