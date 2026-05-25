@@ -59,60 +59,89 @@ function deptTotal(dept){return deptRows().filter(r=>r.department===dept).reduce
 function allTotal(){return DEPT.reduce((a,d)=>a+deptTotal(d),0)}
 function buildingRows(){
   const nameOf = r => r.building_name || r.b_code || r.meter_id || "ไม่ระบุอาคาร";
+  const dateInFilter = d => ymdYear(d)===sY && (sM==="all" || ymdMonth(d)===(+sM));
 
-  // Guard: ตัดค่า anomaly ที่ backend flag ว่าผิดปกติออกจากกราฟ Top อาคารเท่านั้น
-  // เพื่อไม่ให้ค่า reading/reset ผิดพลาดตัวเดียวทำให้กราฟโดดเป็นหลักสิบล้าน
   const isBadSpike = r => {
     const flags = r.flags || r.source_flags || [];
-    const flagBad = Array.isArray(flags) && flags.some(f =>
+    return Array.isArray(flags) && flags.some(f =>
       String(f).includes("SPIKE_SUSPECT") ||
       String(f).includes("NEGATIVE_DELTA_NOT_RESET")
     );
-
-    // กันเคสที่ backend รุ่นเก่าหรือข้อมูลเก่าทำให้ usage = current reading ทั้งก้อน
-    // เช่น ต.0015: previous=0/ว่าง, current=26864, kwh=26864
-    // สำหรับกราฟ Top อาคารรวม ถือว่าเป็น baseline/not-recorded ไม่ใช่ consumption จริง
-    const prev = +(r.previous_normalized_kwh || 0);
-    const curr = +(r.current_normalized_kwh || 0);
-    const kwh = +(r.kwh || 0);
-    const fullCurrentAsUsage = prev === 0 && curr > 0 && Math.abs(kwh - curr) < 0.000001;
-
-    return flagBad || fullCurrentAsUsage;
   };
 
   const map = {};
 
   if(sD === "all"){
     // รวมทั้งสำนักงาน:
-    // - ใช้ค่า usage จริงของอาคารจาก weekly_consumption
-    // - บังคับ ratio = 1
-    // - ใช้เฉพาะอาคารที่มี ratio > 0 อยู่ใน mapping
-    // - ตัดอาคารชื่อซ้ำโดย group ด้วย building_name ไม่ใช่ meter_id
-    // - เพิ่ม sanity guard กันค่า reading/spike ที่ backend ยังไม่ได้ flag เช่น 26 ล้าน kWh
+    // คำนวณ usage ใหม่จาก normalized_readings ใน browser เพื่อกันเคส backend/DB เก่าที่เอา baseline มาเป็น usage
+    // เช่น ต.0015 reading = 26864 เท่ากันทุกสัปดาห์ ต้องได้ 0 ไม่ใช่ 26864
+    // สูตร:
+    // - ใช้เฉพาะ meter ที่มี allocation_ratio > 0 ใน mapping
+    // - ratio บังคับ = 1
+    // - group ด้วย building_name เพื่อตัดอาคารชื่อซ้ำ
+    // - current == previous => usage 0
+    // - current < previous และ previous/current >= 100 => reset, usage = current
+    // - current < previous กรณีอื่น => usage 0
     const eligibleMeters = new Set((DATA.department_weekly || [])
       .filter(r => (+r.allocation_ratio || 0) > 0)
       .map(r => r.meter_id));
 
-    const deptGrand = allTotal();
-    const saneUpperLimit = Math.max(deptGrand * 2, 500000); // กันค่าหลุด แต่ยังเผื่ออาคารใหญ่
-
-    (DATA.weekly_consumption || [])
-      .filter(inFilter)
+    const rowsByMeter = {};
+    (DATA.normalized_readings || [])
       .filter(r => r.is_main_meter !== false)
       .filter(r => eligibleMeters.has(r.meter_id))
-      .filter(r => !isBadSpike(r))
-      .filter(r => (+r.kwh || 0) <= saneUpperLimit)
+      .filter(r => (+r.normalized_kwh || 0) > 0)
       .forEach(r => {
-        const name = nameOf(r);
-        if(!map[name]) map[name] = {name, kwh:0};
-        map[name].kwh += +r.kwh || 0; // ratio = 1
+        if(!rowsByMeter[r.meter_id]) rowsByMeter[r.meter_id] = [];
+        rowsByMeter[r.meter_id].push(r);
       });
+
+    Object.values(rowsByMeter).forEach(rows => {
+      rows.sort((a,b) => String(a.reading_date).localeCompare(String(b.reading_date)));
+
+      for(let i=1; i<rows.length; i++){
+        const prev = +rows[i-1].normalized_kwh || 0;
+        const curr = +rows[i].normalized_kwh || 0;
+        const currentDate = rows[i].reading_date;
+
+        if(!dateInFilter(currentDate)) continue;
+
+        let usage = 0;
+
+        if(curr === prev){
+          usage = 0;
+        }else if(curr < prev){
+          const ratio = prev / Math.max(curr, 1);
+          usage = ratio >= 100 ? curr : 0;
+        }else{
+          usage = curr - prev;
+        }
+
+        if(usage <= 0) continue;
+
+        const name = nameOf(rows[i]);
+        if(!map[name]) map[name] = {name, kwh:0};
+        map[name].kwh += usage; // ratio = 1
+      }
+    });
+
+    // Fallback เฉพาะกรณีไม่มี normalized_readings เลย
+    if(Object.keys(map).length === 0 && (DATA.normalized_readings || []).length === 0){
+      (DATA.weekly_consumption || [])
+        .filter(inFilter)
+        .filter(r => r.is_main_meter !== false)
+        .filter(r => eligibleMeters.has(r.meter_id))
+        .filter(r => !isBadSpike(r))
+        .forEach(r => {
+          const name = nameOf(r);
+          if(!map[name]) map[name] = {name, kwh:0};
+          map[name].kwh += +r.kwh || 0;
+        });
+    }
 
   } else {
     // เลือกฝ่าย:
-    // - ใช้ค่าที่คูณ ratio ของฝ่ายนั้นแล้วจาก department_weekly
-    // - group ด้วย building_name เพื่อเรียงลำดับภายในฝ่าย
-    // - ไม่เอา raw usage ทั้งก้อนมาแสดง
+    // ใช้ department_weekly.kwh = usage × allocation_ratio ของฝ่ายนั้น
     (DATA.department_weekly || [])
       .filter(inFilter)
       .filter(r => r.department === sD)
@@ -121,7 +150,7 @@ function buildingRows(){
       .forEach(r => {
         const name = nameOf(r);
         if(!map[name]) map[name] = {name, kwh:0};
-        map[name].kwh += +r.kwh || 0; // usage × ratio ของฝ่ายที่เลือก
+        map[name].kwh += +r.kwh || 0;
       });
   }
 
