@@ -64,10 +64,20 @@ function buildingRows(){
   // เพื่อไม่ให้ค่า reading/reset ผิดพลาดตัวเดียวทำให้กราฟโดดเป็นหลักสิบล้าน
   const isBadSpike = r => {
     const flags = r.flags || r.source_flags || [];
-    return Array.isArray(flags) && flags.some(f =>
+    const flagBad = Array.isArray(flags) && flags.some(f =>
       String(f).includes("SPIKE_SUSPECT") ||
       String(f).includes("NEGATIVE_DELTA_NOT_RESET")
     );
+
+    // กันเคสที่ backend รุ่นเก่าหรือข้อมูลเก่าทำให้ usage = current reading ทั้งก้อน
+    // เช่น ต.0015: previous=0/ว่าง, current=26864, kwh=26864
+    // สำหรับกราฟ Top อาคารรวม ถือว่าเป็น baseline/not-recorded ไม่ใช่ consumption จริง
+    const prev = +(r.previous_normalized_kwh || 0);
+    const curr = +(r.current_normalized_kwh || 0);
+    const kwh = +(r.kwh || 0);
+    const fullCurrentAsUsage = prev === 0 && curr > 0 && Math.abs(kwh - curr) < 0.000001;
+
+    return flagBad || fullCurrentAsUsage;
   };
 
   const map = {};
