@@ -78,15 +78,20 @@ function buildingRows(){
     // - บังคับ ratio = 1
     // - ใช้เฉพาะอาคารที่มี ratio > 0 อยู่ใน mapping
     // - ตัดอาคารชื่อซ้ำโดย group ด้วย building_name ไม่ใช่ meter_id
+    // - เพิ่ม sanity guard กันค่า reading/spike ที่ backend ยังไม่ได้ flag เช่น 26 ล้าน kWh
     const eligibleMeters = new Set((DATA.department_weekly || [])
       .filter(r => (+r.allocation_ratio || 0) > 0)
       .map(r => r.meter_id));
+
+    const deptGrand = allTotal();
+    const saneUpperLimit = Math.max(deptGrand * 2, 500000); // กันค่าหลุด แต่ยังเผื่ออาคารใหญ่
 
     (DATA.weekly_consumption || [])
       .filter(inFilter)
       .filter(r => r.is_main_meter !== false)
       .filter(r => eligibleMeters.has(r.meter_id))
       .filter(r => !isBadSpike(r))
+      .filter(r => (+r.kwh || 0) <= saneUpperLimit)
       .forEach(r => {
         const name = nameOf(r);
         if(!map[name]) map[name] = {name, kwh:0};
