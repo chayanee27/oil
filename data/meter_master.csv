@@ -87,7 +87,7 @@
 86,T.0019__FL09__PPAC_3,T.0019,FL09,PPAC 3,ท.0019 ชั้นที่ 9 อาคารทำการ ชธธ. แอร์รวม 3,kWh,False,False,MeterData69 RAW
 87,T.0019__FL09__BP,T.0019,FL09,BP,ท.0019 Booster Pump,kWh,False,False,MeterData69 RAW
 88,T.0019__FL09__PPL,T.0019,FL09,PPL,ท.0019 PPL (Lift),kWh,False,False,MeterData69 RAW
-89,T.0020__FL01__SCB_21,T.0020,FL01,SCB 21,ท.0020 อาคาร ศูนย์รับรองสมรรถนะงานเดิมเครื่องและบำรุงรักษา,kWh,False,False,MeterData69 RAW
+89,T.0020__FL01__SCB_21,T.0020,FL01,MDB,ท.0020 อาคาร ศูนย์รับรองสมรรถนะงานเดิมเครื่องและบำรุงรักษา,kWh,False,False,MeterData69 RAW
 90,T.0020__FL01__LP21,T.0020,FL01,LP21,ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 1,kWh,False,False,MeterData69 RAW
 91,T.0020__FL01__PP21,T.0020,FL01,PP21,ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 1,kWh,False,False,MeterData69 RAW
 92,T.0020__FL01__AP21,T.0020,FL01,AP21,ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 1,kWh,False,False,MeterData69 RAW
