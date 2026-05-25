@@ -494,6 +494,114 @@
       "warning": "METER_RESET_AUTO_DECLARED_VALUE_KEPT"
     },
     {
+      "week_end_date": "2026-01-09",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 26864.0,
+      "current_normalized_kwh": 26864.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-16",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 26864.0,
+      "current_normalized_kwh": 26864.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-23",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 26864.0,
+      "current_normalized_kwh": 26864.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-30",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 26864.0,
+      "current_normalized_kwh": 26864.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-06",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 26864.0,
+      "current_normalized_kwh": 26864.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-13",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 26864.0,
+      "current_normalized_kwh": 26864.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-20",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 26864.0,
+      "current_normalized_kwh": 26864.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-27",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 26864.0,
+      "current_normalized_kwh": 26864.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-06",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 26864.0,
+      "current_normalized_kwh": 26864.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-13",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 26864.0,
+      "current_normalized_kwh": 26864.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-20",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 26864.0,
+      "current_normalized_kwh": 26864.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-27",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 26864.0,
+      "current_normalized_kwh": 26864.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
       "week_end_date": "2026-04-03",
       "meter_id": "D.0015__FL01__MDB",
       "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED",
@@ -512,13 +620,31 @@
       "kwh": 26864.0
     },
     {
-      "week_end_date": "2026-05-08",
+      "week_end_date": "2026-04-17",
       "meter_id": "D.0015__FL01__MDB",
-      "warning": "NON_WEEKLY_GAP_14_DAYS",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
       "previous_normalized_kwh": 26864.0,
       "current_normalized_kwh": 26864.0,
       "reset_ratio": "",
-      "kwh": 0.0
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-24",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 26864.0,
+      "current_normalized_kwh": 26864.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "D.0015__FL01__MDB",
+      "warning": "NON_WEEKLY_GAP_14_DAYS,UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 26864.0,
+      "current_normalized_kwh": 26864.0,
+      "reset_ratio": "",
+      "kwh": 0
     },
     {
       "week_end_date": "2026-04-24",
@@ -530,22 +656,148 @@
       "kwh": 169.0
     },
     {
-      "week_end_date": "2026-03-13",
+      "week_end_date": "2026-01-09",
       "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "NON_WEEKLY_GAP_14_DAYS",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
-      "kwh": 0.0
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-16",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5760.0,
+      "current_normalized_kwh": 5760.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-23",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5760.0,
+      "current_normalized_kwh": 5760.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-30",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5760.0,
+      "current_normalized_kwh": 5760.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-06",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5760.0,
+      "current_normalized_kwh": 5760.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-13",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5760.0,
+      "current_normalized_kwh": 5760.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-20",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5760.0,
+      "current_normalized_kwh": 5760.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-27",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5760.0,
+      "current_normalized_kwh": 5760.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-13",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
+      "warning": "NON_WEEKLY_GAP_14_DAYS,UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5760.0,
+      "current_normalized_kwh": 5760.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-20",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5760.0,
+      "current_normalized_kwh": 5760.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-27",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5760.0,
+      "current_normalized_kwh": 5760.0,
+      "reset_ratio": "",
+      "kwh": 0
     },
     {
       "week_end_date": "2026-04-10",
       "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "NON_WEEKLY_GAP_14_DAYS",
+      "warning": "NON_WEEKLY_GAP_14_DAYS,UNCHANGED_READING_USAGE_ZERO",
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
-      "kwh": 0.0
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-17",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5760.0,
+      "current_normalized_kwh": 5760.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-24",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5760.0,
+      "current_normalized_kwh": 5760.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5760.0,
+      "current_normalized_kwh": 5760.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "D.0019__FL01__ร้านค้า_2",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5760.0,
+      "current_normalized_kwh": 5760.0,
+      "reset_ratio": "",
+      "kwh": 0
     },
     {
       "week_end_date": "2026-02-06",
@@ -638,6 +890,123 @@
       "kwh": 0.285
     },
     {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0019__FL08__AP8",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 61767.0,
+      "current_normalized_kwh": 61767.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0019__FL08__LP8",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 76071.62,
+      "current_normalized_kwh": 76071.62,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0019__FL08__PP81",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 49621.19,
+      "current_normalized_kwh": 49621.19,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0019__FL08__PP82",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5919.74,
+      "current_normalized_kwh": 5919.74,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0019__FL08__SCB_8",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 257336.72,
+      "current_normalized_kwh": 257336.72,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0019__FL09__AP9",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 64320.77,
+      "current_normalized_kwh": 64320.77,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0019__FL09__BP",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 11471.34,
+      "current_normalized_kwh": 11471.34,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0019__FL09__LP9",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 41054.29,
+      "current_normalized_kwh": 41054.29,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0019__FL09__PP91",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 26608.84,
+      "current_normalized_kwh": 26608.84,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0019__FL09__PP92",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 29142.88,
+      "current_normalized_kwh": 29142.88,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0019__FL09__PPAC_1",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 114270.83,
+      "current_normalized_kwh": 114270.83,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0019__FL09__PPAC_2",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 106277.59,
+      "current_normalized_kwh": 106277.59,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0019__FL09__PPAC_3",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 42676.02,
+      "current_normalized_kwh": 42676.02,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
       "week_end_date": "2026-02-06",
       "meter_id": "T.0019__FL09__PPD",
       "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN",
@@ -674,6 +1043,78 @@
       "kwh": 842.02
     },
     {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0019__FL09__PPD",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 251241.3,
+      "current_normalized_kwh": 251241.3,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0019__FL09__PPL",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 110848.6,
+      "current_normalized_kwh": 110848.6,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0019__FL09__SCB_9",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 393986.92,
+      "current_normalized_kwh": 393986.92,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0020__FL01__AP21",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 24032.84,
+      "current_normalized_kwh": 24032.84,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-09",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 29.63,
+      "current_normalized_kwh": 29.63,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-23",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 29.64,
+      "current_normalized_kwh": 29.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-30",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 29.64,
+      "current_normalized_kwh": 29.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-06",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 29.64,
+      "current_normalized_kwh": 29.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
       "week_end_date": "2026-02-20",
       "meter_id": "T.0020__FL01__AP22",
       "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED",
@@ -690,6 +1131,168 @@
       "current_normalized_kwh": 29.7,
       "reset_ratio": 998.653,
       "kwh": 29.7
+    },
+    {
+      "week_end_date": "2026-03-13",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 29.72,
+      "current_normalized_kwh": 29.72,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-10",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 29.79,
+      "current_normalized_kwh": 29.79,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-17",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 29.79,
+      "current_normalized_kwh": 29.79,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 29.79,
+      "current_normalized_kwh": 29.79,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 29.79,
+      "current_normalized_kwh": 29.79,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 29.79,
+      "current_normalized_kwh": 29.79,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "meter_id": "T.0020__FL01__AP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 29.79,
+      "current_normalized_kwh": 29.79,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-09",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 46.96,
+      "current_normalized_kwh": 46.96,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-16",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 46.96,
+      "current_normalized_kwh": 46.96,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-23",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 46.96,
+      "current_normalized_kwh": 46.96,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-06",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 46.97,
+      "current_normalized_kwh": 46.97,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-13",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 46.97,
+      "current_normalized_kwh": 46.97,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-20",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 46.97,
+      "current_normalized_kwh": 46.97,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-27",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 46.97,
+      "current_normalized_kwh": 46.97,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-06",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 46.97,
+      "current_normalized_kwh": 46.97,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-13",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 46.97,
+      "current_normalized_kwh": 46.97,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-20",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 46.97,
+      "current_normalized_kwh": 46.97,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-27",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 46.97,
+      "current_normalized_kwh": 46.97,
+      "reset_ratio": "",
+      "kwh": 0
     },
     {
       "week_end_date": "2026-04-10",
@@ -710,6 +1313,411 @@
       "kwh": 46.97
     },
     {
+      "week_end_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 46.97,
+      "current_normalized_kwh": 46.97,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 46.97,
+      "current_normalized_kwh": 46.97,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 46.97,
+      "current_normalized_kwh": 46.97,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "meter_id": "T.0020__FL01__AP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 46.97,
+      "current_normalized_kwh": 46.97,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0020__FL01__LP21",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 36839.98,
+      "current_normalized_kwh": 36839.98,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-09",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-16",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-23",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-30",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-06",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-13",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-20",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-27",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-06",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-13",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-20",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-27",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-03",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-10",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-17",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "meter_id": "T.0020__FL01__LP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 0.64,
+      "current_normalized_kwh": 0.64,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0020__FL01__PP21",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 52177.02,
+      "current_normalized_kwh": 52177.02,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-09",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-16",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-23",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-30",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-06",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-13",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-20",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-27",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-06",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-13",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-20",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-27",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-03",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-10",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-17",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-24",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "meter_id": "T.0020__FL01__PP22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2.55,
+      "current_normalized_kwh": 2.55,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-13",
+      "meter_id": "T.0020__FL01__PP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 33.79,
+      "current_normalized_kwh": 33.79,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
       "week_end_date": "2026-03-27",
       "meter_id": "T.0020__FL01__PP23",
       "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN",
@@ -719,6 +1727,15 @@
       "kwh": 0.44
     },
     {
+      "week_end_date": "2026-04-03",
+      "meter_id": "T.0020__FL01__PP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 34.25,
+      "current_normalized_kwh": 34.25,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
       "week_end_date": "2026-04-10",
       "meter_id": "T.0020__FL01__PP23",
       "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN",
@@ -726,6 +1743,402 @@
       "current_normalized_kwh": 34.87,
       "reset_ratio": "",
       "kwh": 0.62
+    },
+    {
+      "week_end_date": "2026-04-17",
+      "meter_id": "T.0020__FL01__PP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 34.87,
+      "current_normalized_kwh": 34.87,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0020__FL01__PP23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 35.02,
+      "current_normalized_kwh": 35.02,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0020__FL01__SCB_21",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 61324.52,
+      "current_normalized_kwh": 61324.52,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0020__FL02__SCB_22",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 125862.51,
+      "current_normalized_kwh": 125862.51,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0020__FL03__PPAC_3",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 402047.48,
+      "current_normalized_kwh": 402047.48,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0020__FL03__SCB_23",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 95267.36,
+      "current_normalized_kwh": 95267.36,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-09",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1120.0,
+      "current_normalized_kwh": 1120.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-23",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-30",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-06",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-13",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-20",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-27",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-06",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-13",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-20",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-27",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-03",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-10",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-17",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-24",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "meter_id": "T.0022__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 1122.0,
+      "current_normalized_kwh": 1122.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-09",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5792.0,
+      "current_normalized_kwh": 5792.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-16",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5792.0,
+      "current_normalized_kwh": 5792.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-23",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5792.0,
+      "current_normalized_kwh": 5792.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-30",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5792.0,
+      "current_normalized_kwh": 5792.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-06",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5792.0,
+      "current_normalized_kwh": 5792.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-13",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5792.0,
+      "current_normalized_kwh": 5792.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-20",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5792.0,
+      "current_normalized_kwh": 5792.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-02-27",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5792.0,
+      "current_normalized_kwh": 5792.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-06",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5792.0,
+      "current_normalized_kwh": 5792.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-13",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5792.0,
+      "current_normalized_kwh": 5792.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-20",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5792.0,
+      "current_normalized_kwh": 5792.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-03-27",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5792.0,
+      "current_normalized_kwh": 5792.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-03",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5792.0,
+      "current_normalized_kwh": 5792.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-17",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5793.0,
+      "current_normalized_kwh": 5793.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-04-24",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5793.0,
+      "current_normalized_kwh": 5793.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-01",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5793.0,
+      "current_normalized_kwh": 5793.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-08",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5793.0,
+      "current_normalized_kwh": 5793.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-05-15",
+      "meter_id": "T.0023__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 5793.0,
+      "current_normalized_kwh": 5793.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-09",
+      "meter_id": "T.0025__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2852.0,
+      "current_normalized_kwh": 2852.0,
+      "reset_ratio": "",
+      "kwh": 0
+    },
+    {
+      "week_end_date": "2026-01-16",
+      "meter_id": "T.0025__FL01__MDB",
+      "warning": "UNCHANGED_READING_USAGE_ZERO",
+      "previous_normalized_kwh": 2852.0,
+      "current_normalized_kwh": 2852.0,
+      "reset_ratio": "",
+      "kwh": 0
     }
   ],
   "stats": {

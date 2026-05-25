@@ -1,16 +1,17 @@
 {
   "meta": {
     "site": "กฟผ. สำนักงานไทรน้อย",
-    "version": "energy-auto-db-v16-skip-blank-zero-current-reading",
+    "version": "energy-auto-db-v17-unchanged-reading-zero-guard",
     "base_unit": "kWh",
     "main_meter_codes": [
       "MDB",
       "Main",
       "SCB21"
     ],
-    "generated_at": "2026-05-25T08:07:17",
+    "generated_at": "2026-05-25T08:14:04",
     "reset_logic": "Working-base logic plus narrow reset only. If declared current collapses from previous by ratio >= 100, previous is treated as 0 and usage=current.",
     "missing_reading_logic": "If raw_reading is blank or 0, it is skipped as not recorded; previous valid reading remains the baseline.",
+    "unchanged_reading_logic": "If current normalized reading equals previous normalized reading, weekly usage is forced to 0.",
     "allocation_logic": "Correct-flow allocation: building/floor allocation only when available. Blank department rows are ignored. kWh = weekly_usage * allocation_ratio."
   },
   "departments": [
@@ -59797,12 +59798,14 @@
       "subb_code": "MDB",
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 26864.0,
       "current_normalized_kwh": 26864.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-09",
@@ -59813,12 +59816,14 @@
       "subb_code": "MDB",
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 26864.0,
       "current_normalized_kwh": 26864.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-16",
@@ -59829,12 +59834,14 @@
       "subb_code": "MDB",
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 26864.0,
       "current_normalized_kwh": 26864.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-23",
@@ -59845,12 +59852,14 @@
       "subb_code": "MDB",
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 26864.0,
       "current_normalized_kwh": 26864.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-30",
@@ -59861,12 +59870,14 @@
       "subb_code": "MDB",
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 26864.0,
       "current_normalized_kwh": 26864.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-06",
@@ -59877,12 +59888,14 @@
       "subb_code": "MDB",
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 26864.0,
       "current_normalized_kwh": 26864.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-13",
@@ -59893,12 +59906,14 @@
       "subb_code": "MDB",
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 26864.0,
       "current_normalized_kwh": 26864.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-20",
@@ -59909,12 +59924,14 @@
       "subb_code": "MDB",
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 26864.0,
       "current_normalized_kwh": 26864.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-27",
@@ -59925,12 +59942,14 @@
       "subb_code": "MDB",
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 26864.0,
       "current_normalized_kwh": 26864.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-06",
@@ -59941,12 +59960,14 @@
       "subb_code": "MDB",
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 26864.0,
       "current_normalized_kwh": 26864.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-13",
@@ -59957,12 +59978,14 @@
       "subb_code": "MDB",
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 26864.0,
       "current_normalized_kwh": 26864.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-20",
@@ -59973,12 +59996,14 @@
       "subb_code": "MDB",
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 26864.0,
       "current_normalized_kwh": 26864.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-27",
@@ -60027,12 +60052,14 @@
       "subb_code": "MDB",
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 26864.0,
       "current_normalized_kwh": 26864.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-17",
@@ -60043,12 +60070,14 @@
       "subb_code": "MDB",
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 26864.0,
       "current_normalized_kwh": 26864.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-24",
@@ -60059,13 +60088,14 @@
       "subb_code": "MDB",
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 26864.0,
       "current_normalized_kwh": 26864.0,
       "reset_ratio": "",
       "flags": [
-        "NON_WEEKLY_GAP_14_DAYS"
+        "NON_WEEKLY_GAP_14_DAYS",
+        "UNCHANGED_READING_USAGE_ZERO"
       ]
     },
     {
@@ -62159,12 +62189,14 @@
       "subb_code": "ร้านค้า 2",
       "building_name": "ต.0019 ร้านอาหาร 5 (ตี๋ใหญ่ข้าวมันไก่)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-09",
@@ -62175,12 +62207,14 @@
       "subb_code": "ร้านค้า 2",
       "building_name": "ต.0019 ร้านอาหาร 5 (ตี๋ใหญ่ข้าวมันไก่)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-16",
@@ -62191,12 +62225,14 @@
       "subb_code": "ร้านค้า 2",
       "building_name": "ต.0019 ร้านอาหาร 5 (ตี๋ใหญ่ข้าวมันไก่)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-23",
@@ -62207,12 +62243,14 @@
       "subb_code": "ร้านค้า 2",
       "building_name": "ต.0019 ร้านอาหาร 5 (ตี๋ใหญ่ข้าวมันไก่)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-30",
@@ -62223,12 +62261,14 @@
       "subb_code": "ร้านค้า 2",
       "building_name": "ต.0019 ร้านอาหาร 5 (ตี๋ใหญ่ข้าวมันไก่)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-06",
@@ -62239,12 +62279,14 @@
       "subb_code": "ร้านค้า 2",
       "building_name": "ต.0019 ร้านอาหาร 5 (ตี๋ใหญ่ข้าวมันไก่)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-13",
@@ -62255,12 +62297,14 @@
       "subb_code": "ร้านค้า 2",
       "building_name": "ต.0019 ร้านอาหาร 5 (ตี๋ใหญ่ข้าวมันไก่)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-20",
@@ -62271,12 +62315,14 @@
       "subb_code": "ร้านค้า 2",
       "building_name": "ต.0019 ร้านอาหาร 5 (ตี๋ใหญ่ข้าวมันไก่)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-27",
@@ -62287,13 +62333,14 @@
       "subb_code": "ร้านค้า 2",
       "building_name": "ต.0019 ร้านอาหาร 5 (ตี๋ใหญ่ข้าวมันไก่)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
       "flags": [
-        "NON_WEEKLY_GAP_14_DAYS"
+        "NON_WEEKLY_GAP_14_DAYS",
+        "UNCHANGED_READING_USAGE_ZERO"
       ]
     },
     {
@@ -62305,12 +62352,14 @@
       "subb_code": "ร้านค้า 2",
       "building_name": "ต.0019 ร้านอาหาร 5 (ตี๋ใหญ่ข้าวมันไก่)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-20",
@@ -62321,12 +62370,14 @@
       "subb_code": "ร้านค้า 2",
       "building_name": "ต.0019 ร้านอาหาร 5 (ตี๋ใหญ่ข้าวมันไก่)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-27",
@@ -62337,13 +62388,14 @@
       "subb_code": "ร้านค้า 2",
       "building_name": "ต.0019 ร้านอาหาร 5 (ตี๋ใหญ่ข้าวมันไก่)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
       "flags": [
-        "NON_WEEKLY_GAP_14_DAYS"
+        "NON_WEEKLY_GAP_14_DAYS",
+        "UNCHANGED_READING_USAGE_ZERO"
       ]
     },
     {
@@ -62355,12 +62407,14 @@
       "subb_code": "ร้านค้า 2",
       "building_name": "ต.0019 ร้านอาหาร 5 (ตี๋ใหญ่ข้าวมันไก่)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-17",
@@ -62371,12 +62425,14 @@
       "subb_code": "ร้านค้า 2",
       "building_name": "ต.0019 ร้านอาหาร 5 (ตี๋ใหญ่ข้าวมันไก่)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-24",
@@ -62387,12 +62443,14 @@
       "subb_code": "ร้านค้า 2",
       "building_name": "ต.0019 ร้านอาหาร 5 (ตี๋ใหญ่ข้าวมันไก่)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-01",
@@ -62403,12 +62461,14 @@
       "subb_code": "ร้านค้า 2",
       "building_name": "ต.0019 ร้านอาหาร 5 (ตี๋ใหญ่ข้าวมันไก่)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5760.0,
       "current_normalized_kwh": 5760.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-02",
@@ -77453,12 +77513,14 @@
       "subb_code": "AP8",
       "building_name": "ท.0019 ชั้นที่ 8 อาคารทำการ ชธธ. ระบบเครื่องปรับอากาศ 8",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 61767.0,
       "current_normalized_kwh": 61767.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -77757,12 +77819,14 @@
       "subb_code": "LP8",
       "building_name": "ท.0019 ชั้นที่ 8 อาคารทำการ ชธธ. ระบบแสงสว่าง 8",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 76071.62,
       "current_normalized_kwh": 76071.62,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -78061,12 +78125,14 @@
       "subb_code": "PP81",
       "building_name": "ท.0019 ชั้นที่ 8 อาคารทำการ ชธธ. ระบบเครื่องใช้ไฟฟ้า 8/1",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 49621.19,
       "current_normalized_kwh": 49621.19,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -78365,12 +78431,14 @@
       "subb_code": "PP82",
       "building_name": "ท.0019 ชั้นที่ 8 อาคารทำการ ชธธ. ระบบเครื่องใช้ไฟฟ้า 8/2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5919.74,
       "current_normalized_kwh": 5919.74,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -78669,12 +78737,14 @@
       "subb_code": "SCB 8",
       "building_name": "ท.0019 ชั้นที่ 8 อบค.",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 257336.72,
       "current_normalized_kwh": 257336.72,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -78973,12 +79043,14 @@
       "subb_code": "AP9",
       "building_name": "ท.0019 ชั้นที่ 9 อาคารทำการ ชธธ. ระบบเครื่องปรับอากาศ 9",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 64320.77,
       "current_normalized_kwh": 64320.77,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -79277,12 +79349,14 @@
       "subb_code": "BP",
       "building_name": "ท.0019 Booster Pump",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 11471.34,
       "current_normalized_kwh": 11471.34,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -79581,12 +79655,14 @@
       "subb_code": "LP9",
       "building_name": "ท.0019 ชั้นที่ 9 อาคารทำการ ชธธ. ระบบแสงสว่าง 9",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 41054.29,
       "current_normalized_kwh": 41054.29,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -79885,12 +79961,14 @@
       "subb_code": "PP91",
       "building_name": "ท.0019 ชั้นที่ 9 อาคารทำการ ชธธ. ระบบเครื่องใช้ไฟฟ้า 9/1",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 26608.84,
       "current_normalized_kwh": 26608.84,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -80189,12 +80267,14 @@
       "subb_code": "PP92",
       "building_name": "ท.0019 ชั้นที่ 9 อาคารทำการ ชธธ. ระบบเครื่องใช้ไฟฟ้า 9/2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 29142.88,
       "current_normalized_kwh": 29142.88,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -80493,12 +80573,14 @@
       "subb_code": "PPAC 1",
       "building_name": "ท.0019 ชั้นที่ 9 อาคารทำการ ชธธ. แอร์รวม 1",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 114270.83,
       "current_normalized_kwh": 114270.83,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -80797,12 +80879,14 @@
       "subb_code": "PPAC 2",
       "building_name": "ท.0019 ชั้นที่ 9 อาคารทำการ ชธธ. แอร์รวม 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 106277.59,
       "current_normalized_kwh": 106277.59,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -81101,12 +81185,14 @@
       "subb_code": "PPAC 3",
       "building_name": "ท.0019 ชั้นที่ 9 อาคารทำการ ชธธ. แอร์รวม 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 42676.02,
       "current_normalized_kwh": 42676.02,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -81413,12 +81499,14 @@
       "subb_code": "PPD",
       "building_name": "ท.0019 ชั้นที่ 9 PPD",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 251241.3,
       "current_normalized_kwh": 251241.3,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -81717,12 +81805,14 @@
       "subb_code": "PPL",
       "building_name": "ท.0019 PPL (Lift)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 110848.6,
       "current_normalized_kwh": 110848.6,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -82021,12 +82111,14 @@
       "subb_code": "SCB 9",
       "building_name": "ท.0019 ชั้นที่ 9 (รวม)",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 393986.92,
       "current_normalized_kwh": 393986.92,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -82325,12 +82417,14 @@
       "subb_code": "AP21",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 1",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 24032.84,
       "current_normalized_kwh": 24032.84,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -82357,12 +82451,14 @@
       "subb_code": "AP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 29.63,
       "current_normalized_kwh": 29.63,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-09",
@@ -82389,12 +82485,14 @@
       "subb_code": "AP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 29.64,
       "current_normalized_kwh": 29.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-23",
@@ -82405,12 +82503,14 @@
       "subb_code": "AP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 29.64,
       "current_normalized_kwh": 29.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-30",
@@ -82421,12 +82521,14 @@
       "subb_code": "AP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 29.64,
       "current_normalized_kwh": 29.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-06",
@@ -82508,12 +82610,14 @@
       "subb_code": "AP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 29.72,
       "current_normalized_kwh": 29.72,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-13",
@@ -82572,12 +82676,14 @@
       "subb_code": "AP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 29.79,
       "current_normalized_kwh": 29.79,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-10",
@@ -82588,12 +82694,14 @@
       "subb_code": "AP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 29.79,
       "current_normalized_kwh": 29.79,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-17",
@@ -82604,12 +82712,14 @@
       "subb_code": "AP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 29.79,
       "current_normalized_kwh": 29.79,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-24",
@@ -82620,12 +82730,14 @@
       "subb_code": "AP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 29.79,
       "current_normalized_kwh": 29.79,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-01",
@@ -82636,12 +82748,14 @@
       "subb_code": "AP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 29.79,
       "current_normalized_kwh": 29.79,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -82652,12 +82766,14 @@
       "subb_code": "AP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 29.79,
       "current_normalized_kwh": 29.79,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-02",
@@ -82668,12 +82784,14 @@
       "subb_code": "AP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 46.96,
       "current_normalized_kwh": 46.96,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-09",
@@ -82684,12 +82802,14 @@
       "subb_code": "AP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 46.96,
       "current_normalized_kwh": 46.96,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-16",
@@ -82700,12 +82820,14 @@
       "subb_code": "AP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 46.96,
       "current_normalized_kwh": 46.96,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-23",
@@ -82732,12 +82854,14 @@
       "subb_code": "AP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 46.97,
       "current_normalized_kwh": 46.97,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-06",
@@ -82748,12 +82872,14 @@
       "subb_code": "AP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 46.97,
       "current_normalized_kwh": 46.97,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-13",
@@ -82764,12 +82890,14 @@
       "subb_code": "AP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 46.97,
       "current_normalized_kwh": 46.97,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-20",
@@ -82780,12 +82908,14 @@
       "subb_code": "AP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 46.97,
       "current_normalized_kwh": 46.97,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-27",
@@ -82796,12 +82926,14 @@
       "subb_code": "AP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 46.97,
       "current_normalized_kwh": 46.97,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-06",
@@ -82812,12 +82944,14 @@
       "subb_code": "AP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 46.97,
       "current_normalized_kwh": 46.97,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-13",
@@ -82828,12 +82962,14 @@
       "subb_code": "AP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 46.97,
       "current_normalized_kwh": 46.97,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-20",
@@ -82844,12 +82980,14 @@
       "subb_code": "AP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 46.97,
       "current_normalized_kwh": 46.97,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-27",
@@ -82915,12 +83053,14 @@
       "subb_code": "AP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 46.97,
       "current_normalized_kwh": 46.97,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-24",
@@ -82931,12 +83071,14 @@
       "subb_code": "AP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 46.97,
       "current_normalized_kwh": 46.97,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-01",
@@ -82947,12 +83089,14 @@
       "subb_code": "AP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 46.97,
       "current_normalized_kwh": 46.97,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -82963,12 +83107,14 @@
       "subb_code": "AP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องปรับอากาศ 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 46.97,
       "current_normalized_kwh": 46.97,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-02",
@@ -83251,12 +83397,14 @@
       "subb_code": "LP21",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 1",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 36839.98,
       "current_normalized_kwh": 36839.98,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -83283,12 +83431,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-09",
@@ -83299,12 +83449,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-16",
@@ -83315,12 +83467,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-23",
@@ -83331,12 +83485,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-30",
@@ -83347,12 +83503,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-06",
@@ -83363,12 +83521,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-13",
@@ -83379,12 +83539,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-20",
@@ -83395,12 +83557,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-27",
@@ -83411,12 +83575,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-06",
@@ -83427,12 +83593,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-13",
@@ -83443,12 +83611,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-20",
@@ -83459,12 +83629,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-27",
@@ -83475,12 +83647,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-03",
@@ -83491,12 +83665,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-10",
@@ -83507,12 +83683,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-17",
@@ -83523,12 +83701,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-24",
@@ -83539,12 +83719,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-01",
@@ -83555,12 +83737,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -83571,12 +83755,14 @@
       "subb_code": "LP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบแสงสว่าง 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 0.64,
       "current_normalized_kwh": 0.64,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-02",
@@ -83859,12 +84045,14 @@
       "subb_code": "PP21",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 1",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 52177.02,
       "current_normalized_kwh": 52177.02,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -83891,12 +84079,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-09",
@@ -83907,12 +84097,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-16",
@@ -83923,12 +84115,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-23",
@@ -83939,12 +84133,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-30",
@@ -83955,12 +84151,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-06",
@@ -83971,12 +84169,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-13",
@@ -83987,12 +84187,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-20",
@@ -84003,12 +84205,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-27",
@@ -84019,12 +84223,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-06",
@@ -84035,12 +84241,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-13",
@@ -84051,12 +84259,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-20",
@@ -84067,12 +84277,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-27",
@@ -84083,12 +84295,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-03",
@@ -84099,12 +84313,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-10",
@@ -84115,12 +84331,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-17",
@@ -84131,12 +84349,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-24",
@@ -84147,12 +84367,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-01",
@@ -84163,12 +84385,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -84179,12 +84403,14 @@
       "subb_code": "PP22",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2.55,
       "current_normalized_kwh": 2.55,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-02",
@@ -84339,12 +84565,14 @@
       "subb_code": "PP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 33.79,
       "current_normalized_kwh": 33.79,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-13",
@@ -84389,12 +84617,14 @@
       "subb_code": "PP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 34.25,
       "current_normalized_kwh": 34.25,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-03",
@@ -84423,12 +84653,14 @@
       "subb_code": "PP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 34.87,
       "current_normalized_kwh": 34.87,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-17",
@@ -84471,12 +84703,14 @@
       "subb_code": "PP23",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะฯ ระบบเครื่องใช้ไฟฟ้า 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 35.02,
       "current_normalized_kwh": 35.02,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -84775,12 +85009,14 @@
       "subb_code": "SCB 21",
       "building_name": "ท.0020 อาคาร ศูนย์รับรองสมรรถนะงานเดิมเครื่องและบำรุงรักษา",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 61324.52,
       "current_normalized_kwh": 61324.52,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -85079,12 +85315,14 @@
       "subb_code": "SCB 22",
       "building_name": "ท.0020 ชั้นที่ 2",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 125862.51,
       "current_normalized_kwh": 125862.51,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -85383,12 +85621,14 @@
       "subb_code": "PPAC 3",
       "building_name": "ท.0020 แอร์รวม",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 402047.48,
       "current_normalized_kwh": 402047.48,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -85687,12 +85927,14 @@
       "subb_code": "SCB 23",
       "building_name": "ท.0020 ชั้นที่ 3",
       "is_main_meter": false,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 95267.36,
       "current_normalized_kwh": 95267.36,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -85719,12 +85961,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1120.0,
       "current_normalized_kwh": 1120.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-09",
@@ -85751,12 +85995,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-23",
@@ -85767,12 +86013,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-30",
@@ -85783,12 +86031,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-06",
@@ -85799,12 +86049,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-13",
@@ -85815,12 +86067,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-20",
@@ -85831,12 +86085,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-27",
@@ -85847,12 +86103,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-06",
@@ -85863,12 +86121,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-13",
@@ -85879,12 +86139,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-20",
@@ -85895,12 +86157,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-27",
@@ -85911,12 +86175,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-03",
@@ -85927,12 +86193,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-10",
@@ -85943,12 +86211,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-17",
@@ -85959,12 +86229,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-24",
@@ -85975,12 +86247,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-01",
@@ -85991,12 +86265,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -86007,12 +86283,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 1122.0,
       "current_normalized_kwh": 1122.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-02",
@@ -86023,12 +86301,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5792.0,
       "current_normalized_kwh": 5792.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-09",
@@ -86039,12 +86319,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5792.0,
       "current_normalized_kwh": 5792.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-16",
@@ -86055,12 +86337,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5792.0,
       "current_normalized_kwh": 5792.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-23",
@@ -86071,12 +86355,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5792.0,
       "current_normalized_kwh": 5792.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-30",
@@ -86087,12 +86373,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5792.0,
       "current_normalized_kwh": 5792.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-06",
@@ -86103,12 +86391,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5792.0,
       "current_normalized_kwh": 5792.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-13",
@@ -86119,12 +86409,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5792.0,
       "current_normalized_kwh": 5792.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-20",
@@ -86135,12 +86427,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5792.0,
       "current_normalized_kwh": 5792.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-27",
@@ -86151,12 +86445,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5792.0,
       "current_normalized_kwh": 5792.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-06",
@@ -86167,12 +86463,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5792.0,
       "current_normalized_kwh": 5792.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-13",
@@ -86183,12 +86481,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5792.0,
       "current_normalized_kwh": 5792.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-20",
@@ -86199,12 +86499,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5792.0,
       "current_normalized_kwh": 5792.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-27",
@@ -86215,12 +86517,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5792.0,
       "current_normalized_kwh": 5792.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-03",
@@ -86247,12 +86551,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5793.0,
       "current_normalized_kwh": 5793.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-17",
@@ -86263,12 +86569,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5793.0,
       "current_normalized_kwh": 5793.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-24",
@@ -86279,12 +86587,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5793.0,
       "current_normalized_kwh": 5793.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-01",
@@ -86295,12 +86605,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5793.0,
       "current_normalized_kwh": 5793.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -86311,12 +86623,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 5793.0,
       "current_normalized_kwh": 5793.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-02",
@@ -86327,12 +86641,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0025 อาคารเก็บอุปกรณ์ อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2852.0,
       "current_normalized_kwh": 2852.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-09",
@@ -86343,12 +86659,14 @@
       "subb_code": "MDB",
       "building_name": "ท.0025 อาคารเก็บอุปกรณ์ อสร.",
       "is_main_meter": true,
-      "kwh": 0.0,
+      "kwh": 0,
       "raw_delta_kwh": 0.0,
       "previous_normalized_kwh": 2852.0,
       "current_normalized_kwh": 2852.0,
       "reset_ratio": "",
-      "flags": []
+      "flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-16",
@@ -88078,7 +88396,9 @@
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-09",
@@ -88090,7 +88410,9 @@
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-16",
@@ -88102,7 +88424,9 @@
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-23",
@@ -88114,7 +88438,9 @@
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-30",
@@ -88126,7 +88452,9 @@
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-06",
@@ -88138,7 +88466,9 @@
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-13",
@@ -88150,7 +88480,9 @@
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-20",
@@ -88162,7 +88494,9 @@
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-27",
@@ -88174,7 +88508,9 @@
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-06",
@@ -88186,7 +88522,9 @@
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-13",
@@ -88198,7 +88536,9 @@
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-20",
@@ -88210,7 +88550,9 @@
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-27",
@@ -88252,7 +88594,9 @@
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-17",
@@ -88264,7 +88608,9 @@
       "building_name": "ต.0015 อาคารโรงซ่อมเครื่องกล อสร.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-24",
@@ -88277,7 +88623,8 @@
       "allocation_ratio": 1.0,
       "kwh": 0.0,
       "source_flags": [
-        "NON_WEEKLY_GAP_14_DAYS"
+        "NON_WEEKLY_GAP_14_DAYS",
+        "UNCHANGED_READING_USAGE_ZERO"
       ]
     },
     {
@@ -93217,7 +93564,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-09",
@@ -93241,7 +93590,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-23",
@@ -93253,7 +93604,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-30",
@@ -93265,7 +93618,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-06",
@@ -93277,7 +93632,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-13",
@@ -93289,7 +93646,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-20",
@@ -93301,7 +93660,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-27",
@@ -93313,7 +93674,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-06",
@@ -93325,7 +93688,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-13",
@@ -93337,7 +93702,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-20",
@@ -93349,7 +93716,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-27",
@@ -93361,7 +93730,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-03",
@@ -93373,7 +93744,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-10",
@@ -93385,7 +93758,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-17",
@@ -93397,7 +93772,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-24",
@@ -93409,7 +93786,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-01",
@@ -93421,7 +93800,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -93433,7 +93814,9 @@
       "building_name": "ท.0022 อาคารห้องกัมตภาพรังสี อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-02",
@@ -93445,7 +93828,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-09",
@@ -93457,7 +93842,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-16",
@@ -93469,7 +93856,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-23",
@@ -93481,7 +93870,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-30",
@@ -93493,7 +93884,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-06",
@@ -93505,7 +93898,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-13",
@@ -93517,7 +93912,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-20",
@@ -93529,7 +93926,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-02-27",
@@ -93541,7 +93940,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-06",
@@ -93553,7 +93954,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-13",
@@ -93565,7 +93968,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-20",
@@ -93577,7 +93982,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-03-27",
@@ -93589,7 +93996,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-03",
@@ -93613,7 +94022,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-17",
@@ -93625,7 +94036,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-04-24",
@@ -93637,7 +94050,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-01",
@@ -93649,7 +94064,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-05-08",
@@ -93661,7 +94078,9 @@
       "building_name": "ท.0023 อาคาร Construction Shop อบค.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-02",
@@ -93673,7 +94092,9 @@
       "building_name": "ท.0025 อาคารเก็บอุปกรณ์ อสร.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-09",
@@ -93685,7 +94106,9 @@
       "building_name": "ท.0025 อาคารเก็บอุปกรณ์ อสร.",
       "allocation_ratio": 1.0,
       "kwh": 0.0,
-      "source_flags": []
+      "source_flags": [
+        "UNCHANGED_READING_USAGE_ZERO"
+      ]
     },
     {
       "week_start_date": "2026-01-16",
@@ -95352,6 +95775,114 @@
         "warning": "METER_RESET_AUTO_DECLARED_VALUE_KEPT"
       },
       {
+        "week_end_date": "2026-01-09",
+        "meter_id": "D.0015__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 26864.0,
+        "current_normalized_kwh": 26864.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-16",
+        "meter_id": "D.0015__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 26864.0,
+        "current_normalized_kwh": 26864.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-23",
+        "meter_id": "D.0015__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 26864.0,
+        "current_normalized_kwh": 26864.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-30",
+        "meter_id": "D.0015__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 26864.0,
+        "current_normalized_kwh": 26864.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-06",
+        "meter_id": "D.0015__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 26864.0,
+        "current_normalized_kwh": 26864.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-13",
+        "meter_id": "D.0015__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 26864.0,
+        "current_normalized_kwh": 26864.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-20",
+        "meter_id": "D.0015__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 26864.0,
+        "current_normalized_kwh": 26864.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-27",
+        "meter_id": "D.0015__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 26864.0,
+        "current_normalized_kwh": 26864.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-06",
+        "meter_id": "D.0015__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 26864.0,
+        "current_normalized_kwh": 26864.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-13",
+        "meter_id": "D.0015__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 26864.0,
+        "current_normalized_kwh": 26864.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-20",
+        "meter_id": "D.0015__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 26864.0,
+        "current_normalized_kwh": 26864.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-27",
+        "meter_id": "D.0015__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 26864.0,
+        "current_normalized_kwh": 26864.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
         "week_end_date": "2026-04-03",
         "meter_id": "D.0015__FL01__MDB",
         "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED",
@@ -95370,13 +95901,31 @@
         "kwh": 26864.0
       },
       {
-        "week_end_date": "2026-05-08",
+        "week_end_date": "2026-04-17",
         "meter_id": "D.0015__FL01__MDB",
-        "warning": "NON_WEEKLY_GAP_14_DAYS",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
         "previous_normalized_kwh": 26864.0,
         "current_normalized_kwh": 26864.0,
         "reset_ratio": "",
-        "kwh": 0.0
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-24",
+        "meter_id": "D.0015__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 26864.0,
+        "current_normalized_kwh": 26864.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "D.0015__FL01__MDB",
+        "warning": "NON_WEEKLY_GAP_14_DAYS,UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 26864.0,
+        "current_normalized_kwh": 26864.0,
+        "reset_ratio": "",
+        "kwh": 0
       },
       {
         "week_end_date": "2026-04-24",
@@ -95388,22 +95937,148 @@
         "kwh": 169.0
       },
       {
-        "week_end_date": "2026-03-13",
+        "week_end_date": "2026-01-09",
         "meter_id": "D.0019__FL01__ร้านค้า_2",
-        "warning": "NON_WEEKLY_GAP_14_DAYS",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
         "previous_normalized_kwh": 5760.0,
         "current_normalized_kwh": 5760.0,
         "reset_ratio": "",
-        "kwh": 0.0
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-16",
+        "meter_id": "D.0019__FL01__ร้านค้า_2",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5760.0,
+        "current_normalized_kwh": 5760.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-23",
+        "meter_id": "D.0019__FL01__ร้านค้า_2",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5760.0,
+        "current_normalized_kwh": 5760.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-30",
+        "meter_id": "D.0019__FL01__ร้านค้า_2",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5760.0,
+        "current_normalized_kwh": 5760.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-06",
+        "meter_id": "D.0019__FL01__ร้านค้า_2",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5760.0,
+        "current_normalized_kwh": 5760.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-13",
+        "meter_id": "D.0019__FL01__ร้านค้า_2",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5760.0,
+        "current_normalized_kwh": 5760.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-20",
+        "meter_id": "D.0019__FL01__ร้านค้า_2",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5760.0,
+        "current_normalized_kwh": 5760.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-27",
+        "meter_id": "D.0019__FL01__ร้านค้า_2",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5760.0,
+        "current_normalized_kwh": 5760.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-13",
+        "meter_id": "D.0019__FL01__ร้านค้า_2",
+        "warning": "NON_WEEKLY_GAP_14_DAYS,UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5760.0,
+        "current_normalized_kwh": 5760.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-20",
+        "meter_id": "D.0019__FL01__ร้านค้า_2",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5760.0,
+        "current_normalized_kwh": 5760.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-27",
+        "meter_id": "D.0019__FL01__ร้านค้า_2",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5760.0,
+        "current_normalized_kwh": 5760.0,
+        "reset_ratio": "",
+        "kwh": 0
       },
       {
         "week_end_date": "2026-04-10",
         "meter_id": "D.0019__FL01__ร้านค้า_2",
-        "warning": "NON_WEEKLY_GAP_14_DAYS",
+        "warning": "NON_WEEKLY_GAP_14_DAYS,UNCHANGED_READING_USAGE_ZERO",
         "previous_normalized_kwh": 5760.0,
         "current_normalized_kwh": 5760.0,
         "reset_ratio": "",
-        "kwh": 0.0
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-17",
+        "meter_id": "D.0019__FL01__ร้านค้า_2",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5760.0,
+        "current_normalized_kwh": 5760.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-24",
+        "meter_id": "D.0019__FL01__ร้านค้า_2",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5760.0,
+        "current_normalized_kwh": 5760.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-01",
+        "meter_id": "D.0019__FL01__ร้านค้า_2",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5760.0,
+        "current_normalized_kwh": 5760.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "D.0019__FL01__ร้านค้า_2",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5760.0,
+        "current_normalized_kwh": 5760.0,
+        "reset_ratio": "",
+        "kwh": 0
       },
       {
         "week_end_date": "2026-02-06",
@@ -95496,6 +96171,123 @@
         "kwh": 0.285
       },
       {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0019__FL08__AP8",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 61767.0,
+        "current_normalized_kwh": 61767.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0019__FL08__LP8",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 76071.62,
+        "current_normalized_kwh": 76071.62,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0019__FL08__PP81",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 49621.19,
+        "current_normalized_kwh": 49621.19,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0019__FL08__PP82",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5919.74,
+        "current_normalized_kwh": 5919.74,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0019__FL08__SCB_8",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 257336.72,
+        "current_normalized_kwh": 257336.72,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0019__FL09__AP9",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 64320.77,
+        "current_normalized_kwh": 64320.77,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0019__FL09__BP",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 11471.34,
+        "current_normalized_kwh": 11471.34,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0019__FL09__LP9",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 41054.29,
+        "current_normalized_kwh": 41054.29,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0019__FL09__PP91",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 26608.84,
+        "current_normalized_kwh": 26608.84,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0019__FL09__PP92",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 29142.88,
+        "current_normalized_kwh": 29142.88,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0019__FL09__PPAC_1",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 114270.83,
+        "current_normalized_kwh": 114270.83,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0019__FL09__PPAC_2",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 106277.59,
+        "current_normalized_kwh": 106277.59,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0019__FL09__PPAC_3",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 42676.02,
+        "current_normalized_kwh": 42676.02,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
         "week_end_date": "2026-02-06",
         "meter_id": "T.0019__FL09__PPD",
         "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN",
@@ -95532,6 +96324,78 @@
         "kwh": 842.02
       },
       {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0019__FL09__PPD",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 251241.3,
+        "current_normalized_kwh": 251241.3,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0019__FL09__PPL",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 110848.6,
+        "current_normalized_kwh": 110848.6,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0019__FL09__SCB_9",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 393986.92,
+        "current_normalized_kwh": 393986.92,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0020__FL01__AP21",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 24032.84,
+        "current_normalized_kwh": 24032.84,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-09",
+        "meter_id": "T.0020__FL01__AP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 29.63,
+        "current_normalized_kwh": 29.63,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-23",
+        "meter_id": "T.0020__FL01__AP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 29.64,
+        "current_normalized_kwh": 29.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-30",
+        "meter_id": "T.0020__FL01__AP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 29.64,
+        "current_normalized_kwh": 29.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-06",
+        "meter_id": "T.0020__FL01__AP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 29.64,
+        "current_normalized_kwh": 29.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
         "week_end_date": "2026-02-20",
         "meter_id": "T.0020__FL01__AP22",
         "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED",
@@ -95548,6 +96412,168 @@
         "current_normalized_kwh": 29.7,
         "reset_ratio": 998.653,
         "kwh": 29.7
+      },
+      {
+        "week_end_date": "2026-03-13",
+        "meter_id": "T.0020__FL01__AP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 29.72,
+        "current_normalized_kwh": 29.72,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-10",
+        "meter_id": "T.0020__FL01__AP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 29.79,
+        "current_normalized_kwh": 29.79,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-17",
+        "meter_id": "T.0020__FL01__AP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 29.79,
+        "current_normalized_kwh": 29.79,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-24",
+        "meter_id": "T.0020__FL01__AP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 29.79,
+        "current_normalized_kwh": 29.79,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-01",
+        "meter_id": "T.0020__FL01__AP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 29.79,
+        "current_normalized_kwh": 29.79,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0020__FL01__AP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 29.79,
+        "current_normalized_kwh": 29.79,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-15",
+        "meter_id": "T.0020__FL01__AP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 29.79,
+        "current_normalized_kwh": 29.79,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-09",
+        "meter_id": "T.0020__FL01__AP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 46.96,
+        "current_normalized_kwh": 46.96,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-16",
+        "meter_id": "T.0020__FL01__AP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 46.96,
+        "current_normalized_kwh": 46.96,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-23",
+        "meter_id": "T.0020__FL01__AP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 46.96,
+        "current_normalized_kwh": 46.96,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-06",
+        "meter_id": "T.0020__FL01__AP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 46.97,
+        "current_normalized_kwh": 46.97,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-13",
+        "meter_id": "T.0020__FL01__AP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 46.97,
+        "current_normalized_kwh": 46.97,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-20",
+        "meter_id": "T.0020__FL01__AP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 46.97,
+        "current_normalized_kwh": 46.97,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-27",
+        "meter_id": "T.0020__FL01__AP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 46.97,
+        "current_normalized_kwh": 46.97,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-06",
+        "meter_id": "T.0020__FL01__AP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 46.97,
+        "current_normalized_kwh": 46.97,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-13",
+        "meter_id": "T.0020__FL01__AP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 46.97,
+        "current_normalized_kwh": 46.97,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-20",
+        "meter_id": "T.0020__FL01__AP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 46.97,
+        "current_normalized_kwh": 46.97,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-27",
+        "meter_id": "T.0020__FL01__AP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 46.97,
+        "current_normalized_kwh": 46.97,
+        "reset_ratio": "",
+        "kwh": 0
       },
       {
         "week_end_date": "2026-04-10",
@@ -95568,6 +96594,411 @@
         "kwh": 46.97
       },
       {
+        "week_end_date": "2026-04-24",
+        "meter_id": "T.0020__FL01__AP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 46.97,
+        "current_normalized_kwh": 46.97,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-01",
+        "meter_id": "T.0020__FL01__AP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 46.97,
+        "current_normalized_kwh": 46.97,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0020__FL01__AP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 46.97,
+        "current_normalized_kwh": 46.97,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-15",
+        "meter_id": "T.0020__FL01__AP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 46.97,
+        "current_normalized_kwh": 46.97,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0020__FL01__LP21",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 36839.98,
+        "current_normalized_kwh": 36839.98,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-09",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-16",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-23",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-30",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-06",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-13",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-20",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-27",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-06",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-13",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-20",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-27",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-03",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-10",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-17",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-24",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-01",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-15",
+        "meter_id": "T.0020__FL01__LP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 0.64,
+        "current_normalized_kwh": 0.64,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0020__FL01__PP21",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 52177.02,
+        "current_normalized_kwh": 52177.02,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-09",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-16",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-23",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-30",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-06",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-13",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-20",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-27",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-06",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-13",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-20",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-27",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-03",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-10",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-17",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-24",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-01",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-15",
+        "meter_id": "T.0020__FL01__PP22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2.55,
+        "current_normalized_kwh": 2.55,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-13",
+        "meter_id": "T.0020__FL01__PP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 33.79,
+        "current_normalized_kwh": 33.79,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
         "week_end_date": "2026-03-27",
         "meter_id": "T.0020__FL01__PP23",
         "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN",
@@ -95577,6 +97008,15 @@
         "kwh": 0.44
       },
       {
+        "week_end_date": "2026-04-03",
+        "meter_id": "T.0020__FL01__PP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 34.25,
+        "current_normalized_kwh": 34.25,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
         "week_end_date": "2026-04-10",
         "meter_id": "T.0020__FL01__PP23",
         "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN",
@@ -95584,6 +97024,402 @@
         "current_normalized_kwh": 34.87,
         "reset_ratio": "",
         "kwh": 0.62
+      },
+      {
+        "week_end_date": "2026-04-17",
+        "meter_id": "T.0020__FL01__PP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 34.87,
+        "current_normalized_kwh": 34.87,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0020__FL01__PP23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 35.02,
+        "current_normalized_kwh": 35.02,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0020__FL01__SCB_21",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 61324.52,
+        "current_normalized_kwh": 61324.52,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0020__FL02__SCB_22",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 125862.51,
+        "current_normalized_kwh": 125862.51,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0020__FL03__PPAC_3",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 402047.48,
+        "current_normalized_kwh": 402047.48,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0020__FL03__SCB_23",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 95267.36,
+        "current_normalized_kwh": 95267.36,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-09",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1120.0,
+        "current_normalized_kwh": 1120.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-23",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-30",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-06",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-13",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-20",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-27",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-06",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-13",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-20",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-27",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-03",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-10",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-17",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-24",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-01",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-15",
+        "meter_id": "T.0022__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 1122.0,
+        "current_normalized_kwh": 1122.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-09",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5792.0,
+        "current_normalized_kwh": 5792.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-16",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5792.0,
+        "current_normalized_kwh": 5792.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-23",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5792.0,
+        "current_normalized_kwh": 5792.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-30",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5792.0,
+        "current_normalized_kwh": 5792.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-06",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5792.0,
+        "current_normalized_kwh": 5792.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-13",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5792.0,
+        "current_normalized_kwh": 5792.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-20",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5792.0,
+        "current_normalized_kwh": 5792.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-02-27",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5792.0,
+        "current_normalized_kwh": 5792.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-06",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5792.0,
+        "current_normalized_kwh": 5792.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-13",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5792.0,
+        "current_normalized_kwh": 5792.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-20",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5792.0,
+        "current_normalized_kwh": 5792.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-03-27",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5792.0,
+        "current_normalized_kwh": 5792.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-03",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5792.0,
+        "current_normalized_kwh": 5792.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-17",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5793.0,
+        "current_normalized_kwh": 5793.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-04-24",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5793.0,
+        "current_normalized_kwh": 5793.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-01",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5793.0,
+        "current_normalized_kwh": 5793.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-08",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5793.0,
+        "current_normalized_kwh": 5793.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-05-15",
+        "meter_id": "T.0023__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 5793.0,
+        "current_normalized_kwh": 5793.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-09",
+        "meter_id": "T.0025__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2852.0,
+        "current_normalized_kwh": 2852.0,
+        "reset_ratio": "",
+        "kwh": 0
+      },
+      {
+        "week_end_date": "2026-01-16",
+        "meter_id": "T.0025__FL01__MDB",
+        "warning": "UNCHANGED_READING_USAGE_ZERO",
+        "previous_normalized_kwh": 2852.0,
+        "current_normalized_kwh": 2852.0,
+        "reset_ratio": "",
+        "kwh": 0
       }
     ],
     "stats": {
