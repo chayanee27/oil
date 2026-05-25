@@ -1,5 +1,5 @@
 ﻿sort_order,meter_id,b_code,floor,subb_code,building_name,default_unit,is_main,show_on_dashboard,source_sheet
-1,EGAT__FL01__Main11,EGAT,FL01,Main,มิเตอร์รวมทั้งหมด,MWh,True,True,MeterData69 RAW
+1,EGAT__FL01__Main,EGAT,FL01,Main,มิเตอร์รวมทั้งหมด,MWh,True,True,MeterData69 RAW
 2,EGAT__FL01__Main2,EGAT,FL01,Main2,มิเตอร์รวม เฟส 1,kWh,False,False,MeterData69 RAW
 3,T.0006__FL01__MDB,T.0006,FL01,MDB,ท.0006 อาคาร บริหารอะไหล่กังหันก๊าซ1 อรอ.,MWh,True,True,MeterData69 RAW
 4,T.0007__FL01__MDB,T.0007,FL01,MDB,ท.0007 อาคาร กองบริหาร ชธธ.,MWh,True,True,MeterData69 RAW
