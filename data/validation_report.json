@@ -544,7 +544,7 @@
     "department_weekly_rows": 592,
     "allocation_rows_used": 42,
     "building_allocation_rows_used": 42,
-    "fallback_allocation_rows_available": 39,
+    "fallback_allocation_rows_available": 41,
     "allocation_mode": "building_allocation_only",
     "main_meter_codes": [
       "MDB",

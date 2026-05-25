@@ -8,7 +8,7 @@
       "Main",
       "SCB21"
     ],
-    "generated_at": "2026-05-25T07:54:09",
+    "generated_at": "2026-05-25T07:57:31",
     "reset_logic": "Working-base logic plus narrow reset only. If declared current collapses from previous by ratio >= 100, previous is treated as 0 and usage=current.",
     "allocation_logic": "Correct-flow allocation: building/floor allocation only when available. Blank department rows are ignored. kWh = weekly_usage * allocation_ratio."
   },
@@ -97190,7 +97190,7 @@
       "department_weekly_rows": 592,
       "allocation_rows_used": 42,
       "building_allocation_rows_used": 42,
-      "fallback_allocation_rows_available": 39,
+      "fallback_allocation_rows_available": 41,
       "allocation_mode": "building_allocation_only",
       "main_meter_codes": [
         "MDB",
