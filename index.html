@@ -61,7 +61,7 @@ function buildingRows(){
   const nameOf = r => r.building_name || r.b_code || r.meter_id || "ไม่ระบุอาคาร";
   const dateInFilter = d => ymdYear(d)===sY && (sM==="all" || ymdMonth(d)===(+sM));
 
-  const isBadSpike = r => {
+  const badFlags = r => {
     const flags = r.flags || r.source_flags || [];
     return Array.isArray(flags) && flags.some(f =>
       String(f).includes("SPIKE_SUSPECT") ||
@@ -73,15 +73,16 @@ function buildingRows(){
 
   if(sD === "all"){
     // รวมทั้งสำนักงาน:
-    // คำนวณ usage ใหม่จาก normalized_readings ใน browser เพื่อกันเคส backend/DB เก่าที่เอา baseline มาเป็น usage
-    // เช่น ต.0015 reading = 26864 เท่ากันทุกสัปดาห์ ต้องได้ 0 ไม่ใช่ 26864
-    // สูตร:
-    // - ใช้เฉพาะ meter ที่มี allocation_ratio > 0 ใน mapping
+    // ห้ามใช้ weekly_consumption.kwh ในกราฟนี้อีก เพราะเคยมี baseline/reading หลุดมาเป็น usage เช่น ต.0015 = 26,468,000
+    // ให้คำนวณใหม่จาก normalized_readings เท่านั้น:
+    // - current == previous => 0
+    // - current > previous => current - previous
+    // - current < previous มาก ๆ => reset => current
+    // - delta ที่ใหญ่กว่ายอดรวมฝ่ายทั้งระบบถือว่าผิดปกติและตัดทิ้ง
     // - ratio บังคับ = 1
-    // - group ด้วย building_name เพื่อตัดอาคารชื่อซ้ำ
-    // - current == previous => usage 0
-    // - current < previous และ previous/current >= 100 => reset, usage = current
-    // - current < previous กรณีอื่น => usage 0
+    // - ใช้เฉพาะ meter ที่มี allocation_ratio > 0
+    // - group ด้วย building_name เพื่อตัดชื่ออาคารซ้ำ
+
     const eligibleMeters = new Set((DATA.department_weekly || [])
       .filter(r => (+r.allocation_ratio || 0) > 0)
       .map(r => r.meter_id));
@@ -96,6 +97,9 @@ function buildingRows(){
         rowsByMeter[r.meter_id].push(r);
       });
 
+    const deptGrand = allTotal();
+    const hardUpperLimit = Math.max(deptGrand * 1.25, 300000); // อาคารเดียวไม่ควรเกินยอดรวมระบบทั้งช่วงแบบผิดธรรมชาติ
+
     Object.values(rowsByMeter).forEach(rows => {
       rows.sort((a,b) => String(a.reading_date).localeCompare(String(b.reading_date)));
 
@@ -108,7 +112,7 @@ function buildingRows(){
 
         let usage = 0;
 
-        if(curr === prev){
+        if(Math.abs(curr - prev) < 0.000001){
           usage = 0;
         }else if(curr < prev){
           const ratio = prev / Math.max(curr, 1);
@@ -117,7 +121,9 @@ function buildingRows(){
           usage = curr - prev;
         }
 
-        if(usage <= 0) continue;
+        // ตัวกันสุดท้ายสำหรับเคส ต.0015 26 ล้าน:
+        // ถ้า delta ของอาคารเดียวสูงเกินยอดรวมทั้งระบบอย่างผิดธรรมชาติ ห้ามแสดงในกราฟรวม
+        if(usage <= 0 || usage > hardUpperLimit) continue;
 
         const name = nameOf(rows[i]);
         if(!map[name]) map[name] = {name, kwh:0};
@@ -125,28 +131,14 @@ function buildingRows(){
       }
     });
 
-    // Fallback เฉพาะกรณีไม่มี normalized_readings เลย
-    if(Object.keys(map).length === 0 && (DATA.normalized_readings || []).length === 0){
-      (DATA.weekly_consumption || [])
-        .filter(inFilter)
-        .filter(r => r.is_main_meter !== false)
-        .filter(r => eligibleMeters.has(r.meter_id))
-        .filter(r => !isBadSpike(r))
-        .forEach(r => {
-          const name = nameOf(r);
-          if(!map[name]) map[name] = {name, kwh:0};
-          map[name].kwh += +r.kwh || 0;
-        });
-    }
-
   } else {
     // เลือกฝ่าย:
-    // ใช้ department_weekly.kwh = usage × allocation_ratio ของฝ่ายนั้น
+    // ใช้ค่าที่คูณ ratio แล้วจาก department_weekly
     (DATA.department_weekly || [])
       .filter(inFilter)
       .filter(r => r.department === sD)
       .filter(r => (+r.allocation_ratio || 0) > 0)
-      .filter(r => !isBadSpike(r))
+      .filter(r => !badFlags(r))
       .forEach(r => {
         const name = nameOf(r);
         if(!map[name]) map[name] = {name, kwh:0};
