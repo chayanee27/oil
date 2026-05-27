@@ -2,2161 +2,623 @@
   "errors": [],
   "warnings": [
     {
-      "file": "forms/2026-W01.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
+      "file": "_blank_template.csv",
+      "row": 2,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
     },
     {
-      "file": "forms/2026-W02.csv",
+      "file": "_blank_template.csv",
+      "row": 3,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 4,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 5,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 6,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 7,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 8,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 9,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 10,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 11,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 12,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 13,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 14,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 15,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 16,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 17,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 18,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 19,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 20,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 21,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 22,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 23,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 24,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 25,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 26,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 27,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 28,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 29,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 30,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 31,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 32,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 33,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 34,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 35,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 36,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 37,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 38,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 39,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 40,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 41,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
       "row": 42,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "D.0033__FL01__MDB"
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
     },
     {
-      "file": "forms/2026-W02.csv",
+      "file": "_blank_template.csv",
+      "row": 43,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 44,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 45,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 46,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 47,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 48,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 49,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 50,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 51,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 52,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 53,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 54,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 55,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 56,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 57,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 58,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 59,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 60,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 61,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 62,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 63,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 64,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 65,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 66,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 67,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 68,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 69,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 70,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 71,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 72,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 73,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 74,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 75,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 76,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 77,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 78,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 79,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 80,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 81,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 82,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 83,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 84,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 85,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 86,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 87,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 88,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 89,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 90,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 91,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 92,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 93,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 94,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 95,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 96,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 97,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
+      "row": 98,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
+    },
+    {
+      "file": "_blank_template.csv",
       "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
     },
     {
-      "file": "forms/2026-W03.csv",
-      "row": 42,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "D.0033__FL01__MDB"
+      "file": "_blank_template.csv",
+      "row": 100,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
     },
     {
-      "file": "forms/2026-W03.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
+      "file": "_blank_template.csv",
+      "row": 101,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
     },
     {
-      "file": "forms/2026-W04.csv",
-      "row": 42,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "D.0033__FL01__MDB"
-    },
-    {
-      "file": "forms/2026-W04.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "forms/2026-W05.csv",
-      "row": 42,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "D.0033__FL01__MDB"
-    },
-    {
-      "file": "forms/2026-W05.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "forms/2026-W06.csv",
-      "row": 42,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "D.0033__FL01__MDB"
-    },
-    {
-      "file": "forms/2026-W06.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "forms/2026-W07.csv",
-      "row": 42,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "D.0033__FL01__MDB"
-    },
-    {
-      "file": "forms/2026-W07.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "forms/2026-W08.csv",
-      "row": 42,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "D.0033__FL01__MDB"
-    },
-    {
-      "file": "forms/2026-W08.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "forms/2026-W09.csv",
-      "row": 42,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "D.0033__FL01__MDB"
-    },
-    {
-      "file": "forms/2026-W09.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "forms/2026-W10.csv",
-      "row": 42,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "D.0033__FL01__MDB"
-    },
-    {
-      "file": "forms/2026-W10.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "forms/2026-W11.csv",
-      "row": 42,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "D.0033__FL01__MDB"
-    },
-    {
-      "file": "forms/2026-W11.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "forms/2026-W12.csv",
-      "row": 42,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "D.0033__FL01__MDB"
-    },
-    {
-      "file": "forms/2026-W12.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "forms/2026-W13.csv",
-      "row": 42,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "D.0033__FL01__MDB"
-    },
-    {
-      "file": "forms/2026-W13.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "forms/2026-W14.csv",
-      "row": 42,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "D.0033__FL01__MDB"
-    },
-    {
-      "file": "forms/2026-W14.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "forms/2026-W15.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "forms/2026-W16.csv",
-      "row": 42,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "D.0033__FL01__MDB"
-    },
-    {
-      "file": "forms/2026-W16.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "forms/2026-W17.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "forms/2026-W18.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "forms/2026-W19.csv",
-      "row": 42,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "D.0033__FL01__MDB"
-    },
-    {
-      "file": "forms/2026-W19.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "forms/2026-W20.csv",
-      "row": 99,
-      "warning": "ZERO_READING_SKIPPED_AS_NOT_RECORDED",
-      "meter_id": "T.0020__FL01__LP23"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "file": "allocation",
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "T.0025__FL01__MDB"
-    },
-    {
-      "source_form": "forms/2026-W14.csv",
-      "reading_date": "2026-04-03",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
-    },
-    {
-      "source_form": "forms/2026-W15.csv",
-      "reading_date": "2026-04-10",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "METER_RESET_AUTO_DECLARED_VALUE_KEPT"
-    },
-    {
-      "source_form": "forms/2026-W06.csv",
-      "reading_date": "2026-02-06",
-      "meter_id": "D.0019__FL01__ร้านค้า_7",
-      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
-    },
-    {
-      "source_form": "forms/2026-W07.csv",
-      "reading_date": "2026-02-13",
-      "meter_id": "D.0019__FL01__ร้านค้า_7",
-      "warning": "METER_RESET_AUTO_DECLARED_VALUE_KEPT"
-    },
-    {
-      "source_form": "forms/2026-W17.csv",
-      "reading_date": "2026-04-24",
-      "meter_id": "T.0006__FL01__MDB",
-      "warning": "METER_RESET_AUTO_DECLARED_VALUE_KEPT"
-    },
-    {
-      "source_form": "forms/2026-W08.csv",
-      "reading_date": "2026-02-20",
-      "meter_id": "T.0008__FL01__MDB",
-      "warning": "METER_RESET_AUTO_DECLARED_VALUE_KEPT"
-    },
-    {
-      "source_form": "forms/2026-W16.csv",
-      "reading_date": "2026-04-17",
-      "meter_id": "T.0008__FL01__MDB",
-      "warning": "METER_RESET_AUTO_DECLARED_VALUE_KEPT"
-    },
-    {
-      "source_form": "forms/2026-W08.csv",
-      "reading_date": "2026-02-20",
-      "meter_id": "T.0020__FL01__AP22",
-      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
-    },
-    {
-      "source_form": "forms/2026-W09.csv",
-      "reading_date": "2026-02-27",
-      "meter_id": "T.0020__FL01__AP22",
-      "warning": "METER_RESET_AUTO_DECLARED_VALUE_KEPT"
-    },
-    {
-      "source_form": "forms/2026-W15.csv",
-      "reading_date": "2026-04-10",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED"
-    },
-    {
-      "source_form": "forms/2026-W16.csv",
-      "reading_date": "2026-04-17",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "METER_RESET_AUTO_DECLARED_VALUE_KEPT"
-    },
-    {
-      "week_end_date": "2026-01-09",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 26864.0,
-      "current_normalized_kwh": 26864.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-16",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 26864.0,
-      "current_normalized_kwh": 26864.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-23",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 26864.0,
-      "current_normalized_kwh": 26864.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-30",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 26864.0,
-      "current_normalized_kwh": 26864.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-06",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 26864.0,
-      "current_normalized_kwh": 26864.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-13",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 26864.0,
-      "current_normalized_kwh": 26864.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-20",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 26864.0,
-      "current_normalized_kwh": 26864.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-27",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 26864.0,
-      "current_normalized_kwh": 26864.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-06",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 26864.0,
-      "current_normalized_kwh": 26864.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-13",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 26864.0,
-      "current_normalized_kwh": 26864.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-20",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 26864.0,
-      "current_normalized_kwh": 26864.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-27",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 26864.0,
-      "current_normalized_kwh": 26864.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-03",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED",
-      "previous_normalized_kwh": 26864.0,
-      "current_normalized_kwh": 26468000.0,
-      "reset_ratio": "",
-      "kwh": 26441136.0
-    },
-    {
-      "week_end_date": "2026-04-10",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "METER_RESET_AUTO_DECLARED_VALUE_KEPT,METER_RESET_AUTO_PREVIOUS_TREATED_AS_ZERO",
-      "previous_normalized_kwh": 26468000.0,
-      "current_normalized_kwh": 26864.0,
-      "reset_ratio": 985.259,
-      "kwh": 26864.0
-    },
-    {
-      "week_end_date": "2026-04-17",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 26864.0,
-      "current_normalized_kwh": 26864.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-24",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 26864.0,
-      "current_normalized_kwh": 26864.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "D.0015__FL01__MDB",
-      "warning": "NON_WEEKLY_GAP_14_DAYS,UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 26864.0,
-      "current_normalized_kwh": 26864.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-24",
-      "meter_id": "D.0017__FL01__ร้านค้า_1",
-      "warning": "NON_WEEKLY_GAP_21_DAYS",
-      "previous_normalized_kwh": 8900.0,
-      "current_normalized_kwh": 9069.0,
-      "reset_ratio": "",
-      "kwh": 169.0
-    },
-    {
-      "week_end_date": "2026-01-09",
-      "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5760.0,
-      "current_normalized_kwh": 5760.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-16",
-      "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5760.0,
-      "current_normalized_kwh": 5760.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-23",
-      "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5760.0,
-      "current_normalized_kwh": 5760.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-30",
-      "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5760.0,
-      "current_normalized_kwh": 5760.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-06",
-      "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5760.0,
-      "current_normalized_kwh": 5760.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-13",
-      "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5760.0,
-      "current_normalized_kwh": 5760.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-20",
-      "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5760.0,
-      "current_normalized_kwh": 5760.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-27",
-      "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5760.0,
-      "current_normalized_kwh": 5760.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-13",
-      "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "NON_WEEKLY_GAP_14_DAYS,UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5760.0,
-      "current_normalized_kwh": 5760.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-20",
-      "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5760.0,
-      "current_normalized_kwh": 5760.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-27",
-      "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5760.0,
-      "current_normalized_kwh": 5760.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-10",
-      "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "NON_WEEKLY_GAP_14_DAYS,UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5760.0,
-      "current_normalized_kwh": 5760.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-17",
-      "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5760.0,
-      "current_normalized_kwh": 5760.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-24",
-      "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5760.0,
-      "current_normalized_kwh": 5760.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-01",
-      "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5760.0,
-      "current_normalized_kwh": 5760.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "D.0019__FL01__ร้านค้า_2",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5760.0,
-      "current_normalized_kwh": 5760.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-06",
-      "meter_id": "D.0019__FL01__ร้านค้า_7",
-      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,SPIKE_SUSPECT_OVER_5X_MEDIAN,UNIT_SUSPECT_AUTO_CORRECTED",
-      "previous_normalized_kwh": 9980.0,
-      "current_normalized_kwh": 203000.0,
-      "reset_ratio": "",
-      "kwh": 193020.0
-    },
-    {
-      "week_end_date": "2026-02-13",
-      "meter_id": "D.0019__FL01__ร้านค้า_7",
-      "warning": "METER_RESET_AUTO_DECLARED_VALUE_KEPT,METER_RESET_AUTO_PREVIOUS_TREATED_AS_ZERO",
-      "previous_normalized_kwh": 203000.0,
-      "current_normalized_kwh": 442.0,
-      "reset_ratio": 459.276,
-      "kwh": 442.0
-    },
-    {
-      "week_end_date": "2026-02-20",
-      "meter_id": "D.0025__FL01__MDB",
-      "warning": "NEGATIVE_DELTA_NOT_RESET_USAGE_ZERO",
-      "previous_normalized_kwh": 19920.0,
-      "current_normalized_kwh": 19450.0,
-      "reset_ratio": 1.024,
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-17",
-      "meter_id": "T.0006__FL01__MDB",
-      "warning": "NEGATIVE_DELTA_NOT_RESET_USAGE_ZERO",
-      "previous_normalized_kwh": 982282.4,
-      "current_normalized_kwh": 549874.0,
-      "reset_ratio": 1.786,
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-24",
-      "meter_id": "T.0006__FL01__MDB",
-      "warning": "METER_RESET_AUTO_DECLARED_VALUE_KEPT,METER_RESET_AUTO_PREVIOUS_TREATED_AS_ZERO",
-      "previous_normalized_kwh": 549874.0,
-      "current_normalized_kwh": 2013.529,
-      "reset_ratio": 273.09,
-      "kwh": 2013.529
-    },
-    {
-      "week_end_date": "2026-02-13",
-      "meter_id": "T.0007__FL01__MDB",
-      "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN",
-      "previous_normalized_kwh": 1994.3,
-      "current_normalized_kwh": 3080.0,
-      "reset_ratio": "",
-      "kwh": 1085.7
-    },
-    {
-      "week_end_date": "2026-02-20",
-      "meter_id": "T.0008__FL01__MDB",
-      "warning": "METER_RESET_AUTO_DECLARED_VALUE_KEPT,METER_RESET_AUTO_PREVIOUS_TREATED_AS_ZERO",
-      "previous_normalized_kwh": 358366.08,
-      "current_normalized_kwh": 19.87,
-      "reset_ratio": 18035.535,
-      "kwh": 19.87
-    },
-    {
-      "week_end_date": "2026-04-17",
-      "meter_id": "T.0008__FL01__MDB",
-      "warning": "METER_RESET_AUTO_DECLARED_VALUE_KEPT,METER_RESET_AUTO_PREVIOUS_TREATED_AS_ZERO",
-      "previous_normalized_kwh": 1150.0,
-      "current_normalized_kwh": 1.34,
-      "reset_ratio": 858.209,
-      "kwh": 1.34
-    },
-    {
-      "week_end_date": "2026-05-01",
-      "meter_id": "T.0008__FL01__MDB",
-      "warning": "NON_WEEKLY_GAP_14_DAYS",
-      "previous_normalized_kwh": 1.34,
-      "current_normalized_kwh": 1.806,
-      "reset_ratio": "",
-      "kwh": 0.466
-    },
-    {
-      "week_end_date": "2026-05-15",
-      "meter_id": "T.0008__FL01__MDB",
-      "warning": "NON_WEEKLY_GAP_14_DAYS",
-      "previous_normalized_kwh": 1.806,
-      "current_normalized_kwh": 2.091,
-      "reset_ratio": "",
-      "kwh": 0.285
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0019__FL08__AP8",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 61767.0,
-      "current_normalized_kwh": 61767.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0019__FL08__LP8",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 76071.62,
-      "current_normalized_kwh": 76071.62,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0019__FL08__PP81",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 49621.19,
-      "current_normalized_kwh": 49621.19,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0019__FL08__PP82",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5919.74,
-      "current_normalized_kwh": 5919.74,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0019__FL08__SCB_8",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 257336.72,
-      "current_normalized_kwh": 257336.72,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0019__FL09__AP9",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 64320.77,
-      "current_normalized_kwh": 64320.77,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0019__FL09__BP",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 11471.34,
-      "current_normalized_kwh": 11471.34,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0019__FL09__LP9",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 41054.29,
-      "current_normalized_kwh": 41054.29,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0019__FL09__PP91",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 26608.84,
-      "current_normalized_kwh": 26608.84,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0019__FL09__PP92",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 29142.88,
-      "current_normalized_kwh": 29142.88,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0019__FL09__PPAC_1",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 114270.83,
-      "current_normalized_kwh": 114270.83,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0019__FL09__PPAC_2",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 106277.59,
-      "current_normalized_kwh": 106277.59,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0019__FL09__PPAC_3",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 42676.02,
-      "current_normalized_kwh": 42676.02,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-06",
-      "meter_id": "T.0019__FL09__PPD",
-      "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN",
-      "previous_normalized_kwh": 238440.62,
-      "current_normalized_kwh": 238854.44,
-      "reset_ratio": "",
-      "kwh": 413.82
-    },
-    {
-      "week_end_date": "2026-02-13",
-      "meter_id": "T.0019__FL09__PPD",
-      "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN",
-      "previous_normalized_kwh": 238854.44,
-      "current_normalized_kwh": 239596.23,
-      "reset_ratio": "",
-      "kwh": 741.79
-    },
-    {
-      "week_end_date": "2026-02-20",
-      "meter_id": "T.0019__FL09__PPD",
-      "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN",
-      "previous_normalized_kwh": 239596.23,
-      "current_normalized_kwh": 240426.39,
-      "reset_ratio": "",
-      "kwh": 830.16
-    },
-    {
-      "week_end_date": "2026-02-27",
-      "meter_id": "T.0019__FL09__PPD",
-      "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN",
-      "previous_normalized_kwh": 240426.39,
-      "current_normalized_kwh": 241268.41,
-      "reset_ratio": "",
-      "kwh": 842.02
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0019__FL09__PPD",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 251241.3,
-      "current_normalized_kwh": 251241.3,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0019__FL09__PPL",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 110848.6,
-      "current_normalized_kwh": 110848.6,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0019__FL09__SCB_9",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 393986.92,
-      "current_normalized_kwh": 393986.92,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0020__FL01__AP21",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 24032.84,
-      "current_normalized_kwh": 24032.84,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-09",
-      "meter_id": "T.0020__FL01__AP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 29.63,
-      "current_normalized_kwh": 29.63,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-23",
-      "meter_id": "T.0020__FL01__AP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 29.64,
-      "current_normalized_kwh": 29.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-30",
-      "meter_id": "T.0020__FL01__AP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 29.64,
-      "current_normalized_kwh": 29.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-06",
-      "meter_id": "T.0020__FL01__AP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 29.64,
-      "current_normalized_kwh": 29.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-20",
-      "meter_id": "T.0020__FL01__AP22",
-      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED",
-      "previous_normalized_kwh": 29.69,
-      "current_normalized_kwh": 29660.0,
-      "reset_ratio": "",
-      "kwh": 29630.31
-    },
-    {
-      "week_end_date": "2026-02-27",
-      "meter_id": "T.0020__FL01__AP22",
-      "warning": "METER_RESET_AUTO_DECLARED_VALUE_KEPT,METER_RESET_AUTO_PREVIOUS_TREATED_AS_ZERO,SPIKE_SUSPECT_OVER_5X_MEDIAN",
-      "previous_normalized_kwh": 29660.0,
-      "current_normalized_kwh": 29.7,
-      "reset_ratio": 998.653,
-      "kwh": 29.7
-    },
-    {
-      "week_end_date": "2026-03-13",
-      "meter_id": "T.0020__FL01__AP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 29.72,
-      "current_normalized_kwh": 29.72,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-10",
-      "meter_id": "T.0020__FL01__AP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 29.79,
-      "current_normalized_kwh": 29.79,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-17",
-      "meter_id": "T.0020__FL01__AP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 29.79,
-      "current_normalized_kwh": 29.79,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-24",
-      "meter_id": "T.0020__FL01__AP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 29.79,
-      "current_normalized_kwh": 29.79,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-01",
-      "meter_id": "T.0020__FL01__AP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 29.79,
-      "current_normalized_kwh": 29.79,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0020__FL01__AP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 29.79,
-      "current_normalized_kwh": 29.79,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-15",
-      "meter_id": "T.0020__FL01__AP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 29.79,
-      "current_normalized_kwh": 29.79,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-09",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 46.96,
-      "current_normalized_kwh": 46.96,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-16",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 46.96,
-      "current_normalized_kwh": 46.96,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-23",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 46.96,
-      "current_normalized_kwh": 46.96,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-06",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 46.97,
-      "current_normalized_kwh": 46.97,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-13",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 46.97,
-      "current_normalized_kwh": 46.97,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-20",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 46.97,
-      "current_normalized_kwh": 46.97,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-27",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 46.97,
-      "current_normalized_kwh": 46.97,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-06",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 46.97,
-      "current_normalized_kwh": 46.97,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-13",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 46.97,
-      "current_normalized_kwh": 46.97,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-20",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 46.97,
-      "current_normalized_kwh": 46.97,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-27",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 46.97,
-      "current_normalized_kwh": 46.97,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-10",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "RAW_LOOKS_MWH_BUT_UNIT_SAYS_KWH,UNIT_SUSPECT_AUTO_CORRECTED",
-      "previous_normalized_kwh": 47.01,
-      "current_normalized_kwh": 46970.0,
-      "reset_ratio": "",
-      "kwh": 46922.99
-    },
-    {
-      "week_end_date": "2026-04-17",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "METER_RESET_AUTO_DECLARED_VALUE_KEPT,METER_RESET_AUTO_PREVIOUS_TREATED_AS_ZERO,SPIKE_SUSPECT_OVER_5X_MEDIAN",
-      "previous_normalized_kwh": 46970.0,
-      "current_normalized_kwh": 46.97,
-      "reset_ratio": 1000.0,
-      "kwh": 46.97
-    },
-    {
-      "week_end_date": "2026-04-24",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 46.97,
-      "current_normalized_kwh": 46.97,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-01",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 46.97,
-      "current_normalized_kwh": 46.97,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 46.97,
-      "current_normalized_kwh": 46.97,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-15",
-      "meter_id": "T.0020__FL01__AP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 46.97,
-      "current_normalized_kwh": 46.97,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0020__FL01__LP21",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 36839.98,
-      "current_normalized_kwh": 36839.98,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-09",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-16",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-23",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-30",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-06",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-13",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-20",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-27",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-06",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-13",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-20",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-27",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-03",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-10",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-17",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-24",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-01",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-15",
-      "meter_id": "T.0020__FL01__LP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 0.64,
-      "current_normalized_kwh": 0.64,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0020__FL01__PP21",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 52177.02,
-      "current_normalized_kwh": 52177.02,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-09",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-16",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-23",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-30",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-06",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-13",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-20",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-27",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-06",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-13",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-20",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-27",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-03",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-10",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-17",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-24",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-01",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-15",
-      "meter_id": "T.0020__FL01__PP22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2.55,
-      "current_normalized_kwh": 2.55,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-13",
-      "meter_id": "T.0020__FL01__PP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 33.79,
-      "current_normalized_kwh": 33.79,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-27",
-      "meter_id": "T.0020__FL01__PP23",
-      "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN",
-      "previous_normalized_kwh": 33.81,
-      "current_normalized_kwh": 34.25,
-      "reset_ratio": "",
-      "kwh": 0.44
-    },
-    {
-      "week_end_date": "2026-04-03",
-      "meter_id": "T.0020__FL01__PP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 34.25,
-      "current_normalized_kwh": 34.25,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-10",
-      "meter_id": "T.0020__FL01__PP23",
-      "warning": "SPIKE_SUSPECT_OVER_5X_MEDIAN",
-      "previous_normalized_kwh": 34.25,
-      "current_normalized_kwh": 34.87,
-      "reset_ratio": "",
-      "kwh": 0.62
-    },
-    {
-      "week_end_date": "2026-04-17",
-      "meter_id": "T.0020__FL01__PP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 34.87,
-      "current_normalized_kwh": 34.87,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0020__FL01__PP23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 35.02,
-      "current_normalized_kwh": 35.02,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0020__FL01__SCB_21",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 61324.52,
-      "current_normalized_kwh": 61324.52,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0020__FL02__SCB_22",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 125862.51,
-      "current_normalized_kwh": 125862.51,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0020__FL03__PPAC_3",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 402047.48,
-      "current_normalized_kwh": 402047.48,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0020__FL03__SCB_23",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 95267.36,
-      "current_normalized_kwh": 95267.36,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-09",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1120.0,
-      "current_normalized_kwh": 1120.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-23",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-30",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-06",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-13",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-20",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-27",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-06",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-13",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-20",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-27",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-03",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-10",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-17",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-24",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-01",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-15",
-      "meter_id": "T.0022__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 1122.0,
-      "current_normalized_kwh": 1122.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-09",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5792.0,
-      "current_normalized_kwh": 5792.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-16",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5792.0,
-      "current_normalized_kwh": 5792.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-23",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5792.0,
-      "current_normalized_kwh": 5792.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-30",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5792.0,
-      "current_normalized_kwh": 5792.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-06",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5792.0,
-      "current_normalized_kwh": 5792.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-13",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5792.0,
-      "current_normalized_kwh": 5792.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-20",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5792.0,
-      "current_normalized_kwh": 5792.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-02-27",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5792.0,
-      "current_normalized_kwh": 5792.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-06",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5792.0,
-      "current_normalized_kwh": 5792.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-13",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5792.0,
-      "current_normalized_kwh": 5792.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-20",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5792.0,
-      "current_normalized_kwh": 5792.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-03-27",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5792.0,
-      "current_normalized_kwh": 5792.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-03",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5792.0,
-      "current_normalized_kwh": 5792.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-17",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5793.0,
-      "current_normalized_kwh": 5793.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-04-24",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5793.0,
-      "current_normalized_kwh": 5793.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-01",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5793.0,
-      "current_normalized_kwh": 5793.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-08",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5793.0,
-      "current_normalized_kwh": 5793.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-05-15",
-      "meter_id": "T.0023__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 5793.0,
-      "current_normalized_kwh": 5793.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-09",
-      "meter_id": "T.0025__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2852.0,
-      "current_normalized_kwh": 2852.0,
-      "reset_ratio": "",
-      "kwh": 0
-    },
-    {
-      "week_end_date": "2026-01-16",
-      "meter_id": "T.0025__FL01__MDB",
-      "warning": "UNCHANGED_READING_USAGE_ZERO",
-      "previous_normalized_kwh": 2852.0,
-      "current_normalized_kwh": 2852.0,
-      "reset_ratio": "",
-      "kwh": 0
+      "file": "_blank_template.csv",
+      "row": 102,
+      "warning": "INVALID_DATE",
+      "value": "YYYY-MM-DD"
     }
   ],
   "stats": {
     "meters": 101,
-    "weekly_forms_rows_used": 1863,
-    "normalized_readings": 1863,
-    "weekly_consumption_rows": 1768,
-    "department_weekly_rows": 597,
-    "allocation_rows_used": 42,
-    "building_allocation_rows_used": 42,
-    "fallback_allocation_rows_available": 41,
-    "allocation_mode": "building_allocation_only",
+    "form_files_read": 22,
+    "weekly_forms_rows_used": 2121,
+    "normalized_readings": 2121,
+    "weekly_consumption_rows": 2121,
+    "department_weekly_rows": 861,
     "main_meter_codes": [
       "MDB",
       "Main",
       "SCB21"
-    ],
-    "form_files_read": 21,
-    "auto_reset_ratio_threshold": 100
+    ]
   }
 }
