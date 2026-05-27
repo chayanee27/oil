@@ -1,5 +1,6 @@
-# Reconstructed build_energy_db.py
+# scripts/build_energy_db.py
 
+```python
 import csv
 import json
 from pathlib import Path
@@ -9,33 +10,47 @@ from collections import defaultdict
 ROOT = Path(__file__).resolve().parent.parent
 FORMS_DIR = ROOT / "forms"
 DATA_DIR = ROOT / "data"
-OUTPUT_JSON = ROOT / "energy_db.json"
-VALIDATION_JSON = ROOT / "validation_report.json"
+OUTPUT_JSON = DATA_DIR / "energy_db.json"
+VALIDATION_JSON = DATA_DIR / "validation_report.json"
+WEEKLY_READINGS_CSV = DATA_DIR / "weekly_readings.csv"
 
 MAIN_CODES = {"MDB", "Main", "SCB21"}
 EPSILON = 0.000001
 
 
-def to_float(v):
+# --------------------------------------------------
+# HELPERS
+# --------------------------------------------------
+
+
+def to_float(value):
     try:
-        if v is None:
+        if value is None:
             return None
-        t = str(v).strip().replace(",", "")
-        if t == "":
+
+        text = str(value).strip().replace(",", "")
+
+        if text == "":
             return None
-        return float(t)
+
+        return float(text)
+
     except:
         return None
 
 
-def parse_date(v):
-    t = str(v).strip()
+
+def parse_date(value):
+    text = str(value).strip()
+
     for fmt in ("%Y-%m-%d", "%d/%m/%Y"):
         try:
-            return datetime.strptime(t, fmt).strftime("%Y-%m-%d")
+            return datetime.strptime(text, fmt).strftime("%Y-%m-%d")
         except:
             pass
-    raise ValueError(f"invalid date: {v}")
+
+    raise ValueError(f"invalid date format: {value}")
+
 
 
 def load_csv(path):
@@ -43,152 +58,256 @@ def load_csv(path):
         return list(csv.DictReader(f))
 
 
+
+def safe_current_reading(raw_value, previous_value):
+    if raw_value is None:
+        return previous_value
+
+    text = str(raw_value).strip()
+
+    if text == "":
+        return previous_value
+
+    try:
+        value = float(text)
+    except:
+        return previous_value
+
+    # zero means not recorded yet
+    if value == 0:
+        return previous_value
+
+    return value
+
+
+# --------------------------------------------------
+# LOAD MASTER FILES
+# --------------------------------------------------
+
 meter_master = load_csv(DATA_DIR / "meter_master.csv")
-allocations = load_csv(DATA_DIR / "department_allocations.csv")
+department_allocations = load_csv(DATA_DIR / "department_allocations.csv")
 
 meters_by_id = {}
-for r in meter_master:
-    meter_id = r["meter_id"]
-    meters_by_id[meter_id] = r
 
-normalized_readings = []
-weekly_consumption = []
-department_weekly = []
+for row in meter_master:
+    meter_id = row.get("meter_id", "").strip()
+
+    if meter_id:
+        meters_by_id[meter_id] = row
+
+
+# --------------------------------------------------
+# VALIDATION
+# --------------------------------------------------
+
 validation = {
     "errors": [],
     "warnings": [],
-    "stats": {}
+    "stats": {
+        "meters": len(meter_master),
+        "form_files_read": 0,
+        "weekly_forms_rows_used": 0,
+        "normalized_readings": 0,
+        "weekly_consumption_rows": 0,
+        "department_weekly_rows": 0,
+        "main_meter_codes": list(MAIN_CODES)
+    }
 }
 
 
-# ------------------------------------------------------
-# STEP 1: LOAD WEEKLY FORMS
-# ------------------------------------------------------
+# --------------------------------------------------
+# LOAD WEEKLY FORMS
+# --------------------------------------------------
 
 raw_rows = []
 
-for form in sorted(FORMS_DIR.glob("*.csv")):
+form_files = sorted(FORMS_DIR.glob("*.csv"))
+
+for form_path in form_files:
+
+    validation["stats"]["form_files_read"] += 1
+
     try:
-        rows = load_csv(form)
+        rows = load_csv(form_path)
     except Exception as e:
         validation["errors"].append({
-            "file": str(form.name),
+            "file": form_path.name,
             "error": str(e)
         })
         continue
 
-    for row in rows:
-        meter_id = row.get("meter_id", "").strip()
+    for row_no, row in enumerate(rows, start=2):
+
+        meter_id = str(row.get("meter_id", "")).strip()
+
+        if meter_id == "":
+            continue
+
         if meter_id not in meters_by_id:
+            validation["warnings"].append({
+                "file": form_path.name,
+                "row": row_no,
+                "warning": "UNKNOWN_METER_ID",
+                "meter_id": meter_id
+            })
             continue
 
         try:
             reading_date = parse_date(row.get("reading_date"))
-        except:
+        except Exception:
+            validation["warnings"].append({
+                "file": form_path.name,
+                "row": row_no,
+                "warning": "INVALID_DATE",
+                "value": row.get("reading_date")
+            })
             continue
 
-        raw_value = to_float(row.get("raw_reading"))
+        raw_reading = to_float(row.get("raw_reading"))
 
         raw_rows.append({
             "meter_id": meter_id,
             "reading_date": reading_date,
-            "raw_reading": raw_value
+            "raw_reading": raw_reading,
+            "source_file": form_path.name
         })
 
+        validation["stats"]["weekly_forms_rows_used"] += 1
 
-# ------------------------------------------------------
-# STEP 2: NORMALIZE + CALCULATE USAGE
-# ------------------------------------------------------
+
+# --------------------------------------------------
+# GROUP BY METER
+# --------------------------------------------------
 
 rows_by_meter = defaultdict(list)
-for r in raw_rows:
-    rows_by_meter[r["meter_id"]].append(r)
+
+for row in raw_rows:
+    rows_by_meter[row["meter_id"]].append(row)
+
+
+# --------------------------------------------------
+# BUILD DATABASE
+# --------------------------------------------------
+
+normalized_readings = []
+weekly_consumption = []
+department_weekly = []
+weekly_readings_export = []
 
 for meter_id, rows in rows_by_meter.items():
-    rows.sort(key=lambda x: x["reading_date"])
 
-    meta = meters_by_id[meter_id]
-    default_unit = meta.get("default_unit", "kWh")
+    rows.sort(key=lambda r: r["reading_date"])
 
-    previous = None
+    meter_meta = meters_by_id[meter_id]
 
-    for r in rows:
-        raw = r["raw_reading"]
+    building_name = meter_meta.get("building_name")
+    b_code = meter_meta.get("b_code")
+    subb_code = meter_meta.get("subb_code")
+    default_unit = meter_meta.get("default_unit", "kWh")
 
-        if default_unit == "MWh":
-            normalized = (raw or 0) * 1000
-        else:
-            normalized = raw or 0
+    is_main_meter = subb_code in MAIN_CODES
 
-        # IMPORTANT FIX
-        # blank or zero = not recorded
-        if raw in (None, 0):
-            if previous is not None:
-                normalized = previous
+    previous_normalized = None
+
+    for row in rows:
+
+        raw_reading = row["raw_reading"]
+
+        current_normalized = safe_current_reading(
+            raw_reading,
+            previous_normalized
+        )
+
+        if current_normalized is None:
+            current_normalized = 0
+
+        # MWh -> kWh
+        if default_unit.upper() == "MWH":
+            current_normalized *= 1000
+
+        flags = []
+        usage_kwh = 0
+
+        if previous_normalized is not None:
+
+            usage_kwh = current_normalized - previous_normalized
+
+            # same reading => 0 usage
+            if abs(current_normalized - previous_normalized) < EPSILON:
+                usage_kwh = 0
+                flags.append("UNCHANGED_READING_USAGE_ZERO")
+
+            # reset handling
+            elif usage_kwh < 0:
+
+                reset_ratio = previous_normalized / max(current_normalized, 1)
+
+                if reset_ratio >= 100:
+                    usage_kwh = current_normalized
+                    flags.append("METER_RESET_DETECTED")
+
+                else:
+                    usage_kwh = 0
+                    flags.append("NEGATIVE_DELTA_INVALID")
+
+        if usage_kwh < 0:
+            usage_kwh = 0
 
         normalized_readings.append({
             "meter_id": meter_id,
-            "reading_date": r["reading_date"],
-            "normalized_kwh": normalized,
-            "building_name": meta.get("building_name"),
-            "b_code": meta.get("b_code"),
-            "is_main_meter": meta.get("subb_code") in MAIN_CODES
+            "building_name": building_name,
+            "b_code": b_code,
+            "reading_date": row["reading_date"],
+            "normalized_kwh": round(current_normalized, 2),
+            "is_main_meter": is_main_meter
         })
-
-        usage = 0
-        flags = []
-
-        if previous is not None:
-            usage = normalized - previous
-
-            # SAME VALUE => 0
-            if abs(normalized - previous) < EPSILON:
-                usage = 0
-                flags.append("UNCHANGED_READING_USAGE_ZERO")
-
-            # RESET
-            elif usage < 0:
-                ratio = previous / max(normalized, 1)
-
-                if ratio >= 100:
-                    usage = normalized
-                    flags.append("METER_RESET_DETECTED")
-                else:
-                    usage = 0
-                    flags.append("NEGATIVE_DELTA_INVALID")
-
-        if usage < 0:
-            usage = 0
 
         weekly_consumption.append({
             "meter_id": meter_id,
-            "reading_date": r["reading_date"],
-            "kwh": round(usage, 2),
-            "building_name": meta.get("building_name"),
-            "b_code": meta.get("b_code"),
-            "is_main_meter": meta.get("subb_code") in MAIN_CODES,
+            "building_name": building_name,
+            "b_code": b_code,
+            "reading_date": row["reading_date"],
+            "kwh": round(usage_kwh, 2),
+            "previous_normalized_kwh": previous_normalized,
+            "current_normalized_kwh": current_normalized,
             "flags": flags,
-            "previous_normalized_kwh": previous,
-            "current_normalized_kwh": normalized
+            "is_main_meter": is_main_meter
         })
 
-        previous = normalized
+        weekly_readings_export.append({
+            "meter_id": meter_id,
+            "building_name": building_name,
+            "reading_date": row["reading_date"],
+            "raw_reading": raw_reading,
+            "normalized_kwh": round(current_normalized, 2),
+            "usage_kwh": round(usage_kwh, 2)
+        })
+
+        previous_normalized = current_normalized
 
 
-# ------------------------------------------------------
-# STEP 3: DEPARTMENT ALLOCATION
-# ------------------------------------------------------
+# --------------------------------------------------
+# DEPARTMENT ALLOCATION
+# --------------------------------------------------
 
-alloc_map = defaultdict(list)
+alloc_by_meter = defaultdict(list)
 
-for a in allocations:
-    meter_id = a.get("meter_id", "").strip()
-    alloc_map[meter_id].append(a)
+for alloc in department_allocations:
+
+    meter_id = str(alloc.get("meter_id", "")).strip()
+
+    if meter_id == "":
+        continue
+
+    alloc_by_meter[meter_id].append(alloc)
+
 
 for wc in weekly_consumption:
+
     meter_id = wc["meter_id"]
 
-    for alloc in alloc_map.get(meter_id, []):
+    for alloc in alloc_by_meter.get(meter_id, []):
+
         ratio = to_float(alloc.get("allocation_ratio")) or 0
 
         if ratio <= 0:
@@ -204,66 +323,67 @@ for wc in weekly_consumption:
         })
 
 
-# ------------------------------------------------------
-# OUTPUT
-# ------------------------------------------------------
+# --------------------------------------------------
+# WRITE weekly_readings.csv
+# --------------------------------------------------
 
-output = {
+with open(WEEKLY_READINGS_CSV, "w", newline="", encoding="utf-8-sig") as f:
+
+    writer = csv.DictWriter(
+        f,
+        fieldnames=[
+            "meter_id",
+            "building_name",
+            "reading_date",
+            "raw_reading",
+            "normalized_kwh",
+            "usage_kwh"
+        ]
+    )
+
+    writer.writeheader()
+
+    for row in weekly_readings_export:
+        writer.writerow(row)
+
+
+# --------------------------------------------------
+# STATS
+# --------------------------------------------------
+
+validation["stats"]["normalized_readings"] = len(normalized_readings)
+validation["stats"]["weekly_consumption_rows"] = len(weekly_consumption)
+validation["stats"]["department_weekly_rows"] = len(department_weekly)
+
+
+# --------------------------------------------------
+# OUTPUT JSON
+# --------------------------------------------------
+
+energy_db = {
     "meta": {
         "generated_at": datetime.now().isoformat(),
-        "version": "reconstructed-fixed-version",
+        "version": "production-ready-fixed-build",
         "main_meter_codes": list(MAIN_CODES)
     },
     "meters": meter_master,
-    "department_allocations": allocations,
+    "department_allocations": department_allocations,
     "normalized_readings": normalized_readings,
     "weekly_consumption": weekly_consumption,
     "department_weekly": department_weekly
 }
 
-validation["stats"] = {
-    "meters": len(meter_master),
-    "normalized_readings": len(normalized_readings),
-    "weekly_consumption_rows": len(weekly_consumption),
-    "department_weekly_rows": len(department_weekly)
-}
 
 with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
-    json.dump(output, f, ensure_ascii=False, indent=2)
+    json.dump(energy_db, f, ensure_ascii=False, indent=2)
+
 
 with open(VALIDATION_JSON, "w", encoding="utf-8") as f:
     json.dump(validation, f, ensure_ascii=False, indent=2)
 
-print("DONE")
 
+print("SUCCESS")
+print(f"weekly rows: {len(weekly_readings_export)}")
+print(f"weekly consumption: {len(weekly_consumption)}")
+print(f"department rows: {len(department_weekly)}")
 
-จุดสำคัญที่แก้ปัญหา ต.0015:
-
-
-if raw in (None, 0):
-    if previous is not None:
-        normalized = previous
-
-
-และ:
-
-
-if abs(normalized - previous) < EPSILON:
-    usage = 0
-
-
-ดังนั้น:
-
-```text
-26864
-26864
-(blank)
-```
-
-จะได้:
-
-```text
-0 kWh
-```
-
-ไม่ใช่ 26864 หรือ 26 ล้านอีก
