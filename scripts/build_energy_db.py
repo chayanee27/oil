@@ -1,6 +1,6 @@
 # scripts/build_energy_db.py
 
-```python
+
 import csv
 import json
 from pathlib import Path
