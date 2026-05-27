@@ -200,7 +200,12 @@ function renderMonthBar(){
         legend:{display:true,position:"top",labels:{boxWidth:12,font:{size:11}}},
         tooltip:{
           callbacks:{
-            label:ctx=>`${ctx.dataset.label}: ${fmt(ctx.raw)} kWh`
+            label:ctx=>{
+              if(ctx.dataset.label==="ค่าเฉลี่ย"){
+                return `ค่าเฉลี่ย: ${fmt(ctx.raw)} kWh`;
+              }
+              return `${ctx.dataset.label}: ${fmt(ctx.raw)} kWh`;
+            }
           }
         }
       },
