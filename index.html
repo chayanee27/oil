@@ -56,6 +56,7 @@ const DB=["#0D47A1","#004D40","#E65100","#880E4F","#4A148C","#1B5E20","#BF360C"]
 const BUILD_COLORS=["#1565C0","#00897B","#F9A825","#EF6C00","#AD1457","#6A1B9A","#2E7D32","#C5A85F","#455A64","#00ACC1","#8E24AA","#7CB342"];
 let DATA=null, sY=null, sM="all", sD="all", ch={}, visibleYears=new Set();
 function fmt(n){return Math.round(n||0).toLocaleString("th-TH")}
+function displayBuildingName(name){return (DATA && DATA.building_alias && DATA.building_alias[name]) || name}
 function ymdYear(d){return +String(d).slice(0,4)}
 function ymdMonth(d){return +String(d).slice(5,7)}
 function inFilter(w){return ymdYear(w.week_end_date)===sY && (sM==="all" || ymdMonth(w.week_end_date)===(+sM));}
@@ -169,7 +170,7 @@ function renderBuildingBar(){
   ch.buildingBar=new Chart(document.getElementById("buildingBar"),{
     type:"bar",
     data:{
-      labels:b.map(x=>x.name),
+      labels:b.map(x=>displayBuildingName(x.name)),
       datasets:[{
         data:b.map(x=>x.kwh),
         backgroundColor:b.map((_,i)=>BUILD_COLORS[i%BUILD_COLORS.length]),
