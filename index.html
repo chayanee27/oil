@@ -188,10 +188,6 @@ function renderMonthBar(){
           borderDash:[6,6],
           borderWidth:2,
           pointRadius:0,
-          pointHitRadius:28,
-          pointHoverRadius:6,
-          pointHoverBackgroundColor:"#C5A85F",
-          pointHoverBorderColor:"#C5A85F",
           tension:0,
           order:1
         }
@@ -200,8 +196,6 @@ function renderMonthBar(){
     options:{
       responsive:true,
       maintainAspectRatio:false,
-      interaction:{mode:"nearest",intersect:false,axis:"xy"},
-      hover:{mode:"nearest",intersect:false,axis:"xy"},
       plugins:{
         legend:{display:true,position:"top",labels:{boxWidth:12,font:{size:11}}},
         tooltip:{
