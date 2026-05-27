@@ -8,7 +8,7 @@
       "Main",
       "SCB21"
     ],
-    "generated_at": "2026-05-27T05:27:16",
+    "generated_at": "2026-05-27T07:14:56",
     "missing_reading_logic": "Blank or 0 raw_reading uses previous valid reading.",
     "unchanged_reading_logic": "If current equals previous, usage is 0.",
     "allocation_logic": "Fill-down department, then use row allocation_ratio directly."
@@ -1700,6 +1700,7 @@
       "allocation_building_name": "ต.0033 อาคารปฏิบัติการงานเชื่อม"
     }
   ],
+  "building_alias": {},
   "weekly_readings": [
     {
       "source_form": "forms/2026-W01.csv",
