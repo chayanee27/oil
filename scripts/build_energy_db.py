@@ -8,7 +8,6 @@ ROOT = Path(__file__).resolve().parent.parent
 FORMS_DIR = ROOT / "forms"
 DATA_DIR = ROOT / "data"
 
-BUILDING_ALIAS_FILE = DATA_DIR / "building_alias.json"
 METER_MASTER_FILE = DATA_DIR / "meter_master.csv"
 DEPARTMENT_ALLOCATIONS_FILE = DATA_DIR / "department_allocations.csv"
 BUILDING_ALLOCATIONS_FILE = DATA_DIR / "department_allocation_buildings.csv"
@@ -22,12 +21,7 @@ DEPARTMENTS = ["สก.ชธธ.", "อบค.", "อบฟ.", "อบย.", "�
 EPSILON = 0.000001
 AUTO_RESET_RATIO_THRESHOLD = 100
 
-def read_json(path):
-    if not path.exists():
-        return {}
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
-        
+
 def read_csv(path):
     encodings = ["utf-8-sig", "utf-8", "cp874", "tis-620"]
     last_error = None
@@ -120,12 +114,16 @@ def get_col(row, *names):
     return ""
 
 
+
+def is_new_meter_note(value):
+    return "new" in str(value or "").strip().lower()
+
 def declared_to_kwh(raw_value, raw_unit, default_unit):
     unit = clean_unit(raw_unit) or clean_unit(default_unit) or "kWh"
     return raw_value * 1000 if unit == "MWh" else raw_value
 
 
-def normalize_current(raw_value, raw_unit, default_unit, previous_kwh):
+def normalize_current(raw_value, raw_unit, default_unit, previous_kwh, new_meter=False):
     flags = []
 
     # Blank or 0 = not recorded yet. Use previous valid reading.
@@ -137,6 +135,12 @@ def normalize_current(raw_value, raw_unit, default_unit, previous_kwh):
     declared = declared_to_kwh(raw_value, raw_unit, default_unit)
 
     if previous_kwh is None:
+        return round(declared, 3), flags
+
+    # If note contains "New", treat this as new/replaced meter.
+    # Keep declared unit value and do not auto-convert kWh/MWh by continuity.
+    if new_meter:
+        flags.append("NEW_METER_NOTE_DECLARED_VALUE_KEPT")
         return round(declared, 3), flags
 
     # Narrow reset guard before continuity scoring.
@@ -349,8 +353,6 @@ def build():
     }
 
     meter_master, allocation_source, meter_by_id, allocation_map, building_used, old_used, allocation_mode = load_master()
-    # โหลดชื่อ alias อาคาร
-    building_alias = read_json(BUILDING_ALIAS_FILE)
     raw_rows, form_files = collect_form_readings(meter_by_id, validation)
 
     rows_by_meter = defaultdict(list)
@@ -374,14 +376,21 @@ def build():
         previous_date = None
 
         for row in rows:
+            new_meter = is_new_meter_note(row.get("note", ""))
+
             current_kwh, norm_flags = normalize_current(
                 raw_value=row["raw_reading"],
                 raw_unit=row.get("raw_unit", ""),
                 default_unit=default_unit,
                 previous_kwh=previous_kwh,
+                new_meter=new_meter,
             )
 
             usage_kwh, flags = calculate_usage(previous_kwh, current_kwh, norm_flags)
+
+            if new_meter and previous_kwh is not None and current_kwh is not None:
+                usage_kwh = round(current_kwh, 3)
+                flags = sorted(set(list(flags) + ["NEW_METER_NOTE_USAGE_EQUALS_CURRENT"]))
 
             weekly_readings.append({
                 "source_form": row["source_form"],
@@ -505,7 +514,7 @@ def build():
     return {
         "meta": {
             "site": "กฟผ. สำนักงานไทรน้อย",
-            "version": "production-v18-full-build-fixed-week-end-date",
+            "version": "production-v19-new-meter-note-usage-current",
             "base_unit": "kWh",
             "main_meter_codes": sorted(MAIN_METER_CODES),
             "generated_at": datetime.now().isoformat(timespec="seconds"),
@@ -516,7 +525,6 @@ def build():
         "departments": DEPARTMENTS,
         "meters": meter_master,
         "allocation_source": allocation_source,
-        "building_alias": building_alias,
         "weekly_readings": weekly_readings,
         "normalized_readings": normalized_readings,
         "weekly_consumption": weekly_consumption,
