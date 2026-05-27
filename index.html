@@ -228,7 +228,7 @@ function renderYearLine(){
       const color=colors[years.indexOf(y)%colors.length];
       return {
         label:"ปี "+(y+543),
-        data:MO.map((_,i)=>monthlySeriesValue(y,i+1,sD==="all"?null:sD) || null),
+        data:MO.map((_,i)=> sD==="all" ? DEPT.reduce((a,d)=>a+monthlySeriesValue(y,i+1,d),0) || null : monthlySeriesValue(y,i+1,sD) || null),
         borderColor:color,
         backgroundColor:color,
         tension:.3,
