@@ -59,41 +59,67 @@ function fmt(n){return Math.round(n||0).toLocaleString("th-TH")}
 function ymdYear(d){return +String(d).slice(0,4)}
 function ymdMonth(d){return +String(d).slice(5,7)}
 function inFilter(w){return ymdYear(w.week_end_date)===sY && (sM==="all" || ymdMonth(w.week_end_date)===(+sM));}
-function deptRows(){return (DATA.department_weekly||[]).filter(inFilter);}
+function validEnergyRow(r){
+  const kwh=+r.kwh||0;
+  const flags=r.flags||r.source_flags||[];
+  const badFlag=Array.isArray(flags)&&flags.some(f=>
+    String(f).includes("SPIKE_SUSPECT")||
+    String(f).includes("NEGATIVE_DELTA_NOT_RESET")||
+    String(f).includes("NEGATIVE_DELTA_INVALID")
+  );
+
+  // ค่า 26 ล้านคือ row ผิดแน่นอนสำหรับ weekly/allocated row
+  // ตัดเฉพาะ row ที่เกินระดับผิดธรรมชาติ ไม่ได้เปลี่ยนสูตรคำนวณหลัก
+  const impossibleSpike=kwh>2000000;
+
+  return !badFlag && !impossibleSpike;
+}
+function filteredDeptRows(){
+  return (DATA.department_weekly||[]).filter(inFilter).filter(validEnergyRow);
+}
+function monthlySeriesValue(year,month,dept=null){
+  return (DATA.department_weekly||[])
+    .filter(r=>ymdYear(r.week_end_date)===year)
+    .filter(r=>ymdMonth(r.week_end_date)===month)
+    .filter(r=>!dept || r.department===dept)
+    .filter(validEnergyRow)
+    .reduce((a,b)=>a+(+b.kwh||0),0);
+}
+function deptRows(){return filteredDeptRows();}
 function deptTotal(dept){return deptRows().filter(r=>r.department===dept).reduce((a,b)=>a+(+b.kwh||0),0)}
 function allTotal(){return DEPT.reduce((a,d)=>a+deptTotal(d),0)}
 function buildingRows(){
-  const keyOf = r => r.meter_id || (r.building_name || r.b_code || "");
   const nameOf = r => r.building_name || r.b_code || r.meter_id || "ไม่ระบุอาคาร";
-
   const map = {};
 
   if(sD === "all"){
-    // รวมทั้งสำนักงาน: ใช้ usage จริงของอาคาร × 1
-    // แต่เอาเฉพาะอาคารที่มี allocation ratio > 0 ในตาราง mapping เดิมเท่านั้น
+    // รวมทั้งสำนักงาน: ratio = 1 และใช้เฉพาะอาคารที่มี allocation_ratio > 0
+    // ใช้ weekly_consumption แต่ตัด row ผิดธรรมชาติออก
     const eligible = new Set((DATA.department_weekly || [])
       .filter(r => (+r.allocation_ratio || 0) > 0)
       .map(r => r.meter_id));
 
     (DATA.weekly_consumption || [])
       .filter(inFilter)
+      .filter(validEnergyRow)
       .filter(r => r.is_main_meter !== false)
       .filter(r => eligible.has(r.meter_id))
       .forEach(r => {
-        const k = keyOf(r);
-        if(!map[k]) map[k] = {name:nameOf(r), kwh:0};
-        map[k].kwh += +r.kwh || 0;
+        const name = nameOf(r);
+        if(!map[name]) map[name] = {name, kwh:0};
+        map[name].kwh += +r.kwh || 0;
       });
   } else {
-    // เลือกฝ่าย: ใช้ค่าที่คูณ ratio ของฝ่ายนั้นแล้ว
-    // department_weekly.kwh = weekly_usage × allocation_ratio ของ row mapping นั้น
+    // เลือกฝ่าย: ใช้ usage × ratio ของฝ่ายนั้น
     (DATA.department_weekly || [])
       .filter(inFilter)
+      .filter(validEnergyRow)
       .filter(r => r.department === sD)
+      .filter(r => (+r.allocation_ratio || 0) > 0)
       .forEach(r => {
-        const k = keyOf(r);
-        if(!map[k]) map[k] = {name:nameOf(r), kwh:0};
-        map[k].kwh += +r.kwh || 0;
+        const name = nameOf(r);
+        if(!map[name]) map[name] = {name, kwh:0};
+        map[name].kwh += +r.kwh || 0;
       });
   }
 
@@ -102,9 +128,7 @@ function buildingRows(){
     .sort((a,b) => b.kwh - a.kwh)
     .slice(0,8);
 }
-function monthlyDeptTotal(month, dept=null){
-  return (DATA.department_weekly||[]).filter(w=>ymdYear(w.week_end_date)===sY && ymdMonth(w.week_end_date)===month && (!dept || w.department===dept)).reduce((a,b)=>a+(+b.kwh||0),0)
-}
+function monthlyDeptTotal(month, dept=null){return monthlySeriesValue(sY,month,dept)}
 function setupFilters(){
   const years=[...new Set((DATA.department_weekly||[]).map(w=>ymdYear(w.week_end_date)))].sort();
   const ys=document.getElementById("yearSel"); ys.innerHTML="";
@@ -174,18 +198,10 @@ function renderYearLine(){
     years.forEach(y=>visibleYears.add(y));
   }
 
-  // ถ้ามีปีใหม่จากข้อมูล ให้เปิดเป็น default
-  years.forEach(y=>{
-    if(![...visibleYears].some(v=>v===y) && !document.getElementById("yearToggles")?.dataset.initialized){
-      visibleYears.add(y);
-    }
-  });
-
   const tg=document.getElementById("yearToggles");
   const colors=["#1565C0","#00897B","#F9A825","#EF6C00","#AD1457","#6A1B9A","#2E7D32","#C5A85F"];
 
   if(tg){
-    tg.dataset.initialized="1";
     tg.innerHTML="";
     years.forEach((y,idx)=>{
       const btn=document.createElement("button");
@@ -208,21 +224,11 @@ function renderYearLine(){
 
   const datasets=years
     .filter(y=>visibleYears.has(y))
-    .map((y,idx)=>{
+    .map((y)=>{
       const color=colors[years.indexOf(y)%colors.length];
-
       return {
         label:"ปี "+(y+543),
-        data:MO.map((_,i)=>{
-          // ใช้ logic เดียวกับกราฟบนขวา:
-          // รวมทั้งสำนักงาน = sum department_weekly ทุกฝ่าย
-          // เลือกฝ่าย = sum department_weekly เฉพาะฝ่ายนั้น
-          return (DATA.department_weekly||[])
-            .filter(w=>ymdYear(w.week_end_date)===y)
-            .filter(w=>ymdMonth(w.week_end_date)===i+1)
-            .filter(w=>sD==="all" || w.department===sD)
-            .reduce((a,b)=>a+(+b.kwh||0),0) || null;
-        }),
+        data:MO.map((_,i)=>monthlySeriesValue(y,i+1,sD==="all"?null:sD) || null),
         borderColor:color,
         backgroundColor:color,
         tension:.3,
