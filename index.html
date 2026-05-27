@@ -159,9 +159,57 @@ function renderDonut(){
 }
 function renderMonthBar(){
   const vals=MO.map((_,i)=> sD==="all" ? DEPT.reduce((a,d)=>a+monthlyDeptTotal(i+1,d),0) : monthlyDeptTotal(i+1,sD));
-  document.getElementById("barSub").textContent=`ปี ${sY+543}${sD!=="all"?" ("+sD+")":""}`;
+  const validVals=vals.filter(v=>v>0);
+  const maxVal=validVals.length?Math.max(...validVals):0;
+  const avgVal=validVals.length?validVals.reduce((a,b)=>a+b,0)/validVals.length:0;
+
+  document.getElementById("barSub").textContent=`ปี ${sY+543}${sD!=="all"?" ("+sD+")":""} — เส้นประคือค่าเฉลี่ย ${fmt(avgVal)} kWh`;
+
   if(ch.monthBar) ch.monthBar.destroy();
-  ch.monthBar=new Chart(document.getElementById("monthBar"),{type:"bar",data:{labels:MO,datasets:[{label:"kWh",data:vals,backgroundColor:"#1565C0",borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{callback:v=>(v/1000).toFixed(0)+"K"}},x:{grid:{display:false}}}}});
+
+  ch.monthBar=new Chart(document.getElementById("monthBar"),{
+    data:{
+      labels:MO,
+      datasets:[
+        {
+          type:"bar",
+          label:"kWh",
+          data:vals,
+          backgroundColor:vals.map(v=>v===maxVal && v>0 ? "#EF6C00" : "#1565C0"),
+          borderRadius:4,
+          order:2
+        },
+        {
+          type:"line",
+          label:"ค่าเฉลี่ย",
+          data:MO.map(()=>avgVal || null),
+          borderColor:"#C5A85F",
+          backgroundColor:"#C5A85F",
+          borderDash:[6,6],
+          borderWidth:2,
+          pointRadius:0,
+          tension:0,
+          order:1
+        }
+      ]
+    },
+    options:{
+      responsive:true,
+      maintainAspectRatio:false,
+      plugins:{
+        legend:{display:true,position:"top",labels:{boxWidth:12,font:{size:11}}},
+        tooltip:{
+          callbacks:{
+            label:ctx=>`${ctx.dataset.label}: ${fmt(ctx.raw)} kWh`
+          }
+        }
+      },
+      scales:{
+        y:{beginAtZero:true,ticks:{callback:v=>(v/1000).toFixed(0)+"K"}},
+        x:{grid:{display:false}}
+      }
+    }
+  });
 }
 function renderBuildingBar(){
   const b=buildingRows();
