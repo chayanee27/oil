@@ -7,6 +7,27 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+.topbar {
+  background: linear-gradient(90deg, #0c1428 0%, #10172a 100%);
+  border-bottom: 1px solid #2a2f4a;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: sticky; top: 0; z-index: 100;
+}
+.nav-tabs { display: flex; gap: 4px; }
+.nav-tab {
+  padding: 14px 20px;
+  font-size: 13px; font-weight: 500;
+  color: #8892a4;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all .2s;
+  display: flex; align-items: center; gap: 7px;
+}
+.nav-tab:hover { color: #e2e8f0; }
+.nav-tab.active { color: #f59e0b; border-bottom-color: #f59e0b; }  
 :root{--pri:#0B1D51;--pri-l:#1A3A7A;--gold:#C5A85F;--bg:#F0F2F5;--card:#FFF;--txt:#1A1A2E;--txt2:#5A6178;--bdr:#E2E6ED;--sh:0 2px 12px rgba(11,29,81,.08);--r:10px}
 *{margin:0;padding:0;box-sizing:border-box} body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--txt)}
 .hdr{background:linear-gradient(135deg,var(--pri),var(--pri-l));padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
@@ -32,6 +53,19 @@
 </style>
 </head>
 <body>
+<div class="topbar">
+  <div style="font-size:15px;font-weight:700;color:#f59e0b;padding:14px 0;margin-right:32px">
+    กฟผ. สำนักงานไทรน้อย <span style="color:#8892a4;font-weight:400;font-size:12px;margin-left:6px">Auto DB</span>
+  </div>
+  <nav class="nav-tabs">
+    <a href="index.html" class="nav-tab active">
+      ⚡ ไฟฟ้า
+    </a>
+    <a href="water.html" class="nav-tab">
+      💧 น้ำประปา
+    </a>
+  </nav>
+</div>
 <div class="hdr"><div class="hdr-l"><div class="logo">กฟผ.</div><div class="hdr-t"><h1>รายงานปริมาณการใช้ไฟฟ้า สำนักงานไทรน้อย กฟผ.</h1><p>Auto database version — weekly raw meter readings</p></div></div>
 <div class="fg"><span class="fl">ปี</span><select class="fs" id="yearSel"></select><span class="fl">เดือน</span><select class="fs" id="monthSel"></select></div></div>
 <div class="ban"><span class="ban-l">ยอดสะสมการใช้ไฟจาก RAW รายสัปดาห์</span><span class="ban-v" id="grandTotal">—</span><span class="ban-u">kWh</span></div>
