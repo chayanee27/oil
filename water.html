@@ -66,6 +66,27 @@
     .nav-tab:hover { color: #e2e8f0; }
     .nav-tab.active { color: #f59e0b; border-bottom-color: #f59e0b; }  
     .nav-tab svg { width: 15px; height: 15px; }
+    :root{--pri:#0B1D51;--pri-l:#1A3A7A;--gold:#C5A85F;--bg:#F0F2F5;--card:#FFF;--txt:#1A1A2E;--txt2:#5A6178;--bdr:#E2E6ED;--sh:0 2px 12px rgba(11,29,81,.08);--r:10px}
+    *{margin:0;padding:0;box-sizing:border-box} body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--txt)}
+    .hdr{background:linear-gradient(135deg,var(--pri),var(--pri-l));padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .logo{width:42px;height:42px;background:var(--gold);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--pri)}
+    .hdr-l{display:flex;gap:14px;align-items:center}.hdr-t{color:#fff}.hdr-t h1{font-size:18px}.hdr-t p{font-size:12px;color:rgba(255,255,255,.72)}
+    .fg{display:flex;gap:6px;align-items:center}.fl{color:rgba(255,255,255,.85);font-size:13px}.fs{padding:6px 12px;border-radius:6px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff}.fs option{color:#333}
+    .ban{background:linear-gradient(135deg,var(--pri),#1B3B80,var(--pri-l));padding:12px 28px;display:flex;justify-content:flex-end;gap:12px;align-items:center;flex-wrap:wrap}
+    .ban-l{color:rgba(255,255,255,.85);font-size:13px}.ban-v{color:var(--gold);font-size:28px;font-weight:800}.ban-u{color:rgba(255,255,255,.72);font-size:12px}
+    .main{padding:20px 24px;max-width:1600px;margin:auto}.kpi-row{display:grid;grid-template-columns:repeat(8,1fr);gap:12px;margin-bottom:20px}
+    .card,.kG,.kD{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:16px}.kG{border-top:3px solid var(--gold);cursor:pointer}.kD{color:white;cursor:pointer;opacity:.95}.kD.sel{outline:3px solid var(--gold);outline-offset:-1px}.kD.dim{opacity:.38}
+    .kL{font-size:11px;font-weight:700;opacity:.9}.kS{font-size:10px;opacity:.65}.kV{font-size:20px;font-weight:800;margin-top:4px}.kU{font-size:10px;opacity:.75}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}.gridB{display:grid;grid-template-columns:360px 1fr;gap:20px}
+    .ct{font-size:14px;font-weight:700;color:var(--pri);margin-bottom:4px}.cs{font-size:11px;color:var(--txt2);margin-bottom:14px}.cw{height:320px}
+    .dw{display:flex;align-items:center;gap:18px}.donutBox{position:relative;width:220px;height:220px;flex-shrink:0}.dc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}.dcv{font-weight:800;color:var(--pri)}.dcl{font-size:10px;color:var(--txt2)}
+    .lt{width:100%;border-collapse:collapse;font-size:12px}.lt th{text-align:left;color:var(--txt2);font-size:11px;border-bottom:1px solid var(--bdr);padding:4px 8px}.lt td{border-bottom:1px solid #eee;padding:5px 8px}.vl,.pc{text-align:right}.ld{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px}
+    .note{background:#FFF8E1;border-bottom:2px solid #F9A825;padding:7px 28px;font-size:12px;color:#795548}.ft{text-align:center;padding:16px;color:var(--txt2);font-size:11px}
+    @media(max-width:1200px){.kpi-row{grid-template-columns:repeat(4,1fr)}.grid2,.gridB{grid-template-columns:1fr}}@media(max-width:768px){.kpi-row{grid-template-columns:repeat(2,1fr)}.main{padding:12px}}
+
+    .yearToggles{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 10px 0}
+    .yBtn{border:1px solid var(--bdr);background:#fff;border-radius:999px;padding:3px 10px;font-size:11px;cursor:pointer;color:var(--txt2)}
+    .yBtn.on{color:#fff;border-color:transparent}
 
     /* ── Page header ── */
     .page-header {
@@ -217,11 +238,8 @@
 </div>
 
   <!-- Page header -->
-  <div class="page-header">
-    <div class="page-title">
-      <h1>รายงานปริมาณการใช้น้ำ สำนักงานไทรน้อย กฟผ.</h1>
-      <p id="subtitle">Auto database version — daily meter readings</p>
-    </div>
+  <div class="hdr"><div class="hdr-l"><div class="logo">กฟผ.</div><div class="hdr-t"><h1>รายงานปริมาณการใช้น้ำ สำนักงานไทรน้อย กฟผ.</h1><p>Auto database version — daily meter readings</p></div></div>
+  
     <div class="controls">
       <select id="yearSel"></select>
       <select id="monthSel">
