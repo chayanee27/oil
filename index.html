@@ -193,6 +193,7 @@ function renderDonut(){
   ch.donut=new Chart(document.getElementById("donut"),{type:"doughnut",data:{labels:DEPT,datasets:[{data:vals,backgroundColor:CL,borderColor:"#fff",borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,cutout:"62%",plugins:{legend:{display:false}}}});
   const tb=document.getElementById("deptTable"); tb.innerHTML='<tr><th>ฝ่าย</th><th class="vl" style="text-align: right;">kWh</th><th class="pc" style="text-align: right;">%</th></tr>';
   DEPT.map((d,i)=>({d,v:vals[i],c:CL[i]})).sort((a,b)=>b.v-a.v).forEach(x=>{tb.innerHTML+=`<tr><td><span class="ld" style="background:${x.c}"></span>${x.d}</td><td class="vl">${fmt(x.v)}</td><td class="pc">${total?((x.v/total)*100).toFixed(1):"0.0"}%</td></tr>`});
+  tb.innerHTML+=`<tr style="font-weight:700;border-top:2px solid var(--pri)"><td>รวมทั้งสิ้น</td><td class="vl">${fmt(tot)}</td><td class="pc">100%</td></tr>`;
 }
 function renderMonthBar(){
   const vals=MO.map((_,i)=> sD==="all" ? DEPT.reduce((a,d)=>a+monthlyDeptTotal(i+1,d),0) : monthlyDeptTotal(i+1,sD));
