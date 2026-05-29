@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>รายงานปริมาณการใช้น้ำ กฟผ. สำนักงานไทรน้อย</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <style>
-    .topbar {
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>รายงานปริมาณการใช้น้ำ กฟผ. สำนักงานไทรน้อย - Auto DB</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+.topbar {
   background: linear-gradient(90deg, #0c1428 0%, #10172a 100%);
   border-bottom: 1px solid #2a2f4a;
   padding: 0 24px;
@@ -26,7 +27,7 @@
   display: flex; align-items: center; gap: 7px;
 }
 .nav-tab:hover { color: #e2e8f0; }
-.nav-tab.active { color: #f59e0b; border-bottom-color: #f59e0b; }  
+.nav-tab.active { color: #f59e0b; border-bottom-color: #f59e0b; }
 :root{--pri:#0B1D51;--pri-l:#1A3A7A;--gold:#C5A85F;--bg:#F0F2F5;--card:#FFF;--txt:#1A1A2E;--txt2:#5A6178;--bdr:#E2E6ED;--sh:0 2px 12px rgba(11,29,81,.08);--r:10px}
 *{margin:0;padding:0;box-sizing:border-box} body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--txt)}
 .hdr{background:linear-gradient(135deg,var(--pri),var(--pri-l));padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
@@ -42,145 +43,16 @@
 .ct{font-size:14px;font-weight:700;color:var(--pri);margin-bottom:4px}.cs{font-size:11px;color:var(--txt2);margin-bottom:14px}.cw{height:320px}
 .dw{display:flex;align-items:center;gap:18px}.donutBox{position:relative;width:220px;height:220px;flex-shrink:0}.dc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}.dcv{font-weight:800;color:var(--pri)}.dcl{font-size:10px;color:var(--txt2)}
 .lt{width:100%;border-collapse:collapse;font-size:12px}.lt th{text-align:left;color:var(--txt2);font-size:11px;border-bottom:1px solid var(--bdr);padding:4px 8px}.lt td{border-bottom:1px solid #eee;padding:5px 8px}.vl,.pc{text-align:right}.ld{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px}
-.note{background:#FFF8E1;border-bottom:2px solid #F9A825;padding:7px 28px;font-size:12px;color:#795548}.ft{text-align:center;padding:16px;color:var(--txt2);font-size:11px}
+.note{background:#E3F2FD;border-bottom:2px solid #1565C0;padding:7px 28px;font-size:12px;color:#0D47A1}.ft{text-align:center;padding:16px;color:var(--txt2);font-size:11px}
 @media(max-width:1200px){.kpi-row{grid-template-columns:repeat(4,1fr)}.grid2,.gridB{grid-template-columns:1fr}}@media(max-width:768px){.kpi-row{grid-template-columns:repeat(2,1fr)}.main{padding:12px}}
 
 .yearToggles{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 10px 0}
 .yBtn{border:1px solid var(--bdr);background:#fff;border-radius:999px;padding:3px 10px;font-size:11px;cursor:pointer;color:var(--txt2)}
 .yBtn.on{color:#fff;border-color:transparent}
-    /* ── Page header ── */
-    .page-header {
-      padding: 28px 28px 0;
-      display: flex; align-items: flex-start; justify-content: space-between;
-      flex-wrap: wrap; gap: 16px;
-    }
-    .page-title h1 {
-      font-size: 20px; font-weight: 700; color: var(--text);
-    }
-    .page-title p { font-size: 12px; color: var(--muted); margin-top: 4px; }
-    .controls { display: flex; gap: 10px; align-items: center; }
-    select {
-      background: var(--card2); border: 1px solid var(--border);
-      color: var(--text); padding: 7px 12px; border-radius: 8px;
-      font-size: 13px; cursor: pointer; outline: none;
-    }
-    select:focus { border-color: var(--water); }
-
-    /* ── Layout ── */
-    .main { padding: 20px 28px 40px; display: flex; flex-direction: column; gap: 20px; }
-
-    /* ── KPI cards ── */
-    .kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
-    .kpi-card {
-      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
-      padding: 18px 20px;
-    }
-    .kpi-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .8px; }
-    .kpi-val { font-size: 28px; font-weight: 700; margin-top: 8px; color: var(--water); line-height: 1; }
-    .kpi-unit { font-size: 12px; color: var(--muted); margin-top: 4px; }
-    .kpi-sub { font-size: 11px; color: var(--muted); margin-top: 6px; }
-    .kpi-card.highlight { border-color: var(--water-dark); background: linear-gradient(135deg,#0c2540,#1a2d4a); }
-
-    /* ── 2-col grid ── */
-    .row2 { display: grid; grid-template-columns: 340px 1fr; gap: 20px; }
-    @media(max-width:900px){ .row2 { grid-template-columns: 1fr; } }
-
-    /* ── Cards ── */
-    .card {
-      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
-      padding: 20px;
-    }
-    .card-title {
-      font-size: 13px; font-weight: 600; color: var(--text);
-      margin-bottom: 4px;
-    }
-    .card-sub { font-size: 11px; color: var(--muted); margin-bottom: 16px; }
-
-    /* ── Chart containers ── */
-    .chart-wrap { position: relative; }
-    .chart-wrap canvas { max-width: 100%; }
-
-    /* ── Donut legend ── */
-    .donut-wrap { display: flex; flex-direction: column; align-items: center; }
-    .donut-center {
-      position: relative;
-    }
-    .donut-center canvas { display: block; }
-    .legend-list { width: 100%; margin-top: 16px; display: flex; flex-direction: column; gap: 6px; }
-    .legend-item {
-      display: flex; align-items: center; justify-content: space-between;
-      font-size: 12px; color: var(--text);
-    }
-    .legend-dot {
-      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-right: 8px;
-    }
-    .legend-left { display: flex; align-items: center; }
-    .legend-bar-wrap {
-      flex: 1; height: 4px; background: var(--border); border-radius: 4px;
-      margin: 0 12px; overflow: hidden;
-    }
-    .legend-bar { height: 100%; border-radius: 4px; transition: width .6s; }
-    .legend-val { font-size: 11px; color: var(--muted); min-width: 60px; text-align: right; }
-
-    /* ── Bar chart ── */
-    .bar-chart-wrap { height: 260px; position: relative; }
-
-    /* ── Table ── */
-    .building-table { width: 100%; border-collapse: collapse; }
-    .building-table th {
-      font-size: 11px; color: var(--muted); font-weight: 500; text-transform: uppercase;
-      letter-spacing: .6px; padding: 0 0 10px; text-align: left; border-bottom: 1px solid var(--border);
-    }
-    .building-table td { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
-    .building-table tr:last-child td { border-bottom: none; }
-    .rank-badge {
-      width: 22px; height: 22px; border-radius: 50%; display: inline-flex;
-      align-items: center; justify-content: center; font-size: 10px; font-weight: 700;
-    }
-    .rank-1 { background: #fef08a22; color: #fbbf24; border: 1px solid #fbbf2444; }
-    .rank-2 { background: #d1d5db22; color: #9ca3af; border: 1px solid #9ca3af44; }
-    .rank-3 { background: #fed7aa22; color: #fb923c; border: 1px solid #fb923c44; }
-    .rank-other { background: var(--card2); color: var(--muted); border: 1px solid var(--border); }
-    .progress-cell { min-width: 120px; }
-    .progress-bg { height: 6px; background: var(--border); border-radius: 4px; }
-    .progress-fill { height: 100%; border-radius: 4px; background: var(--water); }
-    .dept-badge {
-      display: inline-block; padding: 2px 8px; border-radius: 10px;
-      font-size: 10px; font-weight: 500; background: var(--card2); color: var(--muted);
-      border: 1px solid var(--border);
-    }
-
-    /* ── Loading ── */
-    #loading {
-      position: fixed; inset: 0; background: var(--bg);
-      display: flex; align-items: center; justify-content: center;
-      flex-direction: column; gap: 16px; z-index: 999;
-    }
-    .spinner {
-      width: 40px; height: 40px;
-      border: 3px solid var(--border);
-      border-top-color: var(--water);
-      border-radius: 50%;
-      animation: spin .8s linear infinite;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    #loading p { color: var(--muted); font-size: 13px; }
-    #app { display: none; }
-
-    /* ── Footer ── */
-    footer { text-align: center; color: var(--muted); font-size: 11px; padding: 0 0 24px; }
-  </style>
+</style>
 </head>
 <body>
-
-<div id="loading">
-  <div class="spinner"></div>
-  <p>กำลังโหลดฐานข้อมูลน้ำ…</p>
-</div>
-
-<div id="app">
-  <!-- Topbar nav -->
- <div class="topbar">
+<div class="topbar">
   <div style="font-size:15px;font-weight:700;color:#f59e0b;padding:14px 0;margin-right:32px">
     กฟผ. สำนักงานไทรน้อย 
   </div>
@@ -189,343 +61,189 @@
       ⚡ ไฟฟ้า
     </a>
     <a href="water.html" class="nav-tab active">
-      💧 น้ำประปา (demo)
+      💧 น้ำประปา
     </a>
     <a href="garbage.html" class="nav-tab">
       ขยะ (demo)
     </a>
   </nav>
 </div>
-
-  <!-- Page header -->
-  <div class="hdr"><div class="hdr-l"><div class="logo">กฟผ.</div><div class="hdr-t"><h1>รายงานปริมาณการใช้น้ำ สำนักงานไทรน้อย กฟผ.</h1><p>Auto database version — daily meter readings</p></div></div>
-    <div class="fg"><span class="fl">ปี</span><select class="fs" id="yearSel"></select><span class="fl">เดือน</span><select class="fs" id="monthSel"></select></div>
-
-
-  <!-- Main content -->
-  <div class="main">
-    <!-- KPI Row -->
-    <div class="kpi-row">
-      <div class="kpi-card highlight">
-        <div class="kpi-label">ปริมาณการใช้น้ำรวม</div>
-        <div class="kpi-val" id="kpi-total">—</div>
-        <div class="kpi-unit">ลูกบาศก์เมตร (ลบ.ม.)</div>
-        <div class="kpi-sub" id="kpi-period">—</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">ฝ่ายใช้น้ำสูงสุด</div>
-        <div class="kpi-val" id="kpi-top-dept" style="font-size:18px">—</div>
-        <div class="kpi-unit" id="kpi-top-dept-val">—</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">อาคารใช้น้ำสูงสุด</div>
-        <div class="kpi-val" id="kpi-top-bldg" style="font-size:14px;line-height:1.3">—</div>
-        <div class="kpi-unit" id="kpi-top-bldg-val">—</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">จำนวนมิเตอร์</div>
-        <div class="kpi-val" id="kpi-meters">16</div>
-        <div class="kpi-unit">มิเตอร์</div>
-        <div class="kpi-sub" id="kpi-updated">—</div>
-      </div>
-    </div>
-
-    <!-- Donut + Bar -->
-    <div class="row2">
-      <!-- Donut -->
-      <div class="card">
-        <div class="card-title">อัตราส่วนการใช้น้ำ แยกฝ่าย</div>
-        <div class="card-sub" id="donut-sub">—</div>
-        <div class="donut-wrap">
-          <div class="donut-center">
-            <canvas id="donutChart" width="260" height="260"></canvas>
-          </div>
-          <div class="legend-list" id="legendList"></div>
-        </div>
-      </div>
-      <!-- Bar monthly -->
-      <div class="card">
-        <div class="card-title">ปริมาณการใช้น้ำในแต่ละเดือน</div>
-        <div class="card-sub">แยกตามฝ่าย (ลบ.ม.)</div>
-        <div class="bar-chart-wrap">
-          <canvas id="barChart"></canvas>
-        </div>
-      </div>
-    </div>
-
-    <!-- Top Buildings -->
-    <div class="card">
-      <div class="card-title">Top อาคาร — ปริมาณการใช้น้ำสะสม</div>
-      <div class="card-sub" id="bldg-sub">แสดงทุกมิเตอร์</div>
-      <table class="building-table" id="buildingTable">
-        <thead>
-          <tr>
-            <th style="width:40px">#</th>
-            <th>อาคาร / มิเตอร์</th>
-            <th>ฝ่าย</th>
-            <th class="progress-cell">สัดส่วน</th>
-            <th style="text-align:right">ลบ.ม.</th>
-          </tr>
-        </thead>
-        <tbody id="buildingTbody"></tbody>
-      </table>
-    </div>
-
-    <!-- Monthly trend line -->
-    <div class="card">
-      <div class="card-title">แนวโน้มการใช้น้ำรายเดือน (รวมทุกอาคาร)</div>
-      <div class="card-sub">ลบ.ม. / เดือน</div>
-      <div style="height:200px; position:relative;">
-        <canvas id="trendChart"></canvas>
-      </div>
-    </div>
+<div class="hdr"><div class="hdr-l"><div class="logo">กฟผ.</div><div class="hdr-t"><h1>รายงานปริมาณการใช้น้ำ สำนักงานไทรน้อย กฟผ.</h1><p>Auto database version — daily meter readings</p></div></div>
+<div class="fg"><span class="fl">ปี</span><select class="fs" id="yearSel"></select><span class="fl">เดือน</span><select class="fs" id="monthSel"></select></div></div>
+<div class="ban"><span class="ban-l">ยอดสะสมการใช้น้ำ</span><span class="ban-v" id="grandTotal">—</span><span class="ban-u">ลบ.ม.</span></div>
+<div id="noteBar" class="note">กำลังโหลดฐานข้อมูล <code>data/water_db.json</code>...</div>
+<div class="main">
+  <div class="kpi-row" id="kpiRow"></div>
+  <div class="grid2">
+    <div class="card"><div class="ct">อัตราส่วนการใช้น้ำ แยกฝ่าย</div><div class="cs" id="donutSub"></div><div class="dw"><div class="donutBox"><canvas id="donut"></canvas><div class="dc"><div class="dcv" id="donutTotal">—</div><div class="dcl">ลบ.ม.</div></div></div><div style="flex:1;overflow:auto"><table class="lt" id="deptTable"></table></div></div></div>
+    <div class="card"><div class="ct">ปริมาณการใช้น้ำในแต่ละเดือน</div><div class="cs" id="barSub"></div><div class="cw"><canvas id="monthBar"></canvas></div></div>
   </div>
-
-  <footer>Dashboard ดึงข้อมูลจาก water_db.json | บันทึกมิเตอร์น้ำรายวัน</footer>
+  <div class="gridB">
+    <div class="card"><div class="ct" id="buildingTitle">Top อาคาร</div><div class="cs">แสดงทุกมิเตอร์น้ำ (16 มิเตอร์)</div><div class="cw"><canvas id="buildingBar"></canvas></div></div>
+    <div class="card"><div class="ct">ปริมาณการใช้น้ำรายเดือนในแต่ละปี</div><div class="cs">ใช้ข้อมูลชุดเดียวกับกราฟปริมาณการใช้น้ำในแต่ละเดือน</div><div class="yearToggles" id="yearToggles"></div><div class="cw"><canvas id="yearLine"></canvas></div></div>
+  </div>
 </div>
-
+<div class="ft">Dashboard ดึงข้อมูลจาก water_db.json | บันทึกมิเตอร์น้ำรายวัน</div>
 <script>
-const DEPT_COLORS = {
-  'สก.ชธธ.': '#38bdf8',
-  'อบค.':    '#34d399',
-  'อบฟ.':    '#a78bfa',
-  'อบย.':    '#fbbf24',
-  'อรอ.':    '#fb923c',
-  'อคม.':    '#2dd4bf',
-  'ส่วนกลาง':'#f472b6',
-};
-
-let DB = null;
-let donutChart = null, barChart = null, trendChart = null;
-
-// ── Format number ──
-function fmt(n) {
-  if (n >= 1000) return (n/1000).toFixed(2) + ' K';
-  return n.toFixed(1);
+const MO=["ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค."];
+const DEPT=["สก.ชธธ.","อบค.","อบฟ.","อบย.","อรอ.","อคม.","อหข."];
+const CL=["#1565C0","#00897B","#F9A825","#EF6C00","#AD1457","#6A1B9A","#2E7D32"];
+const DB=["#0D47A1","#004D40","#E65100","#880E4F","#4A148C","#1B5E20","#BF360C"];
+const BUILD_COLORS=["#1565C0","#00897B","#F9A825","#EF6C00","#AD1457","#6A1B9A","#2E7D32","#C5A85F","#455A64","#00ACC1","#8E24AA","#7CB342"];
+let DATA=null, sY=null, sM="all", sD="all", ch={}, visibleYears=new Set();
+function fmt(n){return (Math.round((n||0)*10)/10).toLocaleString("th-TH")}
+function displayBuildingName(name){return (DATA&&DATA.building_alias&&DATA.building_alias[name])||name}
+function rowYear(r){return +String(r.week_end_date).slice(0,4)}
+function rowMonth(r){return +String(r.week_end_date).slice(5,7)}
+function inFilter(r){return rowYear(r)===sY&&(sM==="all"||rowMonth(r)===(+sM));}
+function deptRows(){return (DATA.department_weekly||[]).filter(inFilter);}
+function deptTotal(dept){return deptRows().filter(r=>r.department===dept).reduce((a,b)=>a+(+b.kwh||0),0)}
+function allTotal(){return DEPT.reduce((a,d)=>a+deptTotal(d),0)}
+function monthlySeriesValue(year,month,dept=null){
+  return (DATA.department_weekly||[])
+    .filter(r=>rowYear(r)===year&&rowMonth(r)===month)
+    .filter(r=>!dept||r.department===dept)
+    .reduce((a,b)=>a+(+b.kwh||0),0);
 }
-function fmtFull(n) { return n.toLocaleString('th-TH', {maximumFractionDigits:1}); }
-
-// ── Get filtered data ──
-function getFiltered(year, month) {
-  const keys = Object.keys(DB.monthly_by_department);
-  let filtered = keys.filter(k => k.startsWith(year));
-  if (month !== 'all') filtered = filtered.filter(k => k.endsWith('-'+month));
-  return filtered;
+function buildingRows(){
+  const map={};
+  if(sD==="all"){
+    (DATA.department_weekly||[]).filter(inFilter).forEach(r=>{
+      const name=r.building_name||r.meter_id||"ไม่ระบุ";
+      if(!map[name])map[name]={name,kwh:0};
+      map[name].kwh+=+r.kwh||0;
+    });
+  } else {
+    (DATA.department_weekly||[]).filter(inFilter).filter(r=>r.department===sD).forEach(r=>{
+      const name=r.building_name||r.meter_id||"ไม่ระบุ";
+      if(!map[name])map[name]={name,kwh:0};
+      map[name].kwh+=+r.kwh||0;
+    });
+  }
+  return Object.values(map).filter(x=>x.kwh>0).sort((a,b)=>b.kwh-a.kwh).slice(0,8);
 }
-
-function sumDepts(months) {
-  const totals = {};
-  for (const ym of months) {
-    const data = DB.monthly_by_department[ym] || {};
-    for (const [d, v] of Object.entries(data)) {
-      totals[d] = (totals[d] || 0) + v;
-    }
-  }
-  return totals;
+function setupFilters(){
+  const years=[...new Set((DATA.department_weekly||[]).map(r=>rowYear(r)))].sort();
+  const ys=document.getElementById("yearSel"); ys.innerHTML="";
+  years.forEach(y=>{const o=document.createElement("option");o.value=y;o.textContent=y+543;ys.appendChild(o)});
+  sY=years[years.length-1]; ys.value=sY;
+  const ms=document.getElementById("monthSel"); ms.innerHTML='<option value="all">ทั้งหมด</option>';
+  MO.forEach((m,i)=>{const o=document.createElement("option");o.value=i+1;o.textContent=m;ms.appendChild(o)});
+  ys.onchange=e=>{sY=+e.target.value;renderAll()};
+  ms.onchange=e=>{sM=e.target.value;renderAll()};
 }
-
-function sumMeters(months) {
-  const totals = {};
-  for (const ym of months) {
-    const data = DB.monthly_by_meter[ym] || {};
-    for (const [m, v] of Object.entries(data)) {
-      totals[m] = (totals[m] || 0) + v;
-    }
-  }
-  return totals;
+function renderKPI(){
+  const row=document.getElementById("kpiRow"); row.innerHTML="";
+  const total=allTotal();
+  document.getElementById("grandTotal").textContent=fmt(total);
+  const g=document.createElement("div"); g.className="kG";
+  g.innerHTML=`<div class="kL">กฟผ.ไทรน้อยรวม</div><div class="kS">ปริมาณการใช้น้ำรวม</div><div class="kV">${fmt(total)}</div><div class="kU">ลบ.ม.</div>`;
+  g.onclick=()=>{sD="all";renderAll()}; row.appendChild(g);
+  DEPT.forEach((d,i)=>{
+    const v=deptTotal(d);
+    const el=document.createElement("div");
+    el.className="kD"+(sD===d?" sel":sD!=="all"?" dim":"");
+    el.style.background=DB[i];
+    el.innerHTML=`<div class="kL">${d}</div><div class="kS">ยอดรวมการใช้น้ำ</div><div class="kV">${fmt(v)}</div><div class="kU">ลบ.ม.</div>`;
+    el.onclick=()=>{sD=sD===d?"all":d;renderAll()};
+    row.appendChild(el);
+  });
 }
-
-// ── Render ──
-function render() {
-  const year = document.getElementById('yearSel').value;
-  const month = document.getElementById('monthSel').value;
-  const filteredKeys = getFiltered(year, month);
-
-  const deptTotals = sumDepts(filteredKeys);
-  const meterTotals = sumMeters(filteredKeys);
-  const grandTotal = Object.values(deptTotals).reduce((a,b)=>a+b, 0);
-
-  // KPI
-  document.getElementById('kpi-total').textContent = fmtFull(grandTotal);
-  document.getElementById('kpi-period').textContent =
-    month === 'all' ? `ปี ${year}` : `${['','ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'][parseInt(month)]} ${year}`;
-
-  const topDept = Object.entries(deptTotals).sort((a,b)=>b[1]-a[1])[0];
-  if (topDept) {
-    document.getElementById('kpi-top-dept').textContent = topDept[0];
-    document.getElementById('kpi-top-dept-val').textContent = fmtFull(topDept[1]) + ' ลบ.ม.';
-  }
-
-  const topMeter = Object.entries(meterTotals).sort((a,b)=>b[1]-a[1])[0];
-  if (topMeter) {
-    document.getElementById('kpi-top-bldg').textContent = topMeter[0];
-    document.getElementById('kpi-top-bldg-val').textContent = fmtFull(topMeter[1]) + ' ลบ.ม.';
-  }
-
-  document.getElementById('kpi-updated').textContent = 'อัพเดต: ' + (DB.meta?.last_updated || '—');
-
-  // Donut
-  const depts = Object.keys(deptTotals).sort((a,b)=>deptTotals[b]-deptTotals[a]);
-  const dvals = depts.map(d => deptTotals[d]);
-  const dcolors = depts.map(d => DEPT_COLORS[d] || '#64748b');
-
-  if (donutChart) donutChart.destroy();
-  donutChart = new Chart(document.getElementById('donutChart'), {
-    type: 'doughnut',
-    data: { labels: depts, datasets: [{ data: dvals, backgroundColor: dcolors, borderWidth: 2, borderColor: '#1a1d27', hoverOffset: 8 }] },
-    options: {
-      cutout: '68%', responsive: false,
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          callbacks: {
-            label: ctx => ` ${fmtFull(ctx.parsed)} ลบ.ม. (${(ctx.parsed/grandTotal*100).toFixed(1)}%)`
-          }
-        }
-      }
-    }
+function renderDonut(){
+  const vals=DEPT.map(deptTotal), total=vals.reduce((a,b)=>a+b,0);
+  document.getElementById("donutTotal").textContent=fmt(total);
+  document.getElementById("donutSub").textContent=`ปี ${sY+543}${sM==="all"?"":" — "+MO[+sM-1]}`;
+  if(ch.donut)ch.donut.destroy();
+  ch.donut=new Chart(document.getElementById("donut"),{type:"doughnut",data:{labels:DEPT,datasets:[{data:vals,backgroundColor:CL,borderColor:"#fff",borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,cutout:"62%",plugins:{legend:{display:false}}}});
+  const tb=document.getElementById("deptTable");
+  tb.innerHTML='<tr><th>ฝ่าย</th><th class="vl" style="text-align:right">ลบ.ม.</th><th class="pc" style="text-align:right">%</th></tr>';
+  DEPT.map((d,i)=>({d,v:vals[i],c:CL[i]})).sort((a,b)=>b.v-a.v).forEach(x=>{
+    tb.innerHTML+=`<tr><td><span class="ld" style="background:${x.c}"></span>${x.d}</td><td class="vl">${fmt(x.v)}</td><td class="pc">${total?((x.v/total)*100).toFixed(1):"0.0"}%</td></tr>`;
   });
-
-  // Legend
-  const ll = document.getElementById('legendList');
-  ll.innerHTML = '';
-  const maxV = Math.max(...dvals, 1);
-  depts.forEach((d,i) => {
-    const pct = (dvals[i]/grandTotal*100).toFixed(1);
-    ll.innerHTML += `<div class="legend-item">
-      <div class="legend-left">
-        <div class="legend-dot" style="background:${dcolors[i]}"></div>
-        <span>${d}</span>
-      </div>
-      <div class="legend-bar-wrap">
-        <div class="legend-bar" style="width:${(dvals[i]/maxV*100).toFixed(0)}%;background:${dcolors[i]}"></div>
-      </div>
-      <div class="legend-val">${pct}%</div>
-    </div>`;
-  });
-  document.getElementById('donut-sub').textContent = `${depts.length} ฝ่าย — ${fmtFull(grandTotal)} ลบ.ม.`;
-
-  // Bar chart (monthly stacked)
-  const allMonths = Object.keys(DB.monthly_by_department).sort();
-  const yearMonths = allMonths.filter(k => k.startsWith(year));
-  const thaiMonths = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
-  const barLabels = yearMonths.map(ym => thaiMonths[parseInt(ym.split('-')[1])-1]);
-  const allDepts = DB.departments;
-  const barDatasets = allDepts.map(dept => ({
-    label: dept,
-    data: yearMonths.map(ym => DB.monthly_by_department[ym]?.[dept] || 0),
-    backgroundColor: DEPT_COLORS[dept] || '#64748b',
-    borderRadius: 3, borderSkipped: false
-  }));
-
-  if (barChart) barChart.destroy();
-  barChart = new Chart(document.getElementById('barChart'), {
-    type: 'bar',
-    data: { labels: barLabels, datasets: barDatasets },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { labels: { color: '#8892a4', font: { size: 11 } } },
-        tooltip: { mode: 'index', callbacks: {
-          footer: items => 'รวม: ' + fmtFull(items.reduce((s,i)=>s+i.parsed.y,0)) + ' ลบ.ม.'
-        }}
-      },
-      scales: {
-        x: { stacked: true, ticks: { color: '#8892a4', font:{size:11} }, grid: { color: '#1e2235' } },
-        y: { stacked: true, ticks: { color: '#8892a4', font:{size:11} }, grid: { color: '#1e2235' },
-          title: { display: true, text: 'ลบ.ม.', color: '#8892a4', font:{size:11} } }
-      }
-    }
-  });
-
-  // Building table
-  const sorted = Object.entries(meterTotals).sort((a,b)=>b[1]-a[1]);
-  const maxM = sorted[0]?.[1] || 1;
-  const meterToDept = {};
-  for (const [sheet, info] of Object.entries(DB.meters)) {
-    meterToDept[info.name] = info.dept;
-  }
-  const tbody = document.getElementById('buildingTbody');
-  tbody.innerHTML = '';
-  sorted.forEach(([name, val], i) => {
-    const rank = i+1;
-    const badgeClass = rank===1?'rank-1':rank===2?'rank-2':rank===3?'rank-3':'rank-other';
-    const pct = (val/maxM*100).toFixed(0);
-    const dept = meterToDept[name] || '—';
-    const dcolor = DEPT_COLORS[dept] || '#64748b';
-    tbody.innerHTML += `<tr>
-      <td><span class="rank-badge ${badgeClass}">${rank}</span></td>
-      <td style="font-size:12px; max-width:200px">${name}</td>
-      <td><span class="dept-badge" style="color:${dcolor};border-color:${dcolor}44">${dept}</span></td>
-      <td class="progress-cell">
-        <div class="progress-bg">
-          <div class="progress-fill" style="width:${pct}%;background:${dcolor}"></div>
-        </div>
-      </td>
-      <td style="text-align:right; font-size:13px; font-weight:600; color:var(--water)">${fmtFull(val)}</td>
-    </tr>`;
-  });
-
-  // Trend chart
-  const trendMonths = allMonths;
-  const trendLabels = trendMonths.map(ym => thaiMonths[parseInt(ym.split('-')[1])-1] + ' ' + ym.split('-')[0]);
-  const trendVals = trendMonths.map(ym => {
-    return Object.values(DB.monthly_by_department[ym] || {}).reduce((s,v)=>s+v, 0);
-  });
-
-  if (trendChart) trendChart.destroy();
-  trendChart = new Chart(document.getElementById('trendChart'), {
-    type: 'line',
-    data: {
-      labels: trendLabels,
-      datasets: [{
-        label: 'รวมการใช้น้ำ',
-        data: trendVals,
-        borderColor: '#38bdf8',
-        backgroundColor: 'rgba(56,189,248,0.1)',
-        borderWidth: 2.5, pointRadius: 5,
-        pointBackgroundColor: '#38bdf8', fill: true, tension: 0.35
-      }]
+}
+function renderMonthBar(){
+  const vals=MO.map((_,i)=>sD==="all"?DEPT.reduce((a,d)=>a+monthlySeriesValue(sY,i+1,d),0):monthlySeriesValue(sY,i+1,sD));
+  const validVals=vals.filter(v=>v>0);
+  const maxVal=validVals.length?Math.max(...validVals):0;
+  const avgVal=validVals.length?validVals.reduce((a,b)=>a+b,0)/validVals.length:0;
+  document.getElementById("barSub").textContent=`ปี ${sY+543}${sD!=="all"?" ("+sD+")":""}`;
+  if(ch.monthBar)ch.monthBar.destroy();
+  ch.monthBar=new Chart(document.getElementById("monthBar"),{
+    data:{
+      labels:MO,
+      datasets:[
+        {type:"bar",label:"ลบ.ม.",data:vals,backgroundColor:vals.map(v=>v===maxVal&&v>0?"#EF6C00":"#1565C0"),borderRadius:4,order:2},
+        {type:"line",label:"ค่าเฉลี่ย",data:MO.map(()=>avgVal||null),borderColor:"#C5A85F",backgroundColor:"#C5A85F",borderDash:[6,6],borderWidth:2,pointRadius:0,pointHitRadius:28,pointHoverRadius:6,pointHoverBackgroundColor:"#C5A85F",pointHoverBorderColor:"#C5A85F",tension:0,order:1}
+      ]
     },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false },
-        tooltip: { callbacks: { label: ctx => ` ${fmtFull(ctx.parsed.y)} ลบ.ม.` } }
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      interaction:{mode:"nearest",intersect:false,axis:"xy"},
+      hover:{mode:"nearest",intersect:false,axis:"xy"},
+      plugins:{
+        legend:{display:true,position:"top",labels:{boxWidth:12,font:{size:11}}},
+        tooltip:{callbacks:{label:ctx=>{if(ctx.dataset.label==="ค่าเฉลี่ย")return `ค่าเฉลี่ย: ${fmt(ctx.raw)} ลบ.ม.`;return `${ctx.dataset.label}: ${fmt(ctx.raw)} ลบ.ม.`;}}}
       },
-      scales: {
-        x: { ticks: { color: '#8892a4', font:{size:11} }, grid: { color: '#1e2235' } },
-        y: { ticks: { color: '#8892a4', font:{size:11} }, grid: { color: '#1e2235' },
-          title: { display:true, text:'ลบ.ม.', color:'#8892a4', font:{size:11} } }
-      }
+      scales:{y:{beginAtZero:true,ticks:{callback:v=>v.toFixed(0)}},x:{grid:{display:false}}}
     }
   });
 }
-
-// ── Init ──
-async function init() {
-  const res = await fetch('data/water_db.json');
-  DB = await res.json();
-
-  // Populate year selector
-  const years = [...new Set(Object.keys(DB.monthly_by_department).map(k=>k.split('-')[0]))].sort();
-  const yearSel = document.getElementById('yearSel');
-  years.forEach(y => {
-    const o = document.createElement('option');
-    o.value = y; o.textContent = 'ปี ' + (parseInt(y)+543);
-    yearSel.appendChild(o);
+function renderBuildingBar(){
+  const b=buildingRows();
+  document.getElementById("buildingTitle").textContent=sD==="all"?"ปริมาณใช้น้ำสะสม — Top อาคารรวมทั้งสำนักงาน":`ปริมาณใช้น้ำสะสม — ${sD}`;
+  if(ch.buildingBar)ch.buildingBar.destroy();
+  ch.buildingBar=new Chart(document.getElementById("buildingBar"),{
+    type:"bar",
+    data:{labels:b.map(x=>displayBuildingName(x.name)),datasets:[{data:b.map(x=>x.kwh),backgroundColor:b.map((_,i)=>BUILD_COLORS[i%BUILD_COLORS.length]),borderRadius:4}]},
+    options:{
+      indexAxis:"y",responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${fmt(ctx.raw)} ลบ.ม.`}}},
+      scales:{x:{beginAtZero:true,ticks:{callback:v=>v.toFixed(0)}},y:{ticks:{font:{size:10}}}}
+    }
   });
-  yearSel.value = years[years.length-1];
-
-  document.getElementById('yearSel').addEventListener('change', render);
-  document.getElementById('monthSel').addEventListener('change', render);
-
-  render();
-
-  document.getElementById('loading').style.display = 'none';
-  document.getElementById('app').style.display = 'block';
 }
-
-init().catch(err => {
-  document.getElementById('loading').innerHTML = `<p style="color:#f87171">ไม่สามารถโหลดข้อมูลได้: ${err.message}</p>`;
+function renderYearLine(){
+  const years=[...new Set((DATA.department_weekly||[]).map(r=>rowYear(r)))].sort();
+  if(visibleYears.size===0)years.forEach(y=>visibleYears.add(y));
+  const tg=document.getElementById("yearToggles");
+  const colors=["#1565C0","#00897B","#F9A825","#EF6C00","#AD1457","#6A1B9A","#2E7D32","#C5A85F"];
+  if(tg){
+    tg.innerHTML="";
+    years.forEach((y,idx)=>{
+      const btn=document.createElement("button");
+      btn.className="yBtn"+(visibleYears.has(y)?" on":"");
+      btn.textContent=String(y+543);
+      btn.style.background=visibleYears.has(y)?colors[idx%colors.length]:"#fff";
+      btn.onclick=()=>{if(visibleYears.has(y))visibleYears.delete(y);else visibleYears.add(y);renderYearLine();};
+      tg.appendChild(btn);
+    });
+  }
+  if(ch.yearLine)ch.yearLine.destroy();
+  const datasets=years.filter(y=>visibleYears.has(y)).map(y=>{
+    const color=colors[years.indexOf(y)%colors.length];
+    return {
+      label:"ปี "+(y+543),
+      data:MO.map((_,i)=>sD==="all"?DEPT.reduce((a,d)=>a+monthlySeriesValue(y,i+1,d),0)||null:monthlySeriesValue(y,i+1,sD)||null),
+      borderColor:color,backgroundColor:color,tension:.3,pointRadius:3,pointHoverRadius:5,spanGaps:false
+    };
+  });
+  ch.yearLine=new Chart(document.getElementById("yearLine"),{
+    type:"line",data:{labels:MO,datasets},
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${ctx.dataset.label}: ${fmt(ctx.raw)} ลบ.ม.`}}},
+      scales:{y:{beginAtZero:true,ticks:{callback:v=>v.toFixed(0)}},x:{grid:{display:false}}}
+    }
+  });
+}
+function renderAll(){renderKPI();renderDonut();renderMonthBar();renderBuildingBar();renderYearLine();}
+fetch("data/water_db.json").then(r=>r.json()).then(db=>{
+  DATA=db;
+  document.getElementById("noteBar").textContent="โหลดข้อมูลสำเร็จ: data/water_db.json";
+  setupFilters();renderAll();
+}).catch(err=>{
+  document.getElementById("noteBar").textContent="ไม่พบ data/water_db.json หรือเปิดไฟล์จากเครื่องโดยตรงแล้ว browser บล็อก fetch — ให้รันผ่าน local server เช่น python -m http.server";
+  console.error(err);
 });
 </script>
 </body>
