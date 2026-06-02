@@ -434,20 +434,17 @@ function toggleManual() {
 // แสดงวันที่
 
 function formatThaiDate(dateStr) {
-  if (!dateStr) return 'ไม่พบวันที่';
+  if (!dateStr) return '';
 
-  const s = String(dateStr).trim();
+  const date = new Date(dateStr);
 
-  // รองรับ 2026-05-29 หรือ 2026-05-29T00:00:00
-  let m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
-  if (m) {
-    const date = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
-    return date.toLocaleDateString('th-TH', {
-      day: '2-digit',
-      month: 'short',
-      year: '2-digit'
-    });
-  }
+  return date.toLocaleDateString('th-TH', {
+    timeZone: 'Asia/Bangkok',
+    day: '2-digit',
+    month: 'short',
+    year: '2-digit'
+  });
+}
 
   // รองรับ 29/05/2026 หรือ 29/5/69
   m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
