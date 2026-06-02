@@ -446,24 +446,6 @@ function formatThaiDate(dateStr) {
   });
 }
 
-  // รองรับ 29/05/2026 หรือ 29/5/69
-  m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
-  if (m) {
-    let y = Number(m[3]);
-    if (y < 100) y += 2500;      // 69 -> 2569
-    if (y > 2400) y -= 543;      // 2569 -> 2026
-
-    const date = new Date(y, Number(m[2]) - 1, Number(m[1]));
-    return date.toLocaleDateString('th-TH', {
-      day: '2-digit',
-      month: 'short',
-      year: '2-digit'
-    });
-  }
-
-  return 'วันที่ไม่ถูกต้อง';
-}
-
 function setWeekDisplay(w, rows = []) {
   const readingDate = rows?.[0]?.reading_date || '';
 
