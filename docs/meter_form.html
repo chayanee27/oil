@@ -432,10 +432,13 @@ function toggleManual() {
 function formatThaiDate(dateStr) {
   if (!dateStr) return 'ไม่พบวันที่';
 
-  return new Date(dateStr).toLocaleDateString('th-TH', {
+  const [y, m, d] = String(dateStr).split('-').map(Number);
+  const date = new Date(y, m - 1, d); // ใช้ local date ตรง ๆ
+
+  return date.toLocaleDateString('th-TH', {
     day: '2-digit',
     month: 'short',
-    year: 'numeric'
+    year: '2-digit'
   });
 }
 
