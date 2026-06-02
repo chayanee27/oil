@@ -458,7 +458,7 @@ function setWeekDisplay(w, rows = []) {
   const readingDate = rows?.[0]?.reading_date || '';
 
   document.getElementById('weekLabel').textContent =
-    `${w} (${formatThaiDate(readingDate)})`;
+    readingDate ? `${w} (${readingDate})` : w;
 
   document.getElementById('latestWeekBadge').textContent = w;
 }
