@@ -429,20 +429,29 @@ function toggleManual() {
 
 // แสดงวันที่
 
-function getTodayThaiDate() {
-  return new Date().toLocaleDateString('th-TH', {
+function formatThaiDate(dateStr) {
+  if (!dateStr) return 'ไม่พบวันที่';
+
+  return new Date(dateStr).toLocaleDateString('th-TH', {
     day: '2-digit',
     month: 'short',
     year: 'numeric'
   });
 }
+
+function setWeekDisplay(w, rows = []) {
+  const readingDate = rows?.[0]?.reading_date || '';
+  const label = `${w} (${formatThaiDate(readingDate)})`;
+
+  document.getElementById('weekLabel').textContent = label;
+  document.getElementById('latestWeekBadge').textContent = label;
+}
+
   
 function loadLatestWeek() {
   const w = getCurrentWeekId();
   document.getElementById('weekInput').value = w;
   weekId = w;
-  document.getElementById('weekLabel').textContent =
-  `${w} (${getTodayThaiDate()})`;
   showLoading();
   fetchWeekData(w);
 }
@@ -463,8 +472,6 @@ async function loadWeek() {
   const input = document.getElementById('weekInput').value.trim();
   if (!input) return showToast('กรุณาระบุรหัสสัปดาห์', 'error');
   weekId = input;
-  document.getElementById('weekLabel').textContent =
-  `${weekId} (${getTodayThaiDate()})`;
   showLoading();
   fetchWeekData(weekId);
 }
@@ -475,7 +482,8 @@ async function fetchWeekData(w) {
     const data = await res.json();
     if (!data.ok) throw new Error(data.error || 'โหลดข้อมูลไม่สำเร็จ');
 
-    allRows = data.rows;
+    allRows = data.rows || [];
+    setWeekDisplay(w, allRows);
     renderList();
     document.getElementById('statsBar').style.display  = 'flex';
     document.getElementById('filterTabs').style.display = 'flex';
