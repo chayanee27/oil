@@ -2,654 +2,1346 @@
   "errors": [],
   "warnings": [
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 2,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "EGAT__FL01__Main"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 3,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "EGAT__FL01__Main2"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 4,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0006__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 5,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0007__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 6,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0008__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 7,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0009__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 8,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0010__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 9,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0011__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 10,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0012__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 11,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0026__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 12,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0017__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 13,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0017__FL01__ร้านค้า_1"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 14,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0017__FL01__ร้านค้า_2"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 15,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0017__FL01__ร้านค้า_3"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 16,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0017__FL01__ร้านค้า_4"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 17,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0017__FL01__ร้านค้า_5"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 18,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0014__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 19,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0015__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 20,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0016__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 21,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0017__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 22,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0018__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 23,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0019__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 24,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0019__FL01__ร้านค้า_1"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 25,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0019__FL01__ร้านค้า_2"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 26,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0019__FL01__ร้านค้า_3"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 27,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0019__FL01__ร้านค้า_4"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 28,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0019__FL01__ร้านค้า_5"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 29,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0019__FL01__ร้านค้า_6"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 30,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0019__FL01__ร้านค้า_7"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
-      "meter_id": "D.0015__FL01__MDB"
+      "file": "forms/2026-W22.csv",
+      "row": 31,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0025__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
+      "file": "forms/2026-W22.csv",
+      "row": 32,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
       "meter_id": "D.0015__FL01__MDB"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
-    },
-    {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
     },
     {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
+      "file": "forms/2026-W22.csv",
+      "row": 33,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0022__FL01__MDB"
     },
     {
-      "warning": "NO_ALLOCATION_FOR_METER",
-      "meter_id": "EGAT__FL01__Main",
-      "building_name": "มิเตอร์รวมทั้งหมด"
+      "file": "forms/2026-W22.csv",
+      "row": 34,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0023__FL01__MDB"
     },
     {
-      "warning": "UNKNOWN_DEPARTMENT",
-      "department": "อสร.",
+      "file": "forms/2026-W22.csv",
+      "row": 35,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
       "meter_id": "T.0025__FL01__MDB"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 36,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0026__FL01__MDB"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 37,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0027__FL01__MDB"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 38,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0028__FL01__MDB"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 39,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0029__FL01__MDB"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 40,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0031__FL01__MDB"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 41,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0031__FL01__ร้านค้า_1"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 42,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "D.0033__FL01__MDB"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 43,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "B.0001__FL01__MDB"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 44,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL01__Main"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 45,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL01__LP1"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 46,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL01__PP1"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 47,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL01__AP1"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 48,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL01__EMDB_1"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 49,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL03__SCB_3"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 50,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL03__LP3"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 51,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL03__PP3"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 52,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL03__AP3"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 53,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL03__ร้านค้า"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 54,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL04__SCB_4"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 55,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL04__LP4"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 56,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL04__PP41"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 57,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL04__PP42"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 58,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL04__AP4"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 59,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL05__SCB_5"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 60,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL05__LP5"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 61,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL05__PP51"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 62,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL05__PP52"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 63,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL05__AP5"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 64,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL06__SCB_6"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 65,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL06__LP6"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 66,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL06__PP61"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 67,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL06__PP62"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 68,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL06__AP6"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 69,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL07__SCB_7"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 70,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL07__LP7"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 71,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL07__PP71"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 72,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL07__PP72"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 73,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL07__AP7"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 74,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL08__SCB_8"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 75,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL08__LP8"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 76,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL08__PP81"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 77,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL08__PP82"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 78,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL08__AP8"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 79,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL09__SCB_9"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 80,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL09__LP9"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 81,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL09__PP91"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 82,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL09__PP92"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 83,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL09__AP9"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 84,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL09__PPD"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 85,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL09__PPAC_1"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 86,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL09__PPAC_2"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 87,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL09__PPAC_3"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 88,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL09__BP"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 89,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0019__FL09__PPL"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 90,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0020__FL01__SCB_21"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 91,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0020__FL01__LP21"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 92,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0020__FL01__PP21"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 93,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0020__FL01__AP21"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 94,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0020__FL02__SCB_22"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 95,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0020__FL01__LP22"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 96,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0020__FL01__PP22"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 97,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0020__FL01__AP22"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 98,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0020__FL03__SCB_23"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 99,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0020__FL01__LP23"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 100,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0020__FL01__PP23"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 101,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0020__FL01__AP23"
+    },
+    {
+      "file": "forms/2026-W22.csv",
+      "row": 102,
+      "warning": "INVALID_DATE",
+      "detail": "invalid date format: Sat May 30 2026 00:00:00 GMT+0700 (เวลาอินโดจีน)",
+      "meter_id": "T.0020__FL03__PPAC_3"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "UNKNOWN_DEPARTMENT",
+      "department": "อสร.",
+      "meter_id": "D.0015__FL01__MDB"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
+    },
+    {
+      "warning": "NO_ALLOCATION_FOR_METER",
+      "meter_id": "EGAT__FL01__Main",
+      "building_name": "มิเตอร์รวมทั้งหมด"
     },
     {
       "warning": "UNKNOWN_DEPARTMENT",
@@ -1015,10 +1707,10 @@
   "stats": {
     "meters": 101,
     "form_files_read": 74,
-    "weekly_forms_rows_used": 7474,
-    "normalized_readings": 6768,
-    "weekly_consumption_rows": 6669,
-    "department_weekly_rows": 2445,
+    "weekly_forms_rows_used": 7373,
+    "normalized_readings": 6669,
+    "weekly_consumption_rows": 6570,
+    "department_weekly_rows": 2411,
     "allocation_rows_used": 42,
     "building_allocation_rows_used": 42,
     "fallback_allocation_rows_available": 41,
