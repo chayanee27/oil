@@ -82,23 +82,53 @@
     padding: 12px 16px;
     background: var(--surface);
     border-bottom: 1px solid var(--border);
-    display: flex; gap: 8px; align-items: center;
+    display: flex; flex-direction: column; gap: 8px;
   }
-  .week-selector label { font-size: 12px; color: var(--text2); white-space: nowrap; }
+
+  /* ปุ่มหลัก — โหลดสัปดาห์ล่าสุด */
+  .btn-load-latest {
+    width: 100%; padding: 13px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #000; border: none; border-radius: var(--radius);
+    font-size: 15px; font-weight: 700; font-family: var(--font);
+    cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
+    box-shadow: 0 2px 12px rgba(240,165,0,.25);
+    transition: opacity .15s;
+  }
+  .btn-load-latest:active { opacity: .8; }
+  .btn-load-latest .week-badge {
+    background: rgba(0,0,0,.2); border-radius: 6px;
+    padding: 2px 8px; font-size: 12px; font-weight: 700;
+  }
+
+  /* ส่วนเสริม — กรอกสัปดาห์เอง (พับได้) */
+  .week-manual-toggle {
+    display: flex; align-items: center; gap: 6px;
+    cursor: pointer; color: var(--text3); font-size: 12px;
+    user-select: none; width: fit-content;
+  }
+  .week-manual-toggle:hover { color: var(--text2); }
+  .toggle-arrow { font-size: 10px; transition: transform .2s; }
+  .toggle-arrow.open { transform: rotate(90deg); }
+
+  .week-manual-row {
+    display: none; gap: 8px; align-items: center;
+  }
+  .week-manual-row.open { display: flex; }
   .week-input {
     flex: 1;
-    background: var(--surface2); border: 1px solid var(--border);
-    color: var(--text); border-radius: var(--radius);
-    padding: 8px 12px; font-size: 14px; font-family: var(--font);
+    background: var(--bg); border: 1px solid var(--border);
+    color: var(--text2); border-radius: var(--radius);
+    padding: 7px 10px; font-size: 13px; font-family: var(--font);
     outline: none;
   }
-  .week-input:focus { border-color: var(--accent); }
+  .week-input:focus { border-color: var(--border); color: var(--text); }
   .btn-load {
-    padding: 8px 16px; border-radius: var(--radius);
-    background: var(--accent); color: #000;
-    border: none; font-weight: 700; font-size: 13px;
-    cursor: pointer; white-space: nowrap;
-    font-family: var(--font);
+    padding: 7px 14px; border-radius: var(--radius);
+    background: var(--surface2); color: var(--text2);
+    border: 1px solid var(--border); font-weight: 600; font-size: 12px;
+    cursor: pointer; white-space: nowrap; font-family: var(--font);
+    transition: color .15s;
   }
   .btn-load:active { opacity: .8; }
 
@@ -301,9 +331,22 @@
 
   <!-- Week Selector -->
   <div class="week-selector">
-    <label>สัปดาห์</label>
-    <input type="text" class="week-input" id="weekInput" placeholder="เช่น 2026-W23">
-    <button class="btn-load" onclick="loadWeek()">โหลด</button>
+    <!-- ปุ่มหลัก -->
+    <button class="btn-load-latest" id="btnLatest" onclick="loadLatestWeek()">
+      <span>📅</span>
+      <span>โหลดสัปดาห์ล่าสุด</span>
+      <span class="week-badge" id="latestWeekBadge">—</span>
+    </button>
+
+    <!-- ส่วนเสริม พับได้ -->
+    <div class="week-manual-toggle" onclick="toggleManual()">
+      <span class="toggle-arrow" id="toggleArrow">▶</span>
+      <span>ระบุสัปดาห์อื่น</span>
+    </div>
+    <div class="week-manual-row" id="manualRow">
+      <input type="text" class="week-input" id="weekInput" placeholder="เช่น 2026-W23">
+      <button class="btn-load" onclick="loadWeek()">โหลด</button>
+    </div>
   </div>
 
   <!-- Reader name -->
@@ -340,7 +383,7 @@
   <div id="content">
     <div class="state-box">
       <div style="font-size:48px">📋</div>
-      <div style="color:var(--text2)">กรอกรหัสสัปดาห์แล้วกด <strong style="color:var(--accent)">โหลด</strong></div>
+      <div style="color:var(--text2)">กด <strong style="color:var(--accent)">โหลดสัปดาห์ล่าสุด</strong> เพื่อเริ่มต้น</div>
     </div>
   </div>
 
@@ -357,7 +400,7 @@
 <script>
 // ── CONFIG ─────────────────────────────────────────────────
 // เปลี่ยน URL นี้เป็น Apps Script Web App URL หลัง Deploy
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyJfCwKd55f_AYERKAATdubtVxaowFVT1W6So91wve59oEmhX7pSFeUf6NxfXUsb9G0GQ/exec';
+const APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_WEB_APP_URL';
 
 // ── State ──────────────────────────────────────────────────
 let allRows   = [];
@@ -367,14 +410,30 @@ let editingId = null;
 
 // ── Init ───────────────────────────────────────────────────
 window.onload = () => {
-  // คำนวณ week ปัจจุบัน
   const w = getCurrentWeekId();
   document.getElementById('weekInput').value = w;
+  document.getElementById('latestWeekBadge').textContent = w;
 
   // โหลดชื่อผู้อ่านจาก localStorage
   const saved = localStorage.getItem('readerName') || '';
   document.getElementById('globalReader').value = saved;
 };
+
+function toggleManual() {
+  const row   = document.getElementById('manualRow');
+  const arrow = document.getElementById('toggleArrow');
+  const open  = row.classList.toggle('open');
+  arrow.classList.toggle('open', open);
+}
+
+function loadLatestWeek() {
+  const w = getCurrentWeekId();
+  document.getElementById('weekInput').value = w;
+  weekId = w;
+  document.getElementById('weekLabel').textContent = w;
+  showLoading();
+  fetchWeekData(w);
+}
 
 function saveReaderName(v) {
   localStorage.setItem('readerName', v);
@@ -389,14 +448,17 @@ function getCurrentWeekId() {
 
 // ── Load week data ─────────────────────────────────────────
 async function loadWeek() {
-  weekId = document.getElementById('weekInput').value.trim();
-  if (!weekId) return showToast('กรุณาระบุรหัสสัปดาห์', 'error');
-
+  const input = document.getElementById('weekInput').value.trim();
+  if (!input) return showToast('กรุณาระบุรหัสสัปดาห์', 'error');
+  weekId = input;
   document.getElementById('weekLabel').textContent = weekId;
   showLoading();
+  fetchWeekData(weekId);
+}
 
+async function fetchWeekData(w) {
   try {
-    const res  = await fetch(`${APPS_SCRIPT_URL}?week_id=${weekId}`);
+    const res  = await fetch(`${APPS_SCRIPT_URL}?week_id=${w}`);
     const data = await res.json();
     if (!data.ok) throw new Error(data.error || 'โหลดข้อมูลไม่สำเร็จ');
 
