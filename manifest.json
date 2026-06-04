@@ -1,0 +1,15 @@
+{
+  "name": "SNOE",
+  "short_name": "SNOE",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "SNOE.png", 
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
