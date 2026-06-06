@@ -196,7 +196,7 @@
 <div class="modal-overlay" id="eventModal">
   <div class="modal-box">
     <div class="modal-hdr">
-      <h3>📋 บันทึกเหตุการณ์พิเศษ (Event Logs)</h3>
+      <h3>📋 บันทึกเหตุการณ์พิเศษ — ปี <span id="eventModalYear"></span></h3>
       <button class="modal-close" onclick="closeEventModal()">&times;</button>
     </div>
     
@@ -449,6 +449,8 @@ function openEventModal() {
   const today = new Date().toISOString().slice(0,10);
   document.getElementById("evtDate").value = today;
   document.getElementById("saveStatus").textContent = "";
+  // แสดงปี พ.ศ. ที่กำลังดูอยู่บน header
+  document.getElementById("eventModalYear").textContent = sY ? (sY + 543) : "";
   // ถ้ามี cache แล้ว แสดงทันที แล้วค่อย refresh เบื้องหลัง
   if (_cachedEvents) {
     renderLocalEvents(_cachedEvents);
@@ -488,7 +490,17 @@ function renderLocalEvents(events) {
     container.innerHTML = `<div class="no-event">ยังไม่มีเหตุการณ์ที่บันทึกไว้</div>`;
     return;
   }
-  const sorted = [...events].sort((a, b) => new Date(b.date) - new Date(a.date));
+  // กรองเฉพาะ event ที่อยู่ในปี ค.ศ. เดียวกับ sY (ปีที่ dashboard กำลังแสดง)
+  const filtered = sY ? events.filter(e => {
+    const y = new Date(e.date + "T00:00:00").getFullYear();
+    return y === sY;
+  }) : events;
+  if (filtered.length === 0) {
+    const thaiYear = sY ? (sY + 543) : "";
+    container.innerHTML = `<div class="no-event">ไม่มีเหตุการณ์ที่บันทึกไว้ในปี ${thaiYear}</div>`;
+    return;
+  }
+  const sorted = [...filtered].sort((a, b) => new Date(b.date) - new Date(a.date));
   sorted.forEach(evt => {
     let thaiDate = evt.date;
     try {
