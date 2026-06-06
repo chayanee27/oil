@@ -537,12 +537,12 @@ function loadEventsFromGitHub() {
     return res.json();
   })
   .then(data => {
-    if (Array.isArray(data)) {
-      renderEvents(data);
-    } else if (data.content) {
+    // 🟩 ปรับปรุงจุดนี้: เช็คโครงสร้างให้ถูกต้อง ไม่ว่าจะไฟล์ว่าง หรือไฟล์ที่มีข้อมูลอยู่แล้ว
+    if (data && data.content) {
+      // เก็บค่า SHA ไว้สำหรับใช้ยืนยันตอนกดอัปเดตเซฟไฟล์ (PUT)
       CURRENT_FILE_SHA = data.sha;
       
-      // 🟩 แก้ไขจุดนี้: เปลี่ยนมาใช้ระบบถอดรหัส Base64 ที่ปลอดภัยและรองรับภาษาไทย/ไฟล์ว่าง 100%
+      // ถอดรหัส Base64 จาก GitHub ออกมาเป็นข้อความภาษาไทยที่สมบูรณ์
       const binaryString = atob(data.content.replace(/\s/g, ''));
       const len = binaryString.length;
       const bytes = new Uint8Array(len);
@@ -553,6 +553,11 @@ function loadEventsFromGitHub() {
       
       const events = JSON.parse(decodedContent || "[]");
       renderEvents(events);
+    } else if (Array.isArray(data)) {
+      // รองรับกรณี GitHub ส่งกลับมาเป็น Array ว่างโดยตรง
+      renderEvents(data);
+    } else {
+      renderEvents([]);
     }
   })
   .catch(err => {
