@@ -12,6 +12,7 @@
 :root{--pri:#0B1D51;--pri-l:#1A3A7A;--gold:#C5A85F;--bg:#F0F2F5;--card:#FFF;--txt:#1A1A2E;--txt2:#5A6178;--bdr:#E2E6ED;--sh:0 2px 12px rgba(11,29,81,.08);--r:10px}
 *{margin:0;padding:0;box-sizing:border-box} body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--txt)}
 
+/* จัดตำแหน่งหัวข้อกราฟกับปุ่มให้อยู่บรรทัดเดียวกัน */
 .chart-header-container {
   display: flex;
   justify-content: space-between;
@@ -20,6 +21,7 @@
 }
 .chart-header-container .ct { margin-bottom: 0; }
 
+/* ปุ่ม Event บนขวาของกราฟรายเดือน */
 .btn-event {
   background: var(--pri);
   color: #fff;
@@ -36,11 +38,12 @@
 }
 .btn-event:hover { background: var(--pri-l); }
 
+/* หน้าต่าง Popup Modal */
 .modal-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
-  display: none;
+  display: none; /* เริ่มต้นซ่อนไว้ */
   align-items: center;
   justify-content: center;
   z-index: 1000;
@@ -66,9 +69,10 @@
 .modal-hdr h3 { font-size: 16px; color: var(--pri); }
 .modal-close { background: none; border: none; font-size: 22px; cursor: pointer; color: var(--txt2); }
 
+/* พื้นที่กล่อง Scroll แสดงรายการเหตุการณ์ */
 .modal-body {
   padding: 16px;
-  overflow-y: auto;
+  overflow-y: auto; /* ให้มี Scroll เลื่อนขึ้นลง */
   flex: 1;
 }
 .event-list { display: flex; flex-direction: column; gap: 12px; }
@@ -82,6 +86,7 @@
 .event-desc { font-size: 13px; color: var(--txt); white-space: pre-line; line-height: 1.5; }
 .no-event { text-align: center; color: var(--txt2); font-size: 13px; padding: 30px 0; }
 
+/* ฟอร์มส่วนล่างสำหรับแจ้งเรื่องเพิ่มเหตุการณ์ */
 .modal-ftr {
   padding: 16px;
   border-top: 1px solid var(--bdr);
@@ -98,20 +103,6 @@
   font-size: 13px;
 }
 .form-input:focus { outline: 1px solid var(--pri); border-color: var(--pri); }
-.btn-submit {
-  background: #2e7d32;
-  color: #fff;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  font-size: 13px;
-  font-family: 'Sarabun', sans-serif;
-  cursor: pointer;
-  width: 100%;
-  font-weight: 500;
-  text-align: center;
-}
-.btn-submit:hover { background: #1b5e20; }
 
 .topbar {
   background: linear-gradient(90deg, #0c1428 0%, #10172a 100%);
@@ -201,21 +192,23 @@
 </div>
 <div class="ft">Dashboard ดึงข้อมูลจาก energy_db.json | จด RAW ทุกวันศุกร์เช้า</div>
 
+<!-- โครงสร้าง Popup Modal ลิงก์ตรงผ่าน Google Sheets -->
 <div class="modal-overlay" id="eventModal">
   <div class="modal-box">
     <div class="modal-hdr">
-      <h3>📋 บันทึกเหตุการณ์พิเศษ (Event Logs ส่วนกลาง)</h3>
+      <h3>📋 บันทึกเหตุการณ์พิเศษ (Event Logs)</h3>
       <button class="modal-close" onclick="closeEventModal()">&times;</button>
     </div>
     
     <div class="modal-body">
       <div class="event-list" id="eventListContainer">
-         </div>
+         <!-- ประวัติบันทึกจะเลื่อน Scroll อ่านได้จากตรงนี้ -->
+      </div>
     </div>
     
     <div class="modal-ftr">
       <div class="form-title">➕ บันทึกเหตุการณ์ใหม่ลงระบบส่วนกลาง</div>
-      <p style="font-size:11px; color:var(--txt2); margin-bottom:8px;">ระบบจะเปิดหน้าต่าง Google Form เพื่อใช้บันทึกข้อมูลร่วมกันอย่างปลอดภัย</p>
+      <p style="font-size:11px; color:var(--txt2); margin-bottom:8px;">ระบบจะทำการเปิดหน้าต่าง Google Form แยกออกไปเพื่อบันทึกข้อมูลร่วมกันอย่างปลอดภัย</p>
       <button class="btn-submit" id="btnSubmitEvent" onclick="saveEventToGitHub()">➕ เปิดฟอร์มเพิ่มเหตุการณ์</button>
     </div>
   </div>
@@ -229,9 +222,8 @@ const DB=["#0D47A1","#004D40","#E65100","#880E4F","#4A148C","#1B5E20","#BF360C"]
 const BUILD_COLORS=["#1565C0","#00897B","#F9A825","#EF6C00","#AD1457","#6A1B9A","#2E7D32","#C5A85F","#455A64","#00ACC1","#8E24AA","#7CB342"];
 let DATA=null, sY=null, sM="all", sD="all", ch={}, visibleYears=new Set();
 
-// ⚙️ ตั้งค่าลิงก์ดึงข้อมูลจาก Google Sheets (แก้จุดนี้จุดเดียวเพื่อให้งานออนไลน์รันผ่านชัวร์)
-// วิธีเอาลิงก์ CSV: ในหน้า Google Sheets ที่เก็บข้อมูลฟอร์ม ให้กด File -> Share -> Publish to web -> เลือกชีตที่เก็บข้อความและตั้งเป็นแบบ CSV -> ก๊อปปี้ลิงก์มาวางแทนด้านล่างนี้
-const GOOGLE_SHEETS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRBayN1rKaxnoUCRK_PY3rCj9LnEOqUHG9l1YdLnB4byAOoLJJ8jiN8o-H-YPh11o2-i_zv_ed15AuE/pub?output=csv";
+// ⚙️ ลิงก์ดึงข้อมูลจาก Google Sheets เผยแพร่เว็บในรูปแบบ CSV (นำลิงก์ของคุณมาวางตรงนี้)
+const GOOGLE_SHEETS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vREf1y2S3m9Fw487k-lXz-L8DAn7vI7Y1C1_iZ2S6pGqg8vL_Lg_jB0KxH-u8R_c9B7fK9WpX3gU8R3/pub?output=csv";
 const GOOGLE_FORM_URL = "https://forms.gle/4iQrRnTS16enw71q7"; 
 
 function fmt(n){return Math.round(n||0).toLocaleString("th-TH")}
@@ -327,12 +319,15 @@ function renderDonut(){
   const sumPercent=total ? vals.reduce((a,b)=>a+((b/total)*100),0) : 0;
   tb.innerHTML+=`<tr style="font-weight:700;border-top:2px solid var(--pri)"><td>รวมทั้งสิ้น</td><td class="vl">${fmt(sumKwh)}</td><td class="pc">${sumPercent.toFixed(0)}%</td></tr>`;
 }
+
+// 🟩 แก้ไขจุดนี้: ซ่อมแซม Syntax โครงสร้างระดับตํานานที่พิมพ์ตกไปเรียบร้อยครับ
 function renderMonthBar(){
   const vals=MO.map((_,i)=> sD==="all" ? DEPT.reduce((a,d)=>a+monthlyDeptTotal(i+1,d),0) : monthlyDeptTotal(i+1,sD));
   const validVals=vals.filter(v=>v>0);
   const maxVal=validVals.length?Math.max(...validVals):0;
   const avgVal=validVals.length?validVals.reduce((a,b)=>a+b,0)/validVals.length:0;
   document.getElementById("barSub").textContent=`ปี ${sY+543}${sD!=="all"?" ("+sD+")":""}`;
+
   if(ch.monthBar) ch.monthBar.destroy();
   ch.monthBar=new Chart(document.getElementById("monthBar"),{
     data:{
@@ -370,13 +365,14 @@ function renderMonthBar(){
       interaction:{mode:"nearest",intersect:false,axis:"xy"},
       hover:{mode:"nearest",intersect:false,axis:"xy"},
       plugins:{
-        legend:{true,position:"top",labels:{boxWidth:12,font:{size:11}}},
+        legend:{display:true,position:"top",labels:{boxWidth:12,font:{size:11}}},
         tooltip:{callbacks:{label:ctx=>{if(ctx.dataset.label==="ค่าเฉลี่ย"){return `ค่าเฉลี่ย: ${fmt(ctx.raw)} kWh`;}return `${ctx.dataset.label}: ${fmt(ctx.raw)} kWh`;}}}
       },
       scales:{y:{beginAtZero:true,ticks:{callback:v=>(v/1000).toFixed(0)+"K"}},x:{grid:{display:false}}}
     }
   });
 }
+
 function renderBuildingBar(){
   const b=buildingRows();
   document.getElementById("buildingTitle").textContent=sD==="all"?"หน่วยใช้ไฟสะสม — Top อาคารรวมทั้งสำนักงาน":`หน่วยใช้ไฟสะสม — ${sD}`;
@@ -438,7 +434,7 @@ fetch("data/energy_db.json").then(r=>r.json()).then(db=>{
   console.error(err);
 });
 
-// --- 🌐 เปลี่ยนระบบมาคุยผ่านคลาวด์ Google Sheets แทนเพื่อความชัวร์แบบ 100% 🌐 ---
+// --- 🌐 ระบบดึงประวัติสถิติเหตุการณ์จาก Google Sheets ด่วนส่วนกลาง 🌐 ---
 function openEventModal() {
   document.getElementById("eventModal").style.display = "flex";
   loadEventsFromGoogleSheets();
@@ -448,7 +444,6 @@ function closeEventModal() {
   document.getElementById("eventModal").style.display = "none";
 }
 
-// ฟังก์ชันโหลดข้อมูลออนไลน์ตรงจากไฟล์ CSV ของ Google Sheets (ไม่มีวันติดบล็อกเครือข่าย)
 function loadEventsFromGoogleSheets() {
   const container = document.getElementById("eventListContainer");
   container.innerHTML = `<div class="no-event">กำลังโหลดประวัติเหตุการณ์พิเศษจาก Google Sheets...</div>`;
@@ -462,18 +457,14 @@ function loadEventsFromGoogleSheets() {
     const lines = csvText.split("\n");
     const events = [];
     
-    // แกะโครงสร้างไฟล์ CSV จาก Google Sheets แตกบรรทัดเอาข้อความออกมาแสดงผล
     for(let i = 1; i < lines.length; i++) {
       if(!lines[i].trim()) continue;
-      
-      // ฟังก์ชันช่วยแยกคอลัมน์ CSV อย่างแม่นยำ
       const cleanLine = lines[i].replace(/\r/g, "");
       const columns = cleanLine.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
       
       if(columns.length >= 3) {
         let dateVal = columns[1].replace(/"/g, "").trim();
         let descVal = columns[2].replace(/"/g, "").trim();
-        
         if(dateVal && descVal) {
           events.push({ date: dateVal, desc: descVal });
         }
@@ -496,7 +487,6 @@ function renderLocalEvents(events) {
     return;
   }
   
-  // เรียงลำดับวันที่ใหม่ล่าสุดขึ้นก่อน
   events.sort((a, b) => new Date(b.date) - new Date(a.date));
   
   events.forEach(evt => {
