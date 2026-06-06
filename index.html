@@ -12,7 +12,6 @@
 :root{--pri:#0B1D51;--pri-l:#1A3A7A;--gold:#C5A85F;--bg:#F0F2F5;--card:#FFF;--txt:#1A1A2E;--txt2:#5A6178;--bdr:#E2E6ED;--sh:0 2px 12px rgba(11,29,81,.08);--r:10px}
 *{margin:0;padding:0;box-sizing:border-box} body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--txt)}
 
-/* จัดตำแหน่งหัวข้อกราฟกับปุ่มใหอยู่บรรทัดเดียวกัน */
 .chart-header-container {
   display: flex;
   justify-content: space-between;
@@ -21,7 +20,6 @@
 }
 .chart-header-container .ct { margin-bottom: 0; }
 
-/* ปุ่ม Event บนขวาของกราฟรายเดือน */
 .btn-event {
   background: var(--pri);
   color: #fff;
@@ -38,12 +36,11 @@
 }
 .btn-event:hover { background: var(--pri-l); }
 
-/* หน้าต่าง Popup Modal */
 .modal-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
-  display: none; /* เริ่มต้นซ่อนไว้ */
+  display: none;
   align-items: center;
   justify-content: center;
   z-index: 1000;
@@ -69,10 +66,9 @@
 .modal-hdr h3 { font-size: 16px; color: var(--pri); }
 .modal-close { background: none; border: none; font-size: 22px; cursor: pointer; color: var(--txt2); }
 
-/* พื้นที่กล่อง Scroll แสดงรายการเหตุการณ์ */
 .modal-body {
   padding: 16px;
-  overflow-y: auto; /* ให้มี Scroll เลื่อนขึ้นลงตามโจทย์ */
+  overflow-y: auto;
   flex: 1;
 }
 .event-list { display: flex; flex-direction: column; gap: 12px; }
@@ -86,7 +82,6 @@
 .event-desc { font-size: 13px; color: var(--txt); white-space: pre-line; line-height: 1.5; }
 .no-event { text-align: center; color: var(--txt2); font-size: 13px; padding: 30px 0; }
 
-/* ฟอร์มส่วนล่างสำหรับแจ้งเรื่องเพิ่มเหตุการณ์ */
 .modal-ftr {
   padding: 16px;
   border-top: 1px solid var(--bdr);
@@ -209,7 +204,7 @@
 <div class="modal-overlay" id="eventModal">
   <div class="modal-box">
     <div class="modal-hdr">
-      <h3>📋 บันทึกเหตุการณ์พิเศษ (Event Logs บน GitHub)</h3>
+      <h3>📋 บันทึกเหตุการณ์พิเศษ (Event Logs ส่วนกลาง)</h3>
       <button class="modal-close" onclick="closeEventModal()">&times;</button>
     </div>
     
@@ -220,11 +215,8 @@
     
     <div class="modal-ftr">
       <div class="form-title">➕ บันทึกเหตุการณ์ใหม่ลงระบบส่วนกลาง</div>
-      <div class="form-group">
-        <input type="date" id="evtDate" class="form-input">
-        <textarea id="evtDesc" class="form-input" rows="2" placeholder="ระบุรายละเอียดเหตุการณ์ เช่น เกิดเหตุแอร์ขัดข้อง หรือมีกิจกรรมเปิดบ้าน..."></textarea>
-      </div>
-      <button class="btn-submit" id="btnSubmitEvent" onclick="saveEventToGitHub()">💾 บันทึกตรงลง GitHub</button>
+      <p style="font-size:11px; color:var(--txt2); margin-bottom:8px;">ระบบจะเปิดหน้าต่าง Google Form เพื่อใช้บันทึกข้อมูลร่วมกันอย่างปลอดภัย</p>
+      <button class="btn-submit" id="btnSubmitEvent" onclick="saveEventToGitHub()">➕ เปิดฟอร์มเพิ่มเหตุการณ์</button>
     </div>
   </div>
 </div>
@@ -237,14 +229,10 @@ const DB=["#0D47A1","#004D40","#E65100","#880E4F","#4A148C","#1B5E20","#BF360C"]
 const BUILD_COLORS=["#1565C0","#00897B","#F9A825","#EF6C00","#AD1457","#6A1B9A","#2E7D32","#C5A85F","#455A64","#00ACC1","#8E24AA","#7CB342"];
 let DATA=null, sY=null, sM="all", sD="all", ch={}, visibleYears=new Set();
 
-// ⚙️ ส่วนตั้งค่าการเซฟแมนนวลเข้าสู่ GitHub Repository โดยตรง (แก้ไขคีย์ของคุณตรงนี้)
-const GH_OWNER = "maleeart";                 
-const GH_REPO  = "Energy-Dashboard";         
-const GH_TOKEN = "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";       
-const GH_PATH  = "data/event_logs.json";     
-
-let GLOBAL_EVENTS = [];
-let CURRENT_FILE_SHA = null;
+// ⚙️ ตั้งค่าลิงก์ดึงข้อมูลจาก Google Sheets (แก้จุดนี้จุดเดียวเพื่อให้งานออนไลน์รันผ่านชัวร์)
+// วิธีเอาลิงก์ CSV: ในหน้า Google Sheets ที่เก็บข้อมูลฟอร์ม ให้กด File -> Share -> Publish to web -> เลือกชีตที่เก็บข้อความและตั้งเป็นแบบ CSV -> ก๊อปปี้ลิงก์มาวางแทนด้านล่างนี้
+const GOOGLE_SHEETS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRBayN1rKaxnoUCRK_PY3rCj9LnEOqUHG9l1YdLnB4byAOoLJJ8jiN8o-H-YPh11o2-i_zv_ed15AuE/pub?output=csv";
+const GOOGLE_FORM_URL = "https://forms.gle/4iQrRnTS16enw71q7"; 
 
 function fmt(n){return Math.round(n||0).toLocaleString("th-TH")}
 function displayBuildingName(name){return (DATA && DATA.building_alias && DATA.building_alias[name]) || name}
@@ -277,16 +265,13 @@ function deptRows(){return filteredDeptRows();}
 function deptTotal(dept){return deptRows().filter(r=>r.department===dept).reduce((a,b)=>a+(+b.kwh||0),0)}
 function allTotal(){return DEPT.reduce((a,d)=>a+deptTotal(d),0)}
 
-// 🔄 ย้อนกลับมาใช้แบบเดิม: ใช้ค่า kwh หลักโดยตรง ไม่ลดทอนตามอัตราส่วน
 function buildingRows(){
   const nameOf = r => r.building_name || r.b_code || r.meter_id || "ไม่ระบุอาคาร";
   const map = {};
-
   if(sD === "all"){
     const eligible = new Set((DATA.department_weekly || [])
       .filter(r => (+r.allocation_ratio || 0) > 0)
       .map(r => r.meter_id));
-
     (DATA.weekly_consumption || [])
       .filter(inFilter)
       .filter(validEnergyRow)
@@ -306,14 +291,10 @@ function buildingRows(){
       .forEach(r => {
         const name = nameOf(r);
         if(!map[name]) map[name] = {name, kwh:0};
-        map[name].kwh += +r.kwh || 0; // ดึงค่าก้อนดิบเต็มจำนวนแสดงผลปกติแบบเดิมตามที่ต้องการ
+        map[name].kwh += +r.kwh || 0;
       });
   }
-
-  return Object.values(map)
-    .filter(x => x.kwh > 0)
-    .sort((a,b) => b.kwh - a.kwh)
-    .slice(0,8);
+  return Object.values(map).filter(x => x.kwh > 0).sort((a,b) => b.kwh - a.kwh).slice(0,8);
 }
 function monthlyDeptTotal(month, dept=null){return monthlySeriesValue(sY,month,dept)}
 function setupFilters(){
@@ -352,7 +333,6 @@ function renderMonthBar(){
   const maxVal=validVals.length?Math.max(...validVals):0;
   const avgVal=validVals.length?validVals.reduce((a,b)=>a+b,0)/validVals.length:0;
   document.getElementById("barSub").textContent=`ปี ${sY+543}${sD!=="all"?" ("+sD+")":""}`;
-
   if(ch.monthBar) ch.monthBar.destroy();
   ch.monthBar=new Chart(document.getElementById("monthBar"),{
     data:{
@@ -390,22 +370,10 @@ function renderMonthBar(){
       interaction:{mode:"nearest",intersect:false,axis:"xy"},
       hover:{mode:"nearest",intersect:false,axis:"xy"},
       plugins:{
-        legend:{display:true,position:"top",labels:{boxWidth:12,font:{size:11}}},
-        tooltip:{
-          callbacks:{
-            label:ctx=>{
-              if(ctx.dataset.label==="ค่าเฉลี่ย"){
-                return `ค่าเฉลี่ย: ${fmt(ctx.raw)} kWh`;
-              }
-              return `${ctx.dataset.label}: ${fmt(ctx.raw)} kWh`;
-            }
-          }
-        }
+        legend:{true,position:"top",labels:{boxWidth:12,font:{size:11}}},
+        tooltip:{callbacks:{label:ctx=>{if(ctx.dataset.label==="ค่าเฉลี่ย"){return `ค่าเฉลี่ย: ${fmt(ctx.raw)} kWh`;}return `${ctx.dataset.label}: ${fmt(ctx.raw)} kWh`;}}}
       },
-      scales:{
-        y:{beginAtZero:true,ticks:{callback:v=>(v/1000).toFixed(0)+"K"}},
-        x:{grid:{display:false}}
-      }
+      scales:{y:{beginAtZero:true,ticks:{callback:v=>(v/1000).toFixed(0)+"K"}},x:{grid:{display:false}}}
     }
   });
 }
@@ -417,35 +385,20 @@ function renderBuildingBar(){
     type:"bar",
     data:{
       labels:b.map(x=>displayBuildingName(x.name)),
-      datasets:[{
-        data:b.map(x=>x.kwh),
-        backgroundColor:b.map((_,i)=>BUILD_COLORS[i%BUILD_COLORS.length]),
-        borderRadius:4
-      }]
+      datasets:[{data:b.map(x=>x.kwh),backgroundColor:b.map((_,i)=>BUILD_COLORS[i%BUILD_COLORS.length]),borderRadius:4}]
     },
     options:{
-      indexAxis:"y",
-      responsive:true,
-      maintainAspectRatio:false,
-      plugins:{
-        legend:{display:false},
-        tooltip:{callbacks:{label:ctx=>`${fmt(ctx.raw)} kWh`}}
-      },
-      scales:{
-        x:{beginAtZero:true,ticks:{callback:v=>(v/1000).toFixed(0)+"K"}},
-        y:{ticks:{font:{size:10}}}
-      }
+      indexAxis:"y",responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${fmt(ctx.raw)} kWh`}}},
+      scales:{x:{beginAtZero:true,ticks:{callback:v=>(v/1000).toFixed(0)+"K"}},y:{ticks:{font:{size:10}}}}
     }
   });
 }
 function renderYearLine(){
   const years=[...new Set((DATA.department_weekly||[]).map(w=>ymdYear(w.week_end_date)))].sort();
-  if(visibleYears.size===0){
-    years.forEach(y=>visibleYears.add(y));
-  }
+  if(visibleYears.size===0){years.forEach(y=>visibleYears.add(y));}
   const tg=document.getElementById("yearToggles");
   const colors=["#1565C0","#00897B","#F9A825","#EF6C00","#AD1457","#6A1B9A","#2E7D32","#C5A85F"];
-
   if(tg){
     tg.innerHTML="";
     years.forEach((y,idx)=>{
@@ -453,49 +406,25 @@ function renderYearLine(){
       btn.className="yBtn"+(visibleYears.has(y)?" on":"");
       btn.textContent=String(y+543);
       btn.style.background=visibleYears.has(y)?colors[idx%colors.length]:"#fff";
-      btn.onclick=()=>{
-        if(visibleYears.has(y)){
-          visibleYears.delete(y);
-        }else{
-          visibleYears.add(y);
-        }
-        renderYearLine();
-      };
+      btn.onclick=()=>{if(visibleYears.has(y)){visibleYears.delete(y);}else{visibleYears.add(y);}renderYearLine();};
       tg.appendChild(btn);
     });
   }
-
   if(ch.yearLine) ch.yearLine.destroy();
-  const datasets=years
-    .filter(y=>visibleYears.has(y))
-    .map((y)=>{
-      const color=colors[years.indexOf(y)%colors.length];
-      return {
-        label:"ปี "+(y+543),
-        data:MO.map((_,i)=> sD==="all" ? DEPT.reduce((a,d)=>a+monthlySeriesValue(y,i+1,d),0) || null : monthlySeriesValue(y,i+1,sD) || null),
-        borderColor:color,
-        backgroundColor:color,
-        tension:.3,
-        pointRadius:3,
-        pointHoverRadius:5,
-        spanGaps:false
-      };
-    });
-
+  const datasets=years.filter(y=>visibleYears.has(y)).map((y)=>{
+    const color=colors[years.indexOf(y)%colors.length];
+    return {
+      label:"ปี "+(y+543),
+      data:MO.map((_,i)=> sD==="all" ? DEPT.reduce((a,d)=>a+monthlySeriesValue(y,i+1,d),0) || null : monthlySeriesValue(y,i+1,sD) || null),
+      borderColor:color,backgroundColor:color,tension:.3,pointRadius:3,pointHoverRadius:5,spanGaps:false
+    };
+  });
   ch.yearLine=new Chart(document.getElementById("yearLine"),{
-    type:"line",
-    data:{labels:MO,datasets},
+    type:"line",data:{labels:MO,datasets},
     options:{
-      responsive:true,
-      maintainAspectRatio:false,
-      plugins:{
-        legend:{display:false},
-        tooltip:{callbacks:{label:ctx=>`${ctx.dataset.label}: ${fmt(ctx.raw)} kWh`}}
-      },
-      scales:{
-        y:{beginAtZero:true,ticks:{callback:v=>(v/1000).toFixed(0)+"K"}},
-        x:{grid:{display:false}}
-      }
+      responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${ctx.dataset.label}: ${fmt(ctx.raw)} kWh`}}},
+      scales:{y:{beginAtZero:true,ticks:{callback:v=>(v/1000).toFixed(0)+"K"}},x:{grid:{display:false}}}
     }
   });
 }
@@ -505,84 +434,79 @@ fetch("data/energy_db.json").then(r=>r.json()).then(db=>{
   DATA=db; document.getElementById("noteBar").textContent="โหลดข้อมูลสำเร็จ: data/energy_db.json";
   setupFilters(); renderAll();
 }).catch(err=>{
-  document.getElementById("noteBar").textContent="ไม่พบ data/energy_db.json หรือเปิดไฟล์จากเครื่องโดยตรงแล้ว browser บล็อก fetch — ให้รันผ่าน local server เช่น python -m http.server";
+  document.getElementById("noteBar").textContent="ไม่พบ data/energy_db.json";
   console.error(err);
 });
 
-// --- 🌐 ระบบจัดการข้อมูลเหตุการณ์พิเศษเชื่อมต่อ GitHub API 🌐 ---
-// --- 🌐 ระบบจัดการข้อมูลเหตุการณ์พิเศษเชื่อมต่อ GitHub API 🌐 ---
+// --- 🌐 เปลี่ยนระบบมาคุยผ่านคลาวด์ Google Sheets แทนเพื่อความชัวร์แบบ 100% 🌐 ---
 function openEventModal() {
   document.getElementById("eventModal").style.display = "flex";
-  if(!document.getElementById("evtDate").value) {
-    document.getElementById("evtDate").value = new Date().toISOString().split('T')[0];
-  }
-  loadEventsFromGitHub();
+  loadEventsFromGoogleSheets();
 }
 
 function closeEventModal() {
   document.getElementById("eventModal").style.display = "none";
 }
 
-// 🟩 ปรับปรุงฟังก์ชันโหลดข้อมูล: เพิ่มสิทธิ์การยืนยันตัวตน และระบบถอดรหัสภาษาไทยที่เสถียร
-function loadEventsFromGitHub() {
+// ฟังก์ชันโหลดข้อมูลออนไลน์ตรงจากไฟล์ CSV ของ Google Sheets (ไม่มีวันติดบล็อกเครือข่าย)
+function loadEventsFromGoogleSheets() {
   const container = document.getElementById("eventListContainer");
-  container.innerHTML = `<div class="no-event">กำลังโหลดประวัติเหตุการณ์ส่วนกลางจาก GitHub...</div>`;
+  container.innerHTML = `<div class="no-event">กำลังโหลดประวัติเหตุการณ์พิเศษจาก Google Sheets...</div>`;
 
-  const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}?nocache=${new Date().getTime()}`;
-  
-  fetch(url, {
-    method: "GET",
-    headers: { 
-      "Authorization": `token ${GH_TOKEN}`,
-      "Accept": "application/vnd.github.v3+json"
-    }
-  })
+  fetch(`${GOOGLE_SHEETS_CSV_URL}&nocache=${new Date().getTime()}`)
   .then(res => {
-    if (res.status === 404) return [];
-    if (!res.ok) throw new Error("พิกัดไฟล์ไม่ถูกต้อง หรือสิทธิ์ Token ไม่สมบูรณ์");
-    return res.json();
+    if(!res.ok) throw new Error("ไม่สามารถดาวน์โหลดไฟล์จาก Google Sheets ได้");
+    return res.text();
   })
-  .then(data => {
-    if (Array.isArray(data)) {
-      renderEvents(data);
-    } else if (data && data.content) {
-      CURRENT_FILE_SHA = data.sha; // บันทึก SHA เวอร์ชันล่าสุดไว้สำหรับใช้สั่งเขียนทับ (PUT)
+  .then(csvText => {
+    const lines = csvText.split("\n");
+    const events = [];
+    
+    // แกะโครงสร้างไฟล์ CSV จาก Google Sheets แตกบรรทัดเอาข้อความออกมาแสดงผล
+    for(let i = 1; i < lines.length; i++) {
+      if(!lines[i].trim()) continue;
       
-      // ถอดรหัสข้อความ Base64 รองรับภาษาไทยและอักขระพิเศษ 100% ไม่ให้โครงสร้าง JSON พัง
-      const binaryString = atob(data.content.replace(/\s/g, ''));
-      const bytes = new Uint8Array(binaryString.length);
-      for (let i = 0; i < binaryString.length; i++) {
-        bytes[i] = binaryString.charCodeAt(i);
+      // ฟังก์ชันช่วยแยกคอลัมน์ CSV อย่างแม่นยำ
+      const cleanLine = lines[i].replace(/\r/g, "");
+      const columns = cleanLine.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+      
+      if(columns.length >= 3) {
+        let dateVal = columns[1].replace(/"/g, "").trim();
+        let descVal = columns[2].replace(/"/g, "").trim();
+        
+        if(dateVal && descVal) {
+          events.push({ date: dateVal, desc: descVal });
+        }
       }
-      const decodedContent = new TextDecoder('utf-8').decode(bytes);
-      
-      const events = JSON.parse(decodedContent || "[]");
-      renderEvents(events);
-    } else {
-      renderEvents([]);
     }
+    renderLocalEvents(events);
   })
   .catch(err => {
     console.error(err);
-    container.innerHTML = `<div class="no-event" style="color:red;">⚠️ ไม่สามารถดึงไฟล์เชื่อมต่อ GitHub API ได้<br><small>${err.message}</small></div>`;
+    container.innerHTML = `<div class="no-event" style="color:red;">⚠️ ไม่สามารถเชื่อมต่อฐานข้อมูลเหตุการณ์ได้<br><small>กรุณาตรวจสอบการตั้งค่า Publish to Web บนไฟล์สเปรดชีตครับ</small></div>`;
   });
 }
 
-function renderEvents(events) {
+function renderLocalEvents(events) {
   const container = document.getElementById("eventListContainer");
   container.innerHTML = "";
   
   if (!events || events.length === 0) {
-    container.innerHTML = `<div class="no-event">ยังไม่มีประวัติการบันทึกเหตุการณ์พิเศษในคลังข้อมูล</div>`;
+    container.innerHTML = `<div class="no-event">ยังไม่มีประวัติการบันทึกเหตุการณ์พิเศษในระบบ</div>`;
     return;
   }
   
-  // จัดเรียงลำดับวันที่เหตุการณ์ล่าสุดขึ้นก่อนเสมอ (Scroll เลื่อนลงไปอดีต)
+  // เรียงลำดับวันที่ใหม่ล่าสุดขึ้นก่อน
   events.sort((a, b) => new Date(b.date) - new Date(a.date));
   
   events.forEach(evt => {
-    const dObj = new Date(evt.date);
-    const thaiDate = dObj.toLocaleDateString('th-TH', { day: 'numeric', month: 'short', year: 'numeric' });
+    let thaiDate = evt.date;
+    try {
+      const dObj = new Date(evt.date);
+      if(!isNaN(dObj.getTime())) {
+        thaiDate = dObj.toLocaleDateString('th-TH', { day: 'numeric', month: 'short', year: 'numeric' });
+      }
+    } catch(e) {}
     
     const item = document.createElement("div");
     item.className = "event-item";
@@ -594,28 +518,10 @@ function renderEvents(events) {
   });
 }
 
-// 🟩 ปรับปรุงฟังก์ชันบันทึก: ยิงข้อมูลผ่าน Google Form แทนเพื่อหลบหลีกการบล็อกเครือข่ายอินทราเน็ต
 function saveEventToGitHub() {
-  const dateInput = document.getElementById("evtDate").value;
-  const descInput = document.getElementById("evtDesc").value.trim();
-  
-  if (!dateInput || !descInput) {
-    alert("กรุณากรอกข้อมูลวันที่และรายละเอียดเหตุการณ์ให้ครบถ้วนด้วยครับ");
-    return;
-  }
-  
-  // 1. ไปที่ฟอร์ม Google Form ของคุณ กดปุ่ม "ส่ง (Send)" -> เลือกแชร์แบบ "ลิงก์" คัดลอก URL ของฟอร์มมาวางตรงนี้ครับ
-  // ตัวอย่างลิงก์: https://docs.google.com/forms/d/e/1FAIpQLSxxxxxxxxx/viewform
-  const GOOGLE_FORM_URL = "https://forms.gle/4iQrRnTS16enw71q7"; 
-  
-  // 2. ระบบจะทำการเปิดหน้าต่างแฝงเพื่อยิงข้อมูลผ่าน Google Form ไปจุดชนวนสคริปต์หลังบ้านส่งเข้า GitHub อีกต่อหนึ่ง
-  // เปิดหน้าต่างใหม่เพื่อส่งคนไปกรอกฟอร์มของกูเกิลอย่างเสถียรปลอดภัย
   window.open(GOOGLE_FORM_URL, '_blank');
-  
-  alert("📋 ระบบกำลังนำคุณเข้าสู่หน้าต่าง Google Form เพื่อบันทึกเหตุการณ์พิเศษส่วนกลางร่วมกันครับ!");
-  
-  document.getElementById("evtDesc").value = ""; // ล้างช่องพิมพ์เดิม
-  closeEventModal(); // ปิดหน้าต่างป๊อปอัป
+  alert("📋 กำลังนำคุณเข้าสู่หน้าต่าง Google Form เพื่อบันทึกเหตุการณ์พิเศษชุดออนไลน์ส่วนกลางร่วมกันครับ!");
+  closeEventModal();
 }
 
 window.onclick = function(event) {
