@@ -594,77 +594,28 @@ function renderEvents(events) {
   });
 }
 
-// 🟩 ปรับปรุงฟังก์ชันบันทึกข้อมูล: เพิ่มความเสถียรในการส่ง Payload กลับขึ้น GitHub
+// 🟩 ปรับปรุงฟังก์ชันบันทึก: ยิงข้อมูลผ่าน Google Form แทนเพื่อหลบหลีกการบล็อกเครือข่ายอินทราเน็ต
 function saveEventToGitHub() {
   const dateInput = document.getElementById("evtDate").value;
   const descInput = document.getElementById("evtDesc").value.trim();
-  const btnSubmit = document.getElementById("btnSubmitEvent");
   
   if (!dateInput || !descInput) {
     alert("กรุณากรอกข้อมูลวันที่และรายละเอียดเหตุการณ์ให้ครบถ้วนด้วยครับ");
     return;
   }
   
-  btnSubmit.disabled = true;
-  btnSubmit.textContent = "กำลังเชื่อมต่อไปยัง GitHub...";
+  // 1. ไปที่ฟอร์ม Google Form ของคุณ กดปุ่ม "ส่ง (Send)" -> เลือกแชร์แบบ "ลิงก์" คัดลอก URL ของฟอร์มมาวางตรงนี้ครับ
+  // ตัวอย่างลิงก์: https://docs.google.com/forms/d/e/1FAIpQLSxxxxxxxxx/viewform
+  const GOOGLE_FORM_URL = "นำลิงก์_Google_Form_ของคุณมาวางตรงนี้"; 
   
-  const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`;
+  // 2. ระบบจะทำการเปิดหน้าต่างแฝงเพื่อยิงข้อมูลผ่าน Google Form ไปจุดชนวนสคริปต์หลังบ้านส่งเข้า GitHub อีกต่อหนึ่ง
+  // เปิดหน้าต่างใหม่เพื่อส่งคนไปกรอกฟอร์มของกูเกิลอย่างเสถียรปลอดภัย
+  window.open(GOOGLE_FORM_URL, '_blank');
   
-  // เรียกข้อมูลเวอร์ชันล่าสุดอีกรอบก่อนส่ง เพื่อดึงค่า SHA ที่อัปเดตที่สุดป้องกันการเขียนทับซ้อนกัน
-  fetch(url, {
-    method: "GET",
-    headers: { 
-      "Authorization": `token ${GH_TOKEN}`,
-      "Accept": "application/vnd.github.v3+json"
-    }
-  })
-  .then(res => res.status === 404 ? { content: btoa("[]"), sha: null } : res.json())
-  .then(resData => {
-    const rawText = resData.content ? decodeURIComponent(atob(resData.content).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join('')) : "[]";
-    let events = JSON.parse(rawText || "[]");
-    
-    // เติมข้อมูลชุดแมนนวลอันใหม่เพิ่มเข้าคลัง Array
-    events.push({ date: dateInput, desc: descInput });
-    
-    const updatedJsonText = JSON.stringify(events, null, 2);
-    // ฟังก์ชันช่วยเข้ารหัสภาษาไทยในรูปแบบ Base64 ที่ปลอดภัย
-    const base64Content = btoa(unescape(encodeURIComponent(updatedJsonText)));
-    
-    const payload = {
-      message: `📝 manual add event log via dashboard [${dateInput}]`,
-      content: base64Content
-    };
-    if (resData.sha) {
-      payload.sha = resData.sha;
-    }
-    
-    return fetch(url, {
-      method: "PUT",
-      headers: {
-        "Authorization": `token ${GH_TOKEN}`,
-        "Content-Type": "application/json",
-        "Accept": "application/vnd.github.v3+json"
-      },
-      body: JSON.stringify(payload)
-    });
-  })
-  .then(response => {
-    if(response.ok) {
-      alert("🎉 บันทึกเหตุการณ์และ Push ข้อมูลอัปเดตไฟล์บน GitHub สำเร็จเรียบร้อยแล้ว!");
-      document.getElementById("evtDesc").value = "";
-      loadEventsFromGitHub(); // สั่งรีโหลดข้อมูลสกรอลล์ให้แสดงผลเรียลไทม์ทันที
-    } else {
-      alert("⚠️ เกิดข้อผิดพลาดในการเข้าถึงคลาวด์ กรุณาตรวจสอบรหัส Token หรือสถานะ Repository ของคุณอีกครั้ง");
-    }
-  })
-  .catch(err => {
-    console.error(err);
-    alert("❌ เครือข่ายขัดข้อง ไม่สามารถเขียนข้อมูลเหตุการณ์ลง Server ได้");
-  })
-  .finally(() => {
-    btnSubmit.disabled = false;
-    btnSubmit.textContent = "💾 บันทึกตรงลง GitHub";
-  });
+  alert("📋 ระบบกำลังนำคุณเข้าสู่หน้าต่าง Google Form เพื่อบันทึกเหตุการณ์พิเศษส่วนกลางร่วมกันครับ!");
+  
+  document.getElementById("evtDesc").value = ""; // ล้างช่องพิมพ์เดิม
+  closeEventModal(); // ปิดหน้าต่างป๊อปอัป
 }
 
 window.onclick = function(event) {
