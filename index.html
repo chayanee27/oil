@@ -442,28 +442,43 @@ fetch("data/energy_db.json").then(r=>r.json()).then(db=>{
 });
 
 // --- ระบบ Event Logs เชื่อมกับ GitHub ---
+let _cachedEvents = null; // เก็บ events ใน memory หลังโหลด
+
 function openEventModal() {
   document.getElementById("eventModal").style.display = "flex";
-  // set default date to today
   const today = new Date().toISOString().slice(0,10);
   document.getElementById("evtDate").value = today;
   document.getElementById("saveStatus").textContent = "";
-  loadEventsFromGitHub();
+  // ถ้ามี cache แล้ว แสดงทันที แล้วค่อย refresh เบื้องหลัง
+  if (_cachedEvents) {
+    renderLocalEvents(_cachedEvents);
+    loadEventsFromGitHub(true); // silent refresh
+  } else {
+    loadEventsFromGitHub(false);
+  }
 }
 
 function closeEventModal() {
   document.getElementById("eventModal").style.display = "none";
 }
 
-function loadEventsFromGitHub() {
+function loadEventsFromGitHub(silent = false) {
   const container = document.getElementById("eventListContainer");
-  container.innerHTML = `<div class="no-event">⏳ กำลังโหลดข้อมูล...</div>`;
-  const url = `https://raw.githubusercontent.com/${GITHUB_REPO}/main/${GITHUB_FILE}?nocache=${Date.now()}`;
-  fetch(url)
+  if (!silent) container.innerHTML = `<div class="no-event">⏳ กำลังโหลดข้อมูล...</div>`;
+  // ใช้ GitHub API แทน raw เพื่อป้องกัน CDN cache ของ GitHub Pages
+  fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE}`, {
+    headers: { "Authorization": "token " + GITHUB_TOKEN, "Accept": "application/vnd.github.v3+json",
+                "Cache-Control": "no-cache" }
+  })
     .then(res => { if(!res.ok) throw new Error(res.status); return res.json(); })
-    .then(events => renderLocalEvents(events))
+    .then(meta => {
+      const events = JSON.parse(decodeURIComponent(escape(atob(meta.content.replace(/\n/g,"")))));
+      _cachedEvents = events;
+      renderLocalEvents(events);
+    })
     .catch(() => {
-      container.innerHTML = `<div class="no-event" style="color:red;">⚠️ ไม่สามารถโหลด event_logs.json ได้</div>`;
+      if (!silent)
+        container.innerHTML = `<div class="no-event" style="color:red;">⚠️ ไม่สามารถโหลด event_logs.json ได้</div>`;
     });
 }
 
@@ -474,8 +489,8 @@ function renderLocalEvents(events) {
     container.innerHTML = `<div class="no-event">ยังไม่มีเหตุการณ์ที่บันทึกไว้</div>`;
     return;
   }
-  events.sort((a, b) => new Date(b.date) - new Date(a.date));
-  events.forEach(evt => {
+  const sorted = [...events].sort((a, b) => new Date(b.date) - new Date(a.date));
+  sorted.forEach(evt => {
     let thaiDate = evt.date;
     try {
       const dObj = new Date(evt.date + "T00:00:00");
@@ -488,6 +503,14 @@ function renderLocalEvents(events) {
     item.innerHTML = `<div class="event-date">📅 ${thaiDate}</div><div class="event-desc">${evt.desc.replace(/</g,"&lt;")}</div>`;
     container.appendChild(item);
   });
+}
+
+// encode UTF-8 JSON → base64 อย่างถูกต้อง (รองรับภาษาไทยทุก platform)
+function utf8ToBase64(str) {
+  const bytes = new TextEncoder().encode(str);
+  let binary = "";
+  bytes.forEach(b => binary += String.fromCharCode(b));
+  return btoa(binary);
 }
 
 async function saveEventToGitHub() {
@@ -507,30 +530,30 @@ async function saveEventToGitHub() {
       headers: { "Authorization": "token " + GITHUB_TOKEN, "Accept": "application/vnd.github.v3+json" }
     });
     const meta = await metaRes.json();
-    const currentEvents = JSON.parse(atob(meta.content.replace(/\n/g, "")));
+    const currentEvents = JSON.parse(decodeURIComponent(escape(atob(meta.content.replace(/\n/g,"")))));
 
-    // 2. Append new event
-    currentEvents.push({ date: dateVal, desc: descVal });
+    // 2. Append new event + update cache ทันที (แสดงผลก่อนที่ Pages จะ deploy)
+    const newEvent = { date: dateVal, desc: descVal };
+    currentEvents.push(newEvent);
+    _cachedEvents = currentEvents;
+    renderLocalEvents(currentEvents); // แสดงทันทีใน UI
 
-    // 3. Commit back
-    const newContent = btoa(unescape(encodeURIComponent(JSON.stringify(currentEvents, null, 2))));
+    // 3. Commit to GitHub (UTF-8 safe)
+    const newContent = utf8ToBase64(JSON.stringify(currentEvents, null, 2));
     const commitRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE}`, {
       method: "PUT",
       headers: { "Authorization": "token " + GITHUB_TOKEN, "Content-Type": "application/json" },
-      body: JSON.stringify({
-        message: `Add event: ${dateVal}`,
-        content: newContent,
-        sha: meta.sha
-      })
+      body: JSON.stringify({ message: `Add event: ${dateVal}`, content: newContent, sha: meta.sha })
     });
     if(!commitRes.ok) throw new Error(await commitRes.text());
 
-    status.style.color = "green";
-    status.textContent = "✅ บันทึกสำเร็จ!";
     document.getElementById("evtDesc").value = "";
-    setTimeout(() => loadEventsFromGitHub(), 800);
+    status.style.color = "green";
+    status.innerHTML = `✅ บันทึกสำเร็จแล้ว! <span style="color:var(--txt2);font-size:11px;">(GitHub Pages จะอัปเดตภายใน ~1 นาที)</span>`;
   } catch(err) {
     console.error(err);
+    // rollback cache
+    if (_cachedEvents) { _cachedEvents.pop(); renderLocalEvents(_cachedEvents); }
     status.style.color = "red";
     status.textContent = "❌ บันทึกไม่สำเร็จ: " + err.message;
   } finally {
