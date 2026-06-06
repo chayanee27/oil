@@ -465,18 +465,17 @@ function closeEventModal() {
 function loadEventsFromGitHub(silent = false) {
   const container = document.getElementById("eventListContainer");
   if (!silent) container.innerHTML = `<div class="no-event">⏳ กำลังโหลดข้อมูล...</div>`;
-  // ใช้ GitHub API แทน raw เพื่อป้องกัน CDN cache ของ GitHub Pages
-  fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE}`, {
-    headers: { "Authorization": "token " + GITHUB_TOKEN, "Accept": "application/vnd.github.v3+json",
-                "Cache-Control": "no-cache" }
-  })
+  // ใช้ raw URL (ไม่ต้องการ auth header → ไม่มีปัญหา CORS)
+  // cache-busting ด้วย timestamp เพื่อให้ได้ข้อมูลล่าสุดเสมอ
+  const rawUrl = `https://raw.githubusercontent.com/${GITHUB_REPO}/main/${GITHUB_FILE}?v=${Date.now()}`;
+  fetch(rawUrl, { cache: "no-store" })
     .then(res => { if(!res.ok) throw new Error(res.status); return res.json(); })
-    .then(meta => {
-      const events = JSON.parse(decodeURIComponent(escape(atob(meta.content.replace(/\n/g,"")))));
+    .then(events => {
       _cachedEvents = events;
       renderLocalEvents(events);
     })
-    .catch(() => {
+    .catch(err => {
+      console.error("loadEventsFromGitHub error:", err);
       if (!silent)
         container.innerHTML = `<div class="no-event" style="color:red;">⚠️ ไม่สามารถโหลด event_logs.json ได้</div>`;
     });
@@ -530,7 +529,12 @@ async function saveEventToGitHub() {
       headers: { "Authorization": "token " + GITHUB_TOKEN, "Accept": "application/vnd.github.v3+json" }
     });
     const meta = await metaRes.json();
-    const currentEvents = JSON.parse(decodeURIComponent(escape(atob(meta.content.replace(/\n/g,"")))));
+    // decode base64 → UTF-8 bytes → string (TextDecoder รองรับภาษาไทยถูกต้อง)
+    const b64 = meta.content.replace(/\n/g,"");
+    const binStr = atob(b64);
+    const bytes = new Uint8Array(binStr.length);
+    for (let i = 0; i < binStr.length; i++) bytes[i] = binStr.charCodeAt(i);
+    const currentEvents = JSON.parse(new TextDecoder("utf-8").decode(bytes));
 
     // 2. Append new event + update cache ทันที (แสดงผลก่อนที่ Pages จะ deploy)
     const newEvent = { date: dateVal, desc: descVal };
