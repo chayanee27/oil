@@ -1,0 +1,33 @@
+name: Build Energy DB
+
+on:
+  push:
+    paths:
+      - "forms/*.csv"
+      - "data/*.csv"
+      - "scripts/*.py"
+      - ".github/workflows/build-energy-db.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build energy database
+        run: python scripts/build_energy_db.py
+
+      - name: Commit generated files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-build energy database"
+          file_pattern: data/weekly_readings.csv data/energy_db.json data/validation_report.json
