@@ -9,7 +9,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  /* จัดตำแหน่งหัวข้อกราฟกับปุ่มใหอยู่บรรทัดเดียวกัน */
+:root{--pri:#0B1D51;--pri-l:#1A3A7A;--gold:#C5A85F;--bg:#F0F2F5;--card:#FFF;--txt:#1A1A2E;--txt2:#5A6178;--bdr:#E2E6ED;--sh:0 2px 12px rgba(11,29,81,.08);--r:10px}
+*{margin:0;padding:0;box-sizing:border-box} body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--txt)}
+
+/* จัดตำแหน่งหัวข้อกราฟกับปุ่มใหอยู่บรรทัดเดียวกัน */
 .chart-header-container {
   display: flex;
   justify-content: space-between;
@@ -69,7 +72,7 @@
 /* พื้นที่กล่อง Scroll แสดงรายการเหตุการณ์ */
 .modal-body {
   padding: 16px;
-  overflow-y: auto; /* ให้มี Scroll เลื่อนขึ้นลง */
+  overflow-y: auto; /* ให้มี Scroll เลื่อนขึ้นลงตามโจทย์ */
   flex: 1;
 }
 .event-list { display: flex; flex-direction: column; gap: 12px; }
@@ -114,6 +117,7 @@
   text-align: center;
 }
 .btn-submit:hover { background: #1b5e20; }
+
 .topbar {
   background: linear-gradient(90deg, #0c1428 0%, #10172a 100%);
   border-bottom: 1px solid #2a2f4a;
@@ -135,8 +139,7 @@
 }
 .nav-tab:hover { color: #e2e8f0; }
 .nav-tab.active { color: #f59e0b; border-bottom-color: #f59e0b; }  
-:root{--pri:#0B1D51;--pri-l:#1A3A7A;--gold:#C5A85F;--bg:#F0F2F5;--card:#FFF;--txt:#1A1A2E;--txt2:#5A6178;--bdr:#E2E6ED;--sh:0 2px 12px rgba(11,29,81,.08);--r:10px}
-*{margin:0;padding:0;box-sizing:border-box} body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--txt)}
+
 .hdr{background:linear-gradient(135deg,var(--pri),var(--pri-l));padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .logo{width:42px;height:42px;background:var(--gold);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--pri)}
 .hdr-l{display:flex;gap:14px;align-items:center}.hdr-t{color:#fff}.hdr-t h1{font-size:18px}.hdr-t p{font-size:12px;color:rgba(255,255,255,.72)}
@@ -156,7 +159,6 @@
 .yearToggles{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 10px 0}
 .yBtn{border:1px solid var(--bdr);background:#fff;border-radius:999px;padding:3px 10px;font-size:11px;cursor:pointer;color:var(--txt2)}
 .yBtn.on{color:#fff;border-color:transparent}
-
 </style>
 </head>
 <body>
@@ -184,49 +186,49 @@
   <div class="kpi-row" id="kpiRow"></div>
   <div class="grid2">
     <div class="card"><div class="ct">อัตราส่วนการใช้ไฟฟ้า แยกฝ่าย</div><div class="cs" id="donutSub"></div><div class="dw"><div class="donutBox"><canvas id="donut"></canvas><div class="dc"><div class="dcv" id="donutTotal">—</div><div class="dcl">kWh</div></div></div><div style="flex:1;overflow:auto"><table class="lt" id="deptTable"></table></div></div></div>
+    
     <div class="card">
-  <div class="chart-header-container">
-    <div>
-      <div class="ct">ปริมาณการใช้ไฟฟ้าในแต่ละเดือน</div>
-      <div class="cs" id="barSub"></div>
-    </div>
-    <button class="btn-event" onclick="openEventModal()">📅 บันทึกเหตุการณ์ (Events)</button>
-  </div>
-  <div class="cw"><canvas id="monthBar"></canvas></div>
-</div>
-จุดที่ 3.2: เพิ่มโครงสร้าง Popup Modal
-นำโค้ด HTML ของหน้าต่าง Popup ชุดนี้ไปวางไว้ที่ ล่างสุดของหน้าจอ (วางไว้ก่อนปิดแท็ก </body> เล็กน้อย):
-
-HTML
-<div class="modal-overlay" id="eventModal">
-  <div class="modal-box">
-    <div class="modal-hdr">
-      <h3>📋 บันทึกเหตุการณ์พิเศษ (Event Logs)</h3>
-      <button class="modal-close" onclick="closeEventModal()">&times;</button>
-    </div>
-    
-    <div class="modal-body">
-      <div class="event-list" id="eventListContainer">
+      <div class="chart-header-container">
+        <div>
+          <div class="ct">ปริมาณการใช้ไฟฟ้าในแต่ละเดือน</div>
+          <div class="cs" id="barSub"></div>
         </div>
-    </div>
-    
-    <div class="modal-ftr">
-      <div class="form-title">➕ เสนอเพิ่มเหตุการณ์พิเศษ</div>
-      <div class="form-group">
-        <input type="date" id="evtDate" class="form-input">
-        <textarea id="evtDesc" class="form-input" rows="2" placeholder="ระบุรายละเอียดเหตุการณ์ เช่น เกิดเหตุแอร์ขัดข้อง หรือมีกิจกรรมเปิดบ้าน..."></textarea>
+        <button class="btn-event" onclick="openEventModal()">📅 บันทึกเหตุการณ์ (Events)</button>
       </div>
-      <button class="btn-submit" onclick="submitEventToAdmin()">ส่งข้อมูลเหตุการณ์</button>
+      <div class="cw"><canvas id="monthBar"></canvas></div>
     </div>
   </div>
-</div>
-  </div>
+  
   <div class="gridB">
     <div class="card"><div class="ct" id="buildingTitle">Top อาคาร</div><div class="cw"><canvas id="buildingBar"></canvas></div></div>
     <div class="card"><div class="ct">ปริมาณการใช้พลังงานรายเดือนในแต่ละปี</div><div class="yearToggles" id="yearToggles"></div><div class="cw"><canvas id="yearLine"></canvas></div></div>
   </div>
 </div>
 <div class="ft">Dashboard ดึงข้อมูลจาก energy_db.json | จด RAW ทุกวันศุกร์เช้า</div>
+
+<div class="modal-overlay" id="eventModal">
+  <div class="modal-box">
+    <div class="modal-hdr">
+      <h3>📋 บันทึกเหตุการณ์พิเศษ (Event Logs บน GitHub)</h3>
+      <button class="modal-close" onclick="closeEventModal()">&times;</button>
+    </div>
+    
+    <div class="modal-body">
+      <div class="event-list" id="eventListContainer">
+         </div>
+    </div>
+    
+    <div class="modal-ftr">
+      <div class="form-title">➕ บันทึกเหตุการณ์ใหม่ลงระบบส่วนกลาง</div>
+      <div class="form-group">
+        <input type="date" id="evtDate" class="form-input">
+        <textarea id="evtDesc" class="form-input" rows="2" placeholder="ระบุรายละเอียดเหตุการณ์ เช่น เกิดเหตุแอร์ขัดข้อง หรือมีกิจกรรมเปิดบ้าน..."></textarea>
+      </div>
+      <button class="btn-submit" id="btnSubmitEvent" onclick="saveEventToGitHub()">💾 บันทึกตรงลง GitHub</button>
+    </div>
+  </div>
+</div>
+
 <script>
 const MO=["ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค."];
 const DEPT=["สก.ชธธ.","อบค.","อบฟ.","อบย.","อรอ.","อคม.","อหข."];
@@ -234,6 +236,16 @@ const CL=["#1565C0","#00897B","#F9A825","#EF6C00","#AD1457","#6A1B9A","#2E7D32"]
 const DB=["#0D47A1","#004D40","#E65100","#880E4F","#4A148C","#1B5E20","#BF360C"];
 const BUILD_COLORS=["#1565C0","#00897B","#F9A825","#EF6C00","#AD1457","#6A1B9A","#2E7D32","#C5A85F","#455A64","#00ACC1","#8E24AA","#7CB342"];
 let DATA=null, sY=null, sM="all", sD="all", ch={}, visibleYears=new Set();
+
+// ⚙️ ส่วนตั้งค่าการเซฟแมนนวลเข้าสู่ GitHub Repository โดยตรง (แก้ไขคีย์ของคุณตรงนี้)
+const GH_OWNER = "maleeart";                 
+const GH_REPO  = "Energy-Dashboard";         
+const GH_TOKEN = "github_pat_ของคุณ";       
+const GH_PATH  = "data/event_logs.json";     
+
+let GLOBAL_EVENTS = [];
+let CURRENT_FILE_SHA = null;
+
 function fmt(n){return Math.round(n||0).toLocaleString("th-TH")}
 function displayBuildingName(name){return (DATA && DATA.building_alias && DATA.building_alias[name]) || name}
 function ymdYear(d){return +String(d).slice(0,4)}
@@ -247,11 +259,7 @@ function validEnergyRow(r){
     String(f).includes("NEGATIVE_DELTA_NOT_RESET")||
     String(f).includes("NEGATIVE_DELTA_INVALID")
   );
-
-  // ค่า 26 ล้านคือ row ผิดแน่นอนสำหรับ weekly/allocated row
-  // ตัดเฉพาะ row ที่เกินระดับผิดธรรมชาติ ไม่ได้เปลี่ยนสูตรคำนวณหลัก
   const impossibleSpike=kwh>2000000;
-
   return !badFlag && !impossibleSpike;
 }
 function filteredDeptRows(){
@@ -268,13 +276,13 @@ function monthlySeriesValue(year,month,dept=null){
 function deptRows(){return filteredDeptRows();}
 function deptTotal(dept){return deptRows().filter(r=>r.department===dept).reduce((a,b)=>a+(+b.kwh||0),0)}
 function allTotal(){return DEPT.reduce((a,d)=>a+deptTotal(d),0)}
+
+// 🔄 ย้อนกลับมาใช้แบบเดิม: ใช้ค่า kwh หลักโดยตรง ไม่ลดทอนตามอัตราส่วน
 function buildingRows(){
   const nameOf = r => r.building_name || r.b_code || r.meter_id || "ไม่ระบุอาคาร";
   const map = {};
 
   if(sD === "all"){
-    // รวมทั้งสำนักงาน: ratio = 1 และใช้เฉพาะอาคารที่มี allocation_ratio > 0
-    // ใช้ weekly_consumption แต่ตัด row ผิดธรรมชาติออก
     const eligible = new Set((DATA.department_weekly || [])
       .filter(r => (+r.allocation_ratio || 0) > 0)
       .map(r => r.meter_id));
@@ -290,7 +298,6 @@ function buildingRows(){
         map[name].kwh += +r.kwh || 0;
       });
   } else {
-    // เลือกฝ่าย: ใช้ usage × ratio ของฝ่ายนั้น
     (DATA.department_weekly || [])
       .filter(inFilter)
       .filter(validEnergyRow)
@@ -299,7 +306,7 @@ function buildingRows(){
       .forEach(r => {
         const name = nameOf(r);
         if(!map[name]) map[name] = {name, kwh:0};
-        map[name].kwh += +r.kwh || 0;
+        map[name].kwh += +r.kwh || 0; // ดึงค่าก้อนดิบเต็มจำนวนแสดงผลปกติแบบเดิมตามที่ต้องการ
       });
   }
 
@@ -341,15 +348,12 @@ function renderDonut(){
 }
 function renderMonthBar(){
   const vals=MO.map((_,i)=> sD==="all" ? DEPT.reduce((a,d)=>a+monthlyDeptTotal(i+1,d),0) : monthlyDeptTotal(i+1,sD));
-
   const validVals=vals.filter(v=>v>0);
   const maxVal=validVals.length?Math.max(...validVals):0;
   const avgVal=validVals.length?validVals.reduce((a,b)=>a+b,0)/validVals.length:0;
-
   document.getElementById("barSub").textContent=`ปี ${sY+543}${sD!=="all"?" ("+sD+")":""}`;
 
   if(ch.monthBar) ch.monthBar.destroy();
-
   ch.monthBar=new Chart(document.getElementById("monthBar"),{
     data:{
       labels:MO,
@@ -436,11 +440,9 @@ function renderBuildingBar(){
 }
 function renderYearLine(){
   const years=[...new Set((DATA.department_weekly||[]).map(w=>ymdYear(w.week_end_date)))].sort();
-
   if(visibleYears.size===0){
     years.forEach(y=>visibleYears.add(y));
   }
-
   const tg=document.getElementById("yearToggles");
   const colors=["#1565C0","#00897B","#F9A825","#EF6C00","#AD1457","#6A1B9A","#2E7D32","#C5A85F"];
 
@@ -464,7 +466,6 @@ function renderYearLine(){
   }
 
   if(ch.yearLine) ch.yearLine.destroy();
-
   const datasets=years
     .filter(y=>visibleYears.has(y))
     .map((y)=>{
@@ -499,6 +500,7 @@ function renderYearLine(){
   });
 }
 function renderAll(){renderKPI(); renderDonut(); renderMonthBar(); renderBuildingBar(); renderYearLine();}
+
 fetch("data/energy_db.json").then(r=>r.json()).then(db=>{
   DATA=db; document.getElementById("noteBar").textContent="โหลดข้อมูลสำเร็จ: data/energy_db.json";
   setupFilters(); renderAll();
@@ -506,95 +508,141 @@ fetch("data/energy_db.json").then(r=>r.json()).then(db=>{
   document.getElementById("noteBar").textContent="ไม่พบ data/energy_db.json หรือเปิดไฟล์จากเครื่องโดยตรงแล้ว browser บล็อก fetch — ให้รันผ่าน local server เช่น python -m http.server";
   console.error(err);
 });
-  // ตัวแปรส่วนกลางสำหรับเก็บข้อมูลเหตุการณ์ที่โหลดมาจากเซิร์ฟเวอร์
-let GLOBAL_EVENTS = [];
 
-// ฟังก์ชันเปิดหน้าต่าง Modal และไปดึงข้อมูลเหตุการณ์ล่าสุดจากไฟล์ JSON
+// --- 🌐 ระบบจัดการข้อมูลเหตุการณ์พิเศษเชื่อมต่อ GitHub API 🌐 ---
 function openEventModal() {
   document.getElementById("eventModal").style.display = "flex";
-  
-  // ตั้งค่าช่องใส่วันที่ในฟอร์มให้เริ่มต้นเป็นวันปัจจุบัน
   if(!document.getElementById("evtDate").value) {
     document.getElementById("evtDate").value = new Date().toISOString().split('T')[0];
   }
-  
-  // เรียกข้อมูลจากไฟล์ data/event_logs.json แบบ Real-time ทุกครั้งที่เปิดดู
-  fetch("data/event_logs.json")
-    .then(r => r.json())
-    .then(data => {
-      GLOBAL_EVENTS = data;
-      renderEventList();
-    })
-    .catch(err => {
-      console.error("Error loading event logs:", err);
-      // กรณีเกิดข้อผิดพลาดในการโหลดไฟล์
-      document.getElementById("eventListContainer").innerHTML = 
-        `<div class="no-event" style="color:red;">⚠️ ไม่สามารถโหลดไฟล์ data/event_logs.json ได้</div>`;
-    });
+  loadEventsFromGitHub();
 }
 
-// ฟังก์ชันปิดหน้าต่าง Modal
 function closeEventModal() {
   document.getElementById("eventModal").style.display = "none";
 }
 
-// ฟังก์ชันกรองและแสดงผลเหตุการณ์ลงบนกล่องพื้นที่ Scroll
-function renderEventList() {
+function loadEventsFromGitHub() {
+  const container = document.getElementById("eventListContainer");
+  container.innerHTML = `<div class="no-event">กำลังโหลดประวัติเหตุการณ์ส่วนกลางจาก GitHub...</div>`;
+
+  const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`;
+  
+  fetch(url, {
+    headers: { "Authorization": `token ${GH_TOKEN}` }
+  })
+  .then(res => res.status === 404 ? [] : res.json())
+  .then(data => {
+    if(Array.isArray(data)) {
+      renderEvents(data);
+    } else if (data.content) {
+      CURRENT_FILE_SHA = data.sha;
+      const decodedContent = decodeURIComponent(atob(data.content).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+      }).join(''));
+      
+      const events = JSON.parse(decodedContent || "[]");
+      renderEvents(events);
+    }
+  })
+  .catch(err => {
+    console.error(err);
+    container.innerHTML = `<div class="no-event" style="color:red;">⚠️ ไม่สามารถเชื่อมต่อระบบไฟล์บน GitHub API ได้</div>`;
+  });
+}
+
+function renderEvents(events) {
   const container = document.getElementById("eventListContainer");
   container.innerHTML = "";
   
-  if (!GLOBAL_EVENTS || GLOBAL_EVENTS.length === 0) {
-    container.innerHTML = `<div class="no-event">ยังไม่มีการบันทึกเหตุการณ์พิเศษส่วนกลางในระบบ</div>`;
+  if (!events || events.length === 0) {
+    container.innerHTML = `<div class="no-event">ยังไม่มีประวัติการบันทึกเหตุการณ์พิเศษในคลังข้อมูล</div>`;
     return;
   }
   
-  // ทำการเรียงลำดับวันเวลา โดยนำเหตุการณ์ที่เกิดขึ้นล่าสุด (Newest) ไว้ด้านบนสุดเสมอ
-  const sortedEvents = [...GLOBAL_EVENTS].sort((a, b) => new Date(b.date) - new Date(a.date));
+  events.sort((a, b) => new Date(b.date) - new Date(a.date));
   
-  sortedEvents.forEach(evt => {
-    // แปลงรูปแบบวันที่ย่อยให้อ่านแบบไทย (เช่น 5 มิ.ย. 2569)
-    const dateObj = new Date(evt.date);
-    const thaiDateFormat = dateObj.toLocaleDateString('th-TH', { day: 'numeric', month: 'short', year: 'numeric' });
+  events.forEach(evt => {
+    const dObj = new Date(evt.date);
+    const thaiDate = dObj.toLocaleDateString('th-TH', { day: 'numeric', month: 'short', year: 'numeric' });
     
     const item = document.createElement("div");
     item.className = "event-item";
     item.innerHTML = `
-      <div class="event-date">📅 วันที่ ${thaiDateFormat}</div>
+      <div class="event-date">📅 วันที่ ${thaiDate}</div>
       <div class="event-desc">${evt.desc}</div>
     `;
     container.appendChild(item);
   });
 }
 
-// ฟังก์ชันกดส่งข้อมูล (เนื่องจากเว็บแบบ Static เขียนทับไฟล์ตรงๆ ไม่ได้ จึงต้องทำแบบกึ่งอัตโนมัติ)
-function submitEventToAdmin() {
-  const dateValue = document.getElementById("evtDate").value;
-  const descValue = document.getElementById("evtDesc").value.trim();
+function saveEventToGitHub() {
+  const dateInput = document.getElementById("evtDate").value;
+  const descInput = document.getElementById("evtDesc").value.trim();
+  const btnSubmit = document.getElementById("btnSubmitEvent");
   
-  if (!dateValue || !descValue) {
-    alert("กรุณากรอกข้อมูลวันที่และรายละเอียดเหตุการณ์ให้ครบถ้วนครับ");
+  if (!dateInput || !descInput) {
+    alert("กรุณากรอกข้อมูลวันที่และรายละเอียดเหตุการณ์ให้ครบถ้วนด้วยครับ");
     return;
   }
   
-  // 💡 การทำงานเพื่อสร้าง JSON Payload ให้ Admin ไปเปิดก๊อปปี้ไปวางในระบบง่ายๆ
-  const jsonOutput = JSON.stringify({ date: dateValue, desc: descValue }, null, 2);
+  btnSubmit.disabled = true;
+  btnSubmit.textContent = "กำลังเชื่อมต่อไปยัง GitHub...";
   
-  // แสดงผลลัพธ์คำแนะนำให้ทีมงานผู้บันทึกนำชิ้นส่วนนี้ไปบอกผู้ดูแลระบบ หรือเก็บไว้บันทึกเข้าระบบ Data Pipeline
-  const confirmMsg = `คัดลอกข้อความด้านล่างนี้ ส่งให้ผู้ดูแลระบบนำไปเพิ่มในไฟล์ data/event_logs.json หรือใส่ใน Pipeline คราวถัดไป:\n\n${jsonOutput}`;
+  const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`;
   
-  // สามารถเปิดหน้าต่าง prompt เพื่อให้กดคัดลอก (Copy) ไปใช้ส่งไลน์กลุ่มทีมงานได้ง่ายๆ
-  window.prompt("กรุณากด Ctrl+C เพื่อคัดลอกข้อมูลเหตุการณ์ก้อนนี้ส่งให้แอดมินอัปเดตส่วนกลาง:", jsonOutput);
-  
-  // ล้างข้อความหลังพิมพ์ส่งเรียบร้อย
-  document.getElementById("evtDesc").value = "";
+  fetch(url, {
+    headers: { "Authorization": `token ${GH_TOKEN}` }
+  })
+  .then(res => res.status === 404 ? { content: btoa("[]"), sha: null } : res.json())
+  .then(resData => {
+    const rawText = resData.content ? decodeURIComponent(atob(resData.content).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join('')) : "[]";
+    let events = JSON.parse(rawText || "[]");
+    
+    events.push({ date: dateInput, desc: descInput });
+    
+    const updatedJsonText = JSON.stringify(events, null, 2);
+    const base64Content = btoa(unescape(encodeURIComponent(updatedJsonText)));
+    
+    const payload = {
+      message: `📝 manual add event log via dashboard [${dateInput}]`,
+      content: base64Content
+    };
+    if (resData.sha) {
+      payload.sha = resData.sha;
+    }
+    
+    return fetch(url, {
+      method: "PUT",
+      headers: {
+        "Authorization": `token ${GH_TOKEN}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+  })
+  .then(response => {
+    if(response.ok) {
+      alert("🎉 บันทึกเหตุการณ์และ Push ข้อมูลอัปเดตไฟล์บน GitHub สำเร็จเรียบร้อยแล้ว!");
+      document.getElementById("evtDesc").value = "";
+      loadEventsFromGitHub();
+    } else {
+      alert("⚠️ เกิดข้อผิดพลาดในการเข้าถึงคลาวด์ กรุณาตรวจสอบรหัส Token ของคุณอีกครั้ง");
+    }
+  })
+  .catch(err => {
+    console.error(err);
+    alert("❌ เครือข่ายขัดข้อง ไม่สามารถเขียนข้อมูลเหตุการณ์ลง Server ได้");
+  })
+  .finally(() => {
+    btnSubmit.disabled = false;
+    btnSubmit.textContent = "💾 บันทึกตรงลง GitHub";
+  });
 }
 
-// ปิด Modal ลงอัตโนมัติเมื่อผู้ใช้งานคลิกนอกกรอบกล่องข้อความสีขาว
 window.onclick = function(event) {
   const modal = document.getElementById("eventModal");
-  if (event.target === modal) {
-    closeEventModal();
-  }
+  if (event.target === modal) { closeEventModal(); }
 }
 </script>
 </body>
