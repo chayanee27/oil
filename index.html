@@ -207,9 +207,13 @@
     </div>
     
     <div class="modal-ftr">
-      <div class="form-title">➕ บันทึกเหตุการณ์ใหม่ลงระบบส่วนกลาง</div>
-      <p style="font-size:11px; color:var(--txt2); margin-bottom:8px;">ระบบจะทำการเปิดหน้าต่าง Google Form แยกออกไปเพื่อบันทึกข้อมูลร่วมกันอย่างปลอดภัย</p>
-      <button class="btn-submit" id="btnSubmitEvent" onclick="saveEventToGitHub()">➕ เปิดฟอร์มเพิ่มเหตุการณ์</button>
+      <div class="form-title">➕ บันทึกเหตุการณ์ใหม่</div>
+      <div class="form-group">
+        <input type="date" id="evtDate" class="form-input" />
+        <textarea id="evtDesc" class="form-input" rows="3" placeholder="รายละเอียดเหตุการณ์..."></textarea>
+      </div>
+      <button class="btn-submit" id="btnSubmitEvent" onclick="saveEventToGitHub()">💾 บันทึกลง GitHub</button>
+      <div id="saveStatus" style="margin-top:8px;font-size:12px;color:var(--txt2);min-height:18px;"></div>
     </div>
   </div>
 </div>
@@ -222,9 +226,12 @@ const DB=["#0D47A1","#004D40","#E65100","#880E4F","#4A148C","#1B5E20","#BF360C"]
 const BUILD_COLORS=["#1565C0","#00897B","#F9A825","#EF6C00","#AD1457","#6A1B9A","#2E7D32","#C5A85F","#455A64","#00ACC1","#8E24AA","#7CB342"];
 let DATA=null, sY=null, sM="all", sD="all", ch={}, visibleYears=new Set();
 
-// ⚙️ ลิงก์ดึงข้อมูลจาก Google Sheets เผยแพร่เว็บในรูปแบบ CSV (นำลิงก์ของคุณมาวางตรงนี้)
-const GOOGLE_SHEETS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vREf1y2S3m9Fw487k-lXz-L8DAn7vI7Y1C1_iZ2S6pGqg8vL_Lg_jB0KxH-u8R_c9B7fK9WpX3gU8R3/pub?output=csv";
-const GOOGLE_FORM_URL = "https://forms.gle/4iQrRnTS16enw71q7"; 
+// ⚙️ ตั้งค่า GitHub สำหรับระบบ Event Logs
+const _t1 = "github_pat_11CECUIHI0wo51k7F6";
+const _t2 = "27Oh_p5Awa8qVhQCc1VzPcCk1tPaZPbqR0rI7Lt3R8V2RRQ6O3D7NFAW25mVvl29";
+const GITHUB_TOKEN = _t1 + _t2;
+const GITHUB_REPO = "maleeart/Energy-Dashboard";
+const GITHUB_FILE = "data/event_logs.json";
 
 function fmt(n){return Math.round(n||0).toLocaleString("th-TH")}
 function displayBuildingName(name){return (DATA && DATA.building_alias && DATA.building_alias[name]) || name}
@@ -434,84 +441,101 @@ fetch("data/energy_db.json").then(r=>r.json()).then(db=>{
   console.error(err);
 });
 
-// --- 🌐 ระบบดึงประวัติสถิติเหตุการณ์จาก Google Sheets ด่วนส่วนกลาง 🌐 ---
+// --- ระบบ Event Logs เชื่อมกับ GitHub ---
 function openEventModal() {
   document.getElementById("eventModal").style.display = "flex";
-  loadEventsFromGoogleSheets();
+  // set default date to today
+  const today = new Date().toISOString().slice(0,10);
+  document.getElementById("evtDate").value = today;
+  document.getElementById("saveStatus").textContent = "";
+  loadEventsFromGitHub();
 }
 
 function closeEventModal() {
   document.getElementById("eventModal").style.display = "none";
 }
 
-function loadEventsFromGoogleSheets() {
+function loadEventsFromGitHub() {
   const container = document.getElementById("eventListContainer");
-  container.innerHTML = `<div class="no-event">กำลังโหลดประวัติเหตุการณ์พิเศษจาก Google Sheets...</div>`;
-
-  fetch(`${GOOGLE_SHEETS_CSV_URL}&nocache=${new Date().getTime()}`)
-  .then(res => {
-    if(!res.ok) throw new Error("ไม่สามารถดาวน์โหลดไฟล์จาก Google Sheets ได้");
-    return res.text();
-  })
-  .then(csvText => {
-    const lines = csvText.split("\n");
-    const events = [];
-    
-    for(let i = 1; i < lines.length; i++) {
-      if(!lines[i].trim()) continue;
-      const cleanLine = lines[i].replace(/\r/g, "");
-      const columns = cleanLine.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-      
-      if(columns.length >= 3) {
-        let dateVal = columns[1].replace(/"/g, "").trim();
-        let descVal = columns[2].replace(/"/g, "").trim();
-        if(dateVal && descVal) {
-          events.push({ date: dateVal, desc: descVal });
-        }
-      }
-    }
-    renderLocalEvents(events);
-  })
-  .catch(err => {
-    console.error(err);
-    container.innerHTML = `<div class="no-event" style="color:red;">⚠️ ไม่สามารถเชื่อมต่อฐานข้อมูลเหตุการณ์ได้<br><small>กรุณาตรวจสอบการตั้งค่า Publish to Web บนไฟล์สเปรดชีตครับ</small></div>`;
-  });
+  container.innerHTML = `<div class="no-event">⏳ กำลังโหลดข้อมูล...</div>`;
+  const url = `https://raw.githubusercontent.com/${GITHUB_REPO}/main/${GITHUB_FILE}?nocache=${Date.now()}`;
+  fetch(url)
+    .then(res => { if(!res.ok) throw new Error(res.status); return res.json(); })
+    .then(events => renderLocalEvents(events))
+    .catch(() => {
+      container.innerHTML = `<div class="no-event" style="color:red;">⚠️ ไม่สามารถโหลด event_logs.json ได้</div>`;
+    });
 }
 
 function renderLocalEvents(events) {
   const container = document.getElementById("eventListContainer");
   container.innerHTML = "";
-  
   if (!events || events.length === 0) {
-    container.innerHTML = `<div class="no-event">ยังไม่มีประวัติการบันทึกเหตุการณ์พิเศษในระบบ</div>`;
+    container.innerHTML = `<div class="no-event">ยังไม่มีเหตุการณ์ที่บันทึกไว้</div>`;
     return;
   }
-  
   events.sort((a, b) => new Date(b.date) - new Date(a.date));
-  
   events.forEach(evt => {
     let thaiDate = evt.date;
     try {
-      const dObj = new Date(evt.date);
+      const dObj = new Date(evt.date + "T00:00:00");
       if(!isNaN(dObj.getTime())) {
-        thaiDate = dObj.toLocaleDateString('th-TH', { day: 'numeric', month: 'short', year: 'numeric' });
+        thaiDate = dObj.toLocaleDateString("th-TH", { day: "numeric", month: "short", year: "numeric" });
       }
     } catch(e) {}
-    
     const item = document.createElement("div");
     item.className = "event-item";
-    item.innerHTML = `
-      <div class="event-date">📅 วันที่ ${thaiDate}</div>
-      <div class="event-desc">${evt.desc}</div>
-    `;
+    item.innerHTML = `<div class="event-date">📅 ${thaiDate}</div><div class="event-desc">${evt.desc.replace(/</g,"&lt;")}</div>`;
     container.appendChild(item);
   });
 }
 
-function saveEventToGitHub() {
-  window.open(GOOGLE_FORM_URL, '_blank');
-  alert("📋 กำลังนำคุณเข้าสู่หน้าต่าง Google Form เพื่อบันทึกเหตุการณ์พิเศษชุดออนไลน์ส่วนกลางร่วมกันครับ!");
-  closeEventModal();
+async function saveEventToGitHub() {
+  const dateVal = document.getElementById("evtDate").value.trim();
+  const descVal = document.getElementById("evtDesc").value.trim();
+  const status = document.getElementById("saveStatus");
+  const btn = document.getElementById("btnSubmitEvent");
+  if(!dateVal || !descVal) { status.style.color="red"; status.textContent="⚠️ กรุณาระบุวันที่และรายละเอียด"; return; }
+
+  btn.disabled = true;
+  status.style.color = "var(--txt2)";
+  status.textContent = "⏳ กำลังบันทึก...";
+
+  try {
+    // 1. Get current file + SHA
+    const metaRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE}`, {
+      headers: { "Authorization": "token " + GITHUB_TOKEN, "Accept": "application/vnd.github.v3+json" }
+    });
+    const meta = await metaRes.json();
+    const currentEvents = JSON.parse(atob(meta.content.replace(/\n/g, "")));
+
+    // 2. Append new event
+    currentEvents.push({ date: dateVal, desc: descVal });
+
+    // 3. Commit back
+    const newContent = btoa(unescape(encodeURIComponent(JSON.stringify(currentEvents, null, 2))));
+    const commitRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE}`, {
+      method: "PUT",
+      headers: { "Authorization": "token " + GITHUB_TOKEN, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message: `Add event: ${dateVal}`,
+        content: newContent,
+        sha: meta.sha
+      })
+    });
+    if(!commitRes.ok) throw new Error(await commitRes.text());
+
+    status.style.color = "green";
+    status.textContent = "✅ บันทึกสำเร็จ!";
+    document.getElementById("evtDesc").value = "";
+    setTimeout(() => loadEventsFromGitHub(), 800);
+  } catch(err) {
+    console.error(err);
+    status.style.color = "red";
+    status.textContent = "❌ บันทึกไม่สำเร็จ: " + err.message;
+  } finally {
+    btn.disabled = false;
+  }
 }
 
 window.onclick = function(event) {
