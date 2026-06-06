@@ -510,6 +510,7 @@ fetch("data/energy_db.json").then(r=>r.json()).then(db=>{
 });
 
 // --- 🌐 ระบบจัดการข้อมูลเหตุการณ์พิเศษเชื่อมต่อ GitHub API 🌐 ---
+// --- 🌐 ระบบจัดการข้อมูลเหตุการณ์พิเศษเชื่อมต่อ GitHub API 🌐 ---
 function openEventModal() {
   document.getElementById("eventModal").style.display = "flex";
   if(!document.getElementById("evtDate").value) {
@@ -522,47 +523,48 @@ function closeEventModal() {
   document.getElementById("eventModal").style.display = "none";
 }
 
+// 🟩 ปรับปรุงฟังก์ชันโหลดข้อมูล: เพิ่มสิทธิ์การยืนยันตัวตน และระบบถอดรหัสภาษาไทยที่เสถียร
 function loadEventsFromGitHub() {
   const container = document.getElementById("eventListContainer");
   container.innerHTML = `<div class="no-event">กำลังโหลดประวัติเหตุการณ์ส่วนกลางจาก GitHub...</div>`;
 
-  const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`;
+  const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}?nocache=${new Date().getTime()}`;
   
   fetch(url, {
-    headers: { "Authorization": `token ${GH_TOKEN}` }
+    method: "GET",
+    headers: { 
+      "Authorization": `token ${GH_TOKEN}`,
+      "Accept": "application/vnd.github.v3+json"
+    }
   })
   .then(res => {
     if (res.status === 404) return [];
-    if (!res.ok) throw new Error("Network response was not ok");
+    if (!res.ok) throw new Error("พิกัดไฟล์ไม่ถูกต้อง หรือสิทธิ์ Token ไม่สมบูรณ์");
     return res.json();
   })
   .then(data => {
-    // 🟩 ปรับปรุงจุดนี้: เช็คโครงสร้างให้ถูกต้อง ไม่ว่าจะไฟล์ว่าง หรือไฟล์ที่มีข้อมูลอยู่แล้ว
-    if (data && data.content) {
-      // เก็บค่า SHA ไว้สำหรับใช้ยืนยันตอนกดอัปเดตเซฟไฟล์ (PUT)
-      CURRENT_FILE_SHA = data.sha;
+    if (Array.isArray(data)) {
+      renderEvents(data);
+    } else if (data && data.content) {
+      CURRENT_FILE_SHA = data.sha; // บันทึก SHA เวอร์ชันล่าสุดไว้สำหรับใช้สั่งเขียนทับ (PUT)
       
-      // ถอดรหัส Base64 จาก GitHub ออกมาเป็นข้อความภาษาไทยที่สมบูรณ์
+      // ถอดรหัสข้อความ Base64 รองรับภาษาไทยและอักขระพิเศษ 100% ไม่ให้โครงสร้าง JSON พัง
       const binaryString = atob(data.content.replace(/\s/g, ''));
-      const len = binaryString.length;
-      const bytes = new Uint8Array(len);
-      for (let i = 0; i < len; i++) {
+      const bytes = new Uint8Array(binaryString.length);
+      for (let i = 0; i < binaryString.length; i++) {
         bytes[i] = binaryString.charCodeAt(i);
       }
       const decodedContent = new TextDecoder('utf-8').decode(bytes);
       
       const events = JSON.parse(decodedContent || "[]");
       renderEvents(events);
-    } else if (Array.isArray(data)) {
-      // รองรับกรณี GitHub ส่งกลับมาเป็น Array ว่างโดยตรง
-      renderEvents(data);
     } else {
       renderEvents([]);
     }
   })
   .catch(err => {
     console.error(err);
-    container.innerHTML = `<div class="no-event" style="color:red;">⚠️ ไม่สามารถดึงไฟล์เชื่อมต่อ GitHub API ได้</div>`;
+    container.innerHTML = `<div class="no-event" style="color:red;">⚠️ ไม่สามารถดึงไฟล์เชื่อมต่อ GitHub API ได้<br><small>${err.message}</small></div>`;
   });
 }
 
@@ -575,6 +577,7 @@ function renderEvents(events) {
     return;
   }
   
+  // จัดเรียงลำดับวันที่เหตุการณ์ล่าสุดขึ้นก่อนเสมอ (Scroll เลื่อนลงไปอดีต)
   events.sort((a, b) => new Date(b.date) - new Date(a.date));
   
   events.forEach(evt => {
@@ -591,6 +594,7 @@ function renderEvents(events) {
   });
 }
 
+// 🟩 ปรับปรุงฟังก์ชันบันทึกข้อมูล: เพิ่มความเสถียรในการส่ง Payload กลับขึ้น GitHub
 function saveEventToGitHub() {
   const dateInput = document.getElementById("evtDate").value;
   const descInput = document.getElementById("evtDesc").value.trim();
@@ -606,17 +610,24 @@ function saveEventToGitHub() {
   
   const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`;
   
+  // เรียกข้อมูลเวอร์ชันล่าสุดอีกรอบก่อนส่ง เพื่อดึงค่า SHA ที่อัปเดตที่สุดป้องกันการเขียนทับซ้อนกัน
   fetch(url, {
-    headers: { "Authorization": `token ${GH_TOKEN}` }
+    method: "GET",
+    headers: { 
+      "Authorization": `token ${GH_TOKEN}`,
+      "Accept": "application/vnd.github.v3+json"
+    }
   })
   .then(res => res.status === 404 ? { content: btoa("[]"), sha: null } : res.json())
   .then(resData => {
     const rawText = resData.content ? decodeURIComponent(atob(resData.content).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join('')) : "[]";
     let events = JSON.parse(rawText || "[]");
     
+    // เติมข้อมูลชุดแมนนวลอันใหม่เพิ่มเข้าคลัง Array
     events.push({ date: dateInput, desc: descInput });
     
     const updatedJsonText = JSON.stringify(events, null, 2);
+    // ฟังก์ชันช่วยเข้ารหัสภาษาไทยในรูปแบบ Base64 ที่ปลอดภัย
     const base64Content = btoa(unescape(encodeURIComponent(updatedJsonText)));
     
     const payload = {
@@ -631,7 +642,8 @@ function saveEventToGitHub() {
       method: "PUT",
       headers: {
         "Authorization": `token ${GH_TOKEN}`,
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.github.v3+json"
       },
       body: JSON.stringify(payload)
     });
@@ -640,9 +652,9 @@ function saveEventToGitHub() {
     if(response.ok) {
       alert("🎉 บันทึกเหตุการณ์และ Push ข้อมูลอัปเดตไฟล์บน GitHub สำเร็จเรียบร้อยแล้ว!");
       document.getElementById("evtDesc").value = "";
-      loadEventsFromGitHub();
+      loadEventsFromGitHub(); // สั่งรีโหลดข้อมูลสกรอลล์ให้แสดงผลเรียลไทม์ทันที
     } else {
-      alert("⚠️ เกิดข้อผิดพลาดในการเข้าถึงคลาวด์ กรุณาตรวจสอบรหัส Token ของคุณอีกครั้ง");
+      alert("⚠️ เกิดข้อผิดพลาดในการเข้าถึงคลาวด์ กรุณาตรวจสอบรหัส Token หรือสถานะ Repository ของคุณอีกครั้ง");
     }
   })
   .catch(err => {
