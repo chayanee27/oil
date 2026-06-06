@@ -9,6 +9,111 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+  /* จัดตำแหน่งหัวข้อกราฟกับปุ่มใหอยู่บรรทัดเดียวกัน */
+.chart-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.chart-header-container .ct { margin-bottom: 0; }
+
+/* ปุ่ม Event บนขวาของกราฟรายเดือน */
+.btn-event {
+  background: var(--pri);
+  color: #fff;
+  border: 1px solid var(--pri-l);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: 'Sarabun', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+.btn-event:hover { background: var(--pri-l); }
+
+/* หน้าต่าง Popup Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none; /* เริ่มต้นซ่อนไว้ */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+.modal-box {
+  background: #fff;
+  border-radius: var(--r);
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+}
+.modal-hdr {
+  padding: 16px;
+  border-bottom: 1px solid var(--bdr);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-hdr h3 { font-size: 16px; color: var(--pri); }
+.modal-close { background: none; border: none; font-size: 22px; cursor: pointer; color: var(--txt2); }
+
+/* พื้นที่กล่อง Scroll แสดงรายการเหตุการณ์ */
+.modal-body {
+  padding: 16px;
+  overflow-y: auto; /* ให้มี Scroll เลื่อนขึ้นลง */
+  flex: 1;
+}
+.event-list { display: flex; flex-direction: column; gap: 12px; }
+.event-item {
+  background: #f8f9fa;
+  border-left: 4px solid var(--gold);
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+}
+.event-date { font-size: 12px; font-weight: 700; color: var(--txt2); margin-bottom: 4px; }
+.event-desc { font-size: 13px; color: var(--txt); white-space: pre-line; line-height: 1.5; }
+.no-event { text-align: center; color: var(--txt2); font-size: 13px; padding: 30px 0; }
+
+/* ฟอร์มส่วนล่างสำหรับแจ้งเรื่องเพิ่มเหตุการณ์ */
+.modal-ftr {
+  padding: 16px;
+  border-top: 1px solid var(--bdr);
+  background: #fcfcfd;
+  border-radius: 0 0 var(--r) var(--r);
+}
+.form-title { font-size: 13px; font-weight: 700; margin-bottom: 8px; color: var(--pri); }
+.form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
+.form-input {
+  font-family: 'Sarabun', sans-serif;
+  padding: 8px 12px;
+  border: 1px solid var(--bdr);
+  border-radius: 6px;
+  font-size: 13px;
+}
+.form-input:focus { outline: 1px solid var(--pri); border-color: var(--pri); }
+.btn-submit {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: 'Sarabun', sans-serif;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+.btn-submit:hover { background: #1b5e20; }
 .topbar {
   background: linear-gradient(90deg, #0c1428 0%, #10172a 100%);
   border-bottom: 1px solid #2a2f4a;
@@ -79,7 +184,42 @@
   <div class="kpi-row" id="kpiRow"></div>
   <div class="grid2">
     <div class="card"><div class="ct">อัตราส่วนการใช้ไฟฟ้า แยกฝ่าย</div><div class="cs" id="donutSub"></div><div class="dw"><div class="donutBox"><canvas id="donut"></canvas><div class="dc"><div class="dcv" id="donutTotal">—</div><div class="dcl">kWh</div></div></div><div style="flex:1;overflow:auto"><table class="lt" id="deptTable"></table></div></div></div>
-    <div class="card"><div class="ct">ปริมาณการใช้ไฟฟ้าในแต่ละเดือน</div><div class="cs" id="barSub"></div><div class="cw"><canvas id="monthBar"></canvas></div></div>
+    <div class="card">
+  <div class="chart-header-container">
+    <div>
+      <div class="ct">ปริมาณการใช้ไฟฟ้าในแต่ละเดือน</div>
+      <div class="cs" id="barSub"></div>
+    </div>
+    <button class="btn-event" onclick="openEventModal()">📅 บันทึกเหตุการณ์ (Events)</button>
+  </div>
+  <div class="cw"><canvas id="monthBar"></canvas></div>
+</div>
+จุดที่ 3.2: เพิ่มโครงสร้าง Popup Modal
+นำโค้ด HTML ของหน้าต่าง Popup ชุดนี้ไปวางไว้ที่ ล่างสุดของหน้าจอ (วางไว้ก่อนปิดแท็ก </body> เล็กน้อย):
+
+HTML
+<div class="modal-overlay" id="eventModal">
+  <div class="modal-box">
+    <div class="modal-hdr">
+      <h3>📋 บันทึกเหตุการณ์พิเศษ (Event Logs)</h3>
+      <button class="modal-close" onclick="closeEventModal()">&times;</button>
+    </div>
+    
+    <div class="modal-body">
+      <div class="event-list" id="eventListContainer">
+        </div>
+    </div>
+    
+    <div class="modal-ftr">
+      <div class="form-title">➕ เสนอเพิ่มเหตุการณ์พิเศษ</div>
+      <div class="form-group">
+        <input type="date" id="evtDate" class="form-input">
+        <textarea id="evtDesc" class="form-input" rows="2" placeholder="ระบุรายละเอียดเหตุการณ์ เช่น เกิดเหตุแอร์ขัดข้อง หรือมีกิจกรรมเปิดบ้าน..."></textarea>
+      </div>
+      <button class="btn-submit" onclick="submitEventToAdmin()">ส่งข้อมูลเหตุการณ์</button>
+    </div>
+  </div>
+</div>
   </div>
   <div class="gridB">
     <div class="card"><div class="ct" id="buildingTitle">Top อาคาร</div><div class="cw"><canvas id="buildingBar"></canvas></div></div>
@@ -366,6 +506,96 @@ fetch("data/energy_db.json").then(r=>r.json()).then(db=>{
   document.getElementById("noteBar").textContent="ไม่พบ data/energy_db.json หรือเปิดไฟล์จากเครื่องโดยตรงแล้ว browser บล็อก fetch — ให้รันผ่าน local server เช่น python -m http.server";
   console.error(err);
 });
+  // ตัวแปรส่วนกลางสำหรับเก็บข้อมูลเหตุการณ์ที่โหลดมาจากเซิร์ฟเวอร์
+let GLOBAL_EVENTS = [];
+
+// ฟังก์ชันเปิดหน้าต่าง Modal และไปดึงข้อมูลเหตุการณ์ล่าสุดจากไฟล์ JSON
+function openEventModal() {
+  document.getElementById("eventModal").style.display = "flex";
+  
+  // ตั้งค่าช่องใส่วันที่ในฟอร์มให้เริ่มต้นเป็นวันปัจจุบัน
+  if(!document.getElementById("evtDate").value) {
+    document.getElementById("evtDate").value = new Date().toISOString().split('T')[0];
+  }
+  
+  // เรียกข้อมูลจากไฟล์ data/event_logs.json แบบ Real-time ทุกครั้งที่เปิดดู
+  fetch("data/event_logs.json")
+    .then(r => r.json())
+    .then(data => {
+      GLOBAL_EVENTS = data;
+      renderEventList();
+    })
+    .catch(err => {
+      console.error("Error loading event logs:", err);
+      // กรณีเกิดข้อผิดพลาดในการโหลดไฟล์
+      document.getElementById("eventListContainer").innerHTML = 
+        `<div class="no-event" style="color:red;">⚠️ ไม่สามารถโหลดไฟล์ data/event_logs.json ได้</div>`;
+    });
+}
+
+// ฟังก์ชันปิดหน้าต่าง Modal
+function closeEventModal() {
+  document.getElementById("eventModal").style.display = "none";
+}
+
+// ฟังก์ชันกรองและแสดงผลเหตุการณ์ลงบนกล่องพื้นที่ Scroll
+function renderEventList() {
+  const container = document.getElementById("eventListContainer");
+  container.innerHTML = "";
+  
+  if (!GLOBAL_EVENTS || GLOBAL_EVENTS.length === 0) {
+    container.innerHTML = `<div class="no-event">ยังไม่มีการบันทึกเหตุการณ์พิเศษส่วนกลางในระบบ</div>`;
+    return;
+  }
+  
+  // ทำการเรียงลำดับวันเวลา โดยนำเหตุการณ์ที่เกิดขึ้นล่าสุด (Newest) ไว้ด้านบนสุดเสมอ
+  const sortedEvents = [...GLOBAL_EVENTS].sort((a, b) => new Date(b.date) - new Date(a.date));
+  
+  sortedEvents.forEach(evt => {
+    // แปลงรูปแบบวันที่ย่อยให้อ่านแบบไทย (เช่น 5 มิ.ย. 2569)
+    const dateObj = new Date(evt.date);
+    const thaiDateFormat = dateObj.toLocaleDateString('th-TH', { day: 'numeric', month: 'short', year: 'numeric' });
+    
+    const item = document.createElement("div");
+    item.className = "event-item";
+    item.innerHTML = `
+      <div class="event-date">📅 วันที่ ${thaiDateFormat}</div>
+      <div class="event-desc">${evt.desc}</div>
+    `;
+    container.appendChild(item);
+  });
+}
+
+// ฟังก์ชันกดส่งข้อมูล (เนื่องจากเว็บแบบ Static เขียนทับไฟล์ตรงๆ ไม่ได้ จึงต้องทำแบบกึ่งอัตโนมัติ)
+function submitEventToAdmin() {
+  const dateValue = document.getElementById("evtDate").value;
+  const descValue = document.getElementById("evtDesc").value.trim();
+  
+  if (!dateValue || !descValue) {
+    alert("กรุณากรอกข้อมูลวันที่และรายละเอียดเหตุการณ์ให้ครบถ้วนครับ");
+    return;
+  }
+  
+  // 💡 การทำงานเพื่อสร้าง JSON Payload ให้ Admin ไปเปิดก๊อปปี้ไปวางในระบบง่ายๆ
+  const jsonOutput = JSON.stringify({ date: dateValue, desc: descValue }, null, 2);
+  
+  // แสดงผลลัพธ์คำแนะนำให้ทีมงานผู้บันทึกนำชิ้นส่วนนี้ไปบอกผู้ดูแลระบบ หรือเก็บไว้บันทึกเข้าระบบ Data Pipeline
+  const confirmMsg = `คัดลอกข้อความด้านล่างนี้ ส่งให้ผู้ดูแลระบบนำไปเพิ่มในไฟล์ data/event_logs.json หรือใส่ใน Pipeline คราวถัดไป:\n\n${jsonOutput}`;
+  
+  // สามารถเปิดหน้าต่าง prompt เพื่อให้กดคัดลอก (Copy) ไปใช้ส่งไลน์กลุ่มทีมงานได้ง่ายๆ
+  window.prompt("กรุณากด Ctrl+C เพื่อคัดลอกข้อมูลเหตุการณ์ก้อนนี้ส่งให้แอดมินอัปเดตส่วนกลาง:", jsonOutput);
+  
+  // ล้างข้อความหลังพิมพ์ส่งเรียบร้อย
+  document.getElementById("evtDesc").value = "";
+}
+
+// ปิด Modal ลงอัตโนมัติเมื่อผู้ใช้งานคลิกนอกกรอบกล่องข้อความสีขาว
+window.onclick = function(event) {
+  const modal = document.getElementById("eventModal");
+  if (event.target === modal) {
+    closeEventModal();
+  }
+}
 </script>
 </body>
 </html>
