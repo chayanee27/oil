@@ -531,15 +531,25 @@ function loadEventsFromGitHub() {
   fetch(url, {
     headers: { "Authorization": `token ${GH_TOKEN}` }
   })
-  .then(res => res.status === 404 ? [] : res.json())
+  .then(res => {
+    if (res.status === 404) return [];
+    if (!res.ok) throw new Error("Network response was not ok");
+    return res.json();
+  })
   .then(data => {
-    if(Array.isArray(data)) {
+    if (Array.isArray(data)) {
       renderEvents(data);
     } else if (data.content) {
       CURRENT_FILE_SHA = data.sha;
-      const decodedContent = decodeURIComponent(atob(data.content).split('').map(function(c) {
-        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-      }).join(''));
+      
+      // 🟩 แก้ไขจุดนี้: เปลี่ยนมาใช้ระบบถอดรหัส Base64 ที่ปลอดภัยและรองรับภาษาไทย/ไฟล์ว่าง 100%
+      const binaryString = atob(data.content.replace(/\s/g, ''));
+      const len = binaryString.length;
+      const bytes = new Uint8Array(len);
+      for (let i = 0; i < len; i++) {
+        bytes[i] = binaryString.charCodeAt(i);
+      }
+      const decodedContent = new TextDecoder('utf-8').decode(bytes);
       
       const events = JSON.parse(decodedContent || "[]");
       renderEvents(events);
@@ -547,7 +557,7 @@ function loadEventsFromGitHub() {
   })
   .catch(err => {
     console.error(err);
-    container.innerHTML = `<div class="no-event" style="color:red;">⚠️ ไม่สามารถเชื่อมต่อระบบไฟล์บน GitHub API ได้</div>`;
+    container.innerHTML = `<div class="no-event" style="color:red;">⚠️ ไม่สามารถดึงไฟล์เชื่อมต่อ GitHub API ได้</div>`;
   });
 }
 
