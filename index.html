@@ -328,6 +328,60 @@ function renderDonut(){
 }
 
 // 🟩 แก้ไขจุดนี้: ซ่อมแซม Syntax โครงสร้างระดับตํานานที่พิมพ์ตกไปเรียบร้อยครับ
+// --- อุณหภูมิเฉลี่ยรายเดือน จาก Open-Meteo (ไทรน้อย นนทบุรี) ---
+let TEMP_DATA = {}; // {"2025-01": 28.3, ...}
+
+async function fetchTemperature() {
+  // ดึงข้อมูลปีปัจจุบันและปีก่อนหน้า
+  const today = new Date();
+  const endDate = today.toISOString().slice(0,10);
+  const startDate = "2024-01-01"; // ดึงตั้งแต่ 2024 รองรับทุกปีที่แสดง
+  const url = `https://archive-api.open-meteo.com/v1/archive?latitude=13.9833&longitude=100.2333&start_date=${startDate}&end_date=${endDate}&daily=temperature_2m_mean&timezone=Asia%2FBangkok`;
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(res.status);
+    const data = await res.json();
+    const dates = data.daily.time;
+    const temps = data.daily.temperature_2m_mean;
+    // เฉลี่ยรายเดือน
+    const monthly = {};
+    dates.forEach((d, i) => {
+      if (temps[i] == null) return;
+      const ym = d.slice(0,7);
+      if (!monthly[ym]) monthly[ym] = [];
+      monthly[ym].push(temps[i]);
+    });
+    Object.keys(monthly).forEach(ym => {
+      const arr = monthly[ym];
+      TEMP_DATA[ym] = +(arr.reduce((a,b)=>a+b,0)/arr.length).toFixed(1);
+    });
+    // สำหรับเดือนปัจจุบัน (ยังไม่สิ้นเดือน) ให้ดึงจาก forecast API เพิ่ม
+    const fRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=13.9833&longitude=100.2333&daily=temperature_2m_mean&timezone=Asia%2FBangkok&forecast_days=16`);
+    if (fRes.ok) {
+      const fData = await fRes.json();
+      const fDates = fData.daily.time;
+      const fTemps = fData.daily.temperature_2m_mean;
+      const fMonthly = {};
+      fDates.forEach((d,i) => {
+        if (fTemps[i] == null) return;
+        const ym = d.slice(0,7);
+        if (!fMonthly[ym]) fMonthly[ym] = [];
+        fMonthly[ym].push(fTemps[i]);
+      });
+      Object.keys(fMonthly).forEach(ym => {
+        if (!TEMP_DATA[ym]) { // เฉพาะเดือนที่ archive ยังไม่มี
+          const arr = fMonthly[ym];
+          TEMP_DATA[ym] = +(arr.reduce((a,b)=>a+b,0)/arr.length).toFixed(1);
+        }
+      });
+    }
+    console.log("Temperature loaded:", Object.keys(TEMP_DATA).length, "months");
+    renderMonthBar(); // re-render เพื่อให้ tooltip มี temp
+  } catch(e) {
+    console.warn("ไม่สามารถโหลดอุณหภูมิ:", e);
+  }
+}
+
 function renderMonthBar(){
   const vals=MO.map((_,i)=> sD==="all" ? DEPT.reduce((a,d)=>a+monthlyDeptTotal(i+1,d),0) : monthlyDeptTotal(i+1,sD));
   const validVals=vals.filter(v=>v>0);
@@ -373,7 +427,16 @@ function renderMonthBar(){
       hover:{mode:"nearest",intersect:false,axis:"xy"},
       plugins:{
         legend:{display:true,position:"top",labels:{boxWidth:12,font:{size:11}}},
-        tooltip:{callbacks:{label:ctx=>{if(ctx.dataset.label==="ค่าเฉลี่ย"){return `ค่าเฉลี่ย: ${fmt(ctx.raw)} kWh`;}return `${ctx.dataset.label}: ${fmt(ctx.raw)} kWh`;}}}
+        tooltip:{callbacks:{
+          title: ctx => {
+            const monthIdx = ctx[0]?.dataIndex; // 0-11
+            const ym = `${sY}-${String(monthIdx+1).padStart(2,"0")}`;
+            const temp = TEMP_DATA[ym];
+            const tempStr = temp != null ? `  🌡️ ${temp}°C` : "";
+            return MO[monthIdx] + tempStr;
+          },
+          label:ctx=>{if(ctx.dataset.label==="ค่าเฉลี่ย"){return `ค่าเฉลี่ย: ${fmt(ctx.raw)} kWh`;}return `${ctx.dataset.label}: ${fmt(ctx.raw)} kWh`;}
+        }}
       },
       scales:{y:{beginAtZero:true,ticks:{callback:v=>(v/1000).toFixed(0)+"K"}},x:{grid:{display:false}}}
     }
@@ -474,6 +537,7 @@ function renderAll(){renderKPI(); renderDonut(); renderMonthBar(); renderBuildin
 fetch("data/energy_db.json").then(r=>r.json()).then(db=>{
   DATA=db; document.getElementById("noteBar").textContent="โหลดข้อมูลสำเร็จ: data/energy_db.json";
   setupFilters(); renderAll();
+  fetchTemperature(); // โหลดอุณหภูมิ Open-Meteo เบื้องหลัง
 }).catch(err=>{
   document.getElementById("noteBar").textContent="ไม่พบ data/energy_db.json";
   console.error(err);
