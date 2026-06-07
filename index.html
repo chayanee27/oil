@@ -424,64 +424,47 @@ function renderYearLine(){
   });
   // --- hover highlight: เส้นที่ hover เข้ม ปีอื่นจาง ---
   const lineBaseColors = datasets.map(ds => ds.borderColor);
-  let lineHoverActive = false;
+  let _prevHoverIdx = -2; // ค่าที่ไม่มีทาง match เพื่อให้ update ครั้งแรกเสมอ
 
   function setLineHighlight(hoveredIdx) {
+    if (_prevHoverIdx === hoveredIdx) return; // ไม่เปลี่ยน → ไม่ต้อง update
+    _prevHoverIdx = hoveredIdx;
     const chart = ch.yearLine;
     if (!chart) return;
     chart.data.datasets.forEach((ds, i) => {
       const base = lineBaseColors[i];
       if (hoveredIdx === null) {
-        // ไม่มี hover → ทุกปีสีเข้มเท่ากัน
-        ds.borderColor = base;
-        ds.backgroundColor = base;
-        ds.borderWidth = 2;
-        ds.pointRadius = 3;
-        ds.borderDash = [];
+        ds.borderColor = base; ds.backgroundColor = base;
+        ds.borderWidth = 2; ds.pointRadius = 3; ds.borderDash = [];
       } else if (i === hoveredIdx) {
-        // ปีที่ hover → เข้มขึ้น
-        ds.borderColor = base;
-        ds.backgroundColor = base;
-        ds.borderWidth = 3;
-        ds.pointRadius = 5;
-        ds.borderDash = [];
+        ds.borderColor = base; ds.backgroundColor = base;
+        ds.borderWidth = 3.5; ds.pointRadius = 5; ds.borderDash = [];
       } else {
-        // ปีอื่น → จางลง
-        ds.borderColor = base + "44";
-        ds.backgroundColor = base + "44";
-        ds.borderWidth = 1.5;
-        ds.pointRadius = 2;
-        ds.borderDash = [4,3];
+        ds.borderColor = base + "44"; ds.backgroundColor = base + "44";
+        ds.borderWidth = 1.5; ds.pointRadius = 2; ds.borderDash = [4,3];
       }
     });
     chart.update("none");
   }
 
-  ch.yearLine=new Chart(document.getElementById("yearLine"),{
+  const lineCanvas = document.getElementById("yearLine");
+  // ใช้ mouseleave บน canvas โดยตรง → reset ทันทีเมื่อออกจากกราฟ
+  lineCanvas.addEventListener("mouseleave", () => setLineHighlight(null));
+
+  ch.yearLine=new Chart(lineCanvas,{
     type:"line",data:{labels:MO,datasets},
     options:{
       responsive:true,maintainAspectRatio:false,
-      interaction:{mode:"nearest",intersect:false,axis:"x"},
+      interaction:{mode:"nearest",intersect:true}, // intersect:true → hover เฉพาะตอนชี้ถูกเส้นจริงๆ
       plugins:{
         legend:{display:false},
         tooltip:{callbacks:{label:ctx=>`${ctx.dataset.label}: ${fmt(ctx.raw)} kWh`}}
       },
       scales:{y:{beginAtZero:true,ticks:{callback:v=>(v/1000).toFixed(0)+"K"}},x:{grid:{display:false}}},
       onHover:(evt, elements) => {
-        if (elements && elements.length > 0) {
-          const idx = elements[0].datasetIndex;
-          if (!lineHoverActive || ch.yearLine._lastHoverIdx !== idx) {
-            lineHoverActive = true;
-            ch.yearLine._lastHoverIdx = idx;
-            setLineHighlight(idx);
-          }
-        } else {
-          if (lineHoverActive) {
-            lineHoverActive = false;
-            ch.yearLine._lastHoverIdx = null;
-            setLineHighlight(null);
-          }
-        }
+        // elements มีค่าเฉพาะเมื่อชี้ถูกเส้น (intersect:true)
+        const idx = (elements && elements.length > 0) ? elements[0].datasetIndex : null;
+        setLineHighlight(idx);
       }
     }
   });
