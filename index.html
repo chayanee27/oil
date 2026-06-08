@@ -145,6 +145,11 @@
 .yearToggles{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 10px 0}
 .yBtn{border:1px solid var(--bdr);background:#fff;border-radius:999px;padding:3px 10px;font-size:11px;cursor:pointer;color:var(--txt2)}
 .yBtn.on{color:#fff;border-color:transparent}
+
+  /* เพิ่มสีสำหรับแจ้งสถานะ % เปรียบเทียบเป้าหมาย */
+.text-success { color: #2e7d32 !important; font-weight: bold; } /* สีเขียวเมื่อลดลง (ตามเป้า) */
+.text-danger { color: #c62828 !important; font-weight: bold; }  /* สีแดงเมื่อเพิ่มขึ้น (เกินเป้า) */
+.ban-target { color: rgba(255,255,255,0.85); font-size: 13px; margin-left: 20px; }
 </style>
 </head>
 <body>
@@ -166,7 +171,12 @@
 </div>
 <div class="hdr"><div class="hdr-l"><div class="logo">กฟผ.</div><div class="hdr-t"><h1>รายงานปริมาณการใช้ไฟฟ้า สำนักงานไทรน้อย กฟผ.</h1><p>Auto database version — weekly meter readings</p></div></div>
 <div class="fg"><span class="fl">ปี</span><select class="fs" id="yearSel"></select><span class="fl">เดือน</span><select class="fs" id="monthSel"></select></div></div>
-<div class="ban"><span class="ban-l">ยอดสะสมการใช้ไฟฟ้า</span><span class="ban-v" id="grandTotal">—</span><span class="ban-u">kWh</span></div>
+<div class="ban">
+  <span class="ban-l">ยอดสะสมการใช้ไฟฟ้า</span>
+  <span class="ban-v" id="grandTotal">—</span>
+  <span class="ban-u">kWh</span>
+  <span class="ban-target" id="targetComparison"></span>
+</div>
 <div id="noteBar" class="note">กำลังโหลดฐานข้อมูล <code>data/energy_db.json</code>...</div>
 <div class="main">
   <div class="kpi-row" id="kpiRow"></div>
@@ -219,6 +229,11 @@
 </div>
 
 <script>
+  // กำหนดเป้าหมายการลดพลังงานของแต่ละปี (เช่น ปี 2026/2569 ตั้งไว้ 8%, ปี 2025/2568 ตั้งไว้ 5%)
+const ENERGY_TARGETS = {
+  2026: 8, // ปี พ.ศ. 2569 เป้าลดลง 8%
+  2025: 5  // ปี พ.ศ. 2568 เป้าลดลง 5%
+};
 const MO=["ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค."];
 const DEPT=["สก.ชธธ.","อบค.","อบฟ.","อบย.","อรอ.","อคม.","อหข."];
 const CL=["#1565C0","#00897B","#F9A825","#EF6C00","#AD1457","#6A1B9A","#2E7D32"];
@@ -310,10 +325,75 @@ function setupFilters(){
   ys.onchange=e=>{sY=+e.target.value; renderAll()}; ms.onchange=e=>{sM=e.target.value; renderAll()};
 }
 function renderKPI(){
-  const row=document.getElementById("kpiRow"); row.innerHTML="";
-  const total=allTotal(); document.getElementById("grandTotal").textContent=fmt(total);
-  const g=document.createElement("div"); g.className="kG"; g.innerHTML=`<div class="kL">กฟผ.ไทรน้อยรวม</div><div class="kS">ปริมาณการใช้ไฟฟ้ารวม</div><div class="kV">${fmt(total)}</div><div class="kU">kWh</div>`; g.onclick=()=>{sD="all";renderAll()}; row.appendChild(g);
-  DEPT.forEach((d,i)=>{const v=deptTotal(d); const el=document.createElement("div"); el.className="kD"+(sD===d?" sel":sD!=="all"?" dim":""); el.style.background=DB[i]; el.innerHTML=`<div class="kL">${d}</div><div class="kS">ยอดจาก allocation</div><div class="kV">${fmt(v)}</div><div class="kU">kWh</div>`; el.onclick=()=>{sD=sD===d?"all":d;renderAll()}; row.appendChild(el);});
+  const row = document.getElementById("kpiRow"); row.innerHTML = "";
+  const total = allTotal(); 
+  document.getElementById("grandTotal").textContent = fmt(total);
+  
+  // --- ส่วนคำนวณ % ประหยัดพลังงานเทียบช่วงเวลาเดียวกันของปีก่อนหน้า ---
+  const targetCompEl = document.getElementById("targetComparison");
+  
+  if (DATA && sY) {
+    const prevYear = sY - 1;
+    let currentYearKwh = 0;
+    let prevYearSamePeriodKwh = 0;
+
+    // หาเดือนล่าสุดที่มีข้อมูลในตัวแปร DATA ของปีปัจจุบัน (กรณีเลือกดู "ทั้งหมด" แต่อยากเทียบแค่ช่วงที่มีข้อมูล)
+    const currentRows = (DATA.department_weekly || []).filter(r => ymdYear(r.week_end_date) === sY && validEnergyRow(r));
+    
+    if (currentRows.length > 0) {
+      // ค้นหาเดือนที่มากที่สุดที่มีข้อมูลบันทึกเข้ามาในปีนี้
+      const activeMonths = currentRows.map(r => ymdMonth(r.week_end_date));
+      const maxMonthWithData = sM === "all" ? Math.max(...activeMonths) : +sM;
+      const minMonthWithData = sM === "all" ? Math.min(...activeMonths) : +sM;
+
+      // คำนวณยอดรวมปีปัจจุบัน ในช่วงเดือนที่มีข้อมูล
+      currentYearKwh = (DATA.department_weekly || [])
+        .filter(r => ymdYear(r.week_end_date) === sY && validEnergyRow(r))
+        .filter(r => {
+          const m = ymdMonth(r.week_end_date);
+          return m >= minMonthWithData && m <= maxMonthWithData;
+        })
+        .reduce((a, b) => a + (+b.kwh || 0), 0);
+
+      // คำนwณยอดรวมปีก่อนหน้า ในช่วงเดือนเดียวกันเป๊ะๆ
+      prevYearSamePeriodKwh = (DATA.department_weekly || [])
+        .filter(r => ymdYear(r.week_end_date) === prevYear && validEnergyRow(r))
+        .filter(r => {
+          const m = ymdMonth(r.week_end_date);
+          return m >= minMonthWithData && m <= maxMonthWithData;
+        })
+        .reduce((a, b) => a + (+b.kwh || 0), 0);
+    }
+
+    if (prevYearSamePeriodKwh > 0 && currentYearKwh > 0) {
+      // สูตรคำนวณ % ผลต่าง: (ปีนี้ - ปีก่อน) / ปีก่อน * 100
+      // ถ้าติดลบ (-) หมายถึงใช้ไฟลดลง (ประหยัดได้)
+      const diffPercent = ((currentYearKwh - prevYearSamePeriodKwh) / prevYearSamePeriodKwh) * 100;
+      const savedPercent = -diffPercent; // เปลี่ยนเป็นมุมมอง "ลดลงไปได้กี่ %"
+      
+      const targetSetting = ENERGY_TARGETS[sY] || 0;
+      let targetText = targetSetting > 0 ? ` (เป้าหมายลดลง ${targetSetting}%)` : '';
+
+      if (savedPercent >= 0) {
+        // ใช้ไฟลดลงจริง (ตัวเลขเป็นบวกในแง่การประหยัด) -> สีเขียว
+        targetCompEl.className = "ban-target text-success";
+        targetCompEl.innerHTML = `📉 ลดลง ${savedPercent.toFixed(1)}% จากปีก่อนหน้า${targetText}`;
+      } else {
+        // ใช้ไฟเพิ่มขึ้น (ตัวเลขติดลบในแง่การประหยัด) -> สีแดง
+        const increasedPercent = Math.abs(savedPercent);
+        targetCompEl.className = "ban-target text-danger";
+        targetCompEl.innerHTML = `🔺 เพิ่มขึ้น ${increasedPercent.toFixed(1)}% จากปีก่อนหน้า${targetText}`;
+      }
+    } else {
+      targetCompEl.className = "ban-target";
+      targetCompEl.textContent = `(ไม่มีข้อมูลปีก่อนหน้ามาเปรียบเทียบ)`;
+    }
+  }
+  // -----------------------------------------------------------
+
+  // ส่วนของการแสดงผล KPI Card ด้านล่าง (คงเดิม)
+  const g = document.createElement("div"); g.className = "kG"; g.innerHTML = `<div class="kL">กฟผ.ไทรน้อยรวม</div><div class="kS">ปริมาณการใช้ไฟฟ้ารวม</div><div class="kV">${fmt(total)}</div><div class="kU">kWh</div>`; g.onclick = () => { sD = "all"; renderAll() }; row.appendChild(g);
+  DEPT.forEach((d, i) => { const v = deptTotal(d); const el = document.createElement("div"); el.className = "kD" + (sD === d ? " sel" : sD !== "all" ? " dim" : ""); el.style.background = DB[i]; el.innerHTML = `<div class="kL">${d}</div><div class="kS">ยอดจาก allocation</div><div class="kV">${fmt(v)}</div><div class="kU">kWh</div>`; el.onclick = () => { sD = sD === d ? "all" : d; renderAll() }; row.appendChild(el); });
 }
 function renderDonut(){
   const vals=DEPT.map(deptTotal), total=vals.reduce((a,b)=>a+b,0); document.getElementById("donutTotal").textContent=fmt(total);
