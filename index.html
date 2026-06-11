@@ -131,9 +131,6 @@
 .fs{padding:6px 10px;border-radius:6px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff;font-size:12px;font-family:'Sarabun',sans-serif}
 .fs option{color:#333}
 .filter-sep{color:rgba(255,255,255,.3);font-size:16px;padding:0 2px}
-/* mode toggle buttons */
-.mode-btn{padding:5px 10px;border-radius:6px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:rgba(255,255,255,.7);font-size:12px;font-family:'Sarabun',sans-serif;cursor:pointer;transition:.15s}
-.mode-btn.on{background:rgba(245,158,11,.25);border-color:#f59e0b;color:#f59e0b}
 
 .ban{background:linear-gradient(135deg,var(--pri),#1B3B80,var(--pri-l));padding:12px 28px;display:flex;justify-content:flex-end;gap:12px;align-items:center;flex-wrap:wrap}
 .ban-l{color:rgba(255,255,255,.85);font-size:13px}.ban-v{color:var(--gold);font-size:28px;font-weight:800}.ban-u{color:rgba(255,255,255,.72);font-size:12px}
@@ -179,31 +176,15 @@
 
   <!-- ===== FILTER BAR ===== -->
   <div class="fg">
-    <!-- ปี -->
     <span class="fl">ปี</span>
     <select class="fs" id="yearSel"></select>
 
     <span class="filter-sep">|</span>
 
-    <!-- mode toggle -->
-    <button class="mode-btn on" id="btnModeSingle" onclick="setRangeMode(false)">เดือนเดียว</button>
-    <button class="mode-btn"    id="btnModeRange"  onclick="setRangeMode(true)">ช่วงเดือน</button>
-
-    <span class="filter-sep">|</span>
-
-    <!-- single month -->
-    <div id="filterSingle" style="display:flex;align-items:center;gap:6px">
-      <span class="fl">เดือน</span>
-      <select class="fs" id="monthSel"></select>
-    </div>
-
-    <!-- range -->
-    <div id="filterRange" style="display:none;align-items:center;gap:6px">
-      <span class="fl">ตั้งแต่</span>
-      <select class="fs" id="monthFrom"></select>
-      <span class="fl">ถึง</span>
-      <select class="fs" id="monthTo"></select>
-    </div>
+    <span class="fl">ตั้งแต่</span>
+    <select class="fs" id="monthFrom"></select>
+    <span class="fl">ถึง</span>
+    <select class="fs" id="monthTo"></select>
   </div>
 </div>
 
@@ -285,11 +266,9 @@ const BUILD_COLORS = ["#1565C0","#00897B","#F9A825","#EF6C00","#AD1457","#6A1B9A
 
 // ===== STATE =====
 let DATA = null, sY = null, sD = "all", ch = {}, visibleYears = new Set();
-// filter state
-let rangeMode = false;   // false = single month mode, true = range mode
-let sM     = "all";      // single month  (1-12 or "all")
-let sM_from = 1;         // range: from month (1-12)
-let sM_to   = 12;        // range: to month   (1-12)
+// filter state — range เท่านั้น (ไม่มี single-month mode แล้ว)
+let sM_from = 1;   // เดือนเริ่มต้น (1-12)
+let sM_to   = 12;  // เดือนสิ้นสุด (1-12)
 
 // ===== HELPERS =====
 function fmt(n){ return Math.round(n||0).toLocaleString("th-TH"); }
@@ -301,18 +280,11 @@ function ymdMonth(d) { return +String(d).slice(5,7); }
 function inFilter(w){
   if(ymdYear(w.week_end_date) !== sY) return false;
   const m = ymdMonth(w.week_end_date);
-  if(rangeMode){
-    return m >= sM_from && m <= sM_to;
-  }
-  return sM === "all" || m === (+sM);
+  return m >= sM_from && m <= sM_to;
 }
 
-// ช่วงเดือนที่ active (as numbers) — ใช้ใน renderKPI และ renderYearLine
-function activeMonthRange(){
-  if(rangeMode) return { from: sM_from, to: sM_to };
-  if(sM === "all") return { from: 1, to: 12 };
-  return { from: +sM, to: +sM };
-}
+// ช่วงเดือนที่ active — ใช้ใน renderKPI และ renderYearLine
+function activeMonthRange(){ return { from: sM_from, to: sM_to }; }
 
 function validEnergyRow(r){
   const kwh   = +r.kwh || 0;
@@ -387,11 +359,6 @@ function setupFilters(){
   years.forEach(y=>{ const o=document.createElement("option"); o.value=y; o.textContent=y+543; ys.appendChild(o); });
   sY = years[years.length-1]; ys.value = sY;
 
-  // single month dropdown
-  const ms = document.getElementById("monthSel");
-  ms.innerHTML = '<option value="all">ทั้งหมด</option>';
-  MO.forEach((m,i)=>{ const o=document.createElement("option"); o.value=i+1; o.textContent=m; ms.appendChild(o); });
-
   // range dropdowns
   const mf = document.getElementById("monthFrom");
   const mt = document.getElementById("monthTo");
@@ -403,10 +370,8 @@ function setupFilters(){
   sM_from = 1; sM_to = 12;
 
   ys.onchange = e => { sY = +e.target.value; renderAll(); };
-  ms.onchange = e => { sM = e.target.value; renderAll(); };
   mf.onchange = e => {
     sM_from = +e.target.value;
-    // ถ้า from > to ให้ดึง to ตาม
     if(sM_from > sM_to){ sM_to = sM_from; mt.value = sM_to; }
     renderAll();
   };
@@ -415,15 +380,6 @@ function setupFilters(){
     if(sM_to < sM_from){ sM_from = sM_to; mf.value = sM_from; }
     renderAll();
   };
-}
-
-function setRangeMode(on){
-  rangeMode = on;
-  document.getElementById("filterSingle").style.display = on ? "none" : "flex";
-  document.getElementById("filterRange").style.display  = on ? "flex" : "none";
-  document.getElementById("btnModeSingle").className = "mode-btn" + (on ? "" : " on");
-  document.getElementById("btnModeRange").className  = "mode-btn" + (on ? " on" : "");
-  renderAll();
 }
 
 // ===== RENDER KPI + YoY banner =====
@@ -497,10 +453,8 @@ function renderDonut(){
   document.getElementById("donutTotal").textContent = fmt(total);
 
   const { from, to } = activeMonthRange();
-  const periodLabel = rangeMode
-    ? (from===to ? MO[from-1] : `${MO[from-1]}–${MO[to-1]}`)
-    : (sM==="all" ? "" : " — " + MO[+sM-1]);
-  document.getElementById("donutSub").textContent = `ปี ${sY+543}${rangeMode ? " — "+periodLabel : periodLabel}`;
+  const periodLabel = (from===1 && to===12) ? "" : ` — ${from===to ? MO[from-1] : `${MO[from-1]}–${MO[to-1]}`}`;
+  document.getElementById("donutSub").textContent = `ปี ${sY+543}${periodLabel}`;
 
   if(ch.donut) ch.donut.destroy();
   ch.donut = new Chart(document.getElementById("donut"),{
@@ -572,10 +526,8 @@ function renderMonthBar(){
   const avgVal    = validVals.length ? validVals.reduce((a,b)=>a+b,0)/validVals.length : 0;
 
   const { from, to } = activeMonthRange();
-  const periodLabel = rangeMode
-    ? (from===to ? MO[from-1] : `${MO[from-1]}–${MO[to-1]}`)
-    : (sM==="all" ? "" : " ("+MO[+sM-1]+")");
-  document.getElementById("barSub").textContent = `ปี ${sY+543}${sD!=="all"?" ("+sD+")":""}${rangeMode?" — "+periodLabel:periodLabel}`;
+  const periodLabel = (from===1 && to===12) ? "" : ` — ${from===to ? MO[from-1] : `${MO[from-1]}–${MO[to-1]}`}`;
+  document.getElementById("barSub").textContent = `ปี ${sY+543}${sD!=="all"?" ("+sD+")":""}${periodLabel}`;
 
   if(ch.monthBar) ch.monthBar.destroy();
   ch.monthBar = new Chart(document.getElementById("monthBar"),{
