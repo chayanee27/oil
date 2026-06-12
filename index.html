@@ -261,7 +261,6 @@ const ENERGY_TARGETS = { 2026: 8, 2025: 5 };
 const MO = ["ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค."];
 const DEPT = ["สก.ชธธ.","อบค.","อบฟ.","อบย.","อรอ.","อคม.","อหข."];
 const CL   = ["#1565C0","#00897B","#F9A825","#EF6C00","#AD1457","#6A1B9A","#2E7D32"];
-const DB   = ["#0D47A1","#004D40","#E65100","#880E4F","#4A148C","#1B5E20","#BF360C"];
 const BUILD_COLORS = ["#1565C0","#00897B","#F9A825","#EF6C00","#AD1457","#6A1B9A","#2E7D32","#C5A85F","#455A64","#00ACC1","#8E24AA","#7CB342"];
 
 // ===== STATE =====
@@ -439,7 +438,7 @@ function renderKPI(){
     const v   = deptTotal(d);
     const el  = document.createElement("div");
     el.className = "kD" + (sD===d?" sel":sD!=="all"?" dim":"");
-    el.style.background = DB[i];
+    el.style.background = CL[i];
     el.innerHTML = `<div class="kL">${d}</div><div class="kS">ยอดจาก allocation</div><div class="kV">${fmt(v)}</div><div class="kU">kWh</div>`;
     el.onclick = ()=>{ sD = sD===d?"all":d; renderAll(); };
     row.appendChild(el);
