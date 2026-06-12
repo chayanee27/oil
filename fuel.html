@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="SNOE.png">
+<title>รายงานการใช้น้ำมัน กฟผ. สำนักงานไทรน้อย</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ─── Design tokens (identical to index.html) ─────────────────────── */
+:root{
+  --pri:#0B1D51; --pri-l:#1A3A7A; --gold:#C5A85F;
+  --bg:#F0F2F5;  --card:#FFF;     --txt:#1A1A2E;
+  --txt2:#5A6178; --bdr:#E2E6ED;
+  --sh:0 2px 12px rgba(11,29,81,.08); --r:10px;
+  /* Fuel accent colours */
+  --fuel-amber:#D97706; --fuel-amber-l:#FEF3C7;
+  --fuel-green:#065F46; --fuel-red:#B91C1C;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--txt)}
+
+/* ─── Topbar / Nav (mirrors index.html exactly) ──────────────────── */
+.topbar{
+  background:linear-gradient(90deg,#0c1428 0%,#10172a 100%);
+  border-bottom:1px solid #2a2f4a;
+  padding:0 24px; display:flex; align-items:center; gap:0;
+  position:sticky; top:0; z-index:100;
+}
+.nav-brand{font-size:15px;font-weight:700;color:#f59e0b;padding:14px 0;margin-right:32px}
+.nav-tabs{display:flex;gap:4px}
+.nav-tab{
+  padding:14px 20px; font-size:13px; font-weight:500; color:#8892a4;
+  text-decoration:none; border-bottom:2px solid transparent; transition:all .2s;
+  display:flex; align-items:center; gap:7px;
+}
+.nav-tab:hover{color:#e2e8f0}
+.nav-tab.active{color:#f59e0b;border-bottom-color:#f59e0b}
+
+/* ─── Header ──────────────────────────────────────────────────────── */
+.hdr{
+  background:linear-gradient(135deg,var(--pri),var(--pri-l));
+  padding:16px 28px; display:flex; align-items:center;
+  justify-content:space-between; gap:12px; flex-wrap:wrap;
+}
+.hdr-l{display:flex;gap:14px;align-items:center}
+.logo{
+  width:42px;height:42px;background:var(--gold);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;color:var(--pri);font-size:13px;text-align:center;line-height:1.2;
+}
+.hdr-t{color:#fff}
+.hdr-t h1{font-size:18px}
+.hdr-t p{font-size:12px;color:rgba(255,255,255,.72)}
+/* Filter bar inside header */
+.fg{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.fl{color:rgba(255,255,255,.85);font-size:13px;white-space:nowrap}
+.fs{
+  padding:6px 10px;border-radius:6px;
+  border:1px solid rgba(255,255,255,.3);
+  background:rgba(255,255,255,.12);color:#fff;
+  font-size:12px;font-family:'Sarabun',sans-serif;
+}
+.fs option{color:#333}
+.filter-sep{color:rgba(255,255,255,.3);font-size:16px;padding:0 2px}
+
+/* ─── Banner (totals strip) ──────────────────────────────────────── */
+.ban{
+  background:linear-gradient(135deg,var(--pri),#1B3B80,var(--pri-l));
+  padding:12px 28px; display:flex; justify-content:flex-end;
+  gap:24px; align-items:center; flex-wrap:wrap;
+}
+.ban-item{display:flex;flex-direction:column;align-items:flex-end}
+.ban-l{color:rgba(255,255,255,.85);font-size:12px}
+.ban-v{color:var(--gold);font-size:26px;font-weight:800;line-height:1.1}
+.ban-u{color:rgba(255,255,255,.72);font-size:11px}
+.ban-sep{width:1px;height:40px;background:rgba(255,255,255,.2)}
+
+/* ─── Note bar ───────────────────────────────────────────────────── */
+.note{
+  background:#FFF8E1;border-bottom:2px solid #F9A825;
+  padding:7px 28px;font-size:12px;color:#795548;
+}
+
+/* ─── Main content ───────────────────────────────────────────────── */
+.main{padding:20px 24px;max-width:1600px;margin:auto}
+
+/* ─── KPI row ────────────────────────────────────────────────────── */
+.kpi-row{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:20px}
+.kG{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:16px;border-top:3px solid var(--gold);cursor:pointer}
+.kD{color:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:16px;cursor:pointer;opacity:.95;transition:opacity .2s,outline .1s}
+.kD.sel{outline:3px solid var(--gold);outline-offset:-1px}
+.kD.dim{opacity:.35}
+.kL{font-size:12px;font-weight:700;opacity:.92}
+.kS{font-size:10px;opacity:.65;margin-top:1px}
+.kV{font-size:20px;font-weight:800;margin-top:6px}
+.kV2{font-size:13px;font-weight:600;margin-top:2px;opacity:.85}
+.kU{font-size:10px;opacity:.75}
+
+/* ─── Metric toggle ──────────────────────────────────────────────── */
+.metric-toggle{
+  display:flex;gap:0;border:1px solid var(--bdr);border-radius:8px;
+  overflow:hidden;background:#fff;margin-bottom:20px;width:fit-content;
+}
+.mtBtn{
+  padding:8px 22px;font-size:13px;font-family:'Sarabun',sans-serif;
+  border:none;cursor:pointer;background:#fff;color:var(--txt2);transition:all .15s;
+}
+.mtBtn.on{background:var(--pri);color:#fff;font-weight:600}
+
+/* ─── Cards & grids ──────────────────────────────────────────────── */
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:20px}
+.gridB{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+.ct{font-size:14px;font-weight:700;color:var(--pri);margin-bottom:4px}
+.cs{font-size:11px;color:var(--txt2);margin-bottom:14px}
+.cw{height:300px}
+.cw-sm{height:240px}
+
+/* ─── Donut layout ───────────────────────────────────────────────── */
+.dw{display:flex;align-items:center;gap:18px}
+.donutBox{position:relative;width:200px;height:200px;flex-shrink:0}
+.dc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}
+.dcv{font-weight:800;color:var(--pri);font-size:18px}
+.dcl{font-size:10px;color:var(--txt2)}
+
+/* ─── Table ──────────────────────────────────────────────────────── */
+.lt{width:100%;border-collapse:collapse;font-size:12px}
+.lt th{text-align:left;color:var(--txt2);font-size:11px;border-bottom:1px solid var(--bdr);padding:4px 8px}
+.lt td{border-bottom:1px solid #eee;padding:5px 8px}
+.lt .vr,.lt .pc{text-align:right}
+.ld{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px}
+
+/* ─── Division drill-down panel ──────────────────────────────────── */
+.drill-section{margin-bottom:20px}
+.drill-hdr{
+  font-size:13px;font-weight:700;color:var(--pri);
+  padding:10px 16px;background:#EEF2FF;border-radius:8px 8px 0 0;
+  border:1px solid #C7D2FE;border-bottom:none;
+  display:flex;align-items:center;gap:8px;
+}
+.drill-body{
+  border:1px solid #C7D2FE;border-radius:0 0 8px 8px;
+  overflow:hidden;
+}
+.div-row{
+  display:grid;grid-template-columns:180px 1fr 1fr;
+  align-items:center;gap:0;padding:8px 16px;
+  border-bottom:1px solid #eee;font-size:12px;
+}
+.div-row:last-child{border-bottom:none}
+.div-row:hover{background:#f8faff}
+.div-name{font-weight:600;color:var(--txt)}
+.div-bar-wrap{padding:0 12px}
+.div-bar-track{height:8px;background:#eee;border-radius:4px;overflow:hidden}
+.div-bar-fill{height:100%;border-radius:4px;transition:width .4s ease}
+.div-vals{text-align:right;white-space:nowrap;color:var(--txt2)}
+.div-vals strong{color:var(--txt);font-weight:700}
+
+/* ─── Section label ──────────────────────────────────────────────── */
+.sec-label{
+  font-size:11px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--txt2);
+  margin:24px 0 10px;border-bottom:1px solid var(--bdr);padding-bottom:6px;
+}
+
+/* ─── Footer ──────────────────────────────────────────────────────── */
+.ft{text-align:center;padding:16px;color:var(--txt2);font-size:11px}
+
+/* ─── Responsive ─────────────────────────────────────────────────── */
+@media(max-width:1200px){
+  .kpi-row{grid-template-columns:repeat(3,1fr)}
+  .grid2,.gridB,.grid3{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .kpi-row{grid-template-columns:repeat(2,1fr)}
+  .main{padding:12px}
+  .div-row{grid-template-columns:140px 1fr 90px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ TOP NAV ══════════════ -->
+<div class="topbar">
+  <div class="nav-brand">กฟผ. สำนักงานไทรน้อย</div>
+  <nav class="nav-tabs">
+    <a href="index.html"   class="nav-tab">⚡ ไฟฟ้า</a>
+    <a href="fuel.html"    class="nav-tab active">🛢️ น้ำมัน</a>
+    <a href="water.html"   class="nav-tab">💧 น้ำประปา (demo)</a>
+    <a href="garbage.html" class="nav-tab">♻️ ขยะ (WIP)</a>
+  </nav>
+</div>
+
+<!-- ══════════════ HEADER + FILTERS ══════════════ -->
+<div class="hdr">
+  <div class="hdr-l">
+    <div class="logo">🛢️</div>
+    <div class="hdr-t">
+      <h1>รายงานการใช้น้ำมัน สำนักงานไทรน้อย กฟผ.</h1>
+      <p>Fuel Consumption Dashboard — อัปเดตทุกเดือน</p>
+    </div>
+  </div>
+  <div class="fg">
+    <span class="fl">ตั้งแต่</span>
+    <select class="fs" id="monthFrom"></select>
+    <span class="fl">ถึง</span>
+    <select class="fs" id="monthTo"></select>
+  </div>
+</div>
+
+<!-- ══════════════ BANNER (grand totals) ══════════════ -->
+<div class="ban">
+  <div class="ban-item">
+    <span class="ban-l">ปริมาณน้ำมันรวม</span>
+    <span class="ban-v" id="banVol">—</span>
+    <span class="ban-u">ลิตร</span>
+  </div>
+  <div class="ban-sep"></div>
+  <div class="ban-item">
+    <span class="ban-l">ค่าใช้จ่ายรวม</span>
+    <span class="ban-v" id="banCost">—</span>
+    <span class="ban-u">บาท</span>
+  </div>
+</div>
+
+<div id="noteBar" class="note">กำลังโหลดฐานข้อมูล <code>data/fuel_db.json</code>…</div>
+
+<!-- ══════════════ MAIN ══════════════ -->
+<div class="main">
+
+  <!-- Metric toggle -->
+  <div class="metric-toggle">
+    <button class="mtBtn on" id="btnVol"  onclick="setMetric('vol')">🛢️ ปริมาณ (ลิตร)</button>
+    <button class="mtBtn"    id="btnCost" onclick="setMetric('cost')">💰 ค่าใช้จ่าย (บาท)</button>
+  </div>
+
+  <!-- ── Level 1: Organisation Overview ── -->
+  <div class="sec-label">ภาพรวมทั้งหน่วยงาน</div>
+  <div class="kpi-row" id="kpiRow"></div>
+
+  <div class="grid2">
+    <!-- Donut chart -->
+    <div class="card">
+      <div class="ct">สัดส่วนการใช้น้ำมัน แยกฝ่าย</div>
+      <div class="cs" id="donutSub"></div>
+      <div class="dw">
+        <div class="donutBox">
+          <canvas id="donut"></canvas>
+          <div class="dc">
+            <div class="dcv" id="donutCenter">—</div>
+            <div class="dcl" id="donutUnit">ลิตร</div>
+          </div>
+        </div>
+        <div style="flex:1;overflow:auto"><table class="lt" id="deptTable"></table></div>
+      </div>
+    </div>
+
+    <!-- Monthly bar chart -->
+    <div class="card">
+      <div class="ct">การใช้น้ำมันรายเดือน</div>
+      <div class="cs" id="barSub"></div>
+      <div class="cw"><canvas id="monthBar"></canvas></div>
+    </div>
+  </div>
+
+  <!-- ── Level 2: Department ── -->
+  <div class="sec-label" id="deptSectionLabel">ระดับฝ่าย — เปรียบเทียบรายเดือน</div>
+  <div class="card" style="margin-bottom:20px">
+    <div class="ct" id="deptChartTitle">ปริมาณการใช้น้ำมัน แยกฝ่าย รายเดือน</div>
+    <div class="cs" id="deptChartSub"></div>
+    <div class="cw"><canvas id="deptLine"></canvas></div>
+  </div>
+
+  <!-- ── Level 3: Division (กอง) ── -->
+  <div class="sec-label" id="divSectionLabel">ระดับกอง</div>
+  <div id="divisionPanel"></div>
+
+</div>
+
+<div class="ft">Dashboard ดึงข้อมูลจาก data/fuel_db.json | แบบฟอร์มเติมน้ำมันรายเดือน</div>
+
+<script>
+// ══════════════════════════════════════════════
+//  CONFIG
+// ══════════════════════════════════════════════
+const DB_URL = "data/fuel_db.json";
+
+const DEPT_COLORS = {
+  "ชธธ.": "#1565C0",
+  "อคม.": "#00897B",
+  "อบค.": "#F9A825",
+  "อบฟ.": "#EF6C00",
+  "อบย.": "#AD1457",
+};
+const FALLBACK_COLORS = ["#6A1B9A","#2E7D32","#455A64","#00ACC1"];
+
+// ══════════════════════════════════════════════
+//  STATE
+// ══════════════════════════════════════════════
+let DATA      = null;
+let sMetric   = "vol";          // "vol" | "cost"
+let sFrom     = null;           // ปีเดือน string "2026-03"
+let sTo       = null;
+let sDept     = "all";
+let charts    = {};
+
+// ══════════════════════════════════════════════
+//  HELPERS
+// ══════════════════════════════════════════════
+const fmtVol  = n => (+n||0).toLocaleString("th-TH",{maximumFractionDigits:0}) + " ล.";
+const fmtCost = n => (+n||0).toLocaleString("th-TH",{maximumFractionDigits:0}) + " ฿";
+const fmtNum  = n => (+n||0).toLocaleString("th-TH",{maximumFractionDigits:0});
+
+function deptColor(dept, idx) {
+  return DEPT_COLORS[dept] || FALLBACK_COLORS[idx % FALLBACK_COLORS.length];
+}
+
+function activeMonths() {
+  if (!DATA) return [];
+  return DATA.months.filter(m => m >= sFrom && m <= sTo);
+}
+
+function getValue(obj) {
+  return sMetric === "vol" ? (obj.vol||0) : (obj.cost||0);
+}
+
+function unitLabel() {
+  return sMetric === "vol" ? "ลิตร" : "บาท";
+}
+
+function fmtVal(n) {
+  return fmtNum(n);
+}
+
+// ══════════════════════════════════════════════
+//  SETUP FILTERS
+// ══════════════════════════════════════════════
+function setupFilters() {
+  const months = DATA.months;
+  const mf = document.getElementById("monthFrom");
+  const mt = document.getElementById("monthTo");
+  mf.innerHTML = ""; mt.innerHTML = "";
+  months.forEach(m => {
+    const lbl = DATA.month_labels[m] || m;
+    [mf, mt].forEach(sel => {
+      const o = document.createElement("option");
+      o.value = m; o.textContent = lbl; sel.appendChild(o);
+    });
+  });
+  sFrom = months[0];
+  sTo   = months[months.length - 1];
+  mf.value = sFrom;
+  mt.value = sTo;
+
+  mf.onchange = e => {
+    sFrom = e.target.value;
+    if (sFrom > sTo) { sTo = sFrom; mt.value = sTo; }
+    renderAll();
+  };
+  mt.onchange = e => {
+    sTo = e.target.value;
+    if (sTo < sFrom) { sFrom = sTo; mf.value = sFrom; }
+    renderAll();
+  };
+}
+
+// ══════════════════════════════════════════════
+//  METRIC TOGGLE
+// ══════════════════════════════════════════════
+function setMetric(m) {
+  sMetric = m;
+  document.getElementById("btnVol").classList.toggle("on",  m === "vol");
+  document.getElementById("btnCost").classList.toggle("on", m === "cost");
+  renderAll();
+}
+
+// ══════════════════════════════════════════════
+//  BANNER
+// ══════════════════════════════════════════════
+function renderBanner() {
+  const months = activeMonths();
+  let vol=0, cost=0;
+  DATA.monthly_summary.forEach(r => {
+    if (months.includes(r.month)) { vol += r.vol; cost += r.cost; }
+  });
+  document.getElementById("banVol").textContent  = fmtNum(vol);
+  document.getElementById("banCost").textContent = fmtNum(cost);
+}
+
+// ══════════════════════════════════════════════
+//  KPI CARDS (Level 1 + Dept click filter)
+// ══════════════════════════════════════════════
+function renderKPI() {
+  const row = document.getElementById("kpiRow");
+  row.innerHTML = "";
+  const months = activeMonths();
+
+  function deptTotal(dept) {
+    const dd = DATA.dept_data[dept];
+    return dd.monthly.filter(r => months.includes(r.month))
+      .reduce((a,b) => a + getValue(b), 0);
+  }
+  const total = DATA.departments.reduce((a,d) => a + deptTotal(d), 0);
+
+  // Grand total card
+  const g = document.createElement("div");
+  g.className = "kG";
+  g.innerHTML = `<div class="kL">กฟผ.ไทรน้อยรวม</div>
+    <div class="kS">ทุกฝ่าย รวมกัน</div>
+    <div class="kV">${fmtNum(total)}</div>
+    <div class="kU">${unitLabel()}</div>`;
+  g.onclick = () => { sDept = "all"; renderAll(); };
+  row.appendChild(g);
+
+  DATA.departments.forEach((dept, i) => {
+    const v = deptTotal(dept);
+    const c = deptColor(dept, i);
+    const el = document.createElement("div");
+    el.className = "kD" + (sDept===dept?" sel":(sDept!=="all"?" dim":""));
+    el.style.background = c;
+    const pct = total > 0 ? ((v/total)*100).toFixed(1) : "0.0";
+    el.innerHTML = `<div class="kL">${dept}</div>
+      <div class="kS">${pct}% ของทั้งหมด</div>
+      <div class="kV">${fmtNum(v)}</div>
+      <div class="kU">${unitLabel()}</div>`;
+    el.onclick = () => { sDept = sDept===dept?"all":dept; renderAll(); };
+    row.appendChild(el);
+  });
+}
+
+// ══════════════════════════════════════════════
+//  DONUT CHART (Level 1)
+// ══════════════════════════════════════════════
+function renderDonut() {
+  const months = activeMonths();
+  const labels = DATA.departments;
+  const vals   = labels.map(dept =>
+    DATA.dept_data[dept].monthly.filter(r => months.includes(r.month))
+      .reduce((a,b) => a + getValue(b), 0)
+  );
+  const total = vals.reduce((a,b)=>a+b,0);
+  const colors = labels.map((d,i) => deptColor(d,i));
+
+  document.getElementById("donutCenter").textContent = fmtNum(total);
+  document.getElementById("donutUnit").textContent   = unitLabel();
+  document.getElementById("donutSub").textContent    =
+    `${DATA.month_labels[sFrom] || sFrom} — ${DATA.month_labels[sTo] || sTo}`;
+
+  if (charts.donut) charts.donut.destroy();
+  charts.donut = new Chart(document.getElementById("donut"), {
+    type: "doughnut",
+    data: { labels, datasets: [{ data: vals, backgroundColor: colors, borderColor:"#fff", borderWidth:2 }] },
+    options: { responsive:true, maintainAspectRatio:false, cutout:"62%",
+               plugins:{ legend:{ display:false } } }
+  });
+
+  const tb = document.getElementById("deptTable");
+  tb.innerHTML = `<tr><th>ฝ่าย</th><th class="vr">ค่า</th><th class="pc">%</th></tr>`;
+  labels.map((d,i) => ({d, v:vals[i], c:colors[i]}))
+    .sort((a,b) => b.v - a.v)
+    .forEach(x => {
+      tb.innerHTML += `<tr>
+        <td><span class="ld" style="background:${x.c}"></span>${x.d}</td>
+        <td class="vr">${fmtNum(x.v)}</td>
+        <td class="pc">${total ? ((x.v/total)*100).toFixed(1) : "0.0"}%</td>
+      </tr>`;
+    });
+  tb.innerHTML += `<tr style="font-weight:700;border-top:2px solid var(--pri)">
+    <td>รวม</td><td class="vr">${fmtNum(total)}</td><td class="pc">100%</td></tr>`;
+}
+
+// ══════════════════════════════════════════════
+//  MONTHLY BAR (Level 1 — org-wide)
+// ══════════════════════════════════════════════
+function renderMonthBar() {
+  const months = activeMonths();
+  const labels = months.map(m => DATA.month_labels[m] || m);
+  const vals   = DATA.monthly_summary
+    .filter(r => months.includes(r.month))
+    .map(r => getValue(r));
+
+  document.getElementById("barSub").textContent =
+    `${unitLabel()} รายเดือน — ทั้งหน่วยงาน`;
+
+  if (charts.monthBar) charts.monthBar.destroy();
+  charts.monthBar = new Chart(document.getElementById("monthBar"), {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [{
+        label: unitLabel(), data: vals,
+        backgroundColor: "rgba(197,168,95,0.85)",
+        borderColor: "#C5A85F", borderWidth: 1, borderRadius: 4,
+      }]
+    },
+    options: {
+      responsive:true, maintainAspectRatio:false,
+      plugins:{ legend:{ display:false } },
+      scales:{ y:{ beginAtZero:true, ticks:{ callback: v => fmtNum(v) } } }
+    }
+  });
+}
+
+// ══════════════════════════════════════════════
+//  DEPT LINE CHART (Level 2)
+// ══════════════════════════════════════════════
+function renderDeptLine() {
+  const months  = activeMonths();
+  const mlabels = months.map(m => DATA.month_labels[m] || m);
+  const depts   = sDept === "all" ? DATA.departments : [sDept];
+
+  const datasets = depts.map((dept, i) => {
+    const dd = DATA.dept_data[dept];
+    const vals = months.map(m => {
+      const r = dd.monthly.find(x => x.month === m);
+      return r ? getValue(r) : 0;
+    });
+    return {
+      label: dept, data: vals,
+      borderColor:     deptColor(dept, i),
+      backgroundColor: deptColor(dept, i) + "22",
+      borderWidth: 2, pointRadius: 4, tension: 0.3, fill: false,
+    };
+  });
+
+  document.getElementById("deptChartTitle").textContent =
+    sDept === "all"
+      ? `${sMetric==="vol"?"ปริมาณ":"ค่าใช้จ่าย"} — เปรียบเทียบทุกฝ่าย`
+      : `${sDept} — รายละเอียดรายเดือน`;
+  document.getElementById("deptChartSub").textContent =
+    `${unitLabel()} | คลิก KPI card เพื่อ drill-down รายฝ่าย`;
+
+  if (charts.deptLine) charts.deptLine.destroy();
+  charts.deptLine = new Chart(document.getElementById("deptLine"), {
+    type: "line",
+    data: { labels: mlabels, datasets },
+    options: {
+      responsive:true, maintainAspectRatio:false,
+      interaction:{ mode:"index", intersect:false },
+      plugins:{ legend:{ position:"bottom", labels:{ font:{ family:"Sarabun" } } } },
+      scales:{ y:{ beginAtZero:true, ticks:{ callback: v => fmtNum(v) } } }
+    }
+  });
+}
+
+// ══════════════════════════════════════════════
+//  DIVISION PANEL (Level 3)
+// ══════════════════════════════════════════════
+function renderDivisions() {
+  const panel    = document.getElementById("divisionPanel");
+  const secLabel = document.getElementById("divSectionLabel");
+  panel.innerHTML = "";
+
+  const depts = sDept === "all" ? DATA.departments : [sDept];
+  secLabel.textContent = sDept === "all"
+    ? "ระดับกอง — ทุกฝ่าย" : `ระดับกอง — ${sDept}`;
+
+  const months = activeMonths();
+
+  depts.forEach(dept => {
+    const dd   = DATA.dept_data[dept];
+    const divs = dd.divisions;
+    const color = deptColor(dept, DATA.departments.indexOf(dept));
+
+    // Aggregate each กอง over selected months
+    const divTotals = Object.entries(divs).map(([name, dv]) => {
+      const val = dv.monthly.filter(r => months.includes(r.month))
+        .reduce((a,b) => a + getValue(b), 0);
+      return { name, val };
+    }).filter(x => x.val > 0).sort((a,b) => b.val - a.val);
+
+    if (!divTotals.length) return;
+
+    const maxVal = divTotals[0].val;
+    const deptTotal = divTotals.reduce((a,b)=>a+b.val,0);
+
+    const wrap = document.createElement("div");
+    wrap.className = "drill-section";
+
+    const hdr = document.createElement("div");
+    hdr.className = "drill-hdr";
+    hdr.innerHTML = `<span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${color};margin-right:6px"></span>
+      <strong>${dept}</strong>
+      <span style="margin-left:auto;font-weight:400;font-size:12px;color:var(--txt2)">
+        รวม ${fmtNum(deptTotal)} ${unitLabel()}
+      </span>`;
+    wrap.appendChild(hdr);
+
+    const body = document.createElement("div");
+    body.className = "drill-body";
+
+    divTotals.forEach(({name, val}) => {
+      const pct  = maxVal > 0 ? (val/maxVal*100).toFixed(0) : 0;
+      const share = deptTotal > 0 ? ((val/deptTotal)*100).toFixed(1) : "0.0";
+      const row = document.createElement("div");
+      row.className = "div-row";
+      row.innerHTML = `
+        <div class="div-name">${name}</div>
+        <div class="div-bar-wrap">
+          <div class="div-bar-track">
+            <div class="div-bar-fill" style="width:${pct}%;background:${color}88"></div>
+          </div>
+        </div>
+        <div class="div-vals">
+          <strong>${fmtNum(val)}</strong> <span style="font-size:10px">${unitLabel()}</span>
+          <br><span style="font-size:10px">${share}%</span>
+        </div>`;
+      body.appendChild(row);
+    });
+
+    wrap.appendChild(body);
+    panel.appendChild(wrap);
+  });
+}
+
+// ══════════════════════════════════════════════
+//  RENDER ALL
+// ══════════════════════════════════════════════
+function renderAll() {
+  renderBanner();
+  renderKPI();
+  renderDonut();
+  renderMonthBar();
+  renderDeptLine();
+  renderDivisions();
+}
+
+// ══════════════════════════════════════════════
+//  BOOT — fetch JSON → init
+// ══════════════════════════════════════════════
+(async () => {
+  const nb = document.getElementById("noteBar");
+  try {
+    const res = await fetch(DB_URL);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    DATA = await res.json();
+
+    nb.textContent =
+      `โหลดสำเร็จ — อัปเดตล่าสุด: ${DATA.generated || "—"} | `
+      + `ข้อมูล ${DATA.months.length} เดือน | `
+      + `${DATA.departments.length} ฝ่าย`;
+
+    setupFilters();
+    renderAll();
+  } catch (err) {
+    nb.style.borderColor = "#e53e3e";
+    nb.style.background  = "#fff5f5";
+    nb.style.color       = "#c53030";
+    nb.textContent = `โหลดข้อมูลไม่สำเร็จ: ${err.message} — ตรวจสอบว่าไฟล์ data/fuel_db.json มีอยู่และรัน build_fuel_db.py แล้ว`;
+  }
+})();
+</script>
+</body>
+</html>
